@@ -1,0 +1,38 @@
+diff --git a/meta-alibaba/meta-obmc-cl b/meta-alibaba/meta-obmc-cl
+index 47be8956..45fff149 160000
+--- a/meta-alibaba/meta-obmc-cl
++++ b/meta-alibaba/meta-obmc-cl
+@@ -1 +1 @@
+-Subproject commit 47be8956d3812bbd59c98ecfa758b371a2a6e1c2
++Subproject commit 45fff149dc6b392c9d41b614a4e51f212786133d
+diff --git a/meta-alibaba/recipes-extended/fanctrl/files/devices/AS24-128D-CL/pwm_alg_cfg.json b/meta-alibaba/recipes-extended/fanctrl/files/devices/AS24-128D-CL/pwm_alg_cfg.json
+index 8a60583a..c07c3f61 100644
+--- a/meta-alibaba/recipes-extended/fanctrl/files/devices/AS24-128D-CL/pwm_alg_cfg.json
++++ b/meta-alibaba/recipes-extended/fanctrl/files/devices/AS24-128D-CL/pwm_alg_cfg.json
+@@ -9,7 +9,7 @@
+             "Differential": 0.118,
+             "TargetTemperature": 88.0,
+             "PwmMin": 45.0,
+-            "PwmMax": 100.0
++            "PwmMax": 97.0
+         },
+         "CPU": {
+             "Enabled": true,
+@@ -18,7 +18,7 @@
+             "Differential": 0.157,
+             "TargetTemperature": 89.0,
+             "PwmMin": 45.0,
+-            "PwmMax": 100.0
++            "PwmMax": 97.0
+         }
+     },
+     "LINEAR": {
+@@ -30,7 +30,7 @@
+             "TemperatureShowFixupLow": 4.0,
+             "TemperatureShowFixupHigh": 4.0,
+             "PwmMin": 45.0,
+-            "PwmMax": 100.0,
++            "PwmMax": 97.0,
+             "FallingHysteresis": 2.0
+         }
+     }

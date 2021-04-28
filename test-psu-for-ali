@@ -1,0 +1,17 @@
+#!/bin/bash
+
+date >> /var/log/morton-psu-test
+echo "24-005b" >> /var/log/morton-psu-test.log
+cat /sys/bus/i2c/drivers/dps1100/24-005b/hwmon/hwmon15/MFR_ID_GW >>/var/log/morton-psu-test.log
+cat /sys/bus/i2c/drivers/dps1100/24-005b/hwmon/hwmon15/MFR_Model_GW  >>/var/log/morton-psu-test.log
+cat /sys/bus/i2c/drivers/dps1100/24-005b/hwmon/hwmon15/MFR_Serial_GW >>/var/log/morton-psu-test.log
+cat /sys/bus/i2c/drivers/dps1100/24-005b/hwmon/hwmon15/MFR_Revision_GW >>/var/log/morton-psu-test.log
+
+echo "25-005b" >> /var/log/morton-psu-test.log
+cat /sys/bus/i2c/drivers/dps1100/25-005b/hwmon/hwmon15/MFR_ID_GW >>/var/log/morton-psu-test.log
+cat /sys/bus/i2c/drivers/dps1100/25-005b/hwmon/hwmon15/MFR_Model_GW  >>/var/log/morton-psu-test.log
+cat /sys/bus/i2c/drivers/dps1100/25-005b/hwmon/hwmon15/MFR_Serial_GW >>/var/log/morton-psu-test.log
+cat /sys/bus/i2c/drivers/dps1100/25-005b/hwmon/hwmon15/MFR_Revision_GW >>/var/log/morton-psu-test.log
+
+sleep 5  
+  
