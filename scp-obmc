@@ -1,0 +1,40 @@
+#!/usr/bin/expect 
+set timeout 20
+
+if { [llength $argv] < 1} {
+    puts "Usage:"
+    puts "$argv0 IP"
+    exit 1
+}
+
+set IP [lindex $argv 0]
+set local_file ./tmp/deploy/images/obmc-cl/flash-obmc-cl
+set passwd 0penBmc
+set passwderror 0
+
+
+spawn ssh-keygen -f "/home/morton/.ssh/known_hosts" -R $IP
+
+spawn scp $local_file /home/morton/usr/local/bin/bmc_upgrade_for_ALI.sh root@$IP:~
+
+
+expect {
+    "*assword:*" {
+        if { $passwderror == 1 } {
+        puts "passwd is error"
+        exit 2
+        }
+        set timeout 1000
+        set passwderror 1
+        send "$passwd\r"
+        exp_continue
+    }
+    "*yes/no*" {
+        send "yes\r"
+        exp_continue
+    }
+    timeout {
+        puts "connect is timeout"
+        exit 3
+    }
+}

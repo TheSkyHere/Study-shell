@@ -1,0 +1,24 @@
+#!/bin/bash
+   
+#sudo rm -rf /var/lib/tftpboot/BMC1/*
+     
+ABS_PATH="`pwd`"           
+     
+    
+if [ ! -d "workspace/Build/output" ];then         
+   echo "$ABS_PATH: no file <workspace/Build/output>"            
+   exit 255
+fi
+     
+   
+    
+if [ ! -d "/home/morton/MDS-bin" ];then
+    echo "/home/morton/MDS-bin is no directory!!!"
+    exit 255
+else                       
+    sudo cp -f ./workspace/Build/output/rom.ima /home/morton/MDS-bin
+fi
+   
+                            
+echo  "copy rom.ima is sucess"
+    

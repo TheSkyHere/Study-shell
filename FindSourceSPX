@@ -1,0 +1,32 @@
+#!/bin/bash
+
+#sudo rm -rf /var/lib/tftpboot/BMC1/*
+
+
+if [ $# -lt 1 ];then
+   echo "Usage: `basename $0`+<Find name from spx_src>"
+   echo " $0 libgpio* "
+   exit 255
+fi 
+
+cd ../../spx_src
+
+
+
+#echo "find begin"
+
+ABS_PATH="`pwd`"     
+
+if [ ! -d "iec/" ];then
+	echo "$ABS_PATH: no file <workspace/Build/output>"
+	exit 255
+fi
+
+pwd
+
+echo "FIND--------------------"
+
+find . -type d -name "$1"
+
+echo "OVER--------------------"
+exit 255
