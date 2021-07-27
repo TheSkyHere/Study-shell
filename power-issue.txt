@@ -1,0 +1,252 @@
+root@bmc:~# sensors 
+syscpld-i2c-0-0d
+Adapter: ast_i2c.0
+Switch temp:  +49.6 C  (high = +104.0 C, hyst = +98.0 C)
+CPU temp:     +46.0 C  (high = +100.0 C, hyst = +96.0 C)
+
+sn1701022-i2c-4-64
+Adapter: ast_i2c.4
+CPU_Core VCCIN_1.82V Voltage:  +1.78 V  (min =  +1.60 V, max =  +1.95 V)
+CPU_VCCD_1.2V Voltage:         +1.20 V  (min =  +1.10 V, max =  +1.30 V)
+CPU_Core VCCIN_1.82V Current:  +8.12 A  (min =  +0.00 A, max = +43.00 A)
+CPU_VCCD_1.2V Current:         +1.34 A  (min =  +0.00 A, max = +14.00 A)
+
+sn1701022-i2c-4-66
+Adapter: ast_i2c.4
+CPU_VCCSCSUS_1.05V Voltage:   +1.05 V  (min =  +1.00 V, max =  +1.10 V)
+CPU_VCC/VCCIO_1.05V Voltage:  +1.05 V  (min =  +1.00 V, max =  +1.10 V)
+CPU_VCCSCSUS_1.05V Current:   +0.92 A  (min =  +0.00 A, max = +14.00 A)
+CPU_VCC/VCCIO_1.05V Current:  +2.56 A  (min =  +0.00 A, max = +14.00 A)
+
+max116x-i2c-4-36
+Adapter: ast_i2c.4
+XP3R3V_FD:       +3.33 V  (min =  +3.14 V, max =  +3.47 V)
+XP3R3V:          +3.34 V  (min =  +3.14 V, max =  +3.47 V)
+XP1R82V:         +1.79 V  (min =  +1.60 V, max =  +1.95 V)
+XP1R05V:         +1.05 V  (min =  +1.00 V, max =  +1.10 V)
+XP1R7V:          +1.70 V  (min =  +1.60 V, max =  +1.79 V)
+XP1R2V:          +1.20 V  (min =  +1.14 V, max =  +1.26 V)
+XP1R3V:          +1.30 V  (min =  +1.24 V, max =  +1.36 V)
+XP1R5V:          +1.51 V  (min =  +1.43 V, max =  +1.58 V)
+XP2R5V:          +2.61 V  (min =  +2.37 V, max =  +2.70 V)
+XP0R6V_VTT:      +0.59 V  (min =  +0.57 V, max =  +0.63 V)
+XP3R0V_RTC_BAT:  +3.04 V  (min =  +2.00 V, max =  +3.47 V)
+
+ir38060-i2c-4-43
+Adapter: ast_i2c.4
+Basebord_FPGA_1.0V Voltage:  +1.02 V  (min =  +0.95 V, max =  +1.10 V)
+Basebord_FPGA_1.0V Current:  +0.19 A  (min =  -0.10 A, max =  +6.00 A)
+
+ir38062-i2c-4-49
+Adapter: ast_i2c.4
+Baseboard_3.3V Voltage:  +3.31 V  (min =  +3.13 V, max =  +3.47 V)
+Baseboard_3.3V Current:  +3.31 A  (min =  +0.00 A, max = +15.00 A)
+
+mp2978-i2c-16-63
+Adapter: i2c-4-mux (chan_id 0)
+Switch_XP0R75V_1_PVDD Voltage:  +0.75 V  (min =  +0.73 V, max =  +0.77 V)
+Switch_XP1R2V_TVDD Voltage:     +1.20 V  (min =  +1.16 V, max =  +1.24 V)
+Switch_XP0R75V_1_PVDD Current: +49.00 A  (min =  +0.00 A, max = +60.00 A)
+Switch_XP1R2V_TVDD Current:     +8.00 A  (min =  +0.00 A, max = +16.00 A)
+
+pxe1311-i2c-16-0e
+Adapter: i2c-4-mux (chan_id 0)
+Switch_XP3R3V_1_QSFP Voltage:  +3.30 V  (min =  +3.14 V, max =  +3.47 V)
+Switch_XP1R2V Voltage:         +1.20 V  (min =  +1.16 V, max =  +1.24 V)
+Switch_XP3R3V_1_QSFP Current: +47.75 A  (min =  +0.00 A, max = +48.00 A)   //快要超了
+Switch_XP1R2V Current:         +0.00 A  (min =  -0.10 A, max =  +1.00 A)
+
+ir38060-i2c-17-45
+Adapter: i2c-4-mux (chan_id 1)
+Switch_XP0R75V_3_PVDD Voltage:  +0.77 V  (min =  +0.73 V, max =  +0.77 V)
+Switch_XP0R75V_3_PVDD Current:  +0.25 A  (min =  +0.00 A, max =  +2.00 A)
+
+xdpe132g5c-i2c-17-40
+Adapter: i2c-4-mux (chan_id 1)
+vin:         +12.09 V  
+vout1:        +0.78 V  
+temp1:        +38.0 C  
+pin:         139.50 W  
+pout1:       122.50 W  
+iin:         +11.38 A  
+iout1:       +156.50 A  
+
+pxe1311-i2c-17-0e
+Adapter: i2c-4-mux (chan_id 1)
+Switch_XP3R3V_2_QSFP Voltage:  +3.30 V  (min =  +3.14 V, max =  +3.47 V)
+Switch_XP1R8V_AVDD Voltage:    +1.80 V  (min =  +1.65 V, max =  +1.85 V)
+Switch_XP3R3V_2_QSFP Current: +48.38 A  (min =  +0.00 A, max = +48.00 A)   //超了
+Switch_XP1R8V_AVDD Current:    +0.00 A  (min =  -0.10 A, max =  +2.00 A)
+
+ir38060-i2c-18-45
+Adapter: i2c-4-mux (chan_id 2)
+Switch_XP1R8V Voltage:  +1.81 V  (min =  +1.63 V, max =  +1.89 V)
+Switch_XP1R8V Current:  +0.00 A  (min =  -0.10 A, max =  +3.00 A)
+
+mp2978-i2c-18-69
+Adapter: i2c-4-mux (chan_id 2)
+Switch_XP0R75V_2_PVDD Voltage:  +0.75 V  (min =  +0.73 V, max =  +0.77 V)
+Switch_XP0R75V_2_PVDD Current: +51.00 A  (min =  +0.00 A, max = +60.00 A)
+
+max116x-i2c-18-34
+Adapter: i2c-4-mux (chan_id 2)
+SW_VDD_CORE:        +0.83 V  (min =  +0.70 V, max =  +0.93 V)
+SW_XP1R8V:          +1.81 V  (min =  +1.57 V, max =  +1.94 V)
+SW_XP1R8V_AVDD:     +1.80 V  (min =  +1.59 V, max =  +1.91 V)
+SW_XP1R2V:          +1.21 V  (min =  +1.13 V, max =  +1.27 V)
+SW_XP1R2V_TVDD:     +1.22 V  (min =  +1.13 V, max =  +1.27 V)
+SW_XP0R75V_1_PVDD:  +0.80 V  (min =  +0.70 V, max =  +0.81 V)
+SW_XP0R75V_2_PVDD:  +0.79 V  (min =  +0.70 V, max =  +0.81 V)
+SW_XP0R75V_3_PVDD:  +0.76 V  (min =  +0.70 V, max =  +0.81 V)
+
+mp2978-i2c-19-69
+Adapter: i2c-4-mux (chan_id 3)
+TOP_LC_XP3R3V_A Voltage:  +3.27 V  (min =  +3.14 V, max =  +3.47 V)
+TOP_LC_XP3R3V_A Current: +43.00 A  (min =  +0.00 A, max = +42.00 A)   //超了
+
+mp2978-i2c-19-6b
+Adapter: i2c-4-mux (chan_id 3)
+TOP_LC_XP3R3V_B Voltage:  +3.26 V  (min =  +3.14 V, max =  +3.47 V)
+TOP_LC_XP3R3V_B Current: +43.00 A  (min =  +0.00 A, max = +42.00 A)   //超了
+
+mp2978-i2c-20-69
+Adapter: i2c-4-mux (chan_id 4)
+BOTTOM_LC_XP3R3V_A Voltage:  +3.26 V  (min =  +3.14 V, max =  +3.47 V)
+BOTTOM_LC_XP3R3V_A Current: +46.00 A  (min =  +0.00 A, max = +48.00 A)   //快要超了
+
+mp2978-i2c-20-6b
+Adapter: i2c-4-mux (chan_id 4)
+BOTTOM_LC_XP3R3V_B Voltage:  +3.26 V  (min =  +3.14 V, max =  +3.47 V)
+BOTTOM_LC_XP3R3V_B Current: +47.00 A  (min =  +0.00 A, max = +48.00 A)   //快要超了
+
+max116x-i2c-21-34
+Adapter: i2c-4-mux (chan_id 5)
+SW_XP5R0V:         +5.04 V  (min =  +4.50 V, max =  +5.50 V)
+SW_XP3R3V_1_QSFP:  +3.34 V  (min =  +3.04 V, max =  +3.57 V)
+SW_XP3R3V_2_QSFP:  +3.33 V  (min =  +3.04 V, max =  +3.57 V)
+SW_XP1R8V_SI5391:  +1.79 V  (min =  +1.66 V, max =  +1.94 V)
+
+net_brcm-i2c-22-44
+Adapter: i2c-4-mux (chan_id 6)
+temp1:        +46.3 C  
+temp2:        +49.4 C  
+temp3:        +49.6 C  
+temp4:        +47.0 C  
+temp5:        +45.1 C  
+temp6:        +44.9 C  
+temp7:        +46.5 C  
+temp8:        +47.7 C  
+temp9:        +48.0 C  
+temp10:       +46.5 C  
+temp11:       +45.8 C  
+temp12:       +44.9 C  
+temp13:       +45.4 C  
+temp14:       +45.4 C  
+temp15:       +42.3 C  
+
+dps1100-i2c-24-5b
+Adapter: i2c-6-mux (chan_id 0)
+vin:         +223.75 V  (min = +90.00 V, max = +264.00 V)
+vout1:       +12.12 V  (min = +10.80 V, max = +13.20 V)
+fan1:        11888 RPM  (min = 1000 RPM, max = 28000 RPM)
+temp1:        +30.0 C  (high = +70.0 C, hyst = +60.0 C)
+temp2:        +39.0 C  (high = +70.0 C, hyst = +60.0 C)
+pin:         366.50 W  (max =   1.22 kW)
+pout1:       342.00 W  (max =   1.10 kW)
+iin:          +1.66 A  (min =  +0.00 A, max =  +7.00 A)
+iout1:       +28.22 A  (min =  +0.00 A, max = +90.00 A)
+
+dps1100-i2c-25-5b
+Adapter: i2c-6-mux (chan_id 1)
+vin:         +223.75 V  (min = +90.00 V, max = +264.00 V)
+vout1:       +12.16 V  (min = +10.80 V, max = +13.20 V)
+fan1:        11888 RPM  (min = 1000 RPM, max = 28000 RPM)
+temp1:        +30.0 C  (high = +70.0 C, hyst = +60.0 C)
+temp2:        +39.0 C  (high = +70.0 C, hyst = +60.0 C)
+pin:         353.00 W  (max =   1.22 kW)
+pout1:       330.00 W  (max =   1.10 kW)
+iin:          +1.60 A  (min =  +0.00 A, max =  +7.00 A)
+iout1:       +27.16 A  (min =  +0.00 A, max = +90.00 A)
+
+dps1100-i2c-26-5b
+Adapter: i2c-6-mux (chan_id 2)
+vin:         +224.25 V  (min = +90.00 V, max = +264.00 V)
+vout1:       +12.13 V  (min = +10.80 V, max = +13.20 V)
+fan1:        11904 RPM  (min = 1000 RPM, max = 28000 RPM)
+temp1:        +30.0 C  (high = +70.0 C, hyst = +60.0 C)
+temp2:        +39.0 C  (high = +70.0 C, hyst = +60.0 C)
+pin:         354.00 W  (max =   1.22 kW)
+pout1:       329.00 W  (max =   1.10 kW)
+iin:          +1.60 A  (min =  +0.00 A, max =  +7.00 A)
+iout1:       +27.12 A  (min =  +0.00 A, max = +90.00 A)
+
+dps1100-i2c-27-5b
+Adapter: i2c-6-mux (chan_id 3)
+vin:         +224.25 V  (min = +90.00 V, max = +264.00 V)
+vout1:       +12.16 V  (min = +10.80 V, max = +13.20 V)
+fan1:        11872 RPM  (min = 1000 RPM, max = 28000 RPM)
+temp1:        +29.0 C  (high = +70.0 C, hyst = +60.0 C)
+temp2:        +39.0 C  (high = +70.0 C, hyst = +60.0 C)
+pin:         352.50 W  (max =   1.22 kW)
+pout1:       334.50 W  (max =   1.10 kW)
+iin:          +1.60 A  (min =  +0.00 A, max =  +7.00 A)
+iout1:       +27.75 A  (min =  +0.00 A, max = +90.00 A)
+
+tmp75-i2c-31-48
+Adapter: i2c-6-mux (chan_id 7)
+temp1:        +28.6 C  (high = +70.0 C, hyst = +60.0 C)
+
+tmp75-i2c-31-49
+Adapter: i2c-6-mux (chan_id 7)
+temp1:        +28.6 C  (high = +70.0 C, hyst = +60.0 C)
+
+tmp75-i2c-42-4c
+Adapter: i2c-7-mux (chan_id 0)
+temp1:        +32.1 C  (high = +70.0 C, hyst = +60.0 C)
+
+tmp75-i2c-42-4d
+Adapter: i2c-7-mux (chan_id 0)
+temp1:        +32.6 C  (high = +70.0 C, hyst = +60.0 C)
+
+tmp75-i2c-43-4c
+Adapter: i2c-7-mux (chan_id 1)
+temp1:        +29.9 C  (high = +70.0 C, hyst = +60.0 C)
+
+tmp75-i2c-43-4d
+Adapter: i2c-7-mux (chan_id 1)
+temp1:        +30.2 C  (high = +70.0 C, hyst = +60.0 C)
+
+tmp422-i2c-44-4c
+Adapter: i2c-7-mux (chan_id 2)
+temp1:        +33.2 C  
+temp2:        +58.6 C  
+temp3:        +58.1 C  
+
+tmp75-i2c-44-4d
+Adapter: i2c-7-mux (chan_id 2)
+temp1:        +32.4 C  (high = +70.0 C, hyst = +60.0 C)
+
+tmp75-i2c-44-48
+Adapter: i2c-7-mux (chan_id 2)
+temp1:        +34.4 C  (high = +70.0 C, hyst = +60.0 C)
+
+fancpld-i2c-8-0d
+Adapter: ast_i2c.8
+Fan 5 Front: 8100 RPM  (min = 1000 RPM, max = 32670 RPM)
+Fan 5 Rear:  7200 RPM  (min = 1000 RPM, max = 27170 RPM)
+Fan 4 Front: 8100 RPM  (min = 1000 RPM, max = 32670 RPM)
+Fan 4 Rear:  7050 RPM  (min = 1000 RPM, max = 27170 RPM)
+Fan 3 Front: 8100 RPM  (min = 1000 RPM, max = 32670 RPM)
+Fan 3 Rear:  7050 RPM  (min = 1000 RPM, max = 27170 RPM)
+Fan 2 Front: 8100 RPM  (min = 1000 RPM, max = 32670 RPM)
+Fan 2 Rear:  7200 RPM  (min = 1000 RPM, max = 27170 RPM)
+Fan 1 Front: 8100 RPM  (min = 1000 RPM, max = 32670 RPM)
+Fan 1 Rear:  7350 RPM  (min = 1000 RPM, max = 27170 RPM)
+
+tmp75-i2c-39-48
+Adapter: i2c-8-mux (chan_id 7)
+temp1:        +30.5 C  (high = +70.0 C, hyst = +60.0 C)
+
+tmp75-i2c-39-49
+Adapter: i2c-8-mux (chan_id 7)
+temp1:        +29.9 C  (high = +70.0 C, hyst = +60.0 C)
