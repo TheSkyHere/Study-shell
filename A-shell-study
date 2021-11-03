@@ -1,0 +1,268 @@
+while [ $# -gt 0 ] 
+#注意空格，方括号为条件判断，$#参数个数,$@参数单独引,$*参数一起引；该句表示参数个数大于0，如果用-eq就是等于0，-ne就是不等于0；
+
+-eq           //等于
+
+-ne           //不等于
+
+-gt            //大于 （greater ）
+
+-lt            //小于  （less）
+
+-ge            //大于等于
+
+-le            //小于等于
+
+
+
+shell中判断语句if中-z 和 -n
+
+[ -a FILE ] 如果 FILE 存在则为真。
+
+[ -b FILE ] 如果 FILE 存在且是一个块特殊文件则为真。
+
+[ -c FILE ] 如果 FILE 存在且是一个字特殊文件则为真。
+
+[ -d FILE ] 如果 FILE 存在且是一个目录则为真。
+
+[ -e FILE ] 如果 FILE 存在则为真。
+
+[ -f FILE ] 如果 FILE 存在且是一个普通文件则为真。
+
+[ -g FILE ] 如果 FILE 存在且已经设置了SGID则为真。
+
+[ -h FILE ] 如果 FILE 存在且是一个符号连接则为真。
+
+[ -k FILE ] 如果 FILE 存在且已经设置了粘制位则为真。
+
+[ -p FILE ] 如果 FILE 存在且是一个名字管道(F如果O)则为真。
+
+[ -r FILE ] 如果 FILE 存在且是可读的则为真。
+
+[ -s FILE ] 如果 FILE 存在且大小不为0则为真。
+
+[ -t FD ] 如果文件描述符 FD 打开且指向一个终端则为真。
+
+[ -u FILE ] 如果 FILE 存在且设置了SUID (set user ID)则为真。
+
+[ -w FILE ] 如果 FILE 如果 FILE 存在且是可写的则为真。
+
+[ -x FILE ] 如果 FILE 存在且是可执行的则为真。
+
+[ -O FILE ] 如果 FILE 存在且属有效用户ID则为真。
+
+[ -G FILE ] 如果 FILE 存在且属有效用户组则为真。
+
+[ -L FILE ] 如果 FILE 存在且是一个符号连接则为真。
+
+[ -N FILE ] 如果 FILE 存在 and has been mod如果ied since it was last read则为真。
+
+[ -S FILE ] 如果 FILE 存在且是一个套接字则为真。
+
+[ FILE1 -nt FILE2 ] 如果 FILE1 has been changed more recently than FILE2, or 如果 FILE1 exists and FILE2 does not则为真。
+
+[ FILE1 -ot FILE2 ] 如果 FILE1 比 FILE2 要老, 或者 FILE2 存在且 FILE1 不存在则为真。
+
+[ FILE1 -ef FILE2 ] 如果 FILE1 和 FILE2 指向相同的设备和节点号则为真。
+
+[ -o OPTIONNAME ] 如果 shell选项 “OPTIONNAME” 开启则为真。
+
+[ -z STRING ] “STRING” 的长度为零则为真。
+
+[ -n STRING ] or [ STRING ] “STRING” 的长度为非零 non-zero则为真。
+
+[ STRING1 == STRING2 ] 如果2个字符串相同。 “=” may be used instead of “==” for strict POSIX compliance则为真。
+
+[ STRING1 != STRING2 ] 如果字符串不相等则为真。
+
+[ STRING1 < STRING2 ] 如果 “STRING1” sorts before “STRING2” lexicographically in the current locale则为真。
+
+[ STRING1 > STRING2 ] 如果 “STRING1” sorts after “STRING2” lexicographically in the current locale则为真。
+
+[ ARG1 OP ARG2 ] “OP” is one of -eq, -ne, -lt, -le, -gt or -ge. These arithmetic binary operators return true if “ARG1” is equal to, not equal to, less than, less than or equal to, greater than, or greater than or equal to “ARG2”, respectively. “ARG1” and “ARG2” are integers.
+
+ 
+
+bash中如何实现条件判断
+
+-条件测试类型
+
+-整数测试
+-字符测试
+-文件测试
+
+条件测试的表达式
+
+[ expression ] 括号两端必须要有空格
+
+[[ expression ]] 括号两端必须要有空格
+
+test expression
+
+组合测试条件：
+
+-a　　: and
+
+-o　　: or
+
+ !　　 : not
+
+
+整数比较
+
+-eq 测试两个整数是否相等
+-ne 测试两个整数是否不等
+-gt 测试一个数是否大于另一个数
+-lt 测试一个数是否小于另一个数
+-ge 大于或等于
+-le 小于或等于
+
+命令间的逻辑关系, 逻辑与：&& , 逻辑或：||
+
+ 
+
+字符串比较
+
+== 等于 两边要有空格
+!= 不等
+> 大于
+< 小于
+
+ 
+
+文件测试
+
+-z string 测试指定字符是否为空，空着真，非空为假
+-n string 测试指定字符串是否为不空，空为假 非空为真
+-e FILE 测试文件是否存在
+-f file 测试文件是否为普通文件
+-d file 测试指定路径是否为目录
+-r file 测试文件对当前用户是否可读
+-w file 测试文件对当前用户是否可写
+-x file 测试文件对当前用户是都可执行
+-z 是否为空 为空则为真
+-a 是否不空
+
+
+if语法
+
+单分支if语句
+if 判断条件；then
+statement1
+statement2
+.......
+fi
+
+
+双分支的if语句：
+
+if 判断条件；then
+statement1
+statement2
+.....
+else
+statement3
+statement4
+fi
+
+注意：
+
+if语句进行判断是否为空
+[ "$name” = "" ]
+
+
+等同于
+
+[ ! "$name" ]
+[ -z "$name" ]
+
+
+使用if语句的时候进行判断如果是进行数值类的判断，建议使用let(())进行判断，对于字符串等使用test[ ] or [[ ]] 进行判断
+
+(())中变量是可以不使用$来引用的
+
+ for example：表述数字范围的时候 可以使用if可以是使用case
+
+ if [ $x -gt 90 -o $x -lt 100 ]
+
+case $x in
+100)
+9[0-9])
+
+ 
+
+这个语句的意思是如果$name为空，那么X=X成立折执行下面的结果；
+
+if [ "X$name" != "x" ]
+
+
+写脚本的时候很多时候需要用到回传命令，$?如果上一个命令执行成功，回传值为0，否则为1~255之间的任何一个，0为真，非0为假。
+
+条件测试的写法
+
+1、执行一个命令的结果
+if grep -q "rm" fs.sh;then
+
+ 
+
+2、传回一个命令执行结果的相反值
+if ！grep -q "rm" fs.sh;then
+
+ 
+
+3、使用复合命令（（算式））
+if ((a>b));then
+
+ 
+
+4、使用bash关键字 [[判断式]]
+if [[ str > xyz ]];then
+
+ 
+
+5、使用内置命令：test 判断式
+if test "str" \> "xyz";then
+
+ 
+
+6、使用内置命令：[判断式] 类似test
+if [ "str" \> "xyz" ];then
+
+ 
+
+7、使用-a -o进行逻辑组合
+[ -r filename -a -x filename ]
+
+ 
+
+8、命令&&命令
+if grep -q "rm" fn.sh && [ $a -lt 100 ];then
+
+ 
+
+9、命令||命令
+if grep -q "rm" fn.sh || [ $a -lt 100 ];then
+
+
+
+!#/bin/sh
+
+
+echo >> ./AC_cycle_log.log
+
+
+nohup command &
+
+
+
+$0	脚本名称
+$1-9　　　　　	脚本执行时的参数1到参数9
+$?	脚本的返回值　　　　
+$#	脚本执行时，输入的参数的个数
+$@	输入的参数的具体内容（将输入的参数作为一个多个对象，即是所有参数的一个列表）
+$*	输入的参数的具体内容（将输入的参数作为一个单词）
+
+
+head -n 1  //输出前1行
+greap
+cut
