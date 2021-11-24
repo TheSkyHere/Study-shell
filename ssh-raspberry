@@ -1,16 +1,18 @@
 #!/usr/bin/expect 
 set timeout 20
 
-if { [llength $argv] < 2} {
+if { [llength $argv] < 1} {
     puts "Usage:"
     puts "$argv0 raspberrNUM ttyUSBx"
+    puts "$argv0 raspberrNUM"
+  
     # puts "$argv0 raspberrNUM ttyUSBx [force]"
     # puts "force if other used tty will kill process"
     exit 1
 }
-
-set num     [lindex $argv 0]
-set ttyUSBx [lindex $argv 1]
+set arg_leng [llength $argv  ]
+set num      [lindex  $argv 0]
+set ttyUSBx  [lindex  $argv 1]
 # set force    [lindex $argv 2]
 
 set local_file ./tmp/deploy/images/obmc-cl/flash-obmc-cl
@@ -23,10 +25,10 @@ if { $num == 1 } {
     spawn ssh pi@10.75.92.51
 }
 if { $num == 2 } {
-    spawn ssh pi@10.75.92.81
+    spawn ssh pi@10.75.92.152
 }
-if { $num == 2 } {
-    spawn ssh pi@10.75.92.81
+if { $num == 3 } {
+    spawn ssh pi@10.75.92.41
 }
 
 expect {
@@ -38,6 +40,10 @@ expect {
         set timeout 1000
         set passwderror 1
         send "$passwd\r"
+	if { $arg_leng == 1} {
+    	  interact
+	}
+
         exp_continue
     }
     "*pi@raspberrypi*" {
