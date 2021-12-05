@@ -1,0 +1,69 @@
+#!/usr/bin/expect 
+set timeout 20
+
+if { [llength $argv] < 1} {
+    puts "Usage:"
+    puts "$argv0 raspberrNUM ttyUSBx"
+    puts "$argv0 raspberrNUM"
+  
+    # puts "$argv0 raspberrNUM ttyUSBx [force]"
+    # puts "force if other used tty will kill process"
+    exit 1
+}
+set arg_leng [llength $argv  ]
+set num      [lindex  $argv 0]
+set ttyUSBx  [lindex  $argv 1]
+# set force    [lindex $argv 2]
+
+set local_file ./tmp/deploy/images/obmc-cl/flash-obmc-cl
+set passwd 123456
+set passwderror 0
+
+
+# spawn ssh-keygen -f "/home/morton/.ssh/known_hosts" -R $IP
+if { $num == 1 } {
+    spawn ssh pi@10.75.92.51
+}
+if { $num == 2 } {
+    spawn ssh pi@10.75.92.152
+}
+if { $num == 3 } {
+    spawn ssh pi@10.75.92.41
+}
+
+expect {
+    "*assword:*" {
+        if { $passwderror == 1 } {
+        puts "passwd is error"
+        exit 2
+        }
+        set timeout 1000
+        set passwderror 1
+        send "$passwd\r"
+	if { $arg_leng == 1} {
+    	  interact
+	}
+
+        exp_continue
+    }
+    "*pi@raspberrypi*" {
+        send " picocom -b 115200 /dev/ttyUSB$ttyUSBx\r"
+        exp_continue
+    }
+    "*FATAL: cannot lock*" {
+        # if { $force == "force" } {
+        #     puts "you can kill process and try again"
+        #     exit 1
+        # }
+        send " ps -ef |grep -i ttyUSB$ttyUSBx\r "
+        interact
+    }
+    "*FATAL: cannot open*" {
+        puts "!!!   ########################################   !!!"
+        puts "!!!no ttyUSB$ttyUSBx"
+        exit 1
+    }
+    "*Terminal ready*" {
+        interact
+    }
+}
