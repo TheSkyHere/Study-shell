@@ -1,20 +1,18 @@
 #!/bin/sh
-
-logfile="./morton.log"
+###
+ # @Description: 
+ # @Version: 2.0
+ # @Author: matao
+ # @Date: 2021-11-24 10:53:01
+ # @LastEditors: matao
+ # @LastEditTime: 2022-02-22 18:16:05
+### 
 
 
 while :
 do 
-    echo "Morton_start========================!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!" >> $logfile
-    date  >> $logfile
-    echo "sensor-util smb --force |grep -i GB_" >> $logfile
-    string=$(sensor-util smb --force |grep -i GB_)
-    echo $string >> $logfile
+    sleep 5
 
-    if [[ $string == *"NA"* ]]; then
-        echo "===========================Failed read sensor-util =============" >> $logfile
-    fi
-
-    echo "morton============test----over------------------------------------" >> $logfile
+    echo "morton============test----over------------------------------------"
 
 done

@@ -1,0 +1,155 @@
+#!/usr/bin/expect 
+
+#=====配置文件===================================================
+<名称> <delay/check_str:"指令string"> ....  interact/over
+
+
+#===============================================================
+
+if { [llength $argv] < 1} {
+    puts "Usage:"
+    puts "$argv0 raspberr ttyUSBx <pi2 0>"
+    puts "$argv0 raspberr <pi1> <pi2> <pi3> <amipi>"
+    puts "$argv0 project_name <hollywood> <s3ip>"
+
+
+  
+    # puts "$argv0 raspberrNUM ttyUSBx [force]"
+    # puts "force if other used tty will kill process"
+    exit 1
+}
+set arg_leng [llength $argv  ]
+set argv_0   [lindex  $argv 0]
+set ttyUSBx  [lindex  $argv 1]
+# set force    [lindex $argv 2]
+
+
+set timeout 20
+set serviceIP 10.75.159.14
+set hollywood_ip [exec sh -c {curl -s http://10.75.159.14:8080/api/help | python -m json.tool |grep -i "hollywood" |cut -d '"' -f 4}]
+set s3ip_bmc_ip [exec sh -c {curl -s http://10.75.159.14:8080/api/help | python -m json.tool |grep -i "s3ip-openbmc-bmc" |cut -d '"' -f 4}]
+set s3ip_bsp_ip [exec sh -c {curl -s http://10.75.159.14:8080/api/help | python -m json.tool |grep -i "s3ip-bsp-bmc" |cut -d '"' -f 4}]
+
+set pi1_ip [exec sh -c {curl -s http://10.75.159.14:8080/api/help | python -m json.tool |grep -i "pi1" |cut -d '"' -f 4}]
+set pi2_ip [exec sh -c {curl -s http://10.75.159.14:8080/api/help | python -m json.tool |grep -i "pi2" |cut -d '"' -f 4}]
+set pi3_ip [exec sh -c {curl -s http://10.75.159.14:8080/api/help | python -m json.tool |grep -i "pi3" |cut -d '"' -f 4}]
+
+set local_file ./tmp/deploy/images/obmc-cl/flash-obmc-cl
+set passwderror 0
+
+
+# spawn ssh-keygen -f "/home/morton/.ssh/known_hosts" -R $IP
+if { $argv_0 == "docker" } {
+    set passwd 1
+    spawn ssh cit@10.75.159.16
+    expect {
+        "*yes/no*" {
+            send "yes\r"
+            exp_continue
+        }
+        "*assword:*" {
+            if { $passwderror == 1 } {
+            puts "passwd is error"
+            exit 2
+            }
+            set timeout 1000
+            set passwderror 1
+            send "$passwd\r"
+            sleep 0.2
+            send "sudo su\r"
+            sleep 0.2
+            send "$passwd\r"
+            sleep 0.2
+            send "docker exec -it 16d93b0d2026 bash\r"
+            sleep 0.2
+            send "zsh\r"
+            sleep 0.2
+            send "ls\r"
+            sleep 0.2
+            send "cd\r"
+            interact
+        }
+    }
+}
+if { $argv_0 == "pi1" } {
+    set passwd 123456
+    spawn ssh pi@$pi1_ip
+}
+if { $argv_0 == "pi2" } {
+    set passwd 123456
+    spawn ssh pi@$pi2_ip
+}
+if { $argv_0 == "pi3" } {
+    set passwd 123456
+    spawn ssh pi@$pi3_ip
+}
+if { $argv_0 == "hollywood-diag" } {
+    set passwd 0penBmc
+    spawn ssh-keygen -f "/home_a/matao/.ssh/known_hosts" -R $hollywood_ip
+    spawn ssh root@$hollywood_ip
+}
+if { $argv_0 == "hollywood" } {
+    set passwd 0penBmc
+    spawn ssh-keygen -f "/home_a/matao/.ssh/known_hosts" -R 10.75.92.91
+    spawn ssh root@10.75.159.35
+}
+if { $argv_0 == "s3ip-bmc" } {
+    set passwd 0penBmc
+    # spawn ssh-keygen -f "/home_a/mmatao/.ssh/known_hosts" -R 
+    spawn  ssh-keygen -f "/home_a/matao/.ssh/known_hosts" -R "$s3ip_bmc_ip"
+    spawn ssh root@$s3ip_bmc_ip
+}
+if { $argv_0 == "s3ip-bsp" } {
+    set passwd 0penBmc
+    # spawn ssh-keygen -f "/home_a/mmatao/.ssh/known_hosts" -R 
+    spawn  ssh-keygen -f "/home_a/matao/.ssh/known_hosts" -R "$s3ip_bsp_ip"
+    spawn ssh root@$s3ip_bsp_ip
+}
+if { $argv_0 == "amipi" } {
+    # set passwd 0penBmc
+    # # spawn ssh-keygen -f "/home_a/mmatao/.ssh/known_hosts" -R 
+    # spawn  ssh-keygen -f "/home_a/matao/.ssh/known_hosts" -R "$s3ip_ip"
+    # spawn ssh root@$s3ip_ip
+}
+
+expect {
+    "*yes/no*" {
+        send "yes\r"
+        exp_continue
+    }
+    "*assword:*" {
+        if { $passwderror == 1 } {
+        puts "passwd is error"
+        exit 2
+        }
+        set timeout 1000
+        set passwderror 1
+        send "$passwd\r"
+        if { $arg_leng == 1} {
+            interact
+        }
+        if { $arg_leng == 2} {
+            exp_continue
+        }
+    }
+    "*pi@raspberrypi*" {
+        send " picocom -b 115200 /dev/ttyUSB$ttyUSBx\r"
+        exp_continue
+    }
+    "*FATAL: cannot lock*" {
+        # if { $force == "force" } {
+        #     puts "you can kill process and try again"
+        #     exit 1
+        # }
+        send " ps -ef |grep -i ttyUSB$ttyUSBx |grep -v grep\r "
+        interact
+    }
+    "*FATAL: cannot open*" {
+        puts "!!!   ########################################   !!!"
+        puts "!!!no ttyUSB$ttyUSBx"
+        exit 1
+    }
+    "*Terminal ready*" {
+        interact
+    }
+}

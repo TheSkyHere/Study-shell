@@ -264,5 +264,13 @@ $*	输入的参数的具体内容（将输入的参数作为一个单词）
 
 
 head -n 1  //输出前1行
-greap
-cut
+grep
+cut -d ":" -f2 temp\ copy  //根据":"分割字符串  
+cat temp\ copy |head -n 1 |awk -F ':' '{printf $2}'   //根据":"分割字符串 
+//注意awk和cut的区别，awk中的回车不算字符计算  cut 每一行都使用相同的分割方式
+
+
+//使脚本加入开机自启动中
+sudo update-rc.d mystart defaults
+https://www.cnblogs.com/guke/p/3978894.html
+https://blog.csdn.net/weixin_44537992/article/details/121630794

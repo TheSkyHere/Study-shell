@@ -1,40 +1,60 @@
 #!/usr/bin/expect 
-set timeout 20
 
-if { [llength $argv] < 1} {
-    puts "Usage:"
-    puts "$argv0 IP"
-    exit 1
+if { [llength $argv] < 2} { 
+    puts "Usage:" 
+    puts "$argv0 <Image path> IP" 
+    puts "$argv0 <Image path> IP <path>" 
+    exit 1 
+} 
+
+set timeout 20 
+set Local_File [lindex $argv 0] 
+set IP [lindex $argv 1]
+set STRING 0 
+spawn ssh-keygen -f "/home_a/matao/.ssh/known_hosts" -R $IP
+
+proc myscpfunc { STRING1 } {
+    set passwd 0penBmc
+    set passwderror 0 
+    expect { 
+        "*assword:*" { 
+            if { $passwderror == 1 } { 
+            puts "passwd is error" 
+            exit 2 
+            } 
+            set timeout 1000 
+            set passwderror 1 
+            send "$passwd\r" 
+            exp_continue 
+        } 
+        "yes/no" { 
+            send "yes\r" 
+            exp_continue 
+        } 
+        timeout { 
+            puts "connect is timeout" 
+            exit 3 
+        } 
+    } 
 }
 
-set IP [lindex $argv 0]
-set local_file ./tmp/deploy/images/obmc-cl/flash-obmc-cl
-set passwd 0penBmc
-set passwderror 0
 
+if { [llength $argv] == 2} { 
+    if {[regexp -nocase "obmc-phosphor-image" $Local_File]} {
+        spawn scp $Local_File root@$IP:/tmp/images
+        myscpfunc $STRING
 
-spawn ssh-keygen -f "/home/morton/.ssh/known_hosts" -R $IP
-
-spawn scp $local_file /home/morton/usr/local/bin/bmc_upgrade_for_ALI.sh root@$IP:~
-
-
-expect {
-    "*assword:*" {
-        if { $passwderror == 1 } {
-        puts "passwd is error"
-        exit 2
-        }
-        set timeout 1000
-        set passwderror 1
-        send "$passwd\r"
-        exp_continue
+        spawn scp /home_a/matao/usr/local/bin/BMC_upgrade.sh root@$IP:~/
+        myscpfunc $STRING
+    } else {
+        spawn scp $Local_File /home_a/matao/usr/local/bin/BMC_upgrade.sh root@$IP:~/
+        myscpfunc $STRING
     }
-    "*yes/no*" {
-        send "yes\r"
-        exp_continue
-    }
-    timeout {
-        puts "connect is timeout"
-        exit 3
-    }
-}
+    
+} 
+
+if { [llength $argv] == 3} { 
+    set path [lindex $argv 2]
+    spawn scp $Local_File  root@$IP:$path
+    myscpfunc $STRING
+} 

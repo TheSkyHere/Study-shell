@@ -1,0 +1,89 @@
+#!/bin/bash
+
+usage() {
+    echo "Usage: build an openbmc image"
+    echo "    $(basename $0) <platform>"
+    echo "    $(basename $0) <platform> <feature>"
+    echo "    $(basename $0) <platform> <clean>"
+    echo "    $(basename $0) <platform> <clean> <feature>"
+    echo
+    echo "Examples:"
+    echo "    $(basename $0) kestrel"
+    echo "    $(basename $0) kestrel ipmid"
+    echo "    $(basename $0) kestrel clean"
+    echo "    $(basename $0) kestrel clean ipmid"
+}
+
+
+if [ $# -eq 1 ]; then
+    source ./setup $1;
+    echo "DL_DIR ?= \"/home_b/matao/usr/local/downloads_ocp\"" >> "conf/local.conf"
+    bitbake  obmc-phosphor-image 
+
+elif [ $# -ge 2 ]; then
+    case $2 in
+    "clean")
+        source ./setup $1;
+        echo "DL_DIR ?= \"/home_b/matao/usr/local/downloads_ocp\"" >> "conf/local.conf"
+        bitbake  obmc-phosphor-image -c cleanall obmc-phosphor-image
+    ;;
+    "u-boot")
+	    # source openbmc-init-build-env meta-huaqin/meta-$1 build-$1 && buildpath=$(pwd); downloads; bitbake u-boot
+    ;;
+    "linux-aspeed")
+	    # source openbmc-init-build-env meta-huaqin/meta-$1 build-$1 && buildpath=$(pwd); downloads; bitbake linux-aspeed
+    ;;
+    "modify-u-boot")
+	    # source openbmc-init-build-env meta-huaqin/meta-$1 build-$1 && buildpath=$(pwd);  devtool modify u-boot
+        echo "******************************************************************************************"
+        echo "                        You can modify u-boot in build-$1/workspace                       "
+        echo "******************************************************************************************"
+    ;;
+    "modify-linux-aspeed")
+	    # source openbmc-init-build-env meta-huaqin/meta-$1 build-$1 && buildpath=$(pwd);  devtool modify linux-aspeed
+        echo "******************************************************************************************"
+        echo "                        You can modify linux-aspeedt in build-$1/workspace                "
+        echo "******************************************************************************************"
+    ;;
+    "reset-u-boot")
+	    # source openbmc-init-build-env meta-huaqin/meta-$1 build-$1 && buildpath=$(pwd);  devtool reset u-boot
+        echo "******************************************************************************************"
+        echo "                                   Reset u-boot                                           "
+        echo "******************************************************************************************"
+    ;;
+    "reset-linux-aspeed")
+	    # source openbmc-init-build-env meta-huaqin/meta-$1 build-$1 && buildpath=$(pwd);  devtool reset linux-aspeed
+        echo "******************************************************************************************"
+        echo "                                  Reset linux-aspeedt                                     "
+        echo "******************************************************************************************"
+    ;;
+    *)
+	    source openbmc-init-build-env meta-huaqin/meta-$1 build-$1 && buildpath=$(pwd); downloads; bitbake $2
+    ;;
+    esac
+else
+    usage
+fi
+
+exit 0
+
+
+
+
+# 手动编译使用流程：
+# source ./setup gnr5713bb
+# echo "DL_DIR ?= \"/home_b/matao/usr/local/downloads_ocp\"" >> "conf/local.conf"
+# bitbake  obmc-phosphor-image 
+
+# 如果需要编译uboot或则kernel
+#     1.3. Kernel & U-Boot Development
+#     By default, OpenBMC build process fetches and build Linux kernel and U-boot directly from GitHub repository.
+#         • To make local kernel changes and build with the modified kernel:
+#     In the build directory, run
+#         $ devtool modify linux-aspeed
+#     or
+#         $ devtool modify u-boot
+#     This will create local Linux package under /workspace/sources/linux-aspeed for development
+#         • To go back to default recipes, run
+#         $ devtool reset linux-aspeed
+#         $ devtool reset u-boot 

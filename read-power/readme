@@ -1,0 +1,6 @@
+##功耗读取脚本
+拷贝文件到BMC系统下，执行对应的脚本即可读取功耗。
+read_node_power_temp.sh 脚本在BB  BMC下使用
+get_cpu_power           脚本在BB  BMC下使用
+read_psu_power.sh  脚本在CMM BMC下使用
+read_fan_power.sh  脚本在CMM BMC下使用

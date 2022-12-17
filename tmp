@@ -1,65 +1,226 @@
-/home/morton
-10.204.82.102
-AC_cycle_20210610_bios_update.sh
-AC_cycle_20210610.sh
-AC_cycle_20210616_bios_update.sh
-AC_cycle_20210622_bios_update.sh
-AC_cycle_20210707_bios_update.sh
-AC_cycle _pdu.sh
-AC_cycle_power_off_20210701.sh
-AC_cycle_power_off _no_delay.sh
-AC_cycle_power_off.sh
-AC_cycle.sh
-aclocal
-aclocal-1.13
-aclocal-1.14
-automake
-automake-1.13
-automake-1.14
-bmc_update.sh
-bmc_upgrade_for_ALI.sh
-cpBinToMDSbin
-CreatPRJ.sh
-docker-run.sh
-fcpld
-FindSourceSPX
-FlashTool64Bit
-futurize
-genlink.py
-getSDR.sh
-iec_curl-Ali.sh
-iec_curl-Fearow.sh
-iec_curl-Horsea_ali.sh
-iec_curl-Seadra_Baidu.sh
-iec_curl-Seaking.sh
-iec_curl-TB600G4.sh
-ipmi-test-2.sh
-ipmi-test-3.sh
-ipmi-test-AC_cycle.sh
-ipmitool_ali
-istfwupdate_Ditto
-kernel_panic_test.sh
-lsof
-mds.sh
-pasteurize
-power_cycle.sh
-power-issue.txt
-rbt
-refresh_cpld_stress.sh
-repo
-repo.old
-Scan_I2C_17_3c.sh
-scp-obmc
-scp_OBMC_ALI
-scp_upgread_ALI
-set_pwm_max_to_97.patch
-swlabBMCAthenaG2_Bottom.sh
-t
-Test_cit.sh
-test-psu-for-ali
-test.sh
-tmp
-tqdm
-wireshark
-Yafuflash-horsea-ali
-morton - test 
+docker run -it e8d6f321489f
+
+build
+export BSP=/barefoot/test/bf-reference-bsp-9.3.1
+export SDE_INSTALL=/barefoot/test/bf-sde-9.3.1/install/
+export BSP_INSTALL=$SDE_INSTALL
+cd $BSP/bf-platforms-9.3.1
+./configure --prefix=$BSP_INSTALL --with-tofino --with-tof-brgup-plat enable_thrift=yes
+make
+make install
+
+
+export BSP=/barefoot/test/bf-reference-bsp-9.3.1
+export SDE_INSTALL=/barefoot/test/bf-sde-9.3.1/install/
+export BSP_INSTALL=$SDE_INSTALL
+cd $BSP/bf-platforms-9.3.1
+./configure --prefix=$BSP_INSTALL --with-tofino --with-tof-brgup-plat enable_thrift=yes
+make
+make install
+
+
+编译SDE：
+export SDE_INSTALL=/barefoot/test/bf-sde-9.3.1/install/
+./p4studio_build.py --use-profile diags_profile -shc
+
+
+
+
+
+
+
+
+
+14服务器编译：
+export BSP=/home_a/matao/Project/test/bf-reference-bsp-9.3.1
+export SDE_INSTALL=/home_a/matao/Project/test/bf-sde-9.3.1/install
+export BSP_INSTALL=$SDE_INSTALL
+cd $BSP
+./extract_all.sh
+cd $BSP/bf-platforms-9.3.1
+./configure --prefix=$BSP_INSTALL --with-tofino --with-tof-brgup-plat enable_thrift=yes
+make
+make install
+
+
+16服务器编译：
+export BSP=/home/cit/matao/SDE/bf-reference-bsp-9.3.1
+export SDE_INSTALL=//home/cit/matao/SDE/bf-sde-9.3.1/install
+export BSP_INSTALL=$SDE_INSTALL
+cd $BSP
+./extract_all.sh
+cd $BSP/bf-platforms-9.3.1
+./configure --prefix=$BSP_INSTALL --with-tofino --with-tof-brgup-plat enable_thrift=yes
+make
+make install
+
+
+
+16 docker 编译SDE-install服务器编译：
+export BSP=/home/SDE-install/bf-reference-bsp-9.3.1
+export SDE_INSTALL=/home/SDE-install/bf-sde-9.3.1/install
+export BSP_INSTALL=$SDE_INSTALL
+cd $BSP
+./extract_all.sh
+cd $BSP/bf-platforms-9.3.1
+./configure --prefix=$BSP_INSTALL --with-tofino enable_thrift=yes
+make
+make install
+
+
+
+
+
+
+
+
+
+export BSP=/root/Project/SW6137A-SDE/bf-reference-bsp-9.3.1\r
+cd $BSP\r
+./extract_all.sh\r
+export SDE_INSTALL=/root/Project/SW6137A-SDE/bf-sde-9.3.1/install\r
+export BSP_INSTALL=$SDE_INSTALL\r
+cd $BSP/bf-platforms-9.3.1\r
+./configure --prefix=$BSP_INSTALL --with-tofino enable_thrift=yes\r
+
+./configure --prefix=$BSP_INSTALL --with-tofino --with-tof-brgup-plat enable_thrift=yes
+
+
+
+
+加载卸载驱动：
+./install/bin/bf_kdrv_mod_unload 
+source set_sde.bash
+./install/bin/bf_kdrv_mod_load $SDE_INSTALL
+./run_switchd.sh -p diag
+
+
+
+
+build SDE  (编译指令： )
+./p4studio_build.py --use-profile all_profile -shc
+build BSP
+export SDE=/usr/src/matao-project/SW6137A/bf-sde-9.3.1
+export SDE_INSTALL=/usr/src/matao-project/SW6137A/bf-sde-9.3.1/install
+export PATH=$PATH:$SDE_INSTALL/bin
+
+# 第一次编译使用
+# export BSP=/usr/src/matao-project/SW6137A/bf-reference-bsp-9.3.1
+# ./extract_all.sh
+export BSP_INSTALL=$SDE_INSTALL
+cd $BSP/bf-platforms-9.3.1
+./configure --prefix=$BSP_INSTALL --with-tofino enable_thrift=yes
+./configure --prefix=$BSP_INSTALL --with-tofino --with-tof-brgup-plat enable_thrift=yes
+./configure --prefix=$BSP_INSTALL --with-tof-brgup-plat enable_thrift=yes
+./configure --prefix=$BSP_INSTALL enable_thrift=yes
+
+
+
+
+ucli\r
+pm\r
+port-add 5/0 100G NONE\r
+port-enb 5/0\r
+show\r
+
+
+
+bringup LED 代码流程：()
+bf_pm_porting.c   ---->bf_pm_pre_port_enable_cfg_set()
+bf_led.c          ---->bf_port_led_set()
+platform_stub.c   ---->bf_pltfm_port_led_set()
+
+
+accton驱动库文件：libplatform_thrift.XX
+
+
+
+scp文件：
+scp -r ./lib/python2.7   admin@10.75.159.29:/home/admin/matao-SDE/bf-sde-9.3.1/install/lib
+scp -r ./include   admin@10.75.159.29:/home/admin/matao-SDE/bf-sde-9.3.1/install/
+scp -r ./lib/libacctonbf_driver*   admin@10.75.159.29:/home/admin/matao-SDE/bf-sde-9.3.1/install/lib
+scp -r ./lib/libpltfm_mgr*   admin@10.75.159.29:/home/admin/matao-SDE/bf-sde-9.3.1/install/lib
+scp -r ./lib/libpltfm_driver*   admin@10.75.159.29:/home/admin/matao-SDE/bf-sde-9.3.1/install/lib
+scp -r ./lib/libtofbringup_driver*   admin@10.75.159.29:/home/admin/matao-SDE/bf-sde-9.3.1/install/lib
+scp -r ./lib   admin@10.75.159.29:/home/admin/matao-SDE/bf-sde-9.3.1/install
+scp -r ../install   admin@10.75.159.29:/home/admin/matao-SDE/bf-sde-9.3.1/
+
+
+
+//建秋log
+root@sonic:/home/admin/bf-sde-9.3.1# ./run_switchd.sh -p diag
+Using SDE /home/admin/bf-sde-9.3.1
+Using SDE_INSTALL /home/admin/bf-sde-9.3.1/install
+Setting up DMA Memory Pool
+Using TARGET_CONFIG_FILE /home/admin/bf-sde-9.3.1/install/share/p4/targets/tofino/diag.conf
+Using PATH /home/admin/bf-sde-9.3.1/install/bin:/home/admin/bf-sde-9.3.1/install/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
+Using LD_LIBRARY_PATH /usr/local/lib:/home/admin/bf-sde-9.3.1/install/lib:
+bf_sysfs_fname /sys/class/bf/bf0/device/dev_add
+Install dir: /home/admin/bf-sde-9.3.1/install (0x55d718e49390)
+bf_switchd: system services initialized
+bf_switchd: loading conf_file /home/admin/bf-sde-9.3.1/install/share/p4/targets/tofino/diag.conf...
+bf_switchd: processing device configuration...
+Configuration for dev_id 0
+  Family        : Tofino
+  pci_sysfs_str : /sys/devices/pci0000:00/0000:00:03.0/0000:05:00.0
+  pci_domain    : 0
+  pci_bus       : 5
+  pci_fn        : 0
+  pci_dev       : 0
+  pci_int_mode  : 1
+  sbus_master_fw: /home/admin/bf-sde-9.3.1/install/
+  pcie_fw       : /home/admin/bf-sde-9.3.1/install/
+  serdes_fw     : /home/admin/bf-sde-9.3.1/install/
+  sds_fw_path   : /home/admin/bf-sde-9.3.1/install/
+  microp_fw_path: 
+bf_switchd: processing P4 configuration...
+P4 profile for dev_id 0
+  p4_name: diag
+    libpd: /home/admin/bf-sde-9.3.1/install/lib/tofinopd/diag/libpd.so
+    libpdthrift: /home/admin/bf-sde-9.3.1/install/lib/tofinopd/diag/libpdthrift.so
+    context: /home/admin/bf-sde-9.3.1/install/share/tofinopd/diag/pipeline_profile/context.json
+    config: /home/admin/bf-sde-9.3.1/install/share/tofinopd/diag/pipeline_profile/tofino.bin
+  Agent[0]: /home/admin/bf-sde-9.3.1/install/lib/libpltfm_mgr.so
+  diag: /home/admin/bf-sde-9.3.1/install/lib/libbfdiags.so
+  accton diag: 
+  non_default_port_ppgs: 0
+  SAI default initialize: 1 
+bf_switchd: library /home/admin/bf-sde-9.3.1/install/lib/tofinopd/diag/libpd.so loaded
+bf_switchd: library /home/admin/bf-sde-9.3.1/install/lib/tofinopd/diag/libpdthrift.so loaded
+bf_switchd: library /home/admin/bf-sde-9.3.1/install/lib/libbfdiags.so loaded
+bf_switchd: library /home/admin/bf-sde-9.3.1/install/lib/libpltfm_mgr.so loaded
+bf_switchd: agent[0] initialized
+Operational mode set to ASIC
+Initialized the device types using platforms infra API
+ASIC detected at PCI /sys/class/bf/bf0/device
+ASIC pci device id is 16
+Starting PD-API RPC server on port 9090
+bf_switchd: drivers initialized
+detecting.. IOMMU not enabled on the platform
+Setting core_pll_ctrl0=cd44cbfe
+/
+bf_switchd: dev_id 0 initialized
+
+bf_switchd: initialized 1 devices
+bf_switchd: libpd initialized for p4 pipeline diag on dev 0
+Adding Thrift service for P4 program diag to server
+bf_switchd: libpdthrift initialized for p4 pipeline diag on dev 0
+Entered Diag lib init 
+vlan-decap-add: 
+Added entry with entry-hdl 2
+idle-tmo-en-dmac 
+idle-tmo-en-smac 
+add-yid  
+learn-notify-add 
+Starting DIAG RPC server on port 9096
+bf_switchd: thrift initialized for agent : 0
+bf_switchd: spawning cli server thread
+bf_switchd: spawning driver shell
+bf_switchd: server started - listening on port 9999
+bfruntime gRPC server started on 0.0.0.0:50052
+
+        ********************************************
+        *      WARNING: Authorised Access Only     *
+        ********************************************
+    
+bfshell> 

@@ -1,0 +1,86 @@
+#!/bin/bash
+buildpath=""
+downloads() {
+    echo "buildpath: [$buildpath]"
+    build_exist=$(grep "DL_DIR" $buildpath/conf/local.conf)
+    echo "buildexist: [$build_exist]"
+    if [ ! -n "$build_exist" ]; then
+        echo "DL_DIR ?= \"/home_b/matao/usr/local/downloads\"" >> "conf/local.conf"
+    fi
+}
+
+usage() {
+    echo "Usage: build an openbmc image"
+    echo "    $(basename $0) <platform>"
+    echo "    $(basename $0) <platform> <feature>"
+    echo "    $(basename $0) <platform> <clean>"
+    echo "    $(basename $0) <platform> <clean> <feature>"
+    echo
+    echo "Examples:"
+    echo "    $(basename $0) wedge400"
+    echo "    $(basename $0) wedge400 ipmid"
+    echo "    $(basename $0) wedge400 clean"
+    echo "    $(basename $0) wedge400 clean ipmid"
+}
+
+buildplatform() {
+    source openbmc-init-build-env meta-huaqin/meta-$1 build-$1
+    buildpath=$(pwd)
+    downloads
+    bitbake $1-image
+    rm -rf conf/local.conf
+}
+
+if [ $# -eq 1 ]; then
+#    echo ******************** Build $1 ********************
+#    source openbmc-init-build-env meta-facebook/meta-$1 build-$1 && buildpath=$(pwd) && downloads && bitbake $1-image
+    buildplatform $1
+elif [ $# -ge 2 ]; then
+    case $2 in
+    "clean")
+        if [ $# -gt 2 ]; then
+            source openbmc-init-build-env meta-huaqin/meta-$1 build-$1; bitbake -c cleanall $3
+        else
+            source openbmc-init-build-env meta-huaqin/meta-$1 build-$1; bitbake -c cleanall $1-image
+        fi
+    ;;
+    "u-boot")
+	    source openbmc-init-build-env meta-huaqin/meta-$1 build-$1 && buildpath=$(pwd); downloads; bitbake u-boot
+    ;;
+    "linux-aspeed")
+	    source openbmc-init-build-env meta-huaqin/meta-$1 build-$1 && buildpath=$(pwd); downloads; bitbake linux-aspeed
+    ;;
+    "modify-u-boot")
+	    source openbmc-init-build-env meta-huaqin/meta-$1 build-$1 && buildpath=$(pwd);  devtool modify u-boot
+        echo "******************************************************************************************"
+        echo "                        You can modify u-boot in build-$1/workspace                       "
+        echo "******************************************************************************************"
+    ;;
+    "modify-linux-aspeed")
+	    source openbmc-init-build-env meta-huaqin/meta-$1 build-$1 && buildpath=$(pwd);  devtool modify linux-aspeed
+        echo "******************************************************************************************"
+        echo "                        You can modify linux-aspeedt in build-$1/workspace                "
+        echo "******************************************************************************************"
+    ;;
+    "reset-u-boot")
+	    source openbmc-init-build-env meta-huaqin/meta-$1 build-$1 && buildpath=$(pwd);  devtool reset u-boot
+        echo "******************************************************************************************"
+        echo "                                   Reset u-boot                                           "
+        echo "******************************************************************************************"
+    ;;
+    "reset-linux-aspeed")
+	    source openbmc-init-build-env meta-huaqin/meta-$1 build-$1 && buildpath=$(pwd);  devtool reset linux-aspeed
+        echo "******************************************************************************************"
+        echo "                                  Reset linux-aspeedt                                     "
+        echo "******************************************************************************************"
+    ;;
+    *)
+	    source openbmc-init-build-env meta-huaqin/meta-$1 build-$1 && buildpath=$(pwd); downloads; bitbake $2
+    ;;
+    esac
+else
+    usage
+fi
+
+exit 0
+

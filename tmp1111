@@ -1,0 +1,111 @@
+root@bmc-oob:~# cat /var/log/messages|grep -i fw_mon 
+ 2000 Jan  9 11:14:46 user.info xs9880-8c-316c421e79-matao2: root: bmc_fw_mon.sh: start
+ 2000 Jan  9 11:14:46 user.info xs9880-8c-316c421e79-matao2: root: bmc_fw_mon.sh: disable bmc automatic upgrade
+ 2000 Jan  9 11:18:32 user.info xs9880-8c-316c421e79-matao2: root: bmc_fw_mon.sh: start
+ 2000 Jan  9 11:18:40 user.info xs9880-8c-316c421e79-matao2: root: bmc_fw_mon.sh: bmc_target_version:xs9880-8c-316c421e79-matao1
+ 2000 Jan  9 11:18:40 user.info xs9880-8c-316c421e79-matao2: root: bmc_fw_mon.sh: bmc_boot:Master
+ 2000 Jan  9 11:18:40 user.info xs9880-8c-316c421e79-matao2: root: bmc_fw_mon.sh: current_version:xs9880-8c-316c421e79-matao2
+ 2000 Jan  9 11:18:40 user.info xs9880-8c-316c421e79-matao2: root: bmc_fw_mon.sh: other_version:xs9880-8c-316c421e79-matao2
+ 2000 Jan  9 11:18:40 user.info xs9880-8c-316c421e79-matao2: root: bmc_fw_mon.sh: bmc_wtd2_count:0
+ 2000 Jan  9 11:18:40 user.info xs9880-8c-316c421e79-matao2: root: bmc_fw_mon.sh: wdt2_timeout_count:0
+ 2000 Jan  9 11:18:40 user.info xs9880-8c-316c421e79-matao2: root: bmc_fw_mon.sh: Neither BMC version is the target version
+ 2000 Jan  9 11:23:55 user.info xs9880-8c-316c421e79-matao1: root: bmc_fw_mon.sh: start
+ 2000 Jan  9 11:24:00 user.info xs9880-8c-316c421e79-matao1: root: bmc_fw_mon.sh: bmc_target_version:xs9880-8c-316c421e79-matao1
+ 2000 Jan  9 11:24:00 user.info xs9880-8c-316c421e79-matao1: root: bmc_fw_mon.sh: bmc_boot:Slave
+ 2000 Jan  9 11:24:00 user.info xs9880-8c-316c421e79-matao1: root: bmc_fw_mon.sh: current_version:xs9880-8c-316c421e79-matao1
+ 2000 Jan  9 11:24:00 user.info xs9880-8c-316c421e79-matao1: root: bmc_fw_mon.sh: other_version:xs9880-8c-316c421e79-matao2
+ 2000 Jan  9 11:24:00 user.info xs9880-8c-316c421e79-matao1: root: bmc_fw_mon.sh: bmc_wtd2_count:0
+ 2000 Jan  9 11:24:00 user.info xs9880-8c-316c421e79-matao1: root: bmc_fw_mon.sh: wdt2_timeout_count:1
+ 2000 Jan  9 11:24:00 user.info xs9880-8c-316c421e79-matao1: root: bmc_fw_mon.sh: The current BMC version is the target version
+ 2000 Jan  9 11:32:42 user.info xs9880-8c-316c421e79-matao1: root: bmc_fw_mon.sh: start
+ 2000 Jan  9 11:32:47 user.info xs9880-8c-316c421e79-matao1: root: bmc_fw_mon.sh: bmc_target_version:xs9880-8c-316c421e79-matao1
+ 2000 Jan  9 11:32:47 user.info xs9880-8c-316c421e79-matao1: root: bmc_fw_mon.sh: bmc_boot:Slave
+ 2000 Jan  9 11:32:47 user.info xs9880-8c-316c421e79-matao1: root: bmc_fw_mon.sh: current_version:xs9880-8c-316c421e79-matao1
+ 2000 Jan  9 11:32:47 user.info xs9880-8c-316c421e79-matao1: root: bmc_fw_mon.sh: other_version:xs9880-8c-316c421e79-matao1
+ 2000 Jan  9 11:32:48 user.info xs9880-8c-316c421e79-matao1: root: bmc_fw_mon.sh: bmc_wtd2_count:1
+ 2000 Jan  9 11:32:48 user.info xs9880-8c-316c421e79-matao1: root: bmc_fw_mon.sh: wdt2_timeout_count:1
+ 2000 Jan  9 11:32:48 user.info xs9880-8c-316c421e79-matao1: root: bmc_fw_mon.sh: Both BMC versions are target version
+ 2000 Jan  9 11:39:58 user.info xs9880-8c-316c421e79-matao1: root: bmc_fw_mon.sh: start
+ 2000 Jan  9 11:40:03 user.info xs9880-8c-316c421e79-matao1: root: bmc_fw_mon.sh: bmc_target_version:xs9880-8c-316c421e79-matao1
+ 2000 Jan  9 11:40:03 user.info xs9880-8c-316c421e79-matao1: root: bmc_fw_mon.sh: bmc_boot:Slave
+ 2000 Jan  9 11:40:03 user.info xs9880-8c-316c421e79-matao1: root: bmc_fw_mon.sh: current_version:xs9880-8c-316c421e79-matao1
+ 2000 Jan  9 11:40:03 user.info xs9880-8c-316c421e79-matao1: root: bmc_fw_mon.sh: other_version:xs9880-8c-316c421e79-matao2
+ 2000 Jan  9 11:40:03 user.info xs9880-8c-316c421e79-matao1: root: bmc_fw_mon.sh: bmc_wtd2_count:1
+ 2000 Jan  9 11:40:03 user.info xs9880-8c-316c421e79-matao1: root: bmc_fw_mon.sh: wdt2_timeout_count:1
+ 2000 Jan  9 11:40:03 user.info xs9880-8c-316c421e79-matao1: root: bmc_fw_mon.sh: Only the non current BMC version is not the target version
+ 2000 Jan  9 11:57:18 user.info xs9880-8c-316c421e79-matao1: root: bmc_fw_mon.sh: start
+ 2000 Jan  9 11:57:23 user.info xs9880-8c-316c421e79-matao1: root: bmc_fw_mon.sh: bmc_target_version:xs9880-8c-316c421e79-matao1
+ 2000 Jan  9 11:57:23 user.info xs9880-8c-316c421e79-matao1: root: bmc_fw_mon.sh: bmc_boot:Slave
+ 2000 Jan  9 11:57:23 user.info xs9880-8c-316c421e79-matao1: root: bmc_fw_mon.sh: current_version:xs9880-8c-316c421e79-matao1
+ 2000 Jan  9 11:57:23 user.info xs9880-8c-316c421e79-matao1: root: bmc_fw_mon.sh: other_version:xs9880-8c-316c421e79-matao1
+ 2000 Jan  9 11:57:23 user.info xs9880-8c-316c421e79-matao1: root: bmc_fw_mon.sh: bmc_wtd2_count:1
+ 2000 Jan  9 11:57:23 user.info xs9880-8c-316c421e79-matao1: root: bmc_fw_mon.sh: wdt2_timeout_count:1
+ 2000 Jan  9 11:57:23 user.info xs9880-8c-316c421e79-matao1: root: bmc_fw_mon.sh: Both BMC versions are target version
+ 2000 Jan  9 12:15:18 user.info xs9880-8c-316c421e79-matao1: root: bmc_fw_mon.sh: start
+ 2000 Jan  9 12:15:25 user.info xs9880-8c-316c421e79-matao1: root: bmc_fw_mon.sh: bmc_target_version:xs9880-8c-316c421e79-matao1
+ 2000 Jan  9 12:15:25 user.info xs9880-8c-316c421e79-matao1: root: bmc_fw_mon.sh: bmc_boot:Master
+ 2000 Jan  9 12:15:25 user.info xs9880-8c-316c421e79-matao1: root: bmc_fw_mon.sh: current_version:xs9880-8c-316c421e79-matao1
+ 2000 Jan  9 12:15:25 user.info xs9880-8c-316c421e79-matao1: root: bmc_fw_mon.sh: other_version:xs9880-8c-316c421e79-matao1
+ 2000 Jan  9 12:15:25 user.info xs9880-8c-316c421e79-matao1: root: bmc_fw_mon.sh: bmc_wtd2_count:2
+ 2000 Jan  9 12:15:25 user.info xs9880-8c-316c421e79-matao1: root: bmc_fw_mon.sh: wdt2_timeout_count:2
+ 2000 Jan  9 12:15:26 user.info xs9880-8c-316c421e79-matao1: root: bmc_fw_mon.sh: Both BMC versions are target version
+ 2000 Jan  9 12:22:24 user.info xs9880-8c-316c421e79-matao2: root: bmc_fw_mon.sh: start
+ 2000 Jan  9 12:22:33 user.info xs9880-8c-316c421e79-matao2: root: bmc_fw_mon.sh: bmc_target_version:xs9880-8c-316c421e79-matao1
+ 2000 Jan  9 12:22:33 user.info xs9880-8c-316c421e79-matao2: root: bmc_fw_mon.sh: bmc_boot:Master
+ 2000 Jan  9 12:22:33 user.info xs9880-8c-316c421e79-matao2: root: bmc_fw_mon.sh: current_version:xs9880-8c-316c421e79-matao2
+ 2000 Jan  9 12:22:33 user.info xs9880-8c-316c421e79-matao2: root: bmc_fw_mon.sh: other_version:xs9880-8c-316c421e79-matao1
+ 2000 Jan  9 12:22:33 user.info xs9880-8c-316c421e79-matao2: root: bmc_fw_mon.sh: bmc_wtd2_count:2
+ 2000 Jan  9 12:22:33 user.info xs9880-8c-316c421e79-matao2: root: bmc_fw_mon.sh: wdt2_timeout_count:2
+ 2000 Jan  9 12:22:33 user.info xs9880-8c-316c421e79-matao2: root: bmc_fw_mon.sh: Only the current BMC version is not the target version
+ 2000 Jan  9 12:25:18 user.info xs9880-8c-316c421e79-matao1: root: bmc_fw_mon.sh: start
+ 2000 Jan  9 12:25:23 user.info xs9880-8c-316c421e79-matao1: root: bmc_fw_mon.sh: bmc_target_version:xs9880-8c-316c421e79-matao1
+ 2000 Jan  9 12:25:24 user.info xs9880-8c-316c421e79-matao1: root: bmc_fw_mon.sh: bmc_boot:Slave
+ 2000 Jan  9 12:25:24 user.info xs9880-8c-316c421e79-matao1: root: bmc_fw_mon.sh: current_version:xs9880-8c-316c421e79-matao1
+ 2000 Jan  9 12:25:24 user.info xs9880-8c-316c421e79-matao1: root: bmc_fw_mon.sh: other_version:xs9880-8c-316c421e79-matao2
+ 2000 Jan  9 12:25:24 user.info xs9880-8c-316c421e79-matao1: root: bmc_fw_mon.sh: bmc_wtd2_count:2
+ 2000 Jan  9 12:25:24 user.info xs9880-8c-316c421e79-matao1: root: bmc_fw_mon.sh: wdt2_timeout_count:3
+ 2000 Jan  9 12:25:24 user.info xs9880-8c-316c421e79-matao1: root: bmc_fw_mon.sh: The current BMC version is the target version
+ 2000 Jan  9 12:30:48 user.info xs9880-8c-316c421e79-matao1: root: bmc_fw_mon.sh: start
+ 2000 Jan  9 12:30:53 user.info xs9880-8c-316c421e79-matao1: root: bmc_fw_mon.sh: bmc_target_version:xs9880-8c-316c421e79-matao1
+ 2000 Jan  9 12:30:53 user.info xs9880-8c-316c421e79-matao1: root: bmc_fw_mon.sh: bmc_boot:Slave
+ 2000 Jan  9 12:30:53 user.info xs9880-8c-316c421e79-matao1: root: bmc_fw_mon.sh: current_version:xs9880-8c-316c421e79-matao1
+ 2000 Jan  9 12:30:53 user.info xs9880-8c-316c421e79-matao1: root: bmc_fw_mon.sh: other_version:xs9880-8c-316c421e79-matao1
+ 2000 Jan  9 12:30:53 user.info xs9880-8c-316c421e79-matao1: root: bmc_fw_mon.sh: bmc_wtd2_count:3
+ 2000 Jan  9 12:30:53 user.info xs9880-8c-316c421e79-matao1: root: bmc_fw_mon.sh: wdt2_timeout_count:3
+ 2000 Jan  9 12:30:53 user.info xs9880-8c-316c421e79-matao1: root: bmc_fw_mon.sh: Both BMC versions are target version
+ 2000 Jan  9 12:36:45 user.info xs9880-8c-316c421e79-matao2: root: bmc_fw_mon.sh: start
+ 2000 Jan  9 12:36:52 user.info xs9880-8c-316c421e79-matao2: root: bmc_fw_mon.sh: bmc_target_version:xs9880-8c-316c421e79-matao1
+ 2000 Jan  9 12:36:52 user.info xs9880-8c-316c421e79-matao2: root: bmc_fw_mon.sh: bmc_boot:Master
+ 2000 Jan  9 12:36:52 user.info xs9880-8c-316c421e79-matao2: root: bmc_fw_mon.sh: current_version:xs9880-8c-316c421e79-matao2
+ 2000 Jan  9 12:36:52 user.info xs9880-8c-316c421e79-matao2: root: bmc_fw_mon.sh: other_version:xs9880-8c-316c421e79-matao1
+ 2000 Jan  9 12:36:52 user.info xs9880-8c-316c421e79-matao2: root: bmc_fw_mon.sh: bmc_wtd2_count:3
+ 2000 Jan  9 12:36:52 user.info xs9880-8c-316c421e79-matao2: root: bmc_fw_mon.sh: wdt2_timeout_count:4
+ 2000 Jan  9 12:36:53 user.info xs9880-8c-316c421e79-matao2: root: bmc_fw_mon.sh: The current BMC version is not the target version
+ 2000 Jan  9 12:42:02 user.info xs9880-8c-316c421e79-matao1: root: bmc_fw_mon.sh: start
+ 2000 Jan  9 12:42:07 user.info xs9880-8c-316c421e79-matao1: root: bmc_fw_mon.sh: bmc_target_version:xs9880-8c-316c421e79-matao1
+ 2000 Jan  9 12:42:07 user.info xs9880-8c-316c421e79-matao1: root: bmc_fw_mon.sh: bmc_boot:Slave
+ 2000 Jan  9 12:42:07 user.info xs9880-8c-316c421e79-matao1: root: bmc_fw_mon.sh: current_version:xs9880-8c-316c421e79-matao1
+ 2000 Jan  9 12:42:07 user.info xs9880-8c-316c421e79-matao1: root: bmc_fw_mon.sh: other_version:xs9880-8c-316c421e79-matao2
+ 2000 Jan  9 12:42:07 user.info xs9880-8c-316c421e79-matao1: root: bmc_fw_mon.sh: bmc_wtd2_count:4
+ 2000 Jan  9 12:42:07 user.info xs9880-8c-316c421e79-matao1: root: bmc_fw_mon.sh: wdt2_timeout_count:5
+ 2000 Jan  9 12:42:07 user.info xs9880-8c-316c421e79-matao1: root: bmc_fw_mon.sh: The current BMC version is the target version
+ 2000 Jan  9 12:47:24 user.info xs9880-8c-316c421e79-matao1: root: bmc_fw_mon.sh: start
+ 2000 Jan  9 12:47:29 user.info xs9880-8c-316c421e79-matao1: root: bmc_fw_mon.sh: bmc_target_version:xs9880-8c-316c421e79-matao1
+ 2000 Jan  9 12:47:29 user.info xs9880-8c-316c421e79-matao1: root: bmc_fw_mon.sh: bmc_boot:Slave
+ 2000 Jan  9 12:47:29 user.info xs9880-8c-316c421e79-matao1: root: bmc_fw_mon.sh: current_version:xs9880-8c-316c421e79-matao1
+ 2000 Jan  9 12:47:29 user.info xs9880-8c-316c421e79-matao1: root: bmc_fw_mon.sh: other_version:xs9880-8c-316c421e79-matao1
+ 2000 Jan  9 12:47:29 user.info xs9880-8c-316c421e79-matao1: root: bmc_fw_mon.sh: bmc_wtd2_count:5
+ 2000 Jan  9 12:47:29 user.info xs9880-8c-316c421e79-matao1: root: bmc_fw_mon.sh: wdt2_timeout_count:5
+ 2000 Jan  9 12:47:29 user.info xs9880-8c-316c421e79-matao1: root: bmc_fw_mon.sh: Both BMC versions are target version
+ 2000 Jan  9 12:49:34 user.info xs9880-8c-316c421e79-matao1: root: bmc_fw_mon.sh: start
+ 2000 Jan  9 12:49:34 user.err xs9880-8c-316c421e79-matao1: root: bmc_fw_mon.sh: /var/log/automatic_upgrade/version/bmc_version or /var/log/automatic_upgrade/fw/flash-xs9880-8c file does not exist
+ 2000 Jan  9 12:50:12 user.info xs9880-8c-316c421e79-matao1: root: bmc_fw_mon.sh: start
+ 2000 Jan  9 12:50:12 user.err xs9880-8c-316c421e79-matao1: root: bmc_fw_mon.sh: /var/log/automatic_upgrade/version/bmc_version or /var/log/automatic_upgrade/fw/flash-xs9880-8c file does not exist
+ 2000 Jan  9 12:51:54 user.info xs9880-8c-316c421e79-matao1: root: bmc_fw_mon.sh: start
+ 2000 Jan  9 12:51:54 user.err xs9880-8c-316c421e79-matao1: root: bmc_fw_mon.sh: /var/log/automatic_upgrade/version/bmc_version or /var/log/automatic_upgrade/fw/flash-xs9880-8c file does not exist
+ 2000 Jan  9 12:52:25 user.info xs9880-8c-316c421e79-matao1: root: bmc_fw_mon.sh: start
+ 2000 Jan  9 12:52:25 user.err xs9880-8c-316c421e79-matao1: root: bmc_fw_mon.sh: /var/log/automatic_upgrade/version/bmc_version or /var/log/automatic_upgrade/fw/flash-xs9880-8c file does not exist
+ 2000 Jan  9 12:53:01 user.info xs9880-8c-316c421e79-matao1: root: bmc_fw_mon.sh: start
+ 2000 Jan  9 12:53:05 user.err xs9880-8c-316c421e79-matao1: root: bmc_fw_mon.sh: update bmc times exceeded
+ 2000 Jan  9 12:53:45 user.info xs9880-8c-316c421e79-matao1: root: bmc_fw_mon.sh: start
+ 2000 Jan  9 12:53:45 user.info xs9880-8c-316c421e79-matao1: root: bmc_fw_mon.sh: disable bmc automatic upgrade

@@ -1,0 +1,5 @@
+#!/usr/bin/expect 
+
+spawn ./run_bfshell.sh
+send "ucli \r" 
+interact
