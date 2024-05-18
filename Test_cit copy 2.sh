@@ -1,30 +1,32 @@
 #!/bin/bash
+test_value1="0x55 0x55 0x55 0x55 0x55 0x55 0x55 0x55 0x55 0x55 0x55 0x55 0x55 0x55 0x55 0x55"
+test_value2="0xaa 0xaa 0xaa 0xaa 0xaa 0xaa 0xaa 0xaa 0xaa 0xaa 0xaa 0xaa 0xaa 0xaa 0xaa 0xaa"
+i=1
+while :
+do
+	echo "No.$i test"
+	i2ctransfer -f -y 12 w17@0x50 0x00 $test_value1
+	res1=$(i2ctransfer -f -y 12 w1@0x50 0x00 r16)
+
+	if [ "$res1" != "$test_value1" ]; then
+		echo "get Error:$res1,expect:$test_value1"
+		exit 1
+	fi
+
+	i2ctransfer -f -y 12 w17@0x50 0x00 $test_value2
+	res2=$(i2ctransfer -f -y 12 w1@0x50 0x00 r16)
+
+	echo "get:$res2,expect:$test_value2"
+	if [ "$res2" != "$test_value2" ]; then
+		echo "Error:$res2,expect:$test_value2"
+		exit 1
+	fi
 
 
-parameter_str="all, bmc, cmm, fcb1, fcb2, psu1, psu2, psu3, psu4, lc1, lc2, lc3, lc4, lc5, lc6, lc7, lc8, come1, come2, come3, come4, come5, come6, come7, come8"
-parameter_r_arr=(${parameter_str//,/ })
-
-echo "MT------- ${parameter_r_arr[@]}"
-
-parameter_r_arr[-1]="status"
-
-echo "MT------- ${parameter_r_arr[@]}"
-
-parameter_r_arr[-3]="status"
-
-echo "MT------- ${parameter_r_arr[@]}"
-echo "MT-------[0] ${parameter_r_arr[0]}"
-echo "MT-------[-1] ${parameter_r_arr[-1]}"
-echo "MT-------[-2] ${parameter_r_arr[-2]}"
-
-
-
-
-parameter_w_arr=("${parameter_r_arr[@]}")
-echo "MT------- ${parameter_w_arr[@]}"
-unset parameter_w_arr[0]
-unset parameter_w_arr[-1]
-echo "MT------- ${parameter_w_arr[@]}"
-echo "MT-------[0] ${parameter_w_arr[0]}"
-echo "MT-------[-1] ${parameter_w_arr[-1]}"
-echo "MT-------[-2] ${parameter_w_arr[-2]}"
+    i=$((i+1))
+	if [ $i -gt $1 ]; then
+        i2ctransfer -f -y 12 w17@0x50 0x00 0x01 0x00 0x00 0x01 0x0c 0x00 0x00 0xf2 0x01 0x0b 0x00 0xe3 0xf8 0xb7 0xc6 0x48 
+        echo "test pass"
+		exit 1
+	fi
+done

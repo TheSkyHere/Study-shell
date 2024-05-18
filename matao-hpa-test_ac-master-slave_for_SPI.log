@@ -1,0 +1,2435 @@
+======================cycle0 Start======================
+Thu May 16 10:03:53 CST 2024
+PING 10.75.135.250 (10.75.135.250) 56(84) bytes of data.
+64 bytes from 10.75.135.250: icmp_seq=1 ttl=64 time=0.624 ms
+64 bytes from 10.75.135.250: icmp_seq=2 ttl=64 time=0.333 ms
+64 bytes from 10.75.135.250: icmp_seq=3 ttl=64 time=0.321 ms
+64 bytes from 10.75.135.250: icmp_seq=4 ttl=64 time=0.485 ms
+64 bytes from 10.75.135.250: icmp_seq=5 ttl=64 time=0.324 ms
+
+--- 10.75.135.250 ping statistics ---
+5 packets transmitted, 5 received, 0% packet loss, time 4084ms
+rtt min/avg/max/mdev = 0.321/0.417/0.624/0.121 ms
+======================cycle0 Start======================
+Thu May 16 10:04:02 CST 2024
+PING 10.75.135.250 (10.75.135.250) 56(84) bytes of data.
+64 bytes from 10.75.135.250: icmp_seq=1 ttl=64 time=0.369 ms
+64 bytes from 10.75.135.250: icmp_seq=2 ttl=64 time=0.417 ms
+64 bytes from 10.75.135.250: icmp_seq=3 ttl=64 time=0.438 ms
+64 bytes from 10.75.135.250: icmp_seq=4 ttl=64 time=0.383 ms
+64 bytes from 10.75.135.250: icmp_seq=5 ttl=64 time=0.391 ms
+
+--- 10.75.135.250 ping statistics ---
+5 packets transmitted, 5 received, 0% packet loss, time 4080ms
+rtt min/avg/max/mdev = 0.369/0.399/0.438/0.033 ms
+spawn ssh root@10.75.135.250
+The authenticity of host '10.75.135.250 (10.75.135.250)' can't be established.
+ECDSA key fingerprint is SHA256:Lshe/ywylsMtyOHueYDG5/Ccix3nUJ6k4QNDz1KMlMQ.
+Are you sure you want to continue connecting (yes/no)? yes
+Warning: Permanently added '10.75.135.250' (ECDSA) to the list of known hosts.
+root@10.75.135.250's password: 
+Last login: Thu May 16 02:19:12 2024
+root@lambda_bmc:~# devmem 0x1e785010;devmem 0x1e785030;devmem 0x1e620010;devmem 0x1e6200a8;show_bmc_status 
+0x00000000
+0x00000000
+0x203C0641
+0x00000000
+BMC current boot code source: master
+spawn ssh root@10.75.135.250
+root@10.75.135.250's password: 
+Last login: Thu May 16 02:22:49 2024 from 10.75.135.33
+root@lambda_bmc:~# show_version bmc |grep Pingpong  
+Pingpong BMC Version    : hpa-v2.11.00-dirty
+spawn ssh root@10.75.135.250
+root@10.75.135.250's password: 
+0penBmc
+0penBmc
+Last login: Thu May 16 02:23:00 2024 from 10.75.135.33
+root@lambda_bmc:~# 0penBmc
+-bash: 0penBmc: command not found
+root@lambda_bmc:~# config_bmc_status -s slave 
+BMC will swap to slave after 10 seconds...
+Thu May 16 10:06:35 CST 2024
+PING 10.75.135.250 (10.75.135.250) 56(84) bytes of data.
+64 bytes from 10.75.135.250: icmp_seq=1 ttl=64 time=0.611 ms
+64 bytes from 10.75.135.250: icmp_seq=2 ttl=64 time=0.345 ms
+64 bytes from 10.75.135.250: icmp_seq=3 ttl=64 time=0.459 ms
+64 bytes from 10.75.135.250: icmp_seq=4 ttl=64 time=0.333 ms
+64 bytes from 10.75.135.250: icmp_seq=5 ttl=64 time=0.363 ms
+
+--- 10.75.135.250 ping statistics ---
+5 packets transmitted, 5 received, 0% packet loss, time 4083ms
+rtt min/avg/max/mdev = 0.333/0.422/0.611/0.105 ms
+spawn ssh root@10.75.135.250
+The authenticity of host '10.75.135.250 (10.75.135.250)' can't be established.
+ECDSA key fingerprint is SHA256:Hwtg2GL15X4m03O1S7NqLJA2OVxbD5VHWu23wGuw0Cg.
+Are you sure you want to continue connecting (yes/no)? yes
+Warning: Permanently added '10.75.135.250' (ECDSA) to the list of known hosts.
+root@10.75.135.250's password: 
+Last login: Thu May 16 02:23:12 2024 from 10.75.135.33
+root@lambda_bmc:~# devmem 0x1e785010;devmem 0x1e785030;devmem 0x1e620010;devmem 0x1e6200a8;show_bmc_status 
+0x00000000
+0x00000102
+0x203C0641
+0x00000000
+BMC current boot code source: slave
+spawn ssh root@10.75.135.250
+root@10.75.135.250's password: 
+Last login: Thu May 16 02:31:00 2024 from 10.75.135.33
+root@lambda_bmc:~# show_version bmc |grep Pingpong  
+Pingpong BMC Version    : hpa-v2.11.00-dirty
+spawn ssh root@10.75.135.250
+root@10.75.135.250's password: 
+Last login: Thu May 16 02:31:13 2024 from 10.75.135.33
+root@lambda_bmc:~# devmem 0x1e785010;devmem 0x1e785030;rm -rf /var/log/*;show_bmc_status 
+0x00000000
+0x00000102
+BMC current boot code source: slave
+Thu May 16 10:14:45 CST 2024
+==================================================================================================
+**************************************************************************************************
+==================================================================================================
+======================cycle1 Start======================
+Thu May 16 10:20:02 CST 2024
+PING 10.75.135.250 (10.75.135.250) 56(84) bytes of data.
+64 bytes from 10.75.135.250: icmp_seq=1 ttl=64 time=0.681 ms
+64 bytes from 10.75.135.250: icmp_seq=2 ttl=64 time=0.394 ms
+64 bytes from 10.75.135.250: icmp_seq=3 ttl=64 time=0.336 ms
+64 bytes from 10.75.135.250: icmp_seq=4 ttl=64 time=0.409 ms
+64 bytes from 10.75.135.250: icmp_seq=5 ttl=64 time=0.371 ms
+
+--- 10.75.135.250 ping statistics ---
+5 packets transmitted, 5 received, 0% packet loss, time 4080ms
+rtt min/avg/max/mdev = 0.336/0.438/0.681/0.124 ms
+spawn ssh root@10.75.135.250
+The authenticity of host '10.75.135.250 (10.75.135.250)' can't be established.
+ECDSA key fingerprint is SHA256:pqeZo8sCNjBlQgqTlY1SGa2UmwMTh+D51gOJtdub3OI.
+Are you sure you want to continue connecting (yes/no)? yes
+Warning: Permanently added '10.75.135.250' (ECDSA) to the list of known hosts.
+root@10.75.135.250's password: 
+root@bmc-oob.:~# devmem 0x1e785010;devmem 0x1e785030;devmem 0x1e620010;devmem 0x1e6200a8;show_bmc_status 
+0x00000000
+0x00000000
+0x203C0641
+0x00000000
+BMC current boot code source: master
+spawn ssh root@10.75.135.250
+root@10.75.135.250's password: 
+Last login: Thu May 16 02:38:50 2024 from 10.75.135.33
+root@bmc-oob.:~# show_version bmc |grep Pingpong  
+Pingpong BMC Version    : hpa-v2.11.00-dirty
+spawn ssh root@10.75.135.250
+root@10.75.135.250's password: 
+Last login: Thu May 16 02:39:01 2024 from 10.75.135.33
+root@bmc-oob.:~# config_bmc_status -s slave 
+BMC will swap to slave after 10 seconds...
+Thu May 16 10:22:46 CST 2024
+PING 10.75.135.250 (10.75.135.250) 56(84) bytes of data.
+64 bytes from 10.75.135.250: icmp_seq=1 ttl=64 time=0.616 ms
+64 bytes from 10.75.135.250: icmp_seq=2 ttl=64 time=0.342 ms
+64 bytes from 10.75.135.250: icmp_seq=3 ttl=64 time=0.376 ms
+64 bytes from 10.75.135.250: icmp_seq=4 ttl=64 time=0.354 ms
+64 bytes from 10.75.135.250: icmp_seq=5 ttl=64 time=0.357 ms
+
+--- 10.75.135.250 ping statistics ---
+5 packets transmitted, 5 received, 0% packet loss, time 4101ms
+rtt min/avg/max/mdev = 0.342/0.409/0.616/0.104 ms
+spawn ssh root@10.75.135.250
+The authenticity of host '10.75.135.250 (10.75.135.250)' can't be established.
+ECDSA key fingerprint is SHA256:iTJA5DbICOpoRVeYFKH8CzkGZItzALQAUe3NaFXiETE.
+Are you sure you want to continue connecting (yes/no)? yes
+Warning: Permanently added '10.75.135.250' (ECDSA) to the list of known hosts.
+root@10.75.135.250's password: 
+Last login: Thu May 16 02:39:18 2024 from 10.75.135.33
+root@lambda_bmc:~# devmem 0x1e785010;devmem 0x1e785030;devmem 0x1e620010;devmem 0x1e6200a8;show_bmc_status 
+0x00000000
+0x00000102
+0x203C0641
+0x00000000
+BMC current boot code source: slave
+spawn ssh root@10.75.135.250
+root@10.75.135.250's password: 
+Last login: Thu May 16 02:47:58 2024 from 10.75.135.33
+root@lambda_bmc:~# show_version bmc |grep Pingpong  
+Pingpong BMC Version    : hpa-v2.11.00-dirty
+spawn ssh root@10.75.135.250
+root@10.75.135.250's password: 
+Last login: Thu May 16 02:48:08 2024 from 10.75.135.33
+root@lambda_bmc:~# devmem 0x1e785010;devmem 0x1e785030;rm -rf /var/log/*;show_bmc_status 
+0x00000000
+0x00000102
+BMC current boot code source: slave
+Thu May 16 10:31:43 CST 2024
+==================================================================================================
+**************************************************************************************************
+==================================================================================================
+======================cycle2 Start======================
+Thu May 16 10:36:58 CST 2024
+PING 10.75.135.250 (10.75.135.250) 56(84) bytes of data.
+64 bytes from 10.75.135.250: icmp_seq=1 ttl=64 time=0.604 ms
+64 bytes from 10.75.135.250: icmp_seq=2 ttl=64 time=0.412 ms
+64 bytes from 10.75.135.250: icmp_seq=3 ttl=64 time=0.433 ms
+64 bytes from 10.75.135.250: icmp_seq=4 ttl=64 time=0.336 ms
+64 bytes from 10.75.135.250: icmp_seq=5 ttl=64 time=0.342 ms
+
+--- 10.75.135.250 ping statistics ---
+5 packets transmitted, 5 received, 0% packet loss, time 4101ms
+rtt min/avg/max/mdev = 0.336/0.425/0.604/0.098 ms
+spawn ssh root@10.75.135.250
+The authenticity of host '10.75.135.250 (10.75.135.250)' can't be established.
+ECDSA key fingerprint is SHA256:VwRTbB3xRpLFvXjfzoNs1pn9RlFduENuoOh4HEEaKK0.
+Are you sure you want to continue connecting (yes/no)? yes
+Warning: Permanently added '10.75.135.250' (ECDSA) to the list of known hosts.
+root@10.75.135.250's password: 
+root@bmc-oob.:~# devmem 0x1e785010;devmem 0x1e785030;devmem 0x1e620010;devmem 0x1e6200a8;show_bmc_status 
+0x00000000
+0x00000000
+0x203C0641
+0x00000000
+BMC current boot code source: master
+spawn ssh root@10.75.135.250
+root@10.75.135.250's password: 
+Last login: Thu May 16 02:54:50 2024 from 10.75.135.33
+root@bmc-oob.:~# show_version bmc |grep Pingpong  
+Pingpong BMC Version    : hpa-v2.11.00-dirty
+spawn ssh root@10.75.135.250
+root@10.75.135.250's password: 
+Last login: Thu May 16 02:55:05 2024 from 10.75.135.33
+root@bmc-oob.:~# config_bmc_status -s slave 
+BMC will swap to slave after 10 seconds...
+Thu May 16 10:38:53 CST 2024
+PING 10.75.135.250 (10.75.135.250) 56(84) bytes of data.
+64 bytes from 10.75.135.250: icmp_seq=1 ttl=64 time=0.643 ms
+64 bytes from 10.75.135.250: icmp_seq=2 ttl=64 time=0.359 ms
+64 bytes from 10.75.135.250: icmp_seq=3 ttl=64 time=0.388 ms
+64 bytes from 10.75.135.250: icmp_seq=4 ttl=64 time=0.372 ms
+64 bytes from 10.75.135.250: icmp_seq=5 ttl=64 time=0.447 ms
+
+--- 10.75.135.250 ping statistics ---
+5 packets transmitted, 5 received, 0% packet loss, time 4073ms
+rtt min/avg/max/mdev = 0.359/0.441/0.643/0.108 ms
+spawn ssh root@10.75.135.250
+The authenticity of host '10.75.135.250 (10.75.135.250)' can't be established.
+ECDSA key fingerprint is SHA256:YFsfwGpkgmRMm9fda3tiPktRliQdgbw3YqK0g7MwDYk.
+Are you sure you want to continue connecting (yes/no)? yes
+Warning: Permanently added '10.75.135.250' (ECDSA) to the list of known hosts.
+root@10.75.135.250's password: 
+Last login: Thu May 16 02:55:05 2024 from 10.75.135.33
+root@lambda_bmc:~# devmem 0x1e785010;devmem 0x1e785030;devmem 0x1e620010;devmem 0x1e6200a8;show_bmc_status 
+0x00000000
+0x00000102
+0x203C0641
+0x00000000
+BMC current boot code source: slave
+spawn ssh root@10.75.135.250
+root@10.75.135.250's password: 
+Last login: Thu May 16 03:04:45 2024 from 10.75.135.33
+root@lambda_bmc:~# show_version bmc |grep Pingpong  
+Pingpong BMC Version    : hpa-v2.11.00-dirty
+spawn ssh root@10.75.135.250
+root@10.75.135.250's password: 
+Last login: Thu May 16 03:05:01 2024 from 10.75.135.33
+root@lambda_bmc:~# devmem 0x1e785010;devmem 0x1e785030;rm -rf /var/log/*;show_bmc_status 
+0x00000000
+0x00000102
+BMC current boot code source: slave
+Thu May 16 10:48:40 CST 2024
+==================================================================================================
+**************************************************************************************************
+==================================================================================================
+======================cycle3 Start======================
+Thu May 16 10:53:56 CST 2024
+PING 10.75.135.250 (10.75.135.250) 56(84) bytes of data.
+64 bytes from 10.75.135.250: icmp_seq=1 ttl=64 time=0.678 ms
+64 bytes from 10.75.135.250: icmp_seq=2 ttl=64 time=0.334 ms
+64 bytes from 10.75.135.250: icmp_seq=3 ttl=64 time=0.348 ms
+64 bytes from 10.75.135.250: icmp_seq=4 ttl=64 time=0.394 ms
+64 bytes from 10.75.135.250: icmp_seq=5 ttl=64 time=0.401 ms
+
+--- 10.75.135.250 ping statistics ---
+5 packets transmitted, 5 received, 0% packet loss, time 4087ms
+rtt min/avg/max/mdev = 0.334/0.431/0.678/0.126 ms
+spawn ssh root@10.75.135.250
+The authenticity of host '10.75.135.250 (10.75.135.250)' can't be established.
+ECDSA key fingerprint is SHA256:9/u6O3L93PKf2QzK/qJc3O+zdriazsqvhUFXibozciw.
+Are you sure you want to continue connecting (yes/no)? yes
+Warning: Permanently added '10.75.135.250' (ECDSA) to the list of known hosts.
+root@10.75.135.250's password: 
+root@bmc-oob.:~# devmem 0x1e785010;devmem 0x1e785030;devmem 0x1e620010;devmem 0x1e6200a8;show_bmc_status 
+0x00000000
+0x00000000
+0x203C0641
+0x00000000
+BMC current boot code source: master
+spawn ssh root@10.75.135.250
+root@10.75.135.250's password: 
+Last login: Thu May 16 03:12:44 2024 from 10.75.135.33
+root@bmc-oob.:~# show_version bmc |grep Pingpong  
+Pingpong BMC Version    : hpa-v2.11.00-dirty
+spawn ssh root@10.75.135.250
+root@10.75.135.250's password: 
+Last login: Thu May 16 03:12:54 2024 from 10.75.135.33
+root@bmc-oob.:~# config_bmc_status -s slave 
+BMC will swap to slave after 10 seconds...
+Thu May 16 10:56:39 CST 2024
+PING 10.75.135.250 (10.75.135.250) 56(84) bytes of data.
+64 bytes from 10.75.135.250: icmp_seq=1 ttl=64 time=0.592 ms
+64 bytes from 10.75.135.250: icmp_seq=2 ttl=64 time=0.326 ms
+64 bytes from 10.75.135.250: icmp_seq=3 ttl=64 time=0.412 ms
+64 bytes from 10.75.135.250: icmp_seq=4 ttl=64 time=0.348 ms
+64 bytes from 10.75.135.250: icmp_seq=5 ttl=64 time=0.333 ms
+
+--- 10.75.135.250 ping statistics ---
+5 packets transmitted, 5 received, 0% packet loss, time 4102ms
+rtt min/avg/max/mdev = 0.326/0.402/0.592/0.100 ms
+spawn ssh root@10.75.135.250
+The authenticity of host '10.75.135.250 (10.75.135.250)' can't be established.
+ECDSA key fingerprint is SHA256:MzwjkNA7Zsc+OtiP56VhqsSFDbgqMHdNV4NsV2VJMzE.
+Are you sure you want to continue connecting (yes/no)? yes
+Warning: Permanently added '10.75.135.250' (ECDSA) to the list of known hosts.
+root@10.75.135.250's password: 
+Last login: Thu May 16 03:13:11 2024 from 10.75.135.33
+root@lambda_bmc:~# devmem 0x1e785010;devmem 0x1e785030;devmem 0x1e620010;devmem 0x1e6200a8;show_bmc_status 
+0x00000000
+0x00000102
+0x203C0641
+0x00000000
+BMC current boot code source: slave
+spawn ssh root@10.75.135.250
+root@10.75.135.250's password: 
+Last login: Thu May 16 03:20:33 2024 from 10.75.135.33
+root@lambda_bmc:~# show_version bmc |grep Pingpong  
+Pingpong BMC Version    : hpa-v2.11.00-dirty
+spawn ssh root@10.75.135.250
+root@10.75.135.250's password: 
+Last login: Thu May 16 03:20:42 2024 from 10.75.135.33
+root@lambda_bmc:~# devmem 0x1e785010;devmem 0x1e785030;rm -rf /var/log/*;show_bmc_status 
+0x00000000
+0x00000102
+BMC current boot code source: slave
+Thu May 16 11:04:11 CST 2024
+==================================================================================================
+**************************************************************************************************
+==================================================================================================
+======================cycle4 Start======================
+Thu May 16 11:09:26 CST 2024
+PING 10.75.135.250 (10.75.135.250) 56(84) bytes of data.
+64 bytes from 10.75.135.250: icmp_seq=1 ttl=64 time=0.670 ms
+64 bytes from 10.75.135.250: icmp_seq=2 ttl=64 time=0.368 ms
+64 bytes from 10.75.135.250: icmp_seq=3 ttl=64 time=0.344 ms
+64 bytes from 10.75.135.250: icmp_seq=4 ttl=64 time=0.347 ms
+64 bytes from 10.75.135.250: icmp_seq=5 ttl=64 time=0.413 ms
+
+--- 10.75.135.250 ping statistics ---
+5 packets transmitted, 5 received, 0% packet loss, time 4075ms
+rtt min/avg/max/mdev = 0.344/0.428/0.670/0.124 ms
+spawn ssh root@10.75.135.250
+The authenticity of host '10.75.135.250 (10.75.135.250)' can't be established.
+ECDSA key fingerprint is SHA256:QoQKP6+Hd4QFOeQvPVP3wnbDdCPQMNoT/2Hzw+4xwik.
+Are you sure you want to continue connecting (yes/no)? yes
+Warning: Permanently added '10.75.135.250' (ECDSA) to the list of known hosts.
+root@10.75.135.250's password: 
+root@bmc-oob.:~# devmem 0x1e785010;devmem 0x1e785030;devmem 0x1e620010;devmem 0x1e6200a8;show_bmc_status 
+0x00000000
+0x00000000
+0x203C0641
+0x00000000
+BMC current boot code source: master
+spawn ssh root@10.75.135.250
+root@10.75.135.250's password: 
+Last login: Thu May 16 03:28:16 2024 from 10.75.135.33
+root@bmc-oob.:~# show_version bmc |grep Pingpong  
+Pingpong BMC Version    : hpa-v2.11.00-dirty
+spawn ssh root@10.75.135.250
+root@10.75.135.250's password: 
+Last login: Thu May 16 03:28:27 2024 from 10.75.135.33
+root@bmc-oob.:~# config_bmc_status -s slave 
+BMC will swap to slave after 10 seconds...
+Thu May 16 11:12:10 CST 2024
+PING 10.75.135.250 (10.75.135.250) 56(84) bytes of data.
+64 bytes from 10.75.135.250: icmp_seq=1 ttl=64 time=0.597 ms
+64 bytes from 10.75.135.250: icmp_seq=2 ttl=64 time=0.347 ms
+64 bytes from 10.75.135.250: icmp_seq=3 ttl=64 time=0.380 ms
+64 bytes from 10.75.135.250: icmp_seq=4 ttl=64 time=0.356 ms
+64 bytes from 10.75.135.250: icmp_seq=5 ttl=64 time=0.367 ms
+
+--- 10.75.135.250 ping statistics ---
+5 packets transmitted, 5 received, 0% packet loss, time 4092ms
+rtt min/avg/max/mdev = 0.347/0.409/0.597/0.096 ms
+spawn ssh root@10.75.135.250
+The authenticity of host '10.75.135.250 (10.75.135.250)' can't be established.
+ECDSA key fingerprint is SHA256:CB/L9UozdpA/mH90y+u+P74+sEg6PsJeiPgNSwaBWg8.
+Are you sure you want to continue connecting (yes/no)? yes
+Warning: Permanently added '10.75.135.250' (ECDSA) to the list of known hosts.
+root@10.75.135.250's password: 
+Last login: Thu May 16 03:28:45 2024 from 10.75.135.33
+root@lambda_bmc:~# devmem 0x1e785010;devmem 0x1e785030;devmem 0x1e620010;devmem 0x1e6200a8;show_bmc_status 
+0x00000000
+0x00000102
+0x203C0641
+0x00000000
+BMC current boot code source: slave
+spawn ssh root@10.75.135.250
+root@10.75.135.250's password: 
+Last login: Thu May 16 03:36:46 2024 from 10.75.135.33
+root@lambda_bmc:~# show_version bmc |grep Pingpong  
+Pingpong BMC Version    : hpa-v2.11.00-dirty
+spawn ssh root@10.75.135.250
+root@10.75.135.250's password: 
+Last login: Thu May 16 03:36:55 2024 from 10.75.135.33
+root@lambda_bmc:~# devmem 0x1e785010;devmem 0x1e785030;rm -rf /var/log/*;show_bmc_status 
+0x00000000
+0x00000102
+BMC current boot code source: slave
+Thu May 16 11:20:24 CST 2024
+==================================================================================================
+**************************************************************************************************
+==================================================================================================
+======================cycle5 Start======================
+Thu May 16 11:25:40 CST 2024
+PING 10.75.135.250 (10.75.135.250) 56(84) bytes of data.
+64 bytes from 10.75.135.250: icmp_seq=1 ttl=64 time=0.666 ms
+64 bytes from 10.75.135.250: icmp_seq=2 ttl=64 time=0.426 ms
+64 bytes from 10.75.135.250: icmp_seq=3 ttl=64 time=0.349 ms
+64 bytes from 10.75.135.250: icmp_seq=4 ttl=64 time=0.350 ms
+64 bytes from 10.75.135.250: icmp_seq=5 ttl=64 time=0.349 ms
+
+--- 10.75.135.250 ping statistics ---
+5 packets transmitted, 5 received, 0% packet loss, time 4100ms
+rtt min/avg/max/mdev = 0.349/0.428/0.666/0.122 ms
+spawn ssh root@10.75.135.250
+The authenticity of host '10.75.135.250 (10.75.135.250)' can't be established.
+ECDSA key fingerprint is SHA256:Bjbhf+O1SVItlhYXd37RMkv2HApgHgGp/1yWv8/ngv8.
+Are you sure you want to continue connecting (yes/no)? yes
+Warning: Permanently added '10.75.135.250' (ECDSA) to the list of known hosts.
+root@10.75.135.250's password: 
+root@bmc-oob.:~# devmem 0x1e785010;devmem 0x1e785030;devmem 0x1e620010;devmem 0x1e6200a8;show_bmc_status 
+0x00000000
+0x00000000
+0x203C0641
+0x00000000
+BMC current boot code source: master
+spawn ssh root@10.75.135.250
+root@10.75.135.250's password: 
+Last login: Thu May 16 03:44:06 2024 from 10.75.135.33
+root@bmc-oob.:~# show_version bmc |grep Pingpong  
+Pingpong BMC Version    : hpa-v2.11.00-dirty
+spawn ssh root@10.75.135.250
+root@10.75.135.250's password: 
+Last login: Thu May 16 03:44:16 2024 from 10.75.135.33
+root@bmc-oob.:~# config_bmc_status -s slave 
+BMC will swap to slave after 10 seconds...
+Thu May 16 11:27:48 CST 2024
+PING 10.75.135.250 (10.75.135.250) 56(84) bytes of data.
+64 bytes from 10.75.135.250: icmp_seq=1 ttl=64 time=0.572 ms
+64 bytes from 10.75.135.250: icmp_seq=2 ttl=64 time=0.408 ms
+64 bytes from 10.75.135.250: icmp_seq=3 ttl=64 time=0.347 ms
+64 bytes from 10.75.135.250: icmp_seq=4 ttl=64 time=0.347 ms
+64 bytes from 10.75.135.250: icmp_seq=5 ttl=64 time=0.410 ms
+
+--- 10.75.135.250 ping statistics ---
+5 packets transmitted, 5 received, 0% packet loss, time 4080ms
+rtt min/avg/max/mdev = 0.347/0.416/0.572/0.086 ms
+spawn ssh root@10.75.135.250
+The authenticity of host '10.75.135.250 (10.75.135.250)' can't be established.
+ECDSA key fingerprint is SHA256:PdXXYGv38H+jHkzaOqJFNJKXhAXNa6jafXccFolSPxk.
+Are you sure you want to continue connecting (yes/no)? yes
+Warning: Permanently added '10.75.135.250' (ECDSA) to the list of known hosts.
+root@10.75.135.250's password: 
+Last login: Thu May 16 03:44:28 2024 from 10.75.135.33
+root@lambda_bmc:~# devmem 0x1e785010;devmem 0x1e785030;devmem 0x1e620010;devmem 0x1e6200a8;show_bmc_status 
+0x00000000
+0x00000102
+0x203C0641
+0x00000000
+BMC current boot code source: slave
+spawn ssh root@10.75.135.250
+root@10.75.135.250's password: 
+Last login: Thu May 16 03:55:08 2024 from 10.75.135.33
+root@lambda_bmc:~# show_version bmc |grep Pingpong  
+Pingpong BMC Version    : hpa-v2.11.00-dirty
+spawn ssh root@10.75.135.250
+root@10.75.135.250's password: 
+Last login: Thu May 16 03:55:22 2024 from 10.75.135.33
+root@lambda_bmc:~# devmem 0x1e785010;devmem 0x1e785030;rm -rf /var/log/*;show_bmc_status 
+0x00000000
+0x00000102
+BMC current boot code source: slave
+Thu May 16 11:39:02 CST 2024
+==================================================================================================
+**************************************************************************************************
+==================================================================================================
+======================cycle6 Start======================
+Thu May 16 11:44:19 CST 2024
+PING 10.75.135.250 (10.75.135.250) 56(84) bytes of data.
+64 bytes from 10.75.135.250: icmp_seq=1 ttl=64 time=0.688 ms
+64 bytes from 10.75.135.250: icmp_seq=2 ttl=64 time=0.353 ms
+64 bytes from 10.75.135.250: icmp_seq=3 ttl=64 time=0.387 ms
+64 bytes from 10.75.135.250: icmp_seq=4 ttl=64 time=0.399 ms
+64 bytes from 10.75.135.250: icmp_seq=5 ttl=64 time=0.343 ms
+
+--- 10.75.135.250 ping statistics ---
+5 packets transmitted, 5 received, 0% packet loss, time 4076ms
+rtt min/avg/max/mdev = 0.343/0.434/0.688/0.128 ms
+spawn ssh root@10.75.135.250
+The authenticity of host '10.75.135.250 (10.75.135.250)' can't be established.
+ECDSA key fingerprint is SHA256:PldrKPc+gIKsx3Jj+KRshlD2vOck8LEK+yzZdGgp800.
+Are you sure you want to continue connecting (yes/no)? yes
+Warning: Permanently added '10.75.135.250' (ECDSA) to the list of known hosts.
+root@10.75.135.250's password: 
+root@bmc-oob.:~# devmem 0x1e785010;devmem 0x1e785030;devmem 0x1e620010;devmem 0x1e6200a8;show_bmc_status 
+0x00000000
+0x00000000
+0x203C0641
+0x00000000
+BMC current boot code source: master
+spawn ssh root@10.75.135.250
+root@10.75.135.250's password: 
+Last login: Thu May 16 04:02:56 2024 from 10.75.135.33
+root@bmc-oob.:~# show_version bmc |grep Pingpong  
+Pingpong BMC Version    : hpa-v2.11.00-dirty
+spawn ssh root@10.75.135.250
+root@10.75.135.250's password: 
+Last login: Thu May 16 04:03:07 2024 from 10.75.135.33
+root@bmc-oob.:~# config_bmc_status -s slave 
+BMC will swap to slave after 10 seconds...
+Thu May 16 11:46:43 CST 2024
+PING 10.75.135.250 (10.75.135.250) 56(84) bytes of data.
+64 bytes from 10.75.135.250: icmp_seq=1 ttl=64 time=0.613 ms
+64 bytes from 10.75.135.250: icmp_seq=2 ttl=64 time=0.348 ms
+64 bytes from 10.75.135.250: icmp_seq=3 ttl=64 time=0.403 ms
+64 bytes from 10.75.135.250: icmp_seq=4 ttl=64 time=0.337 ms
+64 bytes from 10.75.135.250: icmp_seq=5 ttl=64 time=0.335 ms
+
+--- 10.75.135.250 ping statistics ---
+5 packets transmitted, 5 received, 0% packet loss, time 4097ms
+rtt min/avg/max/mdev = 0.335/0.407/0.613/0.106 ms
+spawn ssh root@10.75.135.250
+The authenticity of host '10.75.135.250 (10.75.135.250)' can't be established.
+ECDSA key fingerprint is SHA256:KWc6R/9N3BgsuAC1P10FEPPoIr1h2vqZjboo3dlXxG4.
+Are you sure you want to continue connecting (yes/no)? yes
+Warning: Permanently added '10.75.135.250' (ECDSA) to the list of known hosts.
+root@10.75.135.250's password: 
+Last login: Thu May 16 04:03:19 2024 from 10.75.135.33
+root@lambda_bmc:~# devmem 0x1e785010;devmem 0x1e785030;devmem 0x1e620010;devmem 0x1e6200a8;show_bmc_status 
+0x00000000
+0x00000102
+0x203C0641
+0x00000000
+BMC current boot code source: slave
+spawn ssh root@10.75.135.250
+root@10.75.135.250's password: 
+Last login: Thu May 16 04:10:19 2024 from 10.75.135.33
+root@lambda_bmc:~# show_version bmc |grep Pingpong  
+Pingpong BMC Version    : hpa-v2.11.00-dirty
+spawn ssh root@10.75.135.250
+root@10.75.135.250's password: 
+Last login: Thu May 16 04:10:29 2024 from 10.75.135.33
+root@lambda_bmc:~# devmem 0x1e785010;devmem 0x1e785030;rm -rf /var/log/*;show_bmc_status 
+0x00000000
+0x00000102
+BMC current boot code source: slave
+Thu May 16 11:53:54 CST 2024
+==================================================================================================
+**************************************************************************************************
+==================================================================================================
+======================cycle7 Start======================
+Thu May 16 11:59:09 CST 2024
+PING 10.75.135.250 (10.75.135.250) 56(84) bytes of data.
+64 bytes from 10.75.135.250: icmp_seq=1 ttl=64 time=0.732 ms
+64 bytes from 10.75.135.250: icmp_seq=2 ttl=64 time=0.411 ms
+64 bytes from 10.75.135.250: icmp_seq=3 ttl=64 time=0.408 ms
+64 bytes from 10.75.135.250: icmp_seq=4 ttl=64 time=0.406 ms
+64 bytes from 10.75.135.250: icmp_seq=5 ttl=64 time=0.345 ms
+
+--- 10.75.135.250 ping statistics ---
+5 packets transmitted, 5 received, 0% packet loss, time 4096ms
+rtt min/avg/max/mdev = 0.345/0.460/0.732/0.139 ms
+spawn ssh root@10.75.135.250
+The authenticity of host '10.75.135.250 (10.75.135.250)' can't be established.
+ECDSA key fingerprint is SHA256:5CW2dnf7nhYvs/jku0gcandCbtugacdJqp+G6jel7Eo.
+Are you sure you want to continue connecting (yes/no)? yes
+Warning: Permanently added '10.75.135.250' (ECDSA) to the list of known hosts.
+root@10.75.135.250's password: 
+root@bmc-oob.:~# devmem 0x1e785010;devmem 0x1e785030;devmem 0x1e620010;devmem 0x1e6200a8;show_bmc_status 
+0x00000000
+0x00000000
+0x203C0641
+0x00000000
+BMC current boot code source: master
+spawn ssh root@10.75.135.250
+root@10.75.135.250's password: 
+Last login: Thu May 16 04:17:46 2024 from 10.75.135.33
+root@bmc-oob.:~# show_version bmc |grep Pingpong  
+Pingpong BMC Version    : hpa-v2.11.00-dirty
+spawn ssh root@10.75.135.250
+root@10.75.135.250's password: 
+Last login: Thu May 16 04:17:58 2024 from 10.75.135.33
+root@bmc-oob.:~# config_bmc_status -s slave 
+BMC will swap to slave after 10 seconds...
+Thu May 16 12:01:41 CST 2024
+PING 10.75.135.250 (10.75.135.250) 56(84) bytes of data.
+64 bytes from 10.75.135.250: icmp_seq=1 ttl=64 time=0.618 ms
+64 bytes from 10.75.135.250: icmp_seq=2 ttl=64 time=0.348 ms
+64 bytes from 10.75.135.250: icmp_seq=3 ttl=64 time=0.351 ms
+64 bytes from 10.75.135.250: icmp_seq=4 ttl=64 time=0.340 ms
+64 bytes from 10.75.135.250: icmp_seq=5 ttl=64 time=0.358 ms
+
+--- 10.75.135.250 ping statistics ---
+5 packets transmitted, 5 received, 0% packet loss, time 4088ms
+rtt min/avg/max/mdev = 0.340/0.403/0.618/0.107 ms
+spawn ssh root@10.75.135.250
+The authenticity of host '10.75.135.250 (10.75.135.250)' can't be established.
+ECDSA key fingerprint is SHA256:BiZnaJ5kXXhQsxeuwCEA/YmaTIdmL19Me+nvhDMlcuM.
+Are you sure you want to continue connecting (yes/no)? yes
+Warning: Permanently added '10.75.135.250' (ECDSA) to the list of known hosts.
+root@10.75.135.250's password: 
+Last login: Thu May 16 04:18:12 2024 from 10.75.135.33
+root@lambda_bmc:~# devmem 0x1e785010;devmem 0x1e785030;devmem 0x1e620010;devmem 0x1e6200a8;show_bmc_status 
+0x00000000
+0x00000102
+0x203C0641
+0x00000000
+BMC current boot code source: slave
+spawn ssh root@10.75.135.250
+root@10.75.135.250's password: 
+Last login: Thu May 16 04:25:18 2024 from 10.75.135.33
+root@lambda_bmc:~# show_version bmc |grep Pingpong  
+Pingpong BMC Version    : hpa-v2.11.00-dirty
+spawn ssh root@10.75.135.250
+root@10.75.135.250's password: 
+Last login: Thu May 16 04:25:28 2024 from 10.75.135.33
+root@lambda_bmc:~# devmem 0x1e785010;devmem 0x1e785030;rm -rf /var/log/*;show_bmc_status 
+0x00000000
+0x00000102
+BMC current boot code source: slave
+Thu May 16 12:08:55 CST 2024
+==================================================================================================
+**************************************************************************************************
+==================================================================================================
+======================cycle8 Start======================
+Thu May 16 12:19:08 CST 2024
+PING 10.75.135.250 (10.75.135.250) 56(84) bytes of data.
+64 bytes from 10.75.135.250: icmp_seq=1 ttl=64 time=0.341 ms
+64 bytes from 10.75.135.250: icmp_seq=2 ttl=64 time=0.355 ms
+64 bytes from 10.75.135.250: icmp_seq=3 ttl=64 time=0.395 ms
+64 bytes from 10.75.135.250: icmp_seq=4 ttl=64 time=0.387 ms
+64 bytes from 10.75.135.250: icmp_seq=5 ttl=64 time=0.348 ms
+
+--- 10.75.135.250 ping statistics ---
+5 packets transmitted, 5 received, 0% packet loss, time 4087ms
+rtt min/avg/max/mdev = 0.341/0.365/0.395/0.024 ms
+spawn ssh root@10.75.135.250
+The authenticity of host '10.75.135.250 (10.75.135.250)' can't be established.
+ECDSA key fingerprint is SHA256:V9V0WIfZewNDhjrl6LwtDCnkJuS0MN5eBUQ9bkcX80g.
+Are you sure you want to continue connecting (yes/no)? yes
+Warning: Permanently added '10.75.135.250' (ECDSA) to the list of known hosts.
+root@10.75.135.250's password: 
+root@bmc-oob.:~# devmem 0x1e785010;devmem 0x1e785030;devmem 0x1e620010;devmem 0x1e6200a8;show_bmc_status 
+0x00000000
+0x00000000
+0x203C0641
+0x00000000
+BMC current boot code source: master
+spawn ssh root@10.75.135.250
+root@10.75.135.250's password: 
+Last login: Thu May 16 04:36:24 2024 from 10.75.135.33
+root@bmc-oob.:~# show_version bmc |grep Pingpong  
+Pingpong BMC Version    : hpa-v2.11.00-dirty
+spawn ssh root@10.75.135.250
+root@10.75.135.250's password: 
+Last login: Thu May 16 04:36:39 2024 from 10.75.135.33
+root@bmc-oob.:~# config_bmc_status -s slave 
+BMC will swap to slave after 10 seconds...
+Thu May 16 12:20:18 CST 2024
+PING 10.75.135.250 (10.75.135.250) 56(84) bytes of data.
+64 bytes from 10.75.135.250: icmp_seq=1 ttl=64 time=0.600 ms
+64 bytes from 10.75.135.250: icmp_seq=2 ttl=64 time=0.332 ms
+64 bytes from 10.75.135.250: icmp_seq=3 ttl=64 time=0.359 ms
+64 bytes from 10.75.135.250: icmp_seq=4 ttl=64 time=0.357 ms
+64 bytes from 10.75.135.250: icmp_seq=5 ttl=64 time=0.335 ms
+
+--- 10.75.135.250 ping statistics ---
+5 packets transmitted, 5 received, 0% packet loss, time 4092ms
+rtt min/avg/max/mdev = 0.332/0.396/0.600/0.104 ms
+spawn ssh root@10.75.135.250
+The authenticity of host '10.75.135.250 (10.75.135.250)' can't be established.
+ECDSA key fingerprint is SHA256:c1NaHhFhx2Dh+PFtqoAx1gjGNc/ihEFhNRRXo2zgm+k.
+Are you sure you want to continue connecting (yes/no)? yes
+Warning: Permanently added '10.75.135.250' (ECDSA) to the list of known hosts.
+root@10.75.135.250's password: 
+Last login: Thu May 16 04:36:58 2024 from 10.75.135.33
+root@lambda_bmc:~# devmem 0x1e785010;devmem 0x1e785030;devmem 0x1e620010;devmem 0x1e6200a8;show_bmc_status 
+0x00000000
+0x00000102
+0x203C0641
+0x00000000
+BMC current boot code source: slave
+spawn ssh root@10.75.135.250
+root@10.75.135.250's password: 
+Last login: Thu May 16 04:42:34 2024 from 10.75.135.33
+root@lambda_bmc:~# show_version bmc |grep Pingpong  
+Pingpong BMC Version    : hpa-v2.11.00-dirty
+spawn ssh root@10.75.135.250
+root@10.75.135.250's password: 
+Last login: Thu May 16 04:42:48 2024 from 10.75.135.33
+root@lambda_bmc:~# devmem 0x1e785010;devmem 0x1e785030;rm -rf /var/log/*;show_bmc_status 
+0x00000000
+0x00000102
+BMC current boot code source: slave
+Thu May 16 12:26:25 CST 2024
+==================================================================================================
+**************************************************************************************************
+==================================================================================================
+======================cycle9 Start======================
+Thu May 16 12:31:42 CST 2024
+PING 10.75.135.250 (10.75.135.250) 56(84) bytes of data.
+64 bytes from 10.75.135.250: icmp_seq=1 ttl=64 time=0.694 ms
+64 bytes from 10.75.135.250: icmp_seq=2 ttl=64 time=0.369 ms
+64 bytes from 10.75.135.250: icmp_seq=3 ttl=64 time=0.400 ms
+64 bytes from 10.75.135.250: icmp_seq=4 ttl=64 time=0.354 ms
+64 bytes from 10.75.135.250: icmp_seq=5 ttl=64 time=0.420 ms
+
+--- 10.75.135.250 ping statistics ---
+5 packets transmitted, 5 received, 0% packet loss, time 4100ms
+rtt min/avg/max/mdev = 0.354/0.447/0.694/0.126 ms
+spawn ssh root@10.75.135.250
+The authenticity of host '10.75.135.250 (10.75.135.250)' can't be established.
+ECDSA key fingerprint is SHA256:Ph1VZ4AWJSrzBCIpAC7jVHUAb1vWMkhBkwvYCaQeArk.
+Are you sure you want to continue connecting (yes/no)? yes
+Warning: Permanently added '10.75.135.250' (ECDSA) to the list of known hosts.
+root@10.75.135.250's password: 
+root@bmc-oob.:~# devmem 0x1e785010;devmem 0x1e785030;devmem 0x1e620010;devmem 0x1e6200a8;show_bmc_status 
+0x00000000
+0x00000000
+0x203C0641
+0x00000000
+BMC current boot code source: master
+spawn ssh root@10.75.135.250
+root@10.75.135.250's password: 
+Last login: Thu May 16 04:50:42 2024 from 10.75.135.33
+root@bmc-oob.:~# show_version bmc |grep Pingpong  
+Pingpong BMC Version    : hpa-v2.11.00-dirty
+spawn ssh root@10.75.135.250
+root@10.75.135.250's password: 
+Last login: Thu May 16 04:50:52 2024 from 10.75.135.33
+root@bmc-oob.:~# config_bmc_status -s slave 
+BMC will swap to slave after 10 seconds...
+Thu May 16 12:34:37 CST 2024
+PING 10.75.135.250 (10.75.135.250) 56(84) bytes of data.
+64 bytes from 10.75.135.250: icmp_seq=1 ttl=64 time=0.600 ms
+64 bytes from 10.75.135.250: icmp_seq=2 ttl=64 time=0.351 ms
+64 bytes from 10.75.135.250: icmp_seq=3 ttl=64 time=0.363 ms
+64 bytes from 10.75.135.250: icmp_seq=4 ttl=64 time=0.339 ms
+64 bytes from 10.75.135.250: icmp_seq=5 ttl=64 time=0.427 ms
+
+--- 10.75.135.250 ping statistics ---
+5 packets transmitted, 5 received, 0% packet loss, time 4077ms
+rtt min/avg/max/mdev = 0.339/0.416/0.600/0.096 ms
+spawn ssh root@10.75.135.250
+The authenticity of host '10.75.135.250 (10.75.135.250)' can't be established.
+ECDSA key fingerprint is SHA256:S8wgXN6J8X7j1sJl7HNSyLTqD/kKlTLPqbPLljo6nMc.
+Are you sure you want to continue connecting (yes/no)? yes
+Warning: Permanently added '10.75.135.250' (ECDSA) to the list of known hosts.
+root@10.75.135.250's password: 
+Last login: Thu May 16 04:51:15 2024 from 10.75.135.33
+root@lambda_bmc:~# devmem 0x1e785010;devmem 0x1e785030;devmem 0x1e620010;devmem 0x1e6200a8;show_bmc_status 
+0x00000000
+0x00000102
+0x203C0641
+0x00000000
+BMC current boot code source: slave
+spawn ssh root@10.75.135.250
+root@10.75.135.250's password: 
+Last login: Thu May 16 04:58:13 2024 from 10.75.135.33
+root@lambda_bmc:~# show_version bmc |grep Pingpong  
+Pingpong BMC Version    : hpa-v2.11.00-dirty
+spawn ssh root@10.75.135.250
+root@10.75.135.250's password: 
+Last login: Thu May 16 04:58:22 2024 from 10.75.135.33
+root@lambda_bmc:~# devmem 0x1e785010;devmem 0x1e785030;rm -rf /var/log/*;show_bmc_status 
+0x00000000
+0x00000102
+BMC current boot code source: slave
+Thu May 16 12:41:50 CST 2024
+==================================================================================================
+**************************************************************************************************
+==================================================================================================
+======================cycle10 Start======================
+Thu May 16 12:47:05 CST 2024
+PING 10.75.135.250 (10.75.135.250) 56(84) bytes of data.
+64 bytes from 10.75.135.250: icmp_seq=1 ttl=64 time=0.796 ms
+64 bytes from 10.75.135.250: icmp_seq=2 ttl=64 time=0.330 ms
+64 bytes from 10.75.135.250: icmp_seq=3 ttl=64 time=0.337 ms
+64 bytes from 10.75.135.250: icmp_seq=4 ttl=64 time=0.331 ms
+64 bytes from 10.75.135.250: icmp_seq=5 ttl=64 time=0.393 ms
+
+--- 10.75.135.250 ping statistics ---
+5 packets transmitted, 5 received, 0% packet loss, time 4103ms
+rtt min/avg/max/mdev = 0.330/0.437/0.796/0.181 ms
+spawn ssh root@10.75.135.250
+The authenticity of host '10.75.135.250 (10.75.135.250)' can't be established.
+ECDSA key fingerprint is SHA256:rJYCSofpHP5lYVO2asIkdCFWszuqRiY9h5sGD/f1cCQ.
+Are you sure you want to continue connecting (yes/no)? yes
+Warning: Permanently added '10.75.135.250' (ECDSA) to the list of known hosts.
+root@10.75.135.250's password: 
+root@bmc-oob.:~# devmem 0x1e785010;devmem 0x1e785030;devmem 0x1e620010;devmem 0x1e6200a8;show_bmc_status 
+0x00000000
+0x00000000
+0x203C0641
+0x00000000
+BMC current boot code source: master
+spawn ssh root@10.75.135.250
+root@10.75.135.250's password: 
+Last login: Thu May 16 05:08:20 2024 from 10.75.135.33
+root@bmc-oob.:~# show_version bmc |grep Pingpong  
+Pingpong BMC Version    : hpa-v2.11.00-dirty
+spawn ssh root@10.75.135.250
+root@10.75.135.250's password: 
+Last login: Thu May 16 05:08:35 2024 from 10.75.135.33
+root@bmc-oob.:~# config_bmc_status -s slave 
+BMC will swap to slave after 10 seconds...
+Thu May 16 12:52:15 CST 2024
+PING 10.75.135.250 (10.75.135.250) 56(84) bytes of data.
+64 bytes from 10.75.135.250: icmp_seq=1 ttl=64 time=0.607 ms
+64 bytes from 10.75.135.250: icmp_seq=2 ttl=64 time=0.342 ms
+64 bytes from 10.75.135.250: icmp_seq=3 ttl=64 time=0.326 ms
+64 bytes from 10.75.135.250: icmp_seq=4 ttl=64 time=0.355 ms
+64 bytes from 10.75.135.250: icmp_seq=5 ttl=64 time=0.350 ms
+
+--- 10.75.135.250 ping statistics ---
+5 packets transmitted, 5 received, 0% packet loss, time 4094ms
+rtt min/avg/max/mdev = 0.326/0.396/0.607/0.105 ms
+spawn ssh root@10.75.135.250
+The authenticity of host '10.75.135.250 (10.75.135.250)' can't be established.
+ECDSA key fingerprint is SHA256:JA4Ti1+RWi7YEi+loJVhbBreWlxiw/Qf8+okjQ11H8k.
+Are you sure you want to continue connecting (yes/no)? yes
+Warning: Permanently added '10.75.135.250' (ECDSA) to the list of known hosts.
+root@10.75.135.250's password: 
+Last login: Thu May 16 05:08:35 2024 from 10.75.135.33
+root@lambda_bmc:~# devmem 0x1e785010;devmem 0x1e785030;devmem 0x1e620010;devmem 0x1e6200a8;show_bmc_status 
+0x00000000
+0x00000102
+0x203C0641
+0x00000000
+BMC current boot code source: slave
+spawn ssh root@10.75.135.250
+root@10.75.135.250's password: 
+Last login: Thu May 16 05:15:33 2024 from 10.75.135.33
+root@lambda_bmc:~# show_version bmc |grep Pingpong  
+Pingpong BMC Version    : hpa-v2.11.00-dirty
+spawn ssh root@10.75.135.250
+root@10.75.135.250's password: 
+Last login: Thu May 16 05:15:41 2024 from 10.75.135.33
+root@lambda_bmc:~# devmem 0x1e785010;devmem 0x1e785030;rm -rf /var/log/*;show_bmc_status 
+0x00000000
+0x00000102
+BMC current boot code source: slave
+Thu May 16 12:59:14 CST 2024
+==================================================================================================
+**************************************************************************************************
+==================================================================================================
+======================cycle11 Start======================
+Thu May 16 13:04:30 CST 2024
+PING 10.75.135.250 (10.75.135.250) 56(84) bytes of data.
+64 bytes from 10.75.135.250: icmp_seq=1 ttl=64 time=0.778 ms
+64 bytes from 10.75.135.250: icmp_seq=2 ttl=64 time=0.405 ms
+64 bytes from 10.75.135.250: icmp_seq=3 ttl=64 time=0.332 ms
+64 bytes from 10.75.135.250: icmp_seq=4 ttl=64 time=0.340 ms
+64 bytes from 10.75.135.250: icmp_seq=5 ttl=64 time=0.391 ms
+
+--- 10.75.135.250 ping statistics ---
+5 packets transmitted, 5 received, 0% packet loss, time 4098ms
+rtt min/avg/max/mdev = 0.332/0.449/0.778/0.167 ms
+spawn ssh root@10.75.135.250
+The authenticity of host '10.75.135.250 (10.75.135.250)' can't be established.
+ECDSA key fingerprint is SHA256:fmvSmGvfnG94crRPglqMe5193YXWyYuCAuqfsCmxCEc.
+Are you sure you want to continue connecting (yes/no)? yes
+Warning: Permanently added '10.75.135.250' (ECDSA) to the list of known hosts.
+root@10.75.135.250's password: 
+root@bmc-oob.:~# devmem 0x1e785010;devmem 0x1e785030;devmem 0x1e620010;devmem 0x1e6200a8;show_bmc_status 
+0x00000000
+0x00000000
+0x203C0641
+0x00000000
+BMC current boot code source: master
+spawn ssh root@10.75.135.250
+root@10.75.135.250's password: 
+Last login: Thu May 16 05:22:42 2024 from 10.75.135.33
+root@bmc-oob.:~# show_version bmc |grep Pingpong  
+Pingpong BMC Version    : hpa-v2.11.00-dirty
+spawn ssh root@10.75.135.250
+root@10.75.135.250's password: 
+Last login: Thu May 16 05:23:02 2024 from 10.75.135.33
+root@bmc-oob.:~# config_bmc_status -s slave 
+BMC will swap to slave after 10 seconds...
+Thu May 16 13:06:36 CST 2024
+PING 10.75.135.250 (10.75.135.250) 56(84) bytes of data.
+64 bytes from 10.75.135.250: icmp_seq=1 ttl=64 time=0.585 ms
+64 bytes from 10.75.135.250: icmp_seq=2 ttl=64 time=0.343 ms
+64 bytes from 10.75.135.250: icmp_seq=3 ttl=64 time=0.333 ms
+64 bytes from 10.75.135.250: icmp_seq=4 ttl=64 time=0.344 ms
+64 bytes from 10.75.135.250: icmp_seq=5 ttl=64 time=0.351 ms
+
+--- 10.75.135.250 ping statistics ---
+5 packets transmitted, 5 received, 0% packet loss, time 4073ms
+rtt min/avg/max/mdev = 0.333/0.391/0.585/0.097 ms
+spawn ssh root@10.75.135.250
+The authenticity of host '10.75.135.250 (10.75.135.250)' can't be established.
+ECDSA key fingerprint is SHA256:bQf/aVl/wlbu9hfL0skYh2QtQzQcfxJF+qXy1JBN7j4.
+Are you sure you want to continue connecting (yes/no)? yes
+Warning: Permanently added '10.75.135.250' (ECDSA) to the list of known hosts.
+root@10.75.135.250's password: 
+Last login: Thu May 16 05:23:02 2024 from 10.75.135.33
+root@lambda_bmc:~# devmem 0x1e785010;devmem 0x1e785030;devmem 0x1e620010;devmem 0x1e6200a8;show_bmc_status 
+0x00000000
+0x00000102
+0x203C0641
+0x00000000
+BMC current boot code source: slave
+spawn ssh root@10.75.135.250
+root@10.75.135.250's password: 
+Last login: Thu May 16 05:30:16 2024 from 10.75.135.33
+root@lambda_bmc:~# show_version bmc |grep Pingpong  
+Pingpong BMC Version    : hpa-v2.11.00-dirty
+spawn ssh root@10.75.135.250
+root@10.75.135.250's password: 
+Last login: Thu May 16 05:30:27 2024 from 10.75.135.33
+root@lambda_bmc:~# devmem 0x1e785010;devmem 0x1e785030;rm -rf /var/log/*;show_bmc_status 
+0x00000000
+0x00000102
+BMC current boot code source: slave
+Thu May 16 13:13:55 CST 2024
+==================================================================================================
+**************************************************************************************************
+==================================================================================================
+======================cycle12 Start======================
+Thu May 16 13:19:11 CST 2024
+PING 10.75.135.250 (10.75.135.250) 56(84) bytes of data.
+64 bytes from 10.75.135.250: icmp_seq=1 ttl=64 time=0.811 ms
+64 bytes from 10.75.135.250: icmp_seq=2 ttl=64 time=0.337 ms
+64 bytes from 10.75.135.250: icmp_seq=3 ttl=64 time=0.353 ms
+64 bytes from 10.75.135.250: icmp_seq=4 ttl=64 time=0.386 ms
+64 bytes from 10.75.135.250: icmp_seq=5 ttl=64 time=0.338 ms
+
+--- 10.75.135.250 ping statistics ---
+5 packets transmitted, 5 received, 0% packet loss, time 4085ms
+rtt min/avg/max/mdev = 0.337/0.445/0.811/0.183 ms
+spawn ssh root@10.75.135.250
+The authenticity of host '10.75.135.250 (10.75.135.250)' can't be established.
+ECDSA key fingerprint is SHA256:kfBsHrA9AyGZCD6L83bKMRBgoaOM5h4VEQS77KCN7bo.
+Are you sure you want to continue connecting (yes/no)? yes
+Warning: Permanently added '10.75.135.250' (ECDSA) to the list of known hosts.
+root@10.75.135.250's password: 
+root@bmc-oob.:~# devmem 0x1e785010;devmem 0x1e785030;devmem 0x1e620010;devmem 0x1e6200a8;show_bmc_status 
+0x00000000
+0x00000000
+0x203C0641
+0x00000000
+BMC current boot code source: master
+spawn ssh root@10.75.135.250
+root@10.75.135.250's password: 
+Last login: Thu May 16 05:40:09 2024 from 10.75.135.33
+root@bmc-oob.:~# show_version bmc |grep Pingpong  
+Pingpong BMC Version    : hpa-v2.11.00-dirty
+spawn ssh root@10.75.135.250
+root@10.75.135.250's password: 
+Last login: Thu May 16 05:40:25 2024 from 10.75.135.33
+root@bmc-oob.:~# config_bmc_status -s slave 
+BMC will swap to slave after 10 seconds...
+Thu May 16 13:24:05 CST 2024
+PING 10.75.135.250 (10.75.135.250) 56(84) bytes of data.
+64 bytes from 10.75.135.250: icmp_seq=1 ttl=64 time=0.645 ms
+64 bytes from 10.75.135.250: icmp_seq=2 ttl=64 time=0.348 ms
+64 bytes from 10.75.135.250: icmp_seq=3 ttl=64 time=0.356 ms
+64 bytes from 10.75.135.250: icmp_seq=4 ttl=64 time=0.340 ms
+64 bytes from 10.75.135.250: icmp_seq=5 ttl=64 time=0.342 ms
+
+--- 10.75.135.250 ping statistics ---
+5 packets transmitted, 5 received, 0% packet loss, time 4097ms
+rtt min/avg/max/mdev = 0.340/0.406/0.645/0.120 ms
+spawn ssh root@10.75.135.250
+The authenticity of host '10.75.135.250 (10.75.135.250)' can't be established.
+ECDSA key fingerprint is SHA256:EgziWtHPLqxrz6ccUHBHiB9oj70zCR/2gmRHMEcvQ5w.
+Are you sure you want to continue connecting (yes/no)? yes
+Warning: Permanently added '10.75.135.250' (ECDSA) to the list of known hosts.
+root@10.75.135.250's password: 
+Last login: Thu May 16 05:40:41 2024 from 10.75.135.33
+root@lambda_bmc:~# devmem 0x1e785010;devmem 0x1e785030;devmem 0x1e620010;devmem 0x1e6200a8;show_bmc_status 
+0x00000000
+0x00000102
+0x203C0641
+0x00000000
+BMC current boot code source: slave
+spawn ssh root@10.75.135.250
+root@10.75.135.250's password: 
+Last login: Thu May 16 05:48:12 2024 from 10.75.135.33
+root@lambda_bmc:~# show_version bmc |grep Pingpong  
+Pingpong BMC Version    : hpa-v2.11.00-dirty
+spawn ssh root@10.75.135.250
+root@10.75.135.250's password: 
+Last login: Thu May 16 05:48:23 2024 from 10.75.135.33
+root@lambda_bmc:~# devmem 0x1e785010;devmem 0x1e785030;rm -rf /var/log/*;show_bmc_status 
+0x00000000
+0x00000102
+BMC current boot code source: slave
+Thu May 16 13:31:55 CST 2024
+==================================================================================================
+**************************************************************************************************
+==================================================================================================
+======================cycle13 Start======================
+Thu May 16 13:37:12 CST 2024
+PING 10.75.135.250 (10.75.135.250) 56(84) bytes of data.
+64 bytes from 10.75.135.250: icmp_seq=1 ttl=64 time=0.669 ms
+64 bytes from 10.75.135.250: icmp_seq=2 ttl=64 time=0.334 ms
+64 bytes from 10.75.135.250: icmp_seq=3 ttl=64 time=0.334 ms
+64 bytes from 10.75.135.250: icmp_seq=4 ttl=64 time=0.387 ms
+64 bytes from 10.75.135.250: icmp_seq=5 ttl=64 time=0.353 ms
+
+--- 10.75.135.250 ping statistics ---
+5 packets transmitted, 5 received, 0% packet loss, time 4074ms
+rtt min/avg/max/mdev = 0.334/0.415/0.669/0.129 ms
+spawn ssh root@10.75.135.250
+The authenticity of host '10.75.135.250 (10.75.135.250)' can't be established.
+ECDSA key fingerprint is SHA256:dQLG1oE9g9hzy/6gWGJG3s45X6+p2uYZVr52G9xKKgc.
+Are you sure you want to continue connecting (yes/no)? yes
+Warning: Permanently added '10.75.135.250' (ECDSA) to the list of known hosts.
+root@10.75.135.250's password: 
+root@bmc-oob.:~# devmem 0x1e785010;devmem 0x1e785030;devmem 0x1e620010;devmem 0x1e6200a8;show_bmc_status 
+0x00000000
+0x00000000
+0x203C0641
+0x00000000
+BMC current boot code source: master
+spawn ssh root@10.75.135.250
+root@10.75.135.250's password: 
+Last login: Thu May 16 05:56:15 2024 from 10.75.135.33
+root@bmc-oob.:~# show_version bmc |grep Pingpong  
+Pingpong BMC Version    : hpa-v2.11.00-dirty
+spawn ssh root@10.75.135.250
+root@10.75.135.250's password: 
+Last login: Thu May 16 05:56:28 2024 from 10.75.135.33
+root@bmc-oob.:~# config_bmc_status -s slave 
+BMC will swap to slave after 10 seconds...
+Thu May 16 13:40:10 CST 2024
+PING 10.75.135.250 (10.75.135.250) 56(84) bytes of data.
+64 bytes from 10.75.135.250: icmp_seq=1 ttl=64 time=0.576 ms
+64 bytes from 10.75.135.250: icmp_seq=2 ttl=64 time=0.381 ms
+64 bytes from 10.75.135.250: icmp_seq=3 ttl=64 time=0.337 ms
+64 bytes from 10.75.135.250: icmp_seq=4 ttl=64 time=0.341 ms
+64 bytes from 10.75.135.250: icmp_seq=5 ttl=64 time=0.334 ms
+
+--- 10.75.135.250 ping statistics ---
+5 packets transmitted, 5 received, 0% packet loss, time 4088ms
+rtt min/avg/max/mdev = 0.334/0.393/0.576/0.096 ms
+spawn ssh root@10.75.135.250
+The authenticity of host '10.75.135.250 (10.75.135.250)' can't be established.
+ECDSA key fingerprint is SHA256:E0EV62K6D6C6l4HPaOq5Ci2TNLcz9ZRKRbhlDavGmBI.
+Are you sure you want to continue connecting (yes/no)? yes
+Warning: Permanently added '10.75.135.250' (ECDSA) to the list of known hosts.
+root@10.75.135.250's password: 
+Last login: Thu May 16 05:56:49 2024 from 10.75.135.33
+root@lambda_bmc:~# devmem 0x1e785010;devmem 0x1e785030;devmem 0x1e620010;devmem 0x1e6200a8;show_bmc_status 
+0x00000000
+0x00000102
+0x203C0641
+0x00000000
+BMC current boot code source: slave
+spawn ssh root@10.75.135.250
+root@10.75.135.250's password: 
+Last login: Thu May 16 06:03:54 2024 from 10.75.135.33
+root@lambda_bmc:~# show_version bmc |grep Pingpong  
+Pingpong BMC Version    : hpa-v2.11.00-dirty
+spawn ssh root@10.75.135.250
+root@10.75.135.250's password: 
+Last login: Thu May 16 06:04:04 2024 from 10.75.135.33
+root@lambda_bmc:~# devmem 0x1e785010;devmem 0x1e785030;rm -rf /var/log/*;show_bmc_status 
+0x00000000
+0x00000102
+BMC current boot code source: slave
+Thu May 16 13:47:34 CST 2024
+==================================================================================================
+**************************************************************************************************
+==================================================================================================
+======================cycle14 Start======================
+Thu May 16 13:52:50 CST 2024
+PING 10.75.135.250 (10.75.135.250) 56(84) bytes of data.
+64 bytes from 10.75.135.250: icmp_seq=1 ttl=64 time=0.672 ms
+64 bytes from 10.75.135.250: icmp_seq=2 ttl=64 time=0.400 ms
+64 bytes from 10.75.135.250: icmp_seq=3 ttl=64 time=0.398 ms
+64 bytes from 10.75.135.250: icmp_seq=4 ttl=64 time=0.404 ms
+64 bytes from 10.75.135.250: icmp_seq=5 ttl=64 time=0.390 ms
+
+--- 10.75.135.250 ping statistics ---
+5 packets transmitted, 5 received, 0% packet loss, time 4106ms
+rtt min/avg/max/mdev = 0.390/0.452/0.672/0.112 ms
+spawn ssh root@10.75.135.250
+The authenticity of host '10.75.135.250 (10.75.135.250)' can't be established.
+ECDSA key fingerprint is SHA256:ZmjPuSzplzknzIP3hjFwvh/Cp80oZamSzvI8KAWZvY8.
+Are you sure you want to continue connecting (yes/no)? yes
+Warning: Permanently added '10.75.135.250' (ECDSA) to the list of known hosts.
+root@10.75.135.250's password: 
+root@bmc-oob.:~# devmem 0x1e785010;devmem 0x1e785030;devmem 0x1e620010;devmem 0x1e6200a8;show_bmc_status 
+0x00000000
+0x00000000
+0x203C0641
+0x00000000
+BMC current boot code source: master
+spawn ssh root@10.75.135.250
+root@10.75.135.250's password: 
+Last login: Thu May 16 06:13:39 2024 from 10.75.135.33
+root@bmc-oob.:~# show_version bmc |grep Pingpong  
+Pingpong BMC Version    : hpa-v2.11.00-dirty
+spawn ssh root@10.75.135.250
+root@10.75.135.250's password: 
+Last login: Thu May 16 06:13:58 2024 from 10.75.135.33
+root@bmc-oob.:~# config_bmc_status -s slave 
+BMC will swap to slave after 10 seconds...
+Thu May 16 13:57:38 CST 2024
+PING 10.75.135.250 (10.75.135.250) 56(84) bytes of data.
+64 bytes from 10.75.135.250: icmp_seq=1 ttl=64 time=0.603 ms
+64 bytes from 10.75.135.250: icmp_seq=2 ttl=64 time=0.343 ms
+64 bytes from 10.75.135.250: icmp_seq=3 ttl=64 time=0.334 ms
+64 bytes from 10.75.135.250: icmp_seq=4 ttl=64 time=0.344 ms
+64 bytes from 10.75.135.250: icmp_seq=5 ttl=64 time=0.336 ms
+
+--- 10.75.135.250 ping statistics ---
+5 packets transmitted, 5 received, 0% packet loss, time 4080ms
+rtt min/avg/max/mdev = 0.334/0.392/0.603/0.105 ms
+spawn ssh root@10.75.135.250
+The authenticity of host '10.75.135.250 (10.75.135.250)' can't be established.
+ECDSA key fingerprint is SHA256:pr6cwE2jjkpsXS//9xPl7Lrd+RajgKIkJ/okDCE9b6U.
+Are you sure you want to continue connecting (yes/no)? yes
+Warning: Permanently added '10.75.135.250' (ECDSA) to the list of known hosts.
+root@10.75.135.250's password: 
+Last login: Thu May 16 06:13:58 2024 from 10.75.135.33
+root@lambda_bmc:~# devmem 0x1e785010;devmem 0x1e785030;devmem 0x1e620010;devmem 0x1e6200a8;show_bmc_status 
+0x00000000
+0x00000102
+0x203C0641
+0x00000000
+BMC current boot code source: slave
+spawn ssh root@10.75.135.250
+root@10.75.135.250's password: 
+Last login: Thu May 16 06:23:09 2024 from 10.75.135.33
+root@lambda_bmc:~# show_version bmc |grep Pingpong  
+Pingpong BMC Version    : hpa-v2.11.00-dirty
+spawn ssh root@10.75.135.250
+root@10.75.135.250's password: 
+Last login: Thu May 16 06:23:20 2024 from 10.75.135.33
+root@lambda_bmc:~# devmem 0x1e785010;devmem 0x1e785030;rm -rf /var/log/*;show_bmc_status 
+0x00000000
+0x00000102
+BMC current boot code source: slave
+Thu May 16 14:06:51 CST 2024
+==================================================================================================
+**************************************************************************************************
+==================================================================================================
+======================cycle15 Start======================
+Thu May 16 14:12:07 CST 2024
+PING 10.75.135.250 (10.75.135.250) 56(84) bytes of data.
+64 bytes from 10.75.135.250: icmp_seq=1 ttl=64 time=0.692 ms
+64 bytes from 10.75.135.250: icmp_seq=2 ttl=64 time=0.396 ms
+64 bytes from 10.75.135.250: icmp_seq=3 ttl=64 time=0.430 ms
+64 bytes from 10.75.135.250: icmp_seq=4 ttl=64 time=0.400 ms
+64 bytes from 10.75.135.250: icmp_seq=5 ttl=64 time=0.506 ms
+
+--- 10.75.135.250 ping statistics ---
+5 packets transmitted, 5 received, 0% packet loss, time 4031ms
+rtt min/avg/max/mdev = 0.396/0.484/0.692/0.114 ms
+spawn ssh root@10.75.135.250
+The authenticity of host '10.75.135.250 (10.75.135.250)' can't be established.
+ECDSA key fingerprint is SHA256:bSdEBrzBZ87srI74oPt/norBLixpsrxoGKFweT77XAY.
+Are you sure you want to continue connecting (yes/no)? yes
+Warning: Permanently added '10.75.135.250' (ECDSA) to the list of known hosts.
+root@10.75.135.250's password: 
+root@bmc-oob.:~# devmem 0x1e785010;devmem 0x1e785030;devmem 0x1e620010;devmem 0x1e6200a8;show_bmc_status 
+0x00000000
+0x00000000
+0x203C0641
+0x00000000
+BMC current boot code source: master
+spawn ssh root@10.75.135.250
+root@10.75.135.250's password: 
+Last login: Thu May 16 06:30:33 2024 from 10.75.135.33
+root@bmc-oob.:~# show_version bmc |grep Pingpong  
+Pingpong BMC Version    : hpa-v2.11.00-dirty
+spawn ssh root@10.75.135.250
+root@10.75.135.250's password: 
+Last login: Thu May 16 06:30:44 2024 from 10.75.135.33
+root@bmc-oob.:~# config_bmc_status -s slave 
+BMC will swap to slave after 10 seconds...
+Thu May 16 14:14:15 CST 2024
+PING 10.75.135.250 (10.75.135.250) 56(84) bytes of data.
+64 bytes from 10.75.135.250: icmp_seq=1 ttl=64 time=0.624 ms
+64 bytes from 10.75.135.250: icmp_seq=2 ttl=64 time=0.317 ms
+64 bytes from 10.75.135.250: icmp_seq=3 ttl=64 time=0.381 ms
+64 bytes from 10.75.135.250: icmp_seq=4 ttl=64 time=0.369 ms
+64 bytes from 10.75.135.250: icmp_seq=5 ttl=64 time=0.334 ms
+
+--- 10.75.135.250 ping statistics ---
+5 packets transmitted, 5 received, 0% packet loss, time 4068ms
+rtt min/avg/max/mdev = 0.317/0.405/0.624/0.111 ms
+spawn ssh root@10.75.135.250
+The authenticity of host '10.75.135.250 (10.75.135.250)' can't be established.
+ECDSA key fingerprint is SHA256:PBFxLG/9p8ga8CeBsKtuGO/BvLIc4hLVfhaQAYVv5ug.
+Are you sure you want to continue connecting (yes/no)? yes
+Warning: Permanently added '10.75.135.250' (ECDSA) to the list of known hosts.
+root@10.75.135.250's password: 
+Last login: Thu May 16 06:30:55 2024 from 10.75.135.33
+root@lambda_bmc:~# devmem 0x1e785010;devmem 0x1e785030;devmem 0x1e620010;devmem 0x1e6200a8;show_bmc_status 
+0x00000000
+0x00000102
+0x203C0641
+0x00000000
+BMC current boot code source: slave
+spawn ssh root@10.75.135.250
+root@10.75.135.250's password: 
+Last login: Thu May 16 06:38:54 2024 from 10.75.135.33
+root@lambda_bmc:~# show_version bmc |grep Pingpong  
+Pingpong BMC Version    : hpa-v2.11.00-dirty
+spawn ssh root@10.75.135.250
+root@10.75.135.250's password: 
+Last login: Thu May 16 06:39:10 2024 from 10.75.135.33
+root@lambda_bmc:~# devmem 0x1e785010;devmem 0x1e785030;rm -rf /var/log/*;show_bmc_status 
+0x00000000
+0x00000102
+BMC current boot code source: slave
+Thu May 16 14:22:48 CST 2024
+==================================================================================================
+**************************************************************************************************
+==================================================================================================
+======================cycle16 Start======================
+Thu May 16 14:28:03 CST 2024
+PING 10.75.135.250 (10.75.135.250) 56(84) bytes of data.
+64 bytes from 10.75.135.250: icmp_seq=1 ttl=64 time=0.695 ms
+64 bytes from 10.75.135.250: icmp_seq=2 ttl=64 time=1.82 ms
+64 bytes from 10.75.135.250: icmp_seq=3 ttl=64 time=0.314 ms
+64 bytes from 10.75.135.250: icmp_seq=4 ttl=64 time=0.317 ms
+64 bytes from 10.75.135.250: icmp_seq=5 ttl=64 time=0.383 ms
+
+--- 10.75.135.250 ping statistics ---
+5 packets transmitted, 5 received, 0% packet loss, time 4058ms
+rtt min/avg/max/mdev = 0.314/0.706/1.822/0.575 ms
+spawn ssh root@10.75.135.250
+The authenticity of host '10.75.135.250 (10.75.135.250)' can't be established.
+ECDSA key fingerprint is SHA256:HQSrHxnokejo/WZmHmLFD8OLaHB2CFQxFc1WEUn9a1I.
+Are you sure you want to continue connecting (yes/no)? yes
+Warning: Permanently added '10.75.135.250' (ECDSA) to the list of known hosts.
+root@10.75.135.250's password: 
+root@bmc-oob.:~# devmem 0x1e785010;devmem 0x1e785030;devmem 0x1e620010;devmem 0x1e6200a8;show_bmc_status 
+0x00000000
+0x00000000
+0x203C0641
+0x00000000
+BMC current boot code source: master
+spawn ssh root@10.75.135.250
+root@10.75.135.250's password: 
+Last login: Thu May 16 06:46:32 2024 from 10.75.135.33
+root@bmc-oob.:~# show_version bmc |grep Pingpong  
+Pingpong BMC Version    : hpa-v2.11.00-dirty
+spawn ssh root@10.75.135.250
+root@10.75.135.250's password: 
+Last login: Thu May 16 06:46:42 2024 from 10.75.135.33
+root@bmc-oob.:~# config_bmc_status -s slave 
+BMC will swap to slave after 10 seconds...
+Thu May 16 14:30:13 CST 2024
+PING 10.75.135.250 (10.75.135.250) 56(84) bytes of data.
+64 bytes from 10.75.135.250: icmp_seq=1 ttl=64 time=0.580 ms
+64 bytes from 10.75.135.250: icmp_seq=2 ttl=64 time=0.335 ms
+64 bytes from 10.75.135.250: icmp_seq=3 ttl=64 time=0.342 ms
+64 bytes from 10.75.135.250: icmp_seq=4 ttl=64 time=0.322 ms
+64 bytes from 10.75.135.250: icmp_seq=5 ttl=64 time=0.338 ms
+
+--- 10.75.135.250 ping statistics ---
+5 packets transmitted, 5 received, 0% packet loss, time 4086ms
+rtt min/avg/max/mdev = 0.322/0.383/0.580/0.100 ms
+spawn ssh root@10.75.135.250
+The authenticity of host '10.75.135.250 (10.75.135.250)' can't be established.
+ECDSA key fingerprint is SHA256:k81I3OO01Ew98wVSD5vgKsLLDq+kUruFL/jLPnjYZvQ.
+Are you sure you want to continue connecting (yes/no)? yes
+Warning: Permanently added '10.75.135.250' (ECDSA) to the list of known hosts.
+root@10.75.135.250's password: 
+Last login: Thu May 16 06:46:54 2024 from 10.75.135.33
+root@lambda_bmc:~# devmem 0x1e785010;devmem 0x1e785030;devmem 0x1e620010;devmem 0x1e6200a8;show_bmc_status 
+0x00000000
+0x00000102
+0x203C0641
+0x00000000
+BMC current boot code source: slave
+spawn ssh root@10.75.135.250
+root@10.75.135.250's password: 
+Last login: Thu May 16 06:54:59 2024 from 10.75.135.33
+root@lambda_bmc:~# show_version bmc |grep Pingpong  
+Pingpong BMC Version    : hpa-v2.11.00-dirty
+spawn ssh root@10.75.135.250
+root@10.75.135.250's password: 
+Last login: Thu May 16 06:55:08 2024 from 10.75.135.33
+root@lambda_bmc:~# devmem 0x1e785010;devmem 0x1e785030;rm -rf /var/log/*;show_bmc_status 
+0x00000000
+0x00000102
+BMC current boot code source: slave
+Thu May 16 14:38:36 CST 2024
+==================================================================================================
+**************************************************************************************************
+==================================================================================================
+======================cycle17 Start======================
+Thu May 16 14:43:52 CST 2024
+PING 10.75.135.250 (10.75.135.250) 56(84) bytes of data.
+64 bytes from 10.75.135.250: icmp_seq=1 ttl=64 time=0.672 ms
+64 bytes from 10.75.135.250: icmp_seq=2 ttl=64 time=0.392 ms
+64 bytes from 10.75.135.250: icmp_seq=3 ttl=64 time=0.437 ms
+64 bytes from 10.75.135.250: icmp_seq=4 ttl=64 time=0.393 ms
+64 bytes from 10.75.135.250: icmp_seq=5 ttl=64 time=0.335 ms
+
+--- 10.75.135.250 ping statistics ---
+5 packets transmitted, 5 received, 0% packet loss, time 4101ms
+rtt min/avg/max/mdev = 0.335/0.445/0.672/0.120 ms
+spawn ssh root@10.75.135.250
+connect is timeout
+PING 10.75.135.250 (10.75.135.250) 56(84) bytes of data.
+64 bytes from 10.75.135.250: icmp_seq=1 ttl=64 time=0.341 ms
+64 bytes from 10.75.135.250: icmp_seq=2 ttl=64 time=0.321 ms
+64 bytes from 10.75.135.250: icmp_seq=3 ttl=64 time=0.329 ms
+64 bytes from 10.75.135.250: icmp_seq=4 ttl=64 time=0.322 ms
+64 bytes from 10.75.135.250: icmp_seq=5 ttl=64 time=0.341 ms
+
+--- 10.75.135.250 ping statistics ---
+5 packets transmitted, 5 received, 0% packet loss, time 4097ms
+rtt min/avg/max/mdev = 0.321/0.330/0.341/0.024 ms
+spawn ssh root@10.75.135.250
+The authenticity of host '10.75.135.250 (10.75.135.250)' can't be established.
+ECDSA key fingerprint is SHA256:0O1VCZnXFc+odVH933EZSnt+yvf3Ff7xiaGkYvixIe8.
+Are you sure you want to continue connecting (yes/no)? yes
+Warning: Permanently added '10.75.135.250' (ECDSA) to the list of known hosts.
+root@10.75.135.250's password: 
+root@bmc-oob.:~# devmem 0x1e785010;devmem 0x1e785030;devmem 0x1e620010;devmem 0x1e6200a8;show_bmc_status 
+0x00000000
+0x00000000
+0x203C0641
+0x00000000
+BMC current boot code source: master
+spawn ssh root@10.75.135.250
+root@10.75.135.250's password: 
+Last login: Thu May 16 07:09:32 2024 from 10.75.135.33
+root@bmc-oob.:~# show_version bmc |grep Pingpong  
+Pingpong BMC Version    : hpa-v2.11.00-dirty
+spawn ssh root@10.75.135.250
+root@10.75.135.250's password: 
+Last login: Thu May 16 07:09:49 2024 from 10.75.135.33
+root@bmc-oob.:~# config_bmc_status -s slave 
+BMC will swap to slave after 10 seconds...
+Thu May 16 14:53:24 CST 2024
+PING 10.75.135.250 (10.75.135.250) 56(84) bytes of data.
+64 bytes from 10.75.135.250: icmp_seq=1 ttl=64 time=0.701 ms
+64 bytes from 10.75.135.250: icmp_seq=2 ttl=64 time=0.330 ms
+64 bytes from 10.75.135.250: icmp_seq=3 ttl=64 time=0.336 ms
+64 bytes from 10.75.135.250: icmp_seq=4 ttl=64 time=0.339 ms
+64 bytes from 10.75.135.250: icmp_seq=5 ttl=64 time=0.333 ms
+
+--- 10.75.135.250 ping statistics ---
+5 packets transmitted, 5 received, 0% packet loss, time 4100ms
+rtt min/avg/max/mdev = 0.330/0.407/0.701/0.148 ms
+spawn ssh root@10.75.135.250
+The authenticity of host '10.75.135.250 (10.75.135.250)' can't be established.
+ECDSA key fingerprint is SHA256:1rXDXANdvZKGfSK6cI2szQoSvLBN2snSUBtWcDq8bks.
+Are you sure you want to continue connecting (yes/no)? yes
+Warning: Permanently added '10.75.135.250' (ECDSA) to the list of known hosts.
+root@10.75.135.250's password: 
+Last login: Thu May 16 07:10:02 2024 from 10.75.135.33
+root@lambda_bmc:~# devmem 0x1e785010;devmem 0x1e785030;devmem 0x1e620010;devmem 0x1e6200a8;show_bmc_status 
+0x00000000
+0x00000102
+0x203C0641
+0x00000000
+BMC current boot code source: slave
+spawn ssh root@10.75.135.250
+root@10.75.135.250's password: 
+Last login: Thu May 16 07:17:01 2024 from 10.75.135.33
+root@lambda_bmc:~# show_version bmc |grep Pingpong  
+Pingpong BMC Version    : hpa-v2.11.00-dirty
+spawn ssh root@10.75.135.250
+root@10.75.135.250's password: 
+Last login: Thu May 16 07:17:13 2024 from 10.75.135.33
+root@lambda_bmc:~# devmem 0x1e785010;devmem 0x1e785030;rm -rf /var/log/*;show_bmc_status 
+0x00000000
+0x00000102
+BMC current boot code source: slave
+Thu May 16 15:00:41 CST 2024
+==================================================================================================
+**************************************************************************************************
+==================================================================================================
+======================cycle18 Start======================
+Thu May 16 15:05:58 CST 2024
+PING 10.75.135.250 (10.75.135.250) 56(84) bytes of data.
+64 bytes from 10.75.135.250: icmp_seq=1 ttl=64 time=0.674 ms
+64 bytes from 10.75.135.250: icmp_seq=2 ttl=64 time=0.330 ms
+64 bytes from 10.75.135.250: icmp_seq=3 ttl=64 time=0.442 ms
+64 bytes from 10.75.135.250: icmp_seq=4 ttl=64 time=0.343 ms
+64 bytes from 10.75.135.250: icmp_seq=5 ttl=64 time=0.391 ms
+
+--- 10.75.135.250 ping statistics ---
+5 packets transmitted, 5 received, 0% packet loss, time 4057ms
+rtt min/avg/max/mdev = 0.330/0.436/0.674/0.125 ms
+spawn ssh root@10.75.135.250
+The authenticity of host '10.75.135.250 (10.75.135.250)' can't be established.
+ECDSA key fingerprint is SHA256:3Kd2frFearZRtOGznd18xAmJZzsjIyC3Iyz4cka3CKU.
+Are you sure you want to continue connecting (yes/no)? yes
+Warning: Permanently added '10.75.135.250' (ECDSA) to the list of known hosts.
+root@10.75.135.250's password: 
+root@bmc-oob.:~# devmem 0x1e785010;devmem 0x1e785030;devmem 0x1e620010;devmem 0x1e6200a8;show_bmc_status 
+0x00000000
+0x00000000
+0x203C0641
+0x00000000
+BMC current boot code source: master
+spawn ssh root@10.75.135.250
+root@10.75.135.250's password: 
+0penBmc
+0penBmc
+Last login: Thu May 16 07:23:39 2024 from 10.75.135.33
+root@bmc-oob.:~# 0penBmc
+-bash: 0penBmc: command not found
+root@bmc-oob.:~# show_version bmc |grep Pingpong  
+Pingpong BMC Version    : hpa-v2.11.00-dirty
+spawn ssh root@10.75.135.250
+root@10.75.135.250's password: 
+0penBmc
+0penBmc
+Last login: Thu May 16 07:23:54 2024 from 10.75.135.33
+root@bmc-oob.:~# 0penBmc
+-bash: 0penBmc: command not found
+root@bmc-oob.:~# config_bmc_status -s slave 
+BMC will swap to slave after 10 seconds...
+Thu May 16 15:07:38 CST 2024
+PING 10.75.135.250 (10.75.135.250) 56(84) bytes of data.
+64 bytes from 10.75.135.250: icmp_seq=1 ttl=64 time=0.619 ms
+64 bytes from 10.75.135.250: icmp_seq=2 ttl=64 time=0.335 ms
+64 bytes from 10.75.135.250: icmp_seq=3 ttl=64 time=0.337 ms
+64 bytes from 10.75.135.250: icmp_seq=4 ttl=64 time=0.342 ms
+64 bytes from 10.75.135.250: icmp_seq=5 ttl=64 time=0.360 ms
+
+--- 10.75.135.250 ping statistics ---
+5 packets transmitted, 5 received, 0% packet loss, time 4077ms
+rtt min/avg/max/mdev = 0.335/0.398/0.619/0.112 ms
+spawn ssh root@10.75.135.250
+The authenticity of host '10.75.135.250 (10.75.135.250)' can't be established.
+ECDSA key fingerprint is SHA256:/YfH2L9LMaAymjG/wUTAZoHCJAMr44Fm3UI5QX0C6VM.
+Are you sure you want to continue connecting (yes/no)? yes
+Warning: Permanently added '10.75.135.250' (ECDSA) to the list of known hosts.
+root@10.75.135.250's password: 
+Last login: Thu May 16 07:23:54 2024 from 10.75.135.33
+root@lambda_bmc:~# devmem 0x1e785010;devmem 0x1e785030;devmem 0x1e620010;devmem 0x1e6200a8;show_bmc_status 
+0x00000000
+0x00000102
+0x203C0641
+0x00000000
+BMC current boot code source: slave
+spawn ssh root@10.75.135.250
+root@10.75.135.250's password: 
+0penBmc
+0penBmc
+Last login: Thu May 16 07:36:01 2024 from 10.75.135.33
+root@lambda_bmc:~# 0penBmc
+-bash: 0penBmc: command not found
+root@lambda_bmc:~# show_version bmc |grep Pingpong  
+Pingpong BMC Version    : hpa-v2.11.00-dirty
+spawn ssh root@10.75.135.250
+root@10.75.135.250's password: 
+Last login: Thu May 16 07:36:13 2024 from 10.75.135.33
+root@lambda_bmc:~# devmem 0x1e785010;devmem 0x1e785030;rm -rf /var/log/*;show_bmc_status 
+0x00000000
+0x00000102
+BMC current boot code source: slave
+Thu May 16 15:19:51 CST 2024
+==================================================================================================
+**************************************************************************************************
+==================================================================================================
+======================cycle19 Start======================
+Thu May 16 15:25:07 CST 2024
+PING 10.75.135.250 (10.75.135.250) 56(84) bytes of data.
+64 bytes from 10.75.135.250: icmp_seq=1 ttl=64 time=0.676 ms
+64 bytes from 10.75.135.250: icmp_seq=2 ttl=64 time=0.350 ms
+64 bytes from 10.75.135.250: icmp_seq=3 ttl=64 time=0.348 ms
+64 bytes from 10.75.135.250: icmp_seq=4 ttl=64 time=0.365 ms
+64 bytes from 10.75.135.250: icmp_seq=5 ttl=64 time=0.346 ms
+
+--- 10.75.135.250 ping statistics ---
+5 packets transmitted, 5 received, 0% packet loss, time 4025ms
+rtt min/avg/max/mdev = 0.346/0.417/0.676/0.129 ms
+spawn ssh root@10.75.135.250
+The authenticity of host '10.75.135.250 (10.75.135.250)' can't be established.
+ECDSA key fingerprint is SHA256:QmP2OxPaS92N1TqVw/YvEaMJU76ntQt03miXVWvC7AA.
+Are you sure you want to continue connecting (yes/no)? yes
+Warning: Permanently added '10.75.135.250' (ECDSA) to the list of known hosts.
+root@10.75.135.250's password: 
+root@bmc-oob.:~# devmem 0x1e785010;devmem 0x1e785030;devmem 0x1e620010;devmem 0x1e6200a8;show_bmc_status 
+0x00000000
+0x00000000
+0x203C0641
+0x00000000
+BMC current boot code source: master
+spawn ssh root@10.75.135.250
+root@10.75.135.250's password: 
+Last login: Thu May 16 07:48:49 2024 from 10.75.135.33
+root@bmc-oob.:~# show_version bmc |grep Pingpong  
+Pingpong BMC Version    : hpa-v2.11.00-dirty
+spawn ssh root@10.75.135.250
+root@10.75.135.250's password: 
+Last login: Thu May 16 07:49:05 2024 from 10.75.135.33
+root@bmc-oob.:~# config_bmc_status -s slave 
+BMC will swap to slave after 10 seconds...
+Thu May 16 15:32:38 CST 2024
+PING 10.75.135.250 (10.75.135.250) 56(84) bytes of data.
+64 bytes from 10.75.135.250: icmp_seq=1 ttl=64 time=0.719 ms
+64 bytes from 10.75.135.250: icmp_seq=2 ttl=64 time=0.344 ms
+64 bytes from 10.75.135.250: icmp_seq=3 ttl=64 time=0.342 ms
+64 bytes from 10.75.135.250: icmp_seq=4 ttl=64 time=0.344 ms
+64 bytes from 10.75.135.250: icmp_seq=5 ttl=64 time=0.356 ms
+
+--- 10.75.135.250 ping statistics ---
+5 packets transmitted, 5 received, 0% packet loss, time 4023ms
+rtt min/avg/max/mdev = 0.342/0.421/0.719/0.149 ms
+spawn ssh root@10.75.135.250
+The authenticity of host '10.75.135.250 (10.75.135.250)' can't be established.
+ECDSA key fingerprint is SHA256:k2u3mVUHGyfYpPWLOnnGdENiivlSG3DGOd5Xg8umlm8.
+Are you sure you want to continue connecting (yes/no)? yes
+Warning: Permanently added '10.75.135.250' (ECDSA) to the list of known hosts.
+root@10.75.135.250's password: 
+Last login: Thu May 16 07:49:18 2024 from 10.75.135.33
+root@lambda_bmc:~# devmem 0x1e785010;devmem 0x1e785030;devmem 0x1e620010;devmem 0x1e6200a8;show_bmc_status 
+0x00000000
+0x00000102
+0x203C0641
+0x00000000
+BMC current boot code source: slave
+spawn ssh root@10.75.135.250
+root@10.75.135.250's password: 
+Last login: Thu May 16 07:57:01 2024 from 10.75.135.33
+root@lambda_bmc:~# show_version bmc |grep Pingpong  
+Pingpong BMC Version    : hpa-v2.11.00-dirty
+spawn ssh root@10.75.135.250
+root@10.75.135.250's password: 
+Last login: Thu May 16 07:57:12 2024 from 10.75.135.33
+root@lambda_bmc:~# devmem 0x1e785010;devmem 0x1e785030;rm -rf /var/log/*;show_bmc_status 
+0x00000000
+0x00000102
+BMC current boot code source: slave
+Thu May 16 15:40:47 CST 2024
+==================================================================================================
+**************************************************************************************************
+==================================================================================================
+======================cycle20 Start======================
+Thu May 16 15:46:03 CST 2024
+PING 10.75.135.250 (10.75.135.250) 56(84) bytes of data.
+64 bytes from 10.75.135.250: icmp_seq=1 ttl=64 time=0.661 ms
+64 bytes from 10.75.135.250: icmp_seq=2 ttl=64 time=0.343 ms
+64 bytes from 10.75.135.250: icmp_seq=3 ttl=64 time=0.378 ms
+64 bytes from 10.75.135.250: icmp_seq=4 ttl=64 time=0.404 ms
+64 bytes from 10.75.135.250: icmp_seq=5 ttl=64 time=0.348 ms
+
+--- 10.75.135.250 ping statistics ---
+5 packets transmitted, 5 received, 0% packet loss, time 4018ms
+rtt min/avg/max/mdev = 0.343/0.426/0.661/0.121 ms
+spawn ssh root@10.75.135.250
+The authenticity of host '10.75.135.250 (10.75.135.250)' can't be established.
+ECDSA key fingerprint is SHA256:dYdlQzcSxDmfNIPoXYnP7FZFFMCuf+3NIqvQiT6wK8Y.
+Are you sure you want to continue connecting (yes/no)? yes
+Warning: Permanently added '10.75.135.250' (ECDSA) to the list of known hosts.
+root@10.75.135.250's password: 
+root@bmc-oob.:~# devmem 0x1e785010;devmem 0x1e785030;devmem 0x1e620010;devmem 0x1e6200a8;show_bmc_status 
+0x00000000
+0x00000000
+0x203C0641
+0x00000000
+BMC current boot code source: master
+spawn ssh root@10.75.135.250
+root@10.75.135.250's password: 
+Last login: Thu May 16 08:04:44 2024 from 10.75.135.33
+root@bmc-oob.:~# show_version bmc |grep Pingpong  
+Pingpong BMC Version    : hpa-v2.11.00-dirty
+spawn ssh root@10.75.135.250
+root@10.75.135.250's password: 
+Last login: Thu May 16 08:04:56 2024 from 10.75.135.33
+root@bmc-oob.:~# config_bmc_status -s slave 
+BMC will swap to slave after 10 seconds...
+Thu May 16 15:48:35 CST 2024
+PING 10.75.135.250 (10.75.135.250) 56(84) bytes of data.
+64 bytes from 10.75.135.250: icmp_seq=1 ttl=64 time=0.605 ms
+64 bytes from 10.75.135.250: icmp_seq=2 ttl=64 time=0.341 ms
+64 bytes from 10.75.135.250: icmp_seq=3 ttl=64 time=0.348 ms
+64 bytes from 10.75.135.250: icmp_seq=4 ttl=64 time=0.358 ms
+64 bytes from 10.75.135.250: icmp_seq=5 ttl=64 time=0.372 ms
+
+--- 10.75.135.250 ping statistics ---
+5 packets transmitted, 5 received, 0% packet loss, time 4032ms
+rtt min/avg/max/mdev = 0.341/0.404/0.605/0.103 ms
+spawn ssh root@10.75.135.250
+The authenticity of host '10.75.135.250 (10.75.135.250)' can't be established.
+ECDSA key fingerprint is SHA256:X7u9L2PCrt8/O4kJ8rhtRPAdNajmsvXz16einxzvuow.
+Are you sure you want to continue connecting (yes/no)? yes
+Warning: Permanently added '10.75.135.250' (ECDSA) to the list of known hosts.
+root@10.75.135.250's password: 
+0penBmc
+0penBmc
+Last login: Thu May 16 08:05:10 2024 from 10.75.135.33
+root@lambda_bmc:~# 0penBmc
+-bash: 0penBmc: command not found
+root@lambda_bmc:~# devmem 0x1e785010;devmem 0x1e785030;devmem 0x1e620010;devmem 0x1e6200a8;show_bmc_status 
+0x00000000
+0x00000102
+0x203C0641
+0x00000000
+BMC current boot code source: slave
+spawn ssh root@10.75.135.250
+root@10.75.135.250's password: 
+0penBmc
+0penBmc
+Last login: Thu May 16 08:12:50 2024 from 10.75.135.33
+root@lambda_bmc:~# 0penBmc
+-bash: 0penBmc: command not found
+root@lambda_bmc:~# show_version bmc |grep Pingpong  
+Pingpong BMC Version    : hpa-v2.11.00-dirty
+spawn ssh root@10.75.135.250
+root@10.75.135.250's password: 
+Last login: Thu May 16 08:12:59 2024 from 10.75.135.33
+root@lambda_bmc:~# devmem 0x1e785010;devmem 0x1e785030;rm -rf /var/log/*;show_bmc_status 
+0x00000000
+0x00000102
+BMC current boot code source: slave
+Thu May 16 15:56:29 CST 2024
+==================================================================================================
+**************************************************************************************************
+==================================================================================================
+======================cycle21 Start======================
+Thu May 16 16:01:44 CST 2024
+PING 10.75.135.250 (10.75.135.250) 56(84) bytes of data.
+64 bytes from 10.75.135.250: icmp_seq=1 ttl=64 time=0.644 ms
+64 bytes from 10.75.135.250: icmp_seq=2 ttl=64 time=0.337 ms
+64 bytes from 10.75.135.250: icmp_seq=3 ttl=64 time=0.332 ms
+64 bytes from 10.75.135.250: icmp_seq=4 ttl=64 time=0.478 ms
+64 bytes from 10.75.135.250: icmp_seq=5 ttl=64 time=0.339 ms
+
+--- 10.75.135.250 ping statistics ---
+5 packets transmitted, 5 received, 0% packet loss, time 4038ms
+rtt min/avg/max/mdev = 0.332/0.426/0.644/0.122 ms
+spawn ssh root@10.75.135.250
+The authenticity of host '10.75.135.250 (10.75.135.250)' can't be established.
+ECDSA key fingerprint is SHA256:ZWWD4t/zYyZUSOJ//WYTiNHxgz2q7e2fiarZNTb68zk.
+Are you sure you want to continue connecting (yes/no)? yes
+Warning: Permanently added '10.75.135.250' (ECDSA) to the list of known hosts.
+root@10.75.135.250's password: 
+root@bmc-oob.:~# devmem 0x1e785010;devmem 0x1e785030;devmem 0x1e620010;devmem 0x1e6200a8;show_bmc_status 
+0x00000000
+0x00000000
+0x203C0641
+0x00000000
+BMC current boot code source: master
+spawn ssh root@10.75.135.250
+root@10.75.135.250's password: 
+Last login: Thu May 16 08:23:19 2024 from 10.75.135.33
+root@bmc-oob.:~# show_version bmc |grep Pingpong  
+Pingpong BMC Version    : hpa-v2.11.00-dirty
+spawn ssh root@10.75.135.250
+root@10.75.135.250's password: 
+Last login: Thu May 16 08:23:32 2024 from 10.75.135.33
+root@bmc-oob.:~# config_bmc_status -s slave 
+BMC will swap to slave after 10 seconds...
+Thu May 16 16:07:08 CST 2024
+PING 10.75.135.250 (10.75.135.250) 56(84) bytes of data.
+64 bytes from 10.75.135.250: icmp_seq=1 ttl=64 time=0.616 ms
+64 bytes from 10.75.135.250: icmp_seq=2 ttl=64 time=0.359 ms
+64 bytes from 10.75.135.250: icmp_seq=3 ttl=64 time=0.348 ms
+64 bytes from 10.75.135.250: icmp_seq=4 ttl=64 time=0.342 ms
+64 bytes from 10.75.135.250: icmp_seq=5 ttl=64 time=0.349 ms
+
+--- 10.75.135.250 ping statistics ---
+5 packets transmitted, 5 received, 0% packet loss, time 4017ms
+rtt min/avg/max/mdev = 0.342/0.402/0.616/0.109 ms
+spawn ssh root@10.75.135.250
+The authenticity of host '10.75.135.250 (10.75.135.250)' can't be established.
+ECDSA key fingerprint is SHA256:nV34E8yvHB8P1gnpezv/IeQkVt7GHNLPD06yBRRgHcg.
+Are you sure you want to continue connecting (yes/no)? yes
+Warning: Permanently added '10.75.135.250' (ECDSA) to the list of known hosts.
+root@10.75.135.250's password: 
+Last login: Thu May 16 08:23:50 2024 from 10.75.135.33
+root@lambda_bmc:~# devmem 0x1e785010;devmem 0x1e785030;devmem 0x1e620010;devmem 0x1e6200a8;show_bmc_status 
+0x00000000
+0x00000102
+0x203C0641
+0x00000000
+BMC current boot code source: slave
+spawn ssh root@10.75.135.250
+root@10.75.135.250's password: 
+0penBmc
+0penBmc
+Last login: Thu May 16 08:31:04 2024 from 10.75.135.33
+root@lambda_bmc:~# 0penBmc
+show_version bmc |grep Pingpong  
+-bash: 0penBmc: command not found
+root@lambda_bmc:~# show_version bmc |grep Pingpong  
+show_version bmc |grep Pingpong  
+Pingpong BMC Version    : hpa-v2.11.00-dirty
+spawn ssh root@10.75.135.250
+root@10.75.135.250's password: 
+Last login: Thu May 16 08:31:14 2024 from 10.75.135.33
+root@lambda_bmc:~# devmem 0x1e785010;devmem 0x1e785030;rm -rf /var/log/*;show_bmc_status 
+0x00000000
+0x00000102
+BMC current boot code source: slave
+Thu May 16 16:14:39 CST 2024
+==================================================================================================
+**************************************************************************************************
+==================================================================================================
+======================cycle22 Start======================
+Thu May 16 16:19:53 CST 2024
+PING 10.75.135.250 (10.75.135.250) 56(84) bytes of data.
+64 bytes from 10.75.135.250: icmp_seq=1 ttl=64 time=0.554 ms
+64 bytes from 10.75.135.250: icmp_seq=2 ttl=64 time=0.331 ms
+64 bytes from 10.75.135.250: icmp_seq=3 ttl=64 time=0.358 ms
+64 bytes from 10.75.135.250: icmp_seq=4 ttl=64 time=0.373 ms
+64 bytes from 10.75.135.250: icmp_seq=5 ttl=64 time=0.385 ms
+
+--- 10.75.135.250 ping statistics ---
+5 packets transmitted, 5 received, 0% packet loss, time 4046ms
+rtt min/avg/max/mdev = 0.331/0.400/0.554/0.080 ms
+spawn ssh root@10.75.135.250
+The authenticity of host '10.75.135.250 (10.75.135.250)' can't be established.
+ECDSA key fingerprint is SHA256:4ubdHGNTDQ5HeGhuMbyq8dyQrqQJbPzQv9Mccw9JPME.
+Are you sure you want to continue connecting (yes/no)? yes
+Warning: Permanently added '10.75.135.250' (ECDSA) to the list of known hosts.
+root@10.75.135.250's password: 
+root@bmc-oob.:~# devmem 0x1e785010;devmem 0x1e785030;devmem 0x1e620010;devmem 0x1e6200a8;show_bmc_status 
+0x00000000
+0x00000000
+0x203C0641
+0x00000000
+BMC current boot code source: master
+spawn ssh root@10.75.135.250
+root@10.75.135.250's password: 
+Last login: Thu May 16 08:39:24 2024 from 10.75.135.33
+root@bmc-oob.:~# show_version bmc |grep Pingpong  
+Pingpong BMC Version    : hpa-v2.11.00-dirty
+spawn ssh root@10.75.135.250
+root@10.75.135.250's password: 
+Last login: Thu May 16 08:39:35 2024 from 10.75.135.33
+root@bmc-oob.:~# config_bmc_status -s slave 
+BMC will swap to slave after 10 seconds...
+Thu May 16 16:23:13 CST 2024
+PING 10.75.135.250 (10.75.135.250) 56(84) bytes of data.
+64 bytes from 10.75.135.250: icmp_seq=1 ttl=64 time=0.650 ms
+64 bytes from 10.75.135.250: icmp_seq=2 ttl=64 time=0.332 ms
+64 bytes from 10.75.135.250: icmp_seq=3 ttl=64 time=0.394 ms
+64 bytes from 10.75.135.250: icmp_seq=4 ttl=64 time=0.338 ms
+64 bytes from 10.75.135.250: icmp_seq=5 ttl=64 time=0.322 ms
+
+--- 10.75.135.250 ping statistics ---
+5 packets transmitted, 5 received, 0% packet loss, time 4087ms
+rtt min/avg/max/mdev = 0.322/0.407/0.650/0.124 ms
+spawn ssh root@10.75.135.250
+The authenticity of host '10.75.135.250 (10.75.135.250)' can't be established.
+ECDSA key fingerprint is SHA256:t/YNNe1Ra/8dr40utMnA+FOmdasevUELYQO/aSIrt+A.
+Are you sure you want to continue connecting (yes/no)? yes
+Warning: Permanently added '10.75.135.250' (ECDSA) to the list of known hosts.
+root@10.75.135.250's password: 
+Last login: Thu May 16 08:39:52 2024 from 10.75.135.33
+root@lambda_bmc:~# devmem 0x1e785010;devmem 0x1e785030;devmem 0x1e620010;devmem 0x1e6200a8;show_bmc_status 
+0x00000000
+0x00000200
+0x203C0641
+0x00000000
+BMC current boot code source: master
+BMC not slave on ---11
+spawn ssh root@10.75.135.250
+root@10.75.135.250's password: 
+Last login: Thu May 16 08:47:02 2024 from 10.75.135.33
+root@lambda_bmc:~# show_version bmc |grep Pingpong  
+Pingpong BMC Version    : hpa-v2.11.00-dirty
+BMC mdt error --2
+======================cycle0 Start======================
+Thu May 16 17:40:11 CST 2024
+PING 10.75.135.250 (10.75.135.250) 56(84) bytes of data.
+64 bytes from 10.75.135.250: icmp_seq=1 ttl=64 time=0.401 ms
+64 bytes from 10.75.135.250: icmp_seq=2 ttl=64 time=0.337 ms
+64 bytes from 10.75.135.250: icmp_seq=3 ttl=64 time=0.338 ms
+64 bytes from 10.75.135.250: icmp_seq=4 ttl=64 time=0.353 ms
+64 bytes from 10.75.135.250: icmp_seq=5 ttl=64 time=0.396 ms
+
+--- 10.75.135.250 ping statistics ---
+5 packets transmitted, 5 received, 0% packet loss, time 4067ms
+rtt min/avg/max/mdev = 0.337/0.365/0.401/0.027 ms
+spawn ssh root@10.75.135.250
+The authenticity of host '10.75.135.250 (10.75.135.250)' can't be established.
+ECDSA key fingerprint is SHA256:t/YNNe1Ra/8dr40utMnA+FOmdasevUELYQO/aSIrt+A.
+Are you sure you want to continue connecting (yes/no)? yes
+Warning: Permanently added '10.75.135.250' (ECDSA) to the list of known hosts.
+root@10.75.135.250's password: 
+Last login: Thu May 16 09:54:41 2024 from 10.75.135.33
+root@lambda_bmc:~# devmem 0x1e785010;devmem 0x1e785030;devmem 0x1e620010;devmem 0x1e6200a8;show_bmc_status 
+0x00000000
+0x00000200
+0x203C0641
+0x00000000
+BMC current boot code source: master
+spawn ssh root@10.75.135.250
+root@10.75.135.250's password: 
+Last login: Thu May 16 09:57:28 2024 from 10.75.135.33
+root@lambda_bmc:~# show_version bmc |grep Pingpong  
+Pingpong BMC Version    : hpa-v2.11.00-dirty
+spawn ssh root@10.75.135.250
+root@10.75.135.250's password: 
+Last login: Thu May 16 09:57:38 2024 from 10.75.135.33
+root@lambda_bmc:~# config_bmc_status -s slave 
+BMC will swap to slave after 10 seconds...
+Thu May 16 17:41:05 CST 2024
+PING 10.75.135.250 (10.75.135.250) 56(84) bytes of data.
+64 bytes from 10.75.135.250: icmp_seq=1 ttl=64 time=0.653 ms
+64 bytes from 10.75.135.250: icmp_seq=2 ttl=64 time=0.449 ms
+64 bytes from 10.75.135.250: icmp_seq=3 ttl=64 time=0.327 ms
+64 bytes from 10.75.135.250: icmp_seq=4 ttl=64 time=0.349 ms
+64 bytes from 10.75.135.250: icmp_seq=5 ttl=64 time=1.50 ms
+
+--- 10.75.135.250 ping statistics ---
+5 packets transmitted, 5 received, 0% packet loss, time 4079ms
+rtt min/avg/max/mdev = 0.327/0.655/1.500/0.438 ms
+spawn ssh root@10.75.135.250
+The authenticity of host '10.75.135.250 (10.75.135.250)' can't be established.
+ECDSA key fingerprint is SHA256:7uTL/9fgH/B5YVFwK52Zs2mqfUK5YRuwkV65vcMolSk.
+Are you sure you want to continue connecting (yes/no)? yes
+Warning: Permanently added '10.75.135.250' (ECDSA) to the list of known hosts.
+root@10.75.135.250's password: 
+Last login: Thu May 16 09:57:48 2024 from 10.75.135.33
+root@lambda_bmc:~# devmem 0x1e785010;devmem 0x1e785030;devmem 0x1e620010;devmem 0x1e6200a8;show_bmc_status 
+0x00000000
+0x00000102
+0x203C0641
+0x00000000
+BMC current boot code source: slave
+spawn ssh root@10.75.135.250
+root@10.75.135.250's password: 
+Last login: Thu May 16 10:04:56 2024 from 10.75.135.33
+root@lambda_bmc:~# show_version bmc |grep Pingpong  
+Pingpong BMC Version    : hpa-v2.11.00-dirty
+spawn ssh root@10.75.135.250
+root@10.75.135.250's password: 
+Last login: Thu May 16 10:05:05 2024 from 10.75.135.33
+root@lambda_bmc:~# devmem 0x1e785010;devmem 0x1e785030;rm -rf /var/log/*;show_bmc_status 
+0x00000000
+0x00000102
+BMC current boot code source: slave
+Thu May 16 17:48:31 CST 2024
+==================================================================================================
+**************************************************************************************************
+==================================================================================================
+======================cycle1 Start======================
+Thu May 16 17:53:46 CST 2024
+PING 10.75.135.250 (10.75.135.250) 56(84) bytes of data.
+64 bytes from 10.75.135.250: icmp_seq=1 ttl=64 time=0.677 ms
+64 bytes from 10.75.135.250: icmp_seq=2 ttl=64 time=0.368 ms
+64 bytes from 10.75.135.250: icmp_seq=3 ttl=64 time=0.349 ms
+64 bytes from 10.75.135.250: icmp_seq=4 ttl=64 time=0.396 ms
+64 bytes from 10.75.135.250: icmp_seq=5 ttl=64 time=0.407 ms
+
+--- 10.75.135.250 ping statistics ---
+5 packets transmitted, 5 received, 0% packet loss, time 4104ms
+rtt min/avg/max/mdev = 0.349/0.439/0.677/0.121 ms
+spawn ssh root@10.75.135.250
+The authenticity of host '10.75.135.250 (10.75.135.250)' can't be established.
+ECDSA key fingerprint is SHA256:uVV9v0UKGw/ptOHz3r355kFDtowVqrsaAiMk+alqwag.
+Are you sure you want to continue connecting (yes/no)? yes
+Warning: Permanently added '10.75.135.250' (ECDSA) to the list of known hosts.
+root@10.75.135.250's password: 
+root@bmc-oob.:~# devmem 0x1e785010;devmem 0x1e785030;devmem 0x1e620010;devmem 0x1e6200a8;show_bmc_status 
+0x00000000
+0x00000000
+0x203C0641
+0x00000000
+BMC current boot code source: master
+spawn ssh root@10.75.135.250
+root@10.75.135.250's password: 
+Last login: Thu May 16 10:13:22 2024 from 10.75.135.33
+root@bmc-oob.:~# show_version bmc |grep Pingpong  
+Pingpong BMC Version    : hpa-v2.11.00-dirty
+spawn ssh root@10.75.135.250
+root@10.75.135.250's password: 
+Last login: Thu May 16 10:13:37 2024 from 10.75.135.33
+root@bmc-oob.:~# config_bmc_status -s slave 
+BMC will swap to slave after 10 seconds...
+Thu May 16 17:57:11 CST 2024
+PING 10.75.135.250 (10.75.135.250) 56(84) bytes of data.
+64 bytes from 10.75.135.250: icmp_seq=1 ttl=64 time=0.617 ms
+64 bytes from 10.75.135.250: icmp_seq=2 ttl=64 time=0.337 ms
+64 bytes from 10.75.135.250: icmp_seq=3 ttl=64 time=0.348 ms
+64 bytes from 10.75.135.250: icmp_seq=4 ttl=64 time=0.350 ms
+64 bytes from 10.75.135.250: icmp_seq=5 ttl=64 time=0.336 ms
+
+--- 10.75.135.250 ping statistics ---
+5 packets transmitted, 5 received, 0% packet loss, time 4081ms
+rtt min/avg/max/mdev = 0.336/0.397/0.617/0.111 ms
+spawn ssh root@10.75.135.250
+The authenticity of host '10.75.135.250 (10.75.135.250)' can't be established.
+ECDSA key fingerprint is SHA256:8DmKKgOZIOUFR4M4JDaPol+qj/AHxc6hsWyaRaRzTXM.
+Are you sure you want to continue connecting (yes/no)? yes
+Warning: Permanently added '10.75.135.250' (ECDSA) to the list of known hosts.
+root@10.75.135.250's password: 
+Last login: Thu May 16 10:13:52 2024 from 10.75.135.33
+root@lambda_bmc:~# devmem 0x1e785010;devmem 0x1e785030;devmem 0x1e620010;devmem 0x1e6200a8;show_bmc_status 
+0x00000000
+0x00000102
+0x203C0641
+0x00000000
+BMC current boot code source: slave
+spawn ssh root@10.75.135.250
+root@10.75.135.250's password: 
+Last login: Thu May 16 10:21:27 2024 from 10.75.135.33
+root@lambda_bmc:~# show_version bmc |grep Pingpong  
+Pingpong BMC Version    : hpa-v2.11.00-dirty
+spawn ssh root@10.75.135.250
+root@10.75.135.250's password: 
+Last login: Thu May 16 10:21:36 2024 from 10.75.135.33
+root@lambda_bmc:~# devmem 0x1e785010;devmem 0x1e785030;rm -rf /var/log/*;show_bmc_status 
+0x00000000
+0x00000102
+BMC current boot code source: slave
+Thu May 16 18:05:00 CST 2024
+==================================================================================================
+**************************************************************************************************
+==================================================================================================
+======================cycle2 Start======================
+Thu May 16 18:10:15 CST 2024
+PING 10.75.135.250 (10.75.135.250) 56(84) bytes of data.
+64 bytes from 10.75.135.250: icmp_seq=1 ttl=64 time=0.670 ms
+64 bytes from 10.75.135.250: icmp_seq=2 ttl=64 time=0.356 ms
+64 bytes from 10.75.135.250: icmp_seq=3 ttl=64 time=0.349 ms
+64 bytes from 10.75.135.250: icmp_seq=4 ttl=64 time=0.405 ms
+64 bytes from 10.75.135.250: icmp_seq=5 ttl=64 time=0.401 ms
+
+--- 10.75.135.250 ping statistics ---
+5 packets transmitted, 5 received, 0% packet loss, time 4082ms
+rtt min/avg/max/mdev = 0.349/0.436/0.670/0.119 ms
+spawn ssh root@10.75.135.250
+connect is timeout
+PING 10.75.135.250 (10.75.135.250) 56(84) bytes of data.
+64 bytes from 10.75.135.250: icmp_seq=1 ttl=64 time=0.330 ms
+64 bytes from 10.75.135.250: icmp_seq=2 ttl=64 time=0.425 ms
+64 bytes from 10.75.135.250: icmp_seq=3 ttl=64 time=0.325 ms
+64 bytes from 10.75.135.250: icmp_seq=4 ttl=64 time=0.353 ms
+64 bytes from 10.75.135.250: icmp_seq=5 ttl=64 time=0.340 ms
+
+--- 10.75.135.250 ping statistics ---
+5 packets transmitted, 5 received, 0% packet loss, time 4100ms
+rtt min/avg/max/mdev = 0.325/0.354/0.425/0.041 ms
+spawn ssh root@10.75.135.250
+The authenticity of host '10.75.135.250 (10.75.135.250)' can't be established.
+ECDSA key fingerprint is SHA256:WD0HkEVoqe9vIOMX33ooa56rTzC2W4QnQMFhXovPK3c.
+Are you sure you want to continue connecting (yes/no)? yes
+Warning: Permanently added '10.75.135.250' (ECDSA) to the list of known hosts.
+root@10.75.135.250's password: 
+root@bmc-oob.:~# devmem 0x1e785010;devmem 0x1e785030;devmem 0x1e620010;devmem 0x1e6200a8;show_bmc_status 
+0x00000000
+0x00000000
+0x203C0641
+0x00000000
+BMC current boot code source: master
+spawn ssh root@10.75.135.250
+root@10.75.135.250's password: 
+Last login: Thu May 16 10:35:58 2024 from 10.75.135.33
+root@bmc-oob.:~# show_version bmc |grep Pingpong  
+Pingpong BMC Version    : hpa-v2.11.00-dirty
+spawn ssh root@10.75.135.250
+root@10.75.135.250's password: 
+Last login: Thu May 16 10:36:14 2024 from 10.75.135.33
+root@bmc-oob.:~# config_bmc_status -s slave 
+BMC will swap to slave after 10 seconds...
+Thu May 16 18:19:50 CST 2024
+PING 10.75.135.250 (10.75.135.250) 56(84) bytes of data.
+64 bytes from 10.75.135.250: icmp_seq=1 ttl=64 time=0.571 ms
+64 bytes from 10.75.135.250: icmp_seq=2 ttl=64 time=0.330 ms
+64 bytes from 10.75.135.250: icmp_seq=3 ttl=64 time=0.349 ms
+64 bytes from 10.75.135.250: icmp_seq=4 ttl=64 time=0.385 ms
+64 bytes from 10.75.135.250: icmp_seq=5 ttl=64 time=0.349 ms
+
+--- 10.75.135.250 ping statistics ---
+5 packets transmitted, 5 received, 0% packet loss, time 4089ms
+rtt min/avg/max/mdev = 0.330/0.396/0.571/0.092 ms
+spawn ssh root@10.75.135.250
+The authenticity of host '10.75.135.250 (10.75.135.250)' can't be established.
+ECDSA key fingerprint is SHA256:w2WyMbsUgriOGzH0+aqdyzakZmMbanT+K34dg8wG/zs.
+Are you sure you want to continue connecting (yes/no)? yes
+Warning: Permanently added '10.75.135.250' (ECDSA) to the list of known hosts.
+root@10.75.135.250's password: 
+Last login: Thu May 16 10:36:29 2024 from 10.75.135.33
+root@lambda_bmc:~# devmem 0x1e785010;devmem 0x1e785030;devmem 0x1e620010;devmem 0x1e6200a8;show_bmc_status 
+0x00000000
+0x00000102
+0x203C0641
+0x00000000
+BMC current boot code source: slave
+spawn ssh root@10.75.135.250
+root@10.75.135.250's password: 
+Last login: Thu May 16 10:44:51 2024 from 10.75.135.33
+root@lambda_bmc:~# show_version bmc |grep Pingpong  
+Pingpong BMC Version    : hpa-v2.11.00-dirty
+spawn ssh root@10.75.135.250
+root@10.75.135.250's password: 
+Last login: Thu May 16 10:45:02 2024 from 10.75.135.33
+root@lambda_bmc:~# devmem 0x1e785010;devmem 0x1e785030;rm -rf /var/log/*;show_bmc_status 
+0x00000000
+0x00000102
+BMC current boot code source: slave
+Thu May 16 18:28:29 CST 2024
+==================================================================================================
+**************************************************************************************************
+==================================================================================================
+======================cycle3 Start======================
+Thu May 16 18:33:44 CST 2024
+PING 10.75.135.250 (10.75.135.250) 56(84) bytes of data.
+64 bytes from 10.75.135.250: icmp_seq=1 ttl=64 time=1.43 ms
+64 bytes from 10.75.135.250: icmp_seq=2 ttl=64 time=0.358 ms
+64 bytes from 10.75.135.250: icmp_seq=3 ttl=64 time=0.403 ms
+64 bytes from 10.75.135.250: icmp_seq=4 ttl=64 time=0.328 ms
+64 bytes from 10.75.135.250: icmp_seq=5 ttl=64 time=0.344 ms
+
+--- 10.75.135.250 ping statistics ---
+5 packets transmitted, 5 received, 0% packet loss, time 4083ms
+rtt min/avg/max/mdev = 0.328/0.572/1.430/0.430 ms
+spawn ssh root@10.75.135.250
+The authenticity of host '10.75.135.250 (10.75.135.250)' can't be established.
+ECDSA key fingerprint is SHA256:/nc8K3Yd/xmksy7BuP/1adofSWqYvtlTIRqm2PqKboI.
+Are you sure you want to continue connecting (yes/no)? yes
+Warning: Permanently added '10.75.135.250' (ECDSA) to the list of known hosts.
+root@10.75.135.250's password: 
+root@bmc-oob.:~# devmem 0x1e785010;devmem 0x1e785030;devmem 0x1e620010;devmem 0x1e6200a8;show_bmc_status 
+0x00000000
+0x00000000
+0x203C0641
+0x00000000
+BMC current boot code source: master
+spawn ssh root@10.75.135.250
+root@10.75.135.250's password: 
+Last login: Thu May 16 10:53:52 2024 from 10.75.135.33
+root@bmc-oob.:~# show_version bmc |grep Pingpong  
+Pingpong BMC Version    : hpa-v2.11.00-dirty
+spawn ssh root@10.75.135.250
+root@10.75.135.250's password: 
+Last login: Thu May 16 10:54:08 2024 from 10.75.135.33
+root@bmc-oob.:~# config_bmc_status -s slave 
+BMC will swap to slave after 10 seconds...
+Thu May 16 18:37:44 CST 2024
+PING 10.75.135.250 (10.75.135.250) 56(84) bytes of data.
+64 bytes from 10.75.135.250: icmp_seq=1 ttl=64 time=0.567 ms
+64 bytes from 10.75.135.250: icmp_seq=2 ttl=64 time=0.395 ms
+64 bytes from 10.75.135.250: icmp_seq=3 ttl=64 time=0.330 ms
+64 bytes from 10.75.135.250: icmp_seq=4 ttl=64 time=0.353 ms
+64 bytes from 10.75.135.250: icmp_seq=5 ttl=64 time=0.374 ms
+
+--- 10.75.135.250 ping statistics ---
+5 packets transmitted, 5 received, 0% packet loss, time 4085ms
+rtt min/avg/max/mdev = 0.330/0.403/0.567/0.088 ms
+spawn ssh root@10.75.135.250
+The authenticity of host '10.75.135.250 (10.75.135.250)' can't be established.
+ECDSA key fingerprint is SHA256:RaEBPe4/2eVW+fFGveH914ZDtGU2cEAlIo30T4drH04.
+Are you sure you want to continue connecting (yes/no)? yes
+Warning: Permanently added '10.75.135.250' (ECDSA) to the list of known hosts.
+root@10.75.135.250's password: 
+Last login: Thu May 16 10:54:23 2024 from 10.75.135.33
+root@lambda_bmc:~# devmem 0x1e785010;devmem 0x1e785030;devmem 0x1e620010;devmem 0x1e6200a8;show_bmc_status 
+0x00000000
+0x00000102
+0x203C0641
+0x00000000
+BMC current boot code source: slave
+spawn ssh root@10.75.135.250
+root@10.75.135.250's password: 
+Last login: Thu May 16 11:06:03 2024 from 10.75.135.33
+root@lambda_bmc:~# show_version bmc |grep Pingpong  
+Pingpong BMC Version    : hpa-v2.11.00-dirty
+spawn ssh root@10.75.135.250
+root@10.75.135.250's password: 
+Last login: Thu May 16 11:06:14 2024 from 10.75.135.33
+root@lambda_bmc:~# devmem 0x1e785010;devmem 0x1e785030;rm -rf /var/log/*;show_bmc_status 
+0x00000000
+0x00000102
+BMC current boot code source: slave
+Thu May 16 18:49:46 CST 2024
+==================================================================================================
+**************************************************************************************************
+==================================================================================================
+======================cycle4 Start======================
+Thu May 16 18:55:02 CST 2024
+PING 10.75.135.250 (10.75.135.250) 56(84) bytes of data.
+64 bytes from 10.75.135.250: icmp_seq=1 ttl=64 time=0.636 ms
+64 bytes from 10.75.135.250: icmp_seq=2 ttl=64 time=0.393 ms
+64 bytes from 10.75.135.250: icmp_seq=3 ttl=64 time=0.447 ms
+64 bytes from 10.75.135.250: icmp_seq=4 ttl=64 time=0.347 ms
+64 bytes from 10.75.135.250: icmp_seq=5 ttl=64 time=0.335 ms
+
+--- 10.75.135.250 ping statistics ---
+5 packets transmitted, 5 received, 0% packet loss, time 4097ms
+rtt min/avg/max/mdev = 0.335/0.431/0.636/0.111 ms
+spawn ssh root@10.75.135.250
+The authenticity of host '10.75.135.250 (10.75.135.250)' can't be established.
+ECDSA key fingerprint is SHA256:zQiFLqs2VDq9h51Tjrcmo5zGDIW+4OdRK2sN9sRHJOs.
+Are you sure you want to continue connecting (yes/no)? yes
+Warning: Permanently added '10.75.135.250' (ECDSA) to the list of known hosts.
+root@10.75.135.250's password: 
+root@bmc-oob.:~# devmem 0x1e785010;devmem 0x1e785030;devmem 0x1e620010;devmem 0x1e6200a8;show_bmc_status 
+0x00000000
+0x00000000
+0x203C0641
+0x00000000
+BMC current boot code source: master
+spawn ssh root@10.75.135.250
+root@10.75.135.250's password: 
+Last login: Thu May 16 11:13:56 2024 from 10.75.135.33
+root@bmc-oob.:~# show_version bmc |grep Pingpong  
+Pingpong BMC Version    : hpa-v2.11.00-dirty
+spawn ssh root@10.75.135.250
+root@10.75.135.250's password: 
+Last login: Thu May 16 11:14:06 2024 from 10.75.135.33
+root@bmc-oob.:~# config_bmc_status -s slave 
+BMC will swap to slave after 10 seconds...
+Thu May 16 18:57:43 CST 2024
+PING 10.75.135.250 (10.75.135.250) 56(84) bytes of data.
+64 bytes from 10.75.135.250: icmp_seq=1 ttl=64 time=0.612 ms
+64 bytes from 10.75.135.250: icmp_seq=2 ttl=64 time=0.418 ms
+64 bytes from 10.75.135.250: icmp_seq=3 ttl=64 time=0.361 ms
+64 bytes from 10.75.135.250: icmp_seq=4 ttl=64 time=0.342 ms
+64 bytes from 10.75.135.250: icmp_seq=5 ttl=64 time=0.348 ms
+
+--- 10.75.135.250 ping statistics ---
+5 packets transmitted, 5 received, 0% packet loss, time 4104ms
+rtt min/avg/max/mdev = 0.342/0.416/0.612/0.102 ms
+spawn ssh root@10.75.135.250
+The authenticity of host '10.75.135.250 (10.75.135.250)' can't be established.
+ECDSA key fingerprint is SHA256:zUecwtdYQMvpaGnWheKsEMEpEhoAWZBmUJFApqC0cc4.
+Are you sure you want to continue connecting (yes/no)? yes
+Warning: Permanently added '10.75.135.250' (ECDSA) to the list of known hosts.
+root@10.75.135.250's password: 
+Last login: Thu May 16 11:14:17 2024 from 10.75.135.33
+root@lambda_bmc:~# devmem 0x1e785010;devmem 0x1e785030;devmem 0x1e620010;devmem 0x1e6200a8;show_bmc_status 
+0x00000000
+0x00000102
+0x203C0641
+0x00000000
+BMC current boot code source: slave
+spawn ssh root@10.75.135.250
+root@10.75.135.250's password: 
+Last login: Thu May 16 11:22:11 2024 from 10.75.135.33
+root@lambda_bmc:~# show_version bmc |grep Pingpong  
+Pingpong BMC Version    : hpa-v2.11.00-dirty
+spawn ssh root@10.75.135.250
+root@10.75.135.250's password: 
+Last login: Thu May 16 11:22:20 2024 from 10.75.135.33
+root@lambda_bmc:~# devmem 0x1e785010;devmem 0x1e785030;rm -rf /var/log/*;show_bmc_status 
+0x00000000
+0x00000102
+BMC current boot code source: slave
+Thu May 16 19:05:47 CST 2024
+==================================================================================================
+**************************************************************************************************
+==================================================================================================
+======================cycle5 Start======================
+Thu May 16 19:11:01 CST 2024
+PING 10.75.135.250 (10.75.135.250) 56(84) bytes of data.
+64 bytes from 10.75.135.250: icmp_seq=1 ttl=64 time=0.881 ms
+64 bytes from 10.75.135.250: icmp_seq=2 ttl=64 time=0.355 ms
+64 bytes from 10.75.135.250: icmp_seq=3 ttl=64 time=0.397 ms
+64 bytes from 10.75.135.250: icmp_seq=4 ttl=64 time=0.352 ms
+64 bytes from 10.75.135.250: icmp_seq=5 ttl=64 time=0.328 ms
+
+--- 10.75.135.250 ping statistics ---
+5 packets transmitted, 5 received, 0% packet loss, time 4084ms
+rtt min/avg/max/mdev = 0.328/0.462/0.881/0.211 ms
+spawn ssh root@10.75.135.250
+The authenticity of host '10.75.135.250 (10.75.135.250)' can't be established.
+ECDSA key fingerprint is SHA256:cPzX7FNVTate4PoxkfYfDdKUzsGSNh/fiz2s2/Rm3iQ.
+Are you sure you want to continue connecting (yes/no)? yes
+Warning: Permanently added '10.75.135.250' (ECDSA) to the list of known hosts.
+root@10.75.135.250's password: 
+root@bmc-oob.:~# devmem 0x1e785010;devmem 0x1e785030;devmem 0x1e620010;devmem 0x1e6200a8;show_bmc_status 
+0x00000000
+0x00000000
+0x203C0641
+0x00000000
+BMC current boot code source: master
+spawn ssh root@10.75.135.250
+root@10.75.135.250's password: 
+Last login: Thu May 16 11:28:35 2024 from 10.75.135.33
+root@bmc-oob.:~# show_version bmc |grep Pingpong  
+Pingpong BMC Version    : hpa-v2.11.00-dirty
+spawn ssh root@10.75.135.250
+root@10.75.135.250's password: 
+Last login: Thu May 16 11:28:50 2024 from 10.75.135.33
+root@bmc-oob.:~# config_bmc_status -s slave 
+BMC will swap to slave after 10 seconds...
+Thu May 16 19:12:33 CST 2024
+PING 10.75.135.250 (10.75.135.250) 56(84) bytes of data.
+64 bytes from 10.75.135.250: icmp_seq=1 ttl=64 time=0.592 ms
+64 bytes from 10.75.135.250: icmp_seq=2 ttl=64 time=0.431 ms
+64 bytes from 10.75.135.250: icmp_seq=3 ttl=64 time=0.342 ms
+64 bytes from 10.75.135.250: icmp_seq=4 ttl=64 time=0.341 ms
+64 bytes from 10.75.135.250: icmp_seq=5 ttl=64 time=0.340 ms
+
+--- 10.75.135.250 ping statistics ---
+5 packets transmitted, 5 received, 0% packet loss, time 4097ms
+rtt min/avg/max/mdev = 0.340/0.409/0.592/0.098 ms
+spawn ssh root@10.75.135.250
+The authenticity of host '10.75.135.250 (10.75.135.250)' can't be established.
+ECDSA key fingerprint is SHA256:wIhjxuhrXztWptqC1yQCE0aoUQOGgkWv/kSDWYrFI6A.
+Are you sure you want to continue connecting (yes/no)? yes
+Warning: Permanently added '10.75.135.250' (ECDSA) to the list of known hosts.
+root@10.75.135.250's password: 
+Last login: Thu May 16 11:28:50 2024 from 10.75.135.33
+root@lambda_bmc:~# devmem 0x1e785010;devmem 0x1e785030;devmem 0x1e620010;devmem 0x1e6200a8;show_bmc_status 
+0x00000000
+0x00000102
+0x203C0641
+0x00000000
+BMC current boot code source: slave
+spawn ssh root@10.75.135.250
+root@10.75.135.250's password: 
+Last login: Thu May 16 11:38:00 2024 from 10.75.135.33
+root@lambda_bmc:~# show_version bmc |grep Pingpong  
+Pingpong BMC Version    : hpa-v2.11.00-dirty
+spawn ssh root@10.75.135.250
+root@10.75.135.250's password: 
+Last login: Thu May 16 11:38:17 2024 from 10.75.135.33
+root@lambda_bmc:~# devmem 0x1e785010;devmem 0x1e785030;rm -rf /var/log/*;show_bmc_status 
+0x00000000
+0x00000102
+BMC current boot code source: slave
+Thu May 16 19:21:50 CST 2024
+==================================================================================================
+**************************************************************************************************
+==================================================================================================
+======================cycle6 Start======================
+Thu May 16 19:27:06 CST 2024
+PING 10.75.135.250 (10.75.135.250) 56(84) bytes of data.
+64 bytes from 10.75.135.250: icmp_seq=1 ttl=64 time=0.667 ms
+64 bytes from 10.75.135.250: icmp_seq=2 ttl=64 time=0.341 ms
+64 bytes from 10.75.135.250: icmp_seq=3 ttl=64 time=0.415 ms
+64 bytes from 10.75.135.250: icmp_seq=4 ttl=64 time=0.451 ms
+64 bytes from 10.75.135.250: icmp_seq=5 ttl=64 time=0.356 ms
+
+--- 10.75.135.250 ping statistics ---
+5 packets transmitted, 5 received, 0% packet loss, time 4097ms
+rtt min/avg/max/mdev = 0.341/0.446/0.667/0.117 ms
+spawn ssh root@10.75.135.250
+The authenticity of host '10.75.135.250 (10.75.135.250)' can't be established.
+ECDSA key fingerprint is SHA256:qwTBhCECDPktVeXnwQAKuC31xBvDp8IitWqqy9aA3u0.
+Are you sure you want to continue connecting (yes/no)? yes
+Warning: Permanently added '10.75.135.250' (ECDSA) to the list of known hosts.
+root@10.75.135.250's password: 
+root@bmc-oob.:~# devmem 0x1e785010;devmem 0x1e785030;devmem 0x1e620010;devmem 0x1e6200a8;show_bmc_status 
+0x00000000
+0x00000000
+0x203C0641
+0x00000000
+BMC current boot code source: master
+spawn ssh root@10.75.135.250
+root@10.75.135.250's password: 
+Last login: Thu May 16 11:47:36 2024 from 10.75.135.33
+root@bmc-oob.:~# show_version bmc |grep Pingpong  
+Pingpong BMC Version    : hpa-v2.11.00-dirty
+spawn ssh root@10.75.135.250
+root@10.75.135.250's password: 
+Last login: Thu May 16 11:47:51 2024 from 10.75.135.33
+root@bmc-oob.:~# config_bmc_status -s slave 
+BMC will swap to slave after 10 seconds...
+Thu May 16 19:31:32 CST 2024
+PING 10.75.135.250 (10.75.135.250) 56(84) bytes of data.
+64 bytes from 10.75.135.250: icmp_seq=1 ttl=64 time=0.663 ms
+64 bytes from 10.75.135.250: icmp_seq=2 ttl=64 time=0.354 ms
+64 bytes from 10.75.135.250: icmp_seq=3 ttl=64 time=0.408 ms
+64 bytes from 10.75.135.250: icmp_seq=4 ttl=64 time=0.347 ms
+64 bytes from 10.75.135.250: icmp_seq=5 ttl=64 time=0.338 ms
+
+--- 10.75.135.250 ping statistics ---
+5 packets transmitted, 5 received, 0% packet loss, time 4090ms
+rtt min/avg/max/mdev = 0.338/0.422/0.663/0.122 ms
+spawn ssh root@10.75.135.250
+The authenticity of host '10.75.135.250 (10.75.135.250)' can't be established.
+ECDSA key fingerprint is SHA256:iUX4AaYSueEZmpIog888SRg98H+kaprIbiPGQ+JcwtE.
+Are you sure you want to continue connecting (yes/no)? yes
+Warning: Permanently added '10.75.135.250' (ECDSA) to the list of known hosts.
+root@10.75.135.250's password: 
+Last login: Thu May 16 11:47:51 2024 from 10.75.135.33
+root@lambda_bmc:~# devmem 0x1e785010;devmem 0x1e785030;devmem 0x1e620010;devmem 0x1e6200a8;show_bmc_status 
+0x00000000
+0x00000200
+0x203C0641
+0x00000000
+BMC current boot code source: master
+BMC not slave on ---11
+spawn ssh root@10.75.135.250
+root@10.75.135.250's password: 
+Last login: Thu May 16 11:56:05 2024 from 10.75.135.33
+root@lambda_bmc:~# show_version bmc |grep Pingpong  
+Pingpong BMC Version    : hpa-v2.11.00-dirty
+spawn ssh root@10.75.135.250
+root@10.75.135.250's password: 
+Last login: Thu May 16 11:56:14 2024 from 10.75.135.33
+root@lambda_bmc:~# devmem 0x1e785010;devmem 0x1e785030;rm -rf /var/log/*;show_bmc_status 
+0x00000000
+0x00000200
+BMC current boot code source: master
+Thu May 16 19:39:41 CST 2024
+==================================================================================================
+**************************************************************************************************
+==================================================================================================
+======================cycle7 Start======================
+Thu May 16 19:44:57 CST 2024
+PING 10.75.135.250 (10.75.135.250) 56(84) bytes of data.
+64 bytes from 10.75.135.250: icmp_seq=1 ttl=64 time=0.622 ms
+64 bytes from 10.75.135.250: icmp_seq=2 ttl=64 time=0.328 ms
+64 bytes from 10.75.135.250: icmp_seq=3 ttl=64 time=0.345 ms
+64 bytes from 10.75.135.250: icmp_seq=4 ttl=64 time=0.401 ms
+64 bytes from 10.75.135.250: icmp_seq=5 ttl=64 time=0.429 ms
+
+--- 10.75.135.250 ping statistics ---
+5 packets transmitted, 5 received, 0% packet loss, time 4097ms
+rtt min/avg/max/mdev = 0.328/0.425/0.622/0.105 ms
+spawn ssh root@10.75.135.250
+The authenticity of host '10.75.135.250 (10.75.135.250)' can't be established.
+ECDSA key fingerprint is SHA256:4ws8IOdm954oerMiapi6g6ioBJy6aW2OdrUnVZDwB+U.
+Are you sure you want to continue connecting (yes/no)? yes
+Warning: Permanently added '10.75.135.250' (ECDSA) to the list of known hosts.
+root@10.75.135.250's password: 
+root@bmc-oob.:~# devmem 0x1e785010;devmem 0x1e785030;devmem 0x1e620010;devmem 0x1e6200a8;show_bmc_status 
+0x00000000
+0x00000000
+0x203C0641
+0x00000000
+BMC current boot code source: master
+spawn ssh root@10.75.135.250
+root@10.75.135.250's password: 
+Last login: Thu May 16 12:02:32 2024 from 10.75.135.33
+root@bmc-oob.:~# show_version bmc |grep Pingpong  
+Pingpong BMC Version    : hpa-v2.11.00-dirty
+spawn ssh root@10.75.135.250
+root@10.75.135.250's password: 
+Last login: Thu May 16 12:02:47 2024 from 10.75.135.33
+root@bmc-oob.:~# config_bmc_status -s slave 
+BMC will swap to slave after 10 seconds...
+Thu May 16 19:46:29 CST 2024
+PING 10.75.135.250 (10.75.135.250) 56(84) bytes of data.
+64 bytes from 10.75.135.250: icmp_seq=1 ttl=64 time=0.742 ms
+64 bytes from 10.75.135.250: icmp_seq=2 ttl=64 time=0.355 ms
+64 bytes from 10.75.135.250: icmp_seq=3 ttl=64 time=0.336 ms
+64 bytes from 10.75.135.250: icmp_seq=4 ttl=64 time=0.365 ms
+64 bytes from 10.75.135.250: icmp_seq=5 ttl=64 time=0.341 ms
+
+--- 10.75.135.250 ping statistics ---
+5 packets transmitted, 5 received, 0% packet loss, time 4082ms
+rtt min/avg/max/mdev = 0.336/0.427/0.742/0.159 ms
+spawn ssh root@10.75.135.250
+The authenticity of host '10.75.135.250 (10.75.135.250)' can't be established.
+ECDSA key fingerprint is SHA256:BA4e0wA0LZElYMIju0xgltmWonk+CfAd1cpomTrR51I.
+Are you sure you want to continue connecting (yes/no)? yes
+Warning: Permanently added '10.75.135.250' (ECDSA) to the list of known hosts.
+root@10.75.135.250's password: 
+Last login: Thu May 16 12:02:47 2024 from 10.75.135.33
+root@lambda_bmc:~# devmem 0x1e785010;devmem 0x1e785030;devmem 0x1e620010;devmem 0x1e6200a8;show_bmc_status 
+0x00000000
+0x00000102
+0x203C0641
+0x00000000
+BMC current boot code source: slave
+spawn ssh root@10.75.135.250
+root@10.75.135.250's password: 
+Last login: Thu May 16 12:11:47 2024 from 10.75.135.33
+root@lambda_bmc:~# show_version bmc |grep Pingpong  
+Pingpong BMC Version    : hpa-v2.11.00-dirty
+spawn ssh root@10.75.135.250
+root@10.75.135.250's password: 
+Last login: Thu May 16 12:12:01 2024 from 10.75.135.33
+root@lambda_bmc:~# devmem 0x1e785010;devmem 0x1e785030;rm -rf /var/log/*;show_bmc_status 
+0x00000000
+0x00000102
+BMC current boot code source: slave
+Thu May 16 19:55:36 CST 2024
+==================================================================================================
+**************************************************************************************************
+==================================================================================================
+======================cycle8 Start======================
+Thu May 16 20:00:51 CST 2024
+PING 10.75.135.250 (10.75.135.250) 56(84) bytes of data.
+64 bytes from 10.75.135.250: icmp_seq=1 ttl=64 time=0.641 ms
+64 bytes from 10.75.135.250: icmp_seq=2 ttl=64 time=0.376 ms
+64 bytes from 10.75.135.250: icmp_seq=3 ttl=64 time=0.400 ms
+64 bytes from 10.75.135.250: icmp_seq=4 ttl=64 time=0.463 ms
+64 bytes from 10.75.135.250: icmp_seq=5 ttl=64 time=0.482 ms
+
+--- 10.75.135.250 ping statistics ---
+5 packets transmitted, 5 received, 0% packet loss, time 4097ms
+rtt min/avg/max/mdev = 0.376/0.472/0.641/0.094 ms
+spawn ssh root@10.75.135.250
+The authenticity of host '10.75.135.250 (10.75.135.250)' can't be established.
+ECDSA key fingerprint is SHA256:4P0nl1p16f8bdVdoLfRVyOgpydInQwzry6dpS4BN6Ps.
+Are you sure you want to continue connecting (yes/no)? yes
+Warning: Permanently added '10.75.135.250' (ECDSA) to the list of known hosts.
+root@10.75.135.250's password: 
+root@bmc-oob.:~# devmem 0x1e785010;devmem 0x1e785030;devmem 0x1e620010;devmem 0x1e6200a8;show_bmc_status 
+0x00000000
+0x00000000
+0x203C0641
+0x00000000
+BMC current boot code source: master
+spawn ssh root@10.75.135.250
+root@10.75.135.250's password: 
+Last login: Thu May 16 12:21:27 2024 from 10.75.135.33
+root@bmc-oob.:~# show_version bmc |grep Pingpong  
+Pingpong BMC Version    : hpa-v2.11.00-dirty
+spawn ssh root@10.75.135.250
+root@10.75.135.250's password: 
+Last login: Thu May 16 12:21:43 2024 from 10.75.135.33
+root@bmc-oob.:~# config_bmc_status -s slave 
+BMC will swap to slave after 10 seconds...
+Thu May 16 20:05:24 CST 2024
+PING 10.75.135.250 (10.75.135.250) 56(84) bytes of data.
+
+--- 10.75.135.250 ping statistics ---
+5 packets transmitted, 0 received, 100% packet loss, time 4081ms
+
+spawn ssh root@10.75.135.250
+ssh: connect to host 10.75.135.250 port 22: No route to host
+spawn ssh root@10.75.135.250
+ssh: connect to host 10.75.135.250 port 22: No route to host
+spawn ssh root@10.75.135.250
+ssh: connect to host 10.75.135.250 port 22: No route to host
+Thu May 16 20:11:07 CST 2024
+==================================================================================================
+**************************************************************************************************
+==================================================================================================
+======================cycle9 Start======================
+Thu May 16 20:16:20 CST 2024
+PING 10.75.135.250 (10.75.135.250) 56(84) bytes of data.
+64 bytes from 10.75.135.250: icmp_seq=1 ttl=64 time=0.642 ms
+64 bytes from 10.75.135.250: icmp_seq=2 ttl=64 time=0.420 ms
+64 bytes from 10.75.135.250: icmp_seq=3 ttl=64 time=0.341 ms
+64 bytes from 10.75.135.250: icmp_seq=4 ttl=64 time=0.401 ms
+64 bytes from 10.75.135.250: icmp_seq=5 ttl=64 time=0.375 ms
+
+--- 10.75.135.250 ping statistics ---
+5 packets transmitted, 5 received, 0% packet loss, time 4086ms
+rtt min/avg/max/mdev = 0.341/0.435/0.642/0.109 ms
+spawn ssh root@10.75.135.250
+The authenticity of host '10.75.135.250 (10.75.135.250)' can't be established.
+ECDSA key fingerprint is SHA256:J6LpFg+z487suK/66ffwRHd4xrfqoucorB9ywxq6eZQ.
+Are you sure you want to continue connecting (yes/no)? yes
+Warning: Permanently added '10.75.135.250' (ECDSA) to the list of known hosts.
+root@10.75.135.250's password: 
+Last login: Thu May 16 12:21:43 2024 from 10.75.135.33
+root@lambda_bmc:~# devmem 0x1e785010;devmem 0x1e785030;devmem 0x1e620010;devmem 0x1e6200a8;show_bmc_status 
+0x00000000
+0x00000200
+0x00000000
+0x000001DD
+BMC current boot code source: master
+spawn ssh root@10.75.135.250
+root@10.75.135.250's password: 
+Last login: Thu May 16 12:36:19 2024 from 10.75.135.33
+root@lambda_bmc:~# show_version bmc |grep Pingpong  
+Pingpong BMC Version    : NA
+BMC mdt error --1

@@ -1,0 +1,3119 @@
+======================cycle0 Start======================
+Thu May 16 18:43:48 CST 2024
+spawn ssh pi@10.75.159.161
+pi@10.75.159.161's password: 
+Linux raspberrypi-3 5.10.17-v7l+ #1414 SMP Fri Apr 30 13:20:47 BST 2021 armv7l
+
+The programs included with the Debian GNU/Linux system are free software;
+the exact distribution terms for each program are described in the
+individual files in /usr/share/doc/*/copyright.
+
+Debian GNU/Linux comes with ABSOLUTELY NO WARRANTY, to the extent
+permitted by applicable law.
+Last login: Sat Apr 20 13:02:07 2024 from 10.75.135.33
+]0;pi@raspberrypi-3: ~[01;32mpi@raspberrypi-3[00m:[01;34m~ $[00m ssh root@10.75.159.250
+devmem 0x1e785010;devmem 0x1e785030;devmem 0x1e620010;devmem 0x1e6200a8;show_bmc_status 
+The authenticity of host '10.75.159.250 (10.75.159.250)' can't be established.
+ECDSA key fingerprint is SHA256:NGec6VZ5GmTEUrSAIt3RZVSkUZzg2bBT184r1wIArEk.
+Are you sure you want to continue connecting (yes/no)? yes
+Failed to add the host to the list of known hosts (/home/pi/.ssh/known_hosts).
+root@10.75.159.250's password: 
+Last login: Thu Jan  1 00:20:08 1970
+root@bmc-oob.:~# devmem 0x1e785010;devmem 0x1e785030;devmem 0x1e620010;devmem 0x1e6200a8;show_bmc_status 
+0x00000000
+0x00000000
+0x203C0641
+0x00000000
+BMC current boot code source: master
+spawn ssh pi@10.75.159.161
+pi@10.75.159.161's password: 
+Linux raspberrypi-3 5.10.17-v7l+ #1414 SMP Fri Apr 30 13:20:47 BST 2021 armv7l
+
+The programs included with the Debian GNU/Linux system are free software;
+the exact distribution terms for each program are described in the
+individual files in /usr/share/doc/*/copyright.
+
+Debian GNU/Linux comes with ABSOLUTELY NO WARRANTY, to the extent
+permitted by applicable law.
+Last login: Sat Apr 20 14:06:31 2024 from 10.75.135.33
+]0;pi@raspberrypi-3: ~[01;32mpi@raspberrypi-3[00m:[01;34m~ $[00m ssh root@10.75.159.250
+show_version bmc |grep Pingpong  
+The authenticity of host '10.75.159.250 (10.75.159.250)' can't be established.
+ECDSA key fingerprint is SHA256:NGec6VZ5GmTEUrSAIt3RZVSkUZzg2bBT184r1wIArEk.
+Are you sure you want to continue connecting (yes/no)? yes
+Failed to add the host to the list of known hosts (/home/pi/.ssh/known_hosts).
+root@10.75.159.250's password: 
+Last login: Thu Jan  1 00:21:14 1970 from 10.75.159.161
+root@bmc-oob.:~# show_version bmc |grep Pingpong  
+Pingpong BMC Version    : hpa-v2.11.00-dirty
+spawn ssh pi@10.75.159.161
+pi@10.75.159.161's password: 
+Linux raspberrypi-3 5.10.17-v7l+ #1414 SMP Fri Apr 30 13:20:47 BST 2021 armv7l
+
+The programs included with the Debian GNU/Linux system are free software;
+the exact distribution terms for each program are described in the
+individual files in /usr/share/doc/*/copyright.
+
+Debian GNU/Linux comes with ABSOLUTELY NO WARRANTY, to the extent
+permitted by applicable law.
+Last login: Sat Apr 20 14:06:43 2024 from 10.75.135.33
+]0;pi@raspberrypi-3: ~[01;32mpi@raspberrypi-3[00m:[01;34m~ $[00m ssh root@10.75.159.250
+config_bmc_status -s slave 
+The authenticity of host '10.75.159.250 (10.75.159.250)' can't be established.
+ECDSA key fingerprint is SHA256:NGec6VZ5GmTEUrSAIt3RZVSkUZzg2bBT184r1wIArEk.
+Are you sure you want to continue connecting (yes/no)? yes
+Failed to add the host to the list of known hosts (/home/pi/.ssh/known_hosts).
+root@10.75.159.250's password: 
+Last login: Thu Jan  1 00:21:24 1970 from 10.75.159.161
+root@bmc-oob.:~# config_bmc_status -s slave 
+BMC will swap to slave after 10 seconds...
+Thu May 16 18:44:57 CST 2024
+spawn ssh pi@10.75.159.161
+pi@10.75.159.161's password: 
+Linux raspberrypi-3 5.10.17-v7l+ #1414 SMP Fri Apr 30 13:20:47 BST 2021 armv7l
+
+The programs included with the Debian GNU/Linux system are free software;
+the exact distribution terms for each program are described in the
+individual files in /usr/share/doc/*/copyright.
+
+Debian GNU/Linux comes with ABSOLUTELY NO WARRANTY, to the extent
+permitted by applicable law.
+Last login: Sat Apr 20 14:11:41 2024 from 10.75.135.33
+]0;pi@raspberrypi-3: ~[01;32mpi@raspberrypi-3[00m:[01;34m~ $[00m ssh root@10.75.159.250
+devmem 0x1e785010;devmem 0x1e785030;devmem 0x1e620010;devmem 0x1e6200a8;show_bmc_status 
+The authenticity of host '10.75.159.250 (10.75.159.250)' can't be established.
+ECDSA key fingerprint is SHA256:IfZrL0MAM0Z0YetV56bxHEwI7i7UH3JSte3xTKj8tOQ.
+Are you sure you want to continue connecting (yes/no)? yes
+Failed to add the host to the list of known hosts (/home/pi/.ssh/known_hosts).
+root@10.75.159.250's password: 
+Last login: Thu Jan  1 00:21:38 1970 from 10.75.159.161
+root@lambda_bmc:~# devmem 0x1e785010;devmem 0x1e785030;devmem 0x1e620010;devmem 0x1e6200a8;show_bmc_status 
+0x00000000
+0x00000102
+0x203C0641
+0x00000000
+BMC current boot code source: slave
+spawn ssh pi@10.75.159.161
+pi@10.75.159.161's password: 
+Linux raspberrypi-3 5.10.17-v7l+ #1414 SMP Fri Apr 30 13:20:47 BST 2021 armv7l
+
+The programs included with the Debian GNU/Linux system are free software;
+the exact distribution terms for each program are described in the
+individual files in /usr/share/doc/*/copyright.
+
+Debian GNU/Linux comes with ABSOLUTELY NO WARRANTY, to the extent
+permitted by applicable law.
+Last login: Sat Apr 20 14:13:28 2024 from 10.75.135.33
+]0;pi@raspberrypi-3: ~[01;32mpi@raspberrypi-3[00m:[01;34m~ $[00m ssh root@10.75.159.250
+show_version bmc |grep Pingpong  
+The authenticity of host '10.75.159.250 (10.75.159.250)' can't be established.
+ECDSA key fingerprint is SHA256:IfZrL0MAM0Z0YetV56bxHEwI7i7UH3JSte3xTKj8tOQ.
+Are you sure you want to continue connecting (yes/no)? yes
+Failed to add the host to the list of known hosts (/home/pi/.ssh/known_hosts).
+root@10.75.159.250's password: 
+Last login: Thu Jan  1 00:06:30 1970 from 10.75.159.161
+root@lambda_bmc:~# show_version bmc |grep Pingpong  
+Pingpong BMC Version    : hpa-v2.11.00-dirty
+spawn ssh pi@10.75.159.161
+pi@10.75.159.161's password: 
+Linux raspberrypi-3 5.10.17-v7l+ #1414 SMP Fri Apr 30 13:20:47 BST 2021 armv7l
+
+The programs included with the Debian GNU/Linux system are free software;
+the exact distribution terms for each program are described in the
+individual files in /usr/share/doc/*/copyright.
+
+Debian GNU/Linux comes with ABSOLUTELY NO WARRANTY, to the extent
+permitted by applicable law.
+Last login: Sat Apr 20 14:14:15 2024 from 10.75.135.33
+]0;pi@raspberrypi-3: ~[01;32mpi@raspberrypi-3[00m:[01;34m~ $[00m ssh root@10.75.159.250
+devmem 0x1e785010;devmem 0x1e785030;rm -rf /var/log/*;show_bmc_status 
+The authenticity of host '10.75.159.250 (10.75.159.250)' can't be established.
+ECDSA key fingerprint is SHA256:IfZrL0MAM0Z0YetV56bxHEwI7i7UH3JSte3xTKj8tOQ.
+Are you sure you want to continue connecting (yes/no)? yes
+Failed to add the host to the list of known hosts (/home/pi/.ssh/known_hosts).
+root@10.75.159.250's password: 
+Last login: Thu Jan  1 00:06:39 1970 from 10.75.159.161
+root@lambda_bmc:~# devmem 0x1e785010;devmem 0x1e785030;rm -rf /var/log/*;show_bmc_status 
+0x00000000
+0x00000102
+BMC current boot code source: slave
+Thu May 16 18:52:21 CST 2024
+==================================================================================================
+**************************************************************************************************
+==================================================================================================
+======================cycle1 Start======================
+Thu May 16 18:57:36 CST 2024
+spawn ssh pi@10.75.159.161
+pi@10.75.159.161's password: 
+Linux raspberrypi-3 5.10.17-v7l+ #1414 SMP Fri Apr 30 13:20:47 BST 2021 armv7l
+
+The programs included with the Debian GNU/Linux system are free software;
+the exact distribution terms for each program are described in the
+individual files in /usr/share/doc/*/copyright.
+
+Debian GNU/Linux comes with ABSOLUTELY NO WARRANTY, to the extent
+permitted by applicable law.
+Last login: Sat Apr 20 14:18:33 2024 from 10.75.135.33
+]0;pi@raspberrypi-3: ~[01;32mpi@raspberrypi-3[00m:[01;34m~ $[00m ssh root@10.75.159.250
+devmem 0x1e785010;devmem 0x1e785030;devmem 0x1e620010;devmem 0x1e6200a8;show_bmc_status 
+The authenticity of host '10.75.159.250 (10.75.159.250)' can't be established.
+ECDSA key fingerprint is SHA256:7URPvamMGWNODInzkLt20oAJFt1YT+68awOUM8NiOiQ.
+Are you sure you want to continue connecting (yes/no)? yes
+Failed to add the host to the list of known hosts (/home/pi/.ssh/known_hosts).
+root@10.75.159.250's password: 
+root@bmc-oob.:~# devmem 0x1e785010;devmem 0x1e785030;devmem 0x1e620010;devmem 0x1e6200a8;show_bmc_status 
+0x00000000
+0x00000000
+0x203C0641
+0x00000000
+BMC current boot code source: master
+spawn ssh pi@10.75.159.161
+pi@10.75.159.161's password: 
+Linux raspberrypi-3 5.10.17-v7l+ #1414 SMP Fri Apr 30 13:20:47 BST 2021 armv7l
+
+The programs included with the Debian GNU/Linux system are free software;
+the exact distribution terms for each program are described in the
+individual files in /usr/share/doc/*/copyright.
+
+Debian GNU/Linux comes with ABSOLUTELY NO WARRANTY, to the extent
+permitted by applicable law.
+Last login: Sat Apr 20 14:21:05 2024 from 10.75.135.33
+]0;pi@raspberrypi-3: ~[01;32mpi@raspberrypi-3[00m:[01;34m~ $[00m ssh root@10.75.159.250
+show_version bmc |grep Pingpong  
+The authenticity of host '10.75.159.250 (10.75.159.250)' can't be established.
+ECDSA key fingerprint is SHA256:7URPvamMGWNODInzkLt20oAJFt1YT+68awOUM8NiOiQ.
+Are you sure you want to continue connecting (yes/no)? yes
+Failed to add the host to the list of known hosts (/home/pi/.ssh/known_hosts).
+root@10.75.159.250's password: 
+Last login: Thu Jan  1 00:06:44 1970 from 10.75.159.161
+root@bmc-oob.:~# show_version bmc |grep Pingpong  
+Pingpong BMC Version    : hpa-v2.11.00-dirty
+spawn ssh pi@10.75.159.161
+pi@10.75.159.161's password: 
+Linux raspberrypi-3 5.10.17-v7l+ #1414 SMP Fri Apr 30 13:20:47 BST 2021 armv7l
+
+The programs included with the Debian GNU/Linux system are free software;
+the exact distribution terms for each program are described in the
+individual files in /usr/share/doc/*/copyright.
+
+Debian GNU/Linux comes with ABSOLUTELY NO WARRANTY, to the extent
+permitted by applicable law.
+Last login: Sat Apr 20 14:22:07 2024 from 10.75.135.33
+]0;pi@raspberrypi-3: ~[01;32mpi@raspberrypi-3[00m:[01;34m~ $[00m ssh root@10.75.159.250
+config_bmc_status -s slave 
+The authenticity of host '10.75.159.250 (10.75.159.250)' can't be established.
+ECDSA key fingerprint is SHA256:7URPvamMGWNODInzkLt20oAJFt1YT+68awOUM8NiOiQ.
+Are you sure you want to continue connecting (yes/no)? yes
+Failed to add the host to the list of known hosts (/home/pi/.ssh/known_hosts).
+root@10.75.159.250's password: 
+Last login: Thu Jan  1 00:06:55 1970 from 10.75.159.161
+root@bmc-oob.:~# config_bmc_status -s slave 
+BMC will swap to slave after 10 seconds...
+Thu May 16 19:00:17 CST 2024
+spawn ssh pi@10.75.159.161
+pi@10.75.159.161's password: 
+Linux raspberrypi-3 5.10.17-v7l+ #1414 SMP Fri Apr 30 13:20:47 BST 2021 armv7l
+
+The programs included with the Debian GNU/Linux system are free software;
+the exact distribution terms for each program are described in the
+individual files in /usr/share/doc/*/copyright.
+
+Debian GNU/Linux comes with ABSOLUTELY NO WARRANTY, to the extent
+permitted by applicable law.
+Last login: Sat Apr 20 14:26:14 2024 from 10.75.135.33
+]0;pi@raspberrypi-3: ~[01;32mpi@raspberrypi-3[00m:[01;34m~ $[00m ssh root@10.75.159.250
+devmem 0x1e785010;devmem 0x1e785030;devmem 0x1e620010;devmem 0x1e6200a8;show_bmc_status 
+The authenticity of host '10.75.159.250 (10.75.159.250)' can't be established.
+ECDSA key fingerprint is SHA256:ffVS4qcAO5dQqOVyFT4CjuatoSHYM/nHPqXZSTb02js.
+Are you sure you want to continue connecting (yes/no)? yes
+Failed to add the host to the list of known hosts (/home/pi/.ssh/known_hosts).
+root@10.75.159.250's password: 
+Last login: Thu Jan  1 00:07:05 1970 from 10.75.159.161
+root@lambda_bmc:~# devmem 0x1e785010;devmem 0x1e785030;devmem 0x1e620010;devmem 0x1e6200a8;show_bmc_status 
+0x00000000
+0x00000102
+0x203C0641
+0x00000000
+BMC current boot code source: slave
+spawn ssh pi@10.75.159.161
+pi@10.75.159.161's password: 
+Linux raspberrypi-3 5.10.17-v7l+ #1414 SMP Fri Apr 30 13:20:47 BST 2021 armv7l
+
+The programs included with the Debian GNU/Linux system are free software;
+the exact distribution terms for each program are described in the
+individual files in /usr/share/doc/*/copyright.
+
+Debian GNU/Linux comes with ABSOLUTELY NO WARRANTY, to the extent
+permitted by applicable law.
+Last login: Sat Apr 20 14:28:04 2024 from 10.75.135.33
+]0;pi@raspberrypi-3: ~[01;32mpi@raspberrypi-3[00m:[01;34m~ $[00m ssh root@10.75.159.250
+show_version bmc |grep Pingpong  
+The authenticity of host '10.75.159.250 (10.75.159.250)' can't be established.
+ECDSA key fingerprint is SHA256:ffVS4qcAO5dQqOVyFT4CjuatoSHYM/nHPqXZSTb02js.
+Are you sure you want to continue connecting (yes/no)? yes
+Failed to add the host to the list of known hosts (/home/pi/.ssh/known_hosts).
+root@10.75.159.250's password: 
+Last login: Thu Jan  1 00:06:06 1970 from 10.75.159.161
+root@lambda_bmc:~# show_version bmc |grep Pingpong  
+Pingpong BMC Version    : hpa-v2.11.00-dirty
+spawn ssh pi@10.75.159.161
+pi@10.75.159.161's password: 
+Linux raspberrypi-3 5.10.17-v7l+ #1414 SMP Fri Apr 30 13:20:47 BST 2021 armv7l
+
+The programs included with the Debian GNU/Linux system are free software;
+the exact distribution terms for each program are described in the
+individual files in /usr/share/doc/*/copyright.
+
+Debian GNU/Linux comes with ABSOLUTELY NO WARRANTY, to the extent
+permitted by applicable law.
+Last login: Sat Apr 20 14:29:09 2024 from 10.75.135.33
+]0;pi@raspberrypi-3: ~[01;32mpi@raspberrypi-3[00m:[01;34m~ $[00m ssh root@10.75.159.250
+devmem 0x1e785010;devmem 0x1e785030;rm -rf /var/log/*;show_bmc_status 
+The authenticity of host '10.75.159.250 (10.75.159.250)' can't be established.
+ECDSA key fingerprint is SHA256:ffVS4qcAO5dQqOVyFT4CjuatoSHYM/nHPqXZSTb02js.
+Are you sure you want to continue connecting (yes/no)? yes
+Failed to add the host to the list of known hosts (/home/pi/.ssh/known_hosts).
+root@10.75.159.250's password: 
+Last login: Thu Jan  1 00:06:15 1970 from 10.75.159.161
+root@lambda_bmc:~# devmem 0x1e785010;devmem 0x1e785030;rm -rf /var/log/*;show_bmc_status 
+0x00000000
+0x00000102
+BMC current boot code source: slave
+Thu May 16 19:07:16 CST 2024
+==================================================================================================
+**************************************************************************************************
+==================================================================================================
+======================cycle2 Start======================
+Thu May 16 19:12:30 CST 2024
+spawn ssh pi@10.75.159.161
+pi@10.75.159.161's password: 
+Linux raspberrypi-3 5.10.17-v7l+ #1414 SMP Fri Apr 30 13:20:47 BST 2021 armv7l
+
+The programs included with the Debian GNU/Linux system are free software;
+the exact distribution terms for each program are described in the
+individual files in /usr/share/doc/*/copyright.
+
+Debian GNU/Linux comes with ABSOLUTELY NO WARRANTY, to the extent
+permitted by applicable law.
+Last login: Sat Apr 20 14:33:09 2024 from 10.75.135.33
+]0;pi@raspberrypi-3: ~[01;32mpi@raspberrypi-3[00m:[01;34m~ $[00m ssh root@10.75.159.250
+devmem 0x1e785010;devmem 0x1e785030;devmem 0x1e620010;devmem 0x1e6200a8;show_bmc_status 
+The authenticity of host '10.75.159.250 (10.75.159.250)' can't be established.
+ECDSA key fingerprint is SHA256:T7CqS+rLpsErDOxz0EFHu0EbJwaNN9vV/1tvi7opx+g.
+Are you sure you want to continue connecting (yes/no)? yes
+Failed to add the host to the list of known hosts (/home/pi/.ssh/known_hosts).
+root@10.75.159.250's password: 
+root@bmc-oob.:~# devmem 0x1e785010;devmem 0x1e785030;devmem 0x1e620010;devmem 0x1e6200a8;show_bmc_status 
+0x00000000
+0x00000000
+0x203C0641
+0x00000000
+BMC current boot code source: master
+spawn ssh pi@10.75.159.161
+pi@10.75.159.161's password: 
+Linux raspberrypi-3 5.10.17-v7l+ #1414 SMP Fri Apr 30 13:20:47 BST 2021 armv7l
+
+The programs included with the Debian GNU/Linux system are free software;
+the exact distribution terms for each program are described in the
+individual files in /usr/share/doc/*/copyright.
+
+Debian GNU/Linux comes with ABSOLUTELY NO WARRANTY, to the extent
+permitted by applicable law.
+Last login: Sat Apr 20 14:35:47 2024 from 10.75.135.33
+]0;pi@raspberrypi-3: ~[01;32mpi@raspberrypi-3[00m:[01;34m~ $[00m ssh root@10.75.159.250
+show_version bmc |grep Pingpong  
+The authenticity of host '10.75.159.250 (10.75.159.250)' can't be established.
+ECDSA key fingerprint is SHA256:T7CqS+rLpsErDOxz0EFHu0EbJwaNN9vV/1tvi7opx+g.
+Are you sure you want to continue connecting (yes/no)? yes
+Failed to add the host to the list of known hosts (/home/pi/.ssh/known_hosts).
+root@10.75.159.250's password: 
+Last login: Thu Jan  1 00:05:59 1970 from 10.75.159.161
+root@bmc-oob.:~# show_version bmc |grep Pingpong  
+Pingpong BMC Version    : hpa-v2.11.00-dirty
+spawn ssh pi@10.75.159.161
+pi@10.75.159.161's password: 
+Linux raspberrypi-3 5.10.17-v7l+ #1414 SMP Fri Apr 30 13:20:47 BST 2021 armv7l
+
+The programs included with the Debian GNU/Linux system are free software;
+the exact distribution terms for each program are described in the
+individual files in /usr/share/doc/*/copyright.
+
+Debian GNU/Linux comes with ABSOLUTELY NO WARRANTY, to the extent
+permitted by applicable law.
+Last login: Sat Apr 20 14:36:17 2024 from 10.75.135.33
+]0;pi@raspberrypi-3: ~[01;32mpi@raspberrypi-3[00m:[01;34m~ $[00m ssh root@10.75.159.250
+config_bmc_status -s slave 
+The authenticity of host '10.75.159.250 (10.75.159.250)' can't be established.
+ECDSA key fingerprint is SHA256:T7CqS+rLpsErDOxz0EFHu0EbJwaNN9vV/1tvi7opx+g.
+Are you sure you want to continue connecting (yes/no)? yes
+Failed to add the host to the list of known hosts (/home/pi/.ssh/known_hosts).
+root@10.75.159.250's password: 
+Last login: Thu Jan  1 00:06:10 1970 from 10.75.159.161
+root@bmc-oob.:~# config_bmc_status -s slave 
+BMC will swap to slave after 10 seconds...
+Thu May 16 19:14:31 CST 2024
+spawn ssh pi@10.75.159.161
+pi@10.75.159.161's password: 
+Linux raspberrypi-3 5.10.17-v7l+ #1414 SMP Fri Apr 30 13:20:47 BST 2021 armv7l
+
+The programs included with the Debian GNU/Linux system are free software;
+the exact distribution terms for each program are described in the
+individual files in /usr/share/doc/*/copyright.
+
+Debian GNU/Linux comes with ABSOLUTELY NO WARRANTY, to the extent
+permitted by applicable law.
+Last login: Sat Apr 20 14:40:55 2024 from 10.75.135.33
+]0;pi@raspberrypi-3: ~[01;32mpi@raspberrypi-3[00m:[01;34m~ $[00m ssh root@10.75.159.250
+devmem 0x1e785010;devmem 0x1e785030;devmem 0x1e620010;devmem 0x1e6200a8;show_bmc_status 
+The authenticity of host '10.75.159.250 (10.75.159.250)' can't be established.
+ECDSA key fingerprint is SHA256:w7mTps8AcUIK1norzifHFwnYSWM0IDpRmRSeICyhJ9M.
+Are you sure you want to continue connecting (yes/no)? yes
+Failed to add the host to the list of known hosts (/home/pi/.ssh/known_hosts).
+root@10.75.159.250's password: 
+Last login: Thu Jan  1 00:06:23 1970 from 10.75.159.161
+root@lambda_bmc:~# devmem 0x1e785010;devmem 0x1e785030;devmem 0x1e620010;devmem 0x1e6200a8;show_bmc_status 
+0x00000000
+0x00000102
+0x203C0641
+0x00000000
+BMC current boot code source: slave
+spawn ssh pi@10.75.159.161
+pi@10.75.159.161's password: 
+Linux raspberrypi-3 5.10.17-v7l+ #1414 SMP Fri Apr 30 13:20:47 BST 2021 armv7l
+
+The programs included with the Debian GNU/Linux system are free software;
+the exact distribution terms for each program are described in the
+individual files in /usr/share/doc/*/copyright.
+
+Debian GNU/Linux comes with ABSOLUTELY NO WARRANTY, to the extent
+permitted by applicable law.
+Last login: Sat Apr 20 14:42:36 2024 from 10.75.135.33
+]0;pi@raspberrypi-3: ~[01;32mpi@raspberrypi-3[00m:[01;34m~ $[00m ssh root@10.75.159.250
+show_version bmc |grep Pingpong  
+The authenticity of host '10.75.159.250 (10.75.159.250)' can't be established.
+ECDSA key fingerprint is SHA256:w7mTps8AcUIK1norzifHFwnYSWM0IDpRmRSeICyhJ9M.
+Are you sure you want to continue connecting (yes/no)? yes
+Failed to add the host to the list of known hosts (/home/pi/.ssh/known_hosts).
+root@10.75.159.250's password: 
+Last login: Thu Jan  1 00:06:38 1970 from 10.75.159.161
+root@lambda_bmc:~# show_version bmc |grep Pingpong  
+Pingpong BMC Version    : hpa-v2.11.00-dirty
+spawn ssh pi@10.75.159.161
+pi@10.75.159.161's password: 
+Linux raspberrypi-3 5.10.17-v7l+ #1414 SMP Fri Apr 30 13:20:47 BST 2021 armv7l
+
+The programs included with the Debian GNU/Linux system are free software;
+the exact distribution terms for each program are described in the
+individual files in /usr/share/doc/*/copyright.
+
+Debian GNU/Linux comes with ABSOLUTELY NO WARRANTY, to the extent
+permitted by applicable law.
+Last login: Sat Apr 20 14:43:55 2024 from 10.75.135.33
+]0;pi@raspberrypi-3: ~[01;32mpi@raspberrypi-3[00m:[01;34m~ $[00m ssh root@10.75.159.250
+devmem 0x1e785010;devmem 0x1e785030;rm -rf /var/log/*;show_bmc_status 
+The authenticity of host '10.75.159.250 (10.75.159.250)' can't be established.
+ECDSA key fingerprint is SHA256:w7mTps8AcUIK1norzifHFwnYSWM0IDpRmRSeICyhJ9M.
+Are you sure you want to continue connecting (yes/no)? yes
+Failed to add the host to the list of known hosts (/home/pi/.ssh/known_hosts).
+root@10.75.159.250's password: 
+Last login: Thu Jan  1 00:06:46 1970 from 10.75.159.161
+root@lambda_bmc:~# devmem 0x1e785010;devmem 0x1e785030;rm -rf /var/log/*;show_bmc_status 
+0x00000000
+0x00000102
+BMC current boot code source: slave
+Thu May 16 19:22:01 CST 2024
+==================================================================================================
+**************************************************************************************************
+==================================================================================================
+======================cycle3 Start======================
+Thu May 16 19:27:17 CST 2024
+spawn ssh pi@10.75.159.161
+pi@10.75.159.161's password: 
+Linux raspberrypi-3 5.10.17-v7l+ #1414 SMP Fri Apr 30 13:20:47 BST 2021 armv7l
+
+The programs included with the Debian GNU/Linux system are free software;
+the exact distribution terms for each program are described in the
+individual files in /usr/share/doc/*/copyright.
+
+Debian GNU/Linux comes with ABSOLUTELY NO WARRANTY, to the extent
+permitted by applicable law.
+Last login: Sat Apr 20 14:49:27 2024 from 10.75.135.33
+]0;pi@raspberrypi-3: ~[01;32mpi@raspberrypi-3[00m:[01;34m~ $[00m ssh root@10.75.159.250
+devmem 0x1e785010;devmem 0x1e785030;devmem 0x1e620010;devmem 0x1e6200a8;show_bmc_status 
+The authenticity of host '10.75.159.250 (10.75.159.250)' can't be established.
+ECDSA key fingerprint is SHA256:8m2tdf9xyLo9U/qb4q3Q3xevDERmcjtt69yfKj7uPr4.
+Are you sure you want to continue connecting (yes/no)? yes
+Failed to add the host to the list of known hosts (/home/pi/.ssh/known_hosts).
+root@10.75.159.250's password: 
+root@bmc-oob.:~# devmem 0x1e785010;devmem 0x1e785030;devmem 0x1e620010;devmem 0x1e6200a8;show_bmc_status 
+0x00000000
+0x00000000
+0x203C0641
+0x00000000
+BMC current boot code source: master
+spawn ssh pi@10.75.159.161
+pi@10.75.159.161's password: 
+Linux raspberrypi-3 5.10.17-v7l+ #1414 SMP Fri Apr 30 13:20:47 BST 2021 armv7l
+
+The programs included with the Debian GNU/Linux system are free software;
+the exact distribution terms for each program are described in the
+individual files in /usr/share/doc/*/copyright.
+
+Debian GNU/Linux comes with ABSOLUTELY NO WARRANTY, to the extent
+permitted by applicable law.
+Last login: Sat Apr 20 14:49:29 2024 from 10.75.135.33
+]0;pi@raspberrypi-3: ~[01;32mpi@raspberrypi-3[00m:[01;34m~ $[00m ssh root@10.75.159.250
+show_version bmc |grep Pingpong  
+The authenticity of host '10.75.159.250 (10.75.159.250)' can't be established.
+ECDSA key fingerprint is SHA256:8m2tdf9xyLo9U/qb4q3Q3xevDERmcjtt69yfKj7uPr4.
+Are you sure you want to continue connecting (yes/no)? yes
+Failed to add the host to the list of known hosts (/home/pi/.ssh/known_hosts).
+root@10.75.159.250's password: 
+Last login: Thu Jan  1 00:05:43 1970 from 10.75.159.161
+root@bmc-oob.:~# show_version bmc |grep Pingpong  
+Pingpong BMC Version    : hpa-v2.11.00-dirty
+spawn ssh pi@10.75.159.161
+pi@10.75.159.161's password: 
+Linux raspberrypi-3 5.10.17-v7l+ #1414 SMP Fri Apr 30 13:20:47 BST 2021 armv7l
+
+The programs included with the Debian GNU/Linux system are free software;
+the exact distribution terms for each program are described in the
+individual files in /usr/share/doc/*/copyright.
+
+Debian GNU/Linux comes with ABSOLUTELY NO WARRANTY, to the extent
+permitted by applicable law.
+Last login: Sat Apr 20 14:50:47 2024 from 10.75.135.33
+]0;pi@raspberrypi-3: ~[01;32mpi@raspberrypi-3[00m:[01;34m~ $[00m ssh root@10.75.159.250
+config_bmc_status -s slave 
+The authenticity of host '10.75.159.250 (10.75.159.250)' can't be established.
+ECDSA key fingerprint is SHA256:8m2tdf9xyLo9U/qb4q3Q3xevDERmcjtt69yfKj7uPr4.
+Are you sure you want to continue connecting (yes/no)? yes
+Failed to add the host to the list of known hosts (/home/pi/.ssh/known_hosts).
+root@10.75.159.250's password: 
+Last login: Thu Jan  1 00:05:53 1970 from 10.75.159.161
+root@bmc-oob.:~# config_bmc_status -s slave 
+BMC will swap to slave after 10 seconds...
+Thu May 16 19:28:59 CST 2024
+spawn ssh pi@10.75.159.161
+pi@10.75.159.161's password: 
+Linux raspberrypi-3 5.10.17-v7l+ #1414 SMP Fri Apr 30 13:20:47 BST 2021 armv7l
+
+The programs included with the Debian GNU/Linux system are free software;
+the exact distribution terms for each program are described in the
+individual files in /usr/share/doc/*/copyright.
+
+Debian GNU/Linux comes with ABSOLUTELY NO WARRANTY, to the extent
+permitted by applicable law.
+Last login: Sat Apr 20 14:54:35 2024 from 10.75.135.33
+]0;pi@raspberrypi-3: ~[01;32mpi@raspberrypi-3[00m:[01;34m~ $[00m ssh root@10.75.159.250
+devmem 0x1e785010;devmem 0x1e785030;devmem 0x1e620010;devmem 0x1e6200a8;show_bmc_status 
+The authenticity of host '10.75.159.250 (10.75.159.250)' can't be established.
+ECDSA key fingerprint is SHA256:aLbhRNknidUCq/exGvUwcwnLeQLe3Lalapvfi2Lt1n0.
+Are you sure you want to continue connecting (yes/no)? yes
+Failed to add the host to the list of known hosts (/home/pi/.ssh/known_hosts).
+root@10.75.159.250's password: 
+Last login: Thu Jan  1 00:06:05 1970 from 10.75.159.161
+root@lambda_bmc:~# devmem 0x1e785010;devmem 0x1e785030;devmem 0x1e620010;devmem 0x1e6200a8;show_bmc_status 
+0x00000000
+0x00000102
+0x203C0641
+0x00000000
+BMC current boot code source: slave
+spawn ssh pi@10.75.159.161
+pi@10.75.159.161's password: 
+Linux raspberrypi-3 5.10.17-v7l+ #1414 SMP Fri Apr 30 13:20:47 BST 2021 armv7l
+
+The programs included with the Debian GNU/Linux system are free software;
+the exact distribution terms for each program are described in the
+individual files in /usr/share/doc/*/copyright.
+
+Debian GNU/Linux comes with ABSOLUTELY NO WARRANTY, to the extent
+permitted by applicable law.
+Last login: Sat Apr 20 14:57:21 2024 from 10.75.135.33
+]0;pi@raspberrypi-3: ~[01;32mpi@raspberrypi-3[00m:[01;34m~ $[00m ssh root@10.75.159.250
+show_version bmc |grep Pingpong  
+The authenticity of host '10.75.159.250 (10.75.159.250)' can't be established.
+ECDSA key fingerprint is SHA256:aLbhRNknidUCq/exGvUwcwnLeQLe3Lalapvfi2Lt1n0.
+Are you sure you want to continue connecting (yes/no)? yes
+Failed to add the host to the list of known hosts (/home/pi/.ssh/known_hosts).
+root@10.75.159.250's password: 
+Last login: Thu Jan  1 00:06:11 1970 from 10.75.159.161
+root@lambda_bmc:~# show_version bmc |grep Pingpong  
+Pingpong BMC Version    : hpa-v2.11.00-dirty
+spawn ssh pi@10.75.159.161
+pi@10.75.159.161's password: 
+Linux raspberrypi-3 5.10.17-v7l+ #1414 SMP Fri Apr 30 13:20:47 BST 2021 armv7l
+
+The programs included with the Debian GNU/Linux system are free software;
+the exact distribution terms for each program are described in the
+individual files in /usr/share/doc/*/copyright.
+
+Debian GNU/Linux comes with ABSOLUTELY NO WARRANTY, to the extent
+permitted by applicable law.
+Last login: Sat Apr 20 14:57:53 2024 from 10.75.135.33
+]0;pi@raspberrypi-3: ~[01;32mpi@raspberrypi-3[00m:[01;34m~ $[00m ssh root@10.75.159.250
+devmem 0x1e785010;devmem 0x1e785030;rm -rf /var/log/*;show_bmc_status 
+The authenticity of host '10.75.159.250 (10.75.159.250)' can't be established.
+ECDSA key fingerprint is SHA256:aLbhRNknidUCq/exGvUwcwnLeQLe3Lalapvfi2Lt1n0.
+Are you sure you want to continue connecting (yes/no)? yes
+Failed to add the host to the list of known hosts (/home/pi/.ssh/known_hosts).
+root@10.75.159.250's password: 
+Last login: Thu Jan  1 00:06:17 1970 from 10.75.159.161
+root@lambda_bmc:~# devmem 0x1e785010;devmem 0x1e785030;rm -rf /var/log/*;show_bmc_status 
+0x00000000
+0x00000102
+BMC current boot code source: slave
+Thu May 16 19:35:56 CST 2024
+==================================================================================================
+**************************************************************************************************
+==================================================================================================
+======================cycle4 Start======================
+Thu May 16 19:41:10 CST 2024
+spawn ssh pi@10.75.159.161
+pi@10.75.159.161's password: 
+Linux raspberrypi-3 5.10.17-v7l+ #1414 SMP Fri Apr 30 13:20:47 BST 2021 armv7l
+
+The programs included with the Debian GNU/Linux system are free software;
+the exact distribution terms for each program are described in the
+individual files in /usr/share/doc/*/copyright.
+
+Debian GNU/Linux comes with ABSOLUTELY NO WARRANTY, to the extent
+permitted by applicable law.
+Last login: Sat Apr 20 15:02:26 2024 from 10.75.135.33
+]0;pi@raspberrypi-3: ~[01;32mpi@raspberrypi-3[00m:[01;34m~ $[00m ssh root@10.75.159.250
+devmem 0x1e785010;devmem 0x1e785030;devmem 0x1e620010;devmem 0x1e6200a8;show_bmc_status 
+The authenticity of host '10.75.159.250 (10.75.159.250)' can't be established.
+ECDSA key fingerprint is SHA256:gF2x01BA1nrjNqqKP2iqJIlaMaSYQ6uOLNRXat1WO1s.
+Are you sure you want to continue connecting (yes/no)? yes
+Failed to add the host to the list of known hosts (/home/pi/.ssh/known_hosts).
+root@10.75.159.250's password: 
+root@bmc-oob.:~# devmem 0x1e785010;devmem 0x1e785030;devmem 0x1e620010;devmem 0x1e6200a8;show_bmc_status 
+0x00000000
+0x00000000
+0x203C0641
+0x00000000
+BMC current boot code source: master
+spawn ssh pi@10.75.159.161
+pi@10.75.159.161's password: 
+Linux raspberrypi-3 5.10.17-v7l+ #1414 SMP Fri Apr 30 13:20:47 BST 2021 armv7l
+
+The programs included with the Debian GNU/Linux system are free software;
+the exact distribution terms for each program are described in the
+individual files in /usr/share/doc/*/copyright.
+
+Debian GNU/Linux comes with ABSOLUTELY NO WARRANTY, to the extent
+permitted by applicable law.
+Last login: Sat Apr 20 15:03:22 2024 from 10.75.135.33
+]0;pi@raspberrypi-3: ~[01;32mpi@raspberrypi-3[00m:[01;34m~ $[00m ssh root@10.75.159.250
+show_version bmc |grep Pingpong  
+The authenticity of host '10.75.159.250 (10.75.159.250)' can't be established.
+ECDSA key fingerprint is SHA256:gF2x01BA1nrjNqqKP2iqJIlaMaSYQ6uOLNRXat1WO1s.
+Are you sure you want to continue connecting (yes/no)? yes
+Failed to add the host to the list of known hosts (/home/pi/.ssh/known_hosts).
+root@10.75.159.250's password: 
+Last login: Thu Jan  1 00:05:50 1970 from 10.75.159.161
+root@bmc-oob.:~# show_version bmc |grep Pingpong  
+Pingpong BMC Version    : hpa-v2.11.00-dirty
+spawn ssh pi@10.75.159.161
+pi@10.75.159.161's password: 
+Linux raspberrypi-3 5.10.17-v7l+ #1414 SMP Fri Apr 30 13:20:47 BST 2021 armv7l
+
+The programs included with the Debian GNU/Linux system are free software;
+the exact distribution terms for each program are described in the
+individual files in /usr/share/doc/*/copyright.
+
+Debian GNU/Linux comes with ABSOLUTELY NO WARRANTY, to the extent
+permitted by applicable law.
+Last login: Sat Apr 20 15:04:48 2024 from 10.75.135.33
+]0;pi@raspberrypi-3: ~[01;32mpi@raspberrypi-3[00m:[01;34m~ $[00m ssh root@10.75.159.250
+config_bmc_status -s slave 
+The authenticity of host '10.75.159.250 (10.75.159.250)' can't be established.
+ECDSA key fingerprint is SHA256:gF2x01BA1nrjNqqKP2iqJIlaMaSYQ6uOLNRXat1WO1s.
+Are you sure you want to continue connecting (yes/no)? yes
+Failed to add the host to the list of known hosts (/home/pi/.ssh/known_hosts).
+root@10.75.159.250's password: 
+Last login: Thu Jan  1 00:06:01 1970 from 10.75.159.161
+root@bmc-oob.:~# config_bmc_status -s slave 
+BMC will swap to slave after 10 seconds...
+Thu May 16 19:43:00 CST 2024
+spawn ssh pi@10.75.159.161
+pi@10.75.159.161's password: 
+Linux raspberrypi-3 5.10.17-v7l+ #1414 SMP Fri Apr 30 13:20:47 BST 2021 armv7l
+
+The programs included with the Debian GNU/Linux system are free software;
+the exact distribution terms for each program are described in the
+individual files in /usr/share/doc/*/copyright.
+
+Debian GNU/Linux comes with ABSOLUTELY NO WARRANTY, to the extent
+permitted by applicable law.
+Last login: Sat Apr 20 15:05:41 2024 from 10.75.135.33
+]0;pi@raspberrypi-3: ~[01;32mpi@raspberrypi-3[00m:[01;34m~ $[00m ssh root@10.75.159.250
+devmem 0x1e785010;devmem 0x1e785030;devmem 0x1e620010;devmem 0x1e6200a8;show_bmc_status 
+ssh: connect to host 10.75.159.250 port 22: Connection timed out
+]0;pi@raspberrypi-3: ~[01;32mpi@raspberrypi-3[00m:[01;34m~ $[00m devmem 0x1e785010;devmem 0x1e785030;devmem 0x1e620010;devmem 0x1e6200a8;show_bmc_status 
+-bash: devmem: command not found
+-bash: devmem: command not found
+-bash: devmem: command not found
+-bash: devmem: command not found
+-bash: show_bmc_status: command not found
+]0;pi@raspberrypi-3: ~[01;32mpi@raspberrypi-3[00m:[01;34m~ $[00m ssh root@10.75.159.250
+devmem 0x1e785010;devmem 0x1e785030;devmem 0x1e620010;devmem 0x1e6200a8;show_bmc_status 
+The authenticity of host '10.75.159.250 (10.75.159.250)' can't be established.
+ECDSA key fingerprint is SHA256:A1KDnBw+eaRmVfHHu/roEJsYnmB9gOB9cWUbuTKO4Ok.
+Are you sure you want to continue connecting (yes/no)? yes
+Failed to add the host to the list of known hosts (/home/pi/.ssh/known_hosts).
+root@10.75.159.250's password: 
+Last login: Thu Jan  1 00:06:12 1970 from 10.75.159.161
+root@lambda_bmc:~# devmem 0x1e785010;devmem 0x1e785030;devmem 0x1e620010;devmem 0x1e6200a8;show_bmc_status 
+0x00000000
+0x00000102
+0x203C0641
+0x00000000
+BMC current boot code source: slave
+spawn ssh pi@10.75.159.161
+pi@10.75.159.161's password: 
+Linux raspberrypi-3 5.10.17-v7l+ #1414 SMP Fri Apr 30 13:20:47 BST 2021 armv7l
+
+The programs included with the Debian GNU/Linux system are free software;
+the exact distribution terms for each program are described in the
+individual files in /usr/share/doc/*/copyright.
+
+Debian GNU/Linux comes with ABSOLUTELY NO WARRANTY, to the extent
+permitted by applicable law.
+Last login: Sat Apr 20 15:12:27 2024 from 10.75.135.33
+]0;pi@raspberrypi-3: ~[01;32mpi@raspberrypi-3[00m:[01;34m~ $[00m ssh root@10.75.159.250
+show_version bmc |grep Pingpong  
+The authenticity of host '10.75.159.250 (10.75.159.250)' can't be established.
+ECDSA key fingerprint is SHA256:A1KDnBw+eaRmVfHHu/roEJsYnmB9gOB9cWUbuTKO4Ok.
+Are you sure you want to continue connecting (yes/no)? yes
+Failed to add the host to the list of known hosts (/home/pi/.ssh/known_hosts).
+root@10.75.159.250's password: 
+Last login: Thu Jan  1 00:06:48 1970 from 10.75.159.161
+root@lambda_bmc:~# show_version bmc |grep Pingpong  
+Pingpong BMC Version    : hpa-v2.11.00-dirty
+spawn ssh pi@10.75.159.161
+pi@10.75.159.161's password: 
+Linux raspberrypi-3 5.10.17-v7l+ #1414 SMP Fri Apr 30 13:20:47 BST 2021 armv7l
+
+The programs included with the Debian GNU/Linux system are free software;
+the exact distribution terms for each program are described in the
+individual files in /usr/share/doc/*/copyright.
+
+Debian GNU/Linux comes with ABSOLUTELY NO WARRANTY, to the extent
+permitted by applicable law.
+Last login: Sat Apr 20 15:12:35 2024 from 10.75.135.33
+]0;pi@raspberrypi-3: ~[01;32mpi@raspberrypi-3[00m:[01;34m~ $[00m ssh root@10.75.159.250
+devmem 0x1e785010;devmem 0x1e785030;rm -rf /var/log/*;show_bmc_status 
+The authenticity of host '10.75.159.250 (10.75.159.250)' can't be established.
+ECDSA key fingerprint is SHA256:A1KDnBw+eaRmVfHHu/roEJsYnmB9gOB9cWUbuTKO4Ok.
+Are you sure you want to continue connecting (yes/no)? yes
+Failed to add the host to the list of known hosts (/home/pi/.ssh/known_hosts).
+root@10.75.159.250's password: 
+Last login: Thu Jan  1 00:06:57 1970 from 10.75.159.161
+root@lambda_bmc:~# devmem 0x1e785010;devmem 0x1e785030;rm -rf /var/log/*;show_bmc_status 
+0x00000000
+0x00000102
+BMC current boot code source: slave
+Thu May 16 19:50:43 CST 2024
+==================================================================================================
+**************************************************************************************************
+==================================================================================================
+======================cycle5 Start======================
+Thu May 16 19:55:58 CST 2024
+spawn ssh pi@10.75.159.161
+pi@10.75.159.161's password: 
+Linux raspberrypi-3 5.10.17-v7l+ #1414 SMP Fri Apr 30 13:20:47 BST 2021 armv7l
+
+The programs included with the Debian GNU/Linux system are free software;
+the exact distribution terms for each program are described in the
+individual files in /usr/share/doc/*/copyright.
+
+Debian GNU/Linux comes with ABSOLUTELY NO WARRANTY, to the extent
+permitted by applicable law.
+Last login: Sat Apr 20 15:17:32 2024 from 10.75.135.33
+]0;pi@raspberrypi-3: ~[01;32mpi@raspberrypi-3[00m:[01;34m~ $[00m ssh root@10.75.159.250
+devmem 0x1e785010;devmem 0x1e785030;devmem 0x1e620010;devmem 0x1e6200a8;show_bmc_status 
+The authenticity of host '10.75.159.250 (10.75.159.250)' can't be established.
+ECDSA key fingerprint is SHA256:USBcrPavHRCuhtBh6ynT+PHf9QDcN2JTvaZRKHhr/Ak.
+Are you sure you want to continue connecting (yes/no)? yes
+Failed to add the host to the list of known hosts (/home/pi/.ssh/known_hosts).
+root@10.75.159.250's password: 
+root@bmc-oob.:~# devmem 0x1e785010;devmem 0x1e785030;devmem 0x1e620010;devmem 0x1e6200a8;show_bmc_status 
+0x00000000
+0x00000000
+0x203C0641
+0x00000000
+BMC current boot code source: master
+spawn ssh pi@10.75.159.161
+pi@10.75.159.161's password: 
+Linux raspberrypi-3 5.10.17-v7l+ #1414 SMP Fri Apr 30 13:20:47 BST 2021 armv7l
+
+The programs included with the Debian GNU/Linux system are free software;
+the exact distribution terms for each program are described in the
+individual files in /usr/share/doc/*/copyright.
+
+Debian GNU/Linux comes with ABSOLUTELY NO WARRANTY, to the extent
+permitted by applicable law.
+Last login: Sat Apr 20 15:18:10 2024 from 10.75.135.33
+]0;pi@raspberrypi-3: ~[01;32mpi@raspberrypi-3[00m:[01;34m~ $[00m ssh root@10.75.159.250
+show_version bmc |grep Pingpong  
+The authenticity of host '10.75.159.250 (10.75.159.250)' can't be established.
+ECDSA key fingerprint is SHA256:USBcrPavHRCuhtBh6ynT+PHf9QDcN2JTvaZRKHhr/Ak.
+Are you sure you want to continue connecting (yes/no)? yes
+Failed to add the host to the list of known hosts (/home/pi/.ssh/known_hosts).
+root@10.75.159.250's password: 
+Last login: Thu Jan  1 00:05:45 1970 from 10.75.159.161
+root@bmc-oob.:~# show_version bmc |grep Pingpong  
+Pingpong BMC Version    : hpa-v2.11.00-dirty
+spawn ssh pi@10.75.159.161
+pi@10.75.159.161's password: 
+Linux raspberrypi-3 5.10.17-v7l+ #1414 SMP Fri Apr 30 13:20:47 BST 2021 armv7l
+
+The programs included with the Debian GNU/Linux system are free software;
+the exact distribution terms for each program are described in the
+individual files in /usr/share/doc/*/copyright.
+
+Debian GNU/Linux comes with ABSOLUTELY NO WARRANTY, to the extent
+permitted by applicable law.
+Last login: Sat Apr 20 15:19:44 2024 from 10.75.135.33
+]0;pi@raspberrypi-3: ~[01;32mpi@raspberrypi-3[00m:[01;34m~ $[00m ssh root@10.75.159.250
+config_bmc_status -s slave 
+The authenticity of host '10.75.159.250 (10.75.159.250)' can't be established.
+ECDSA key fingerprint is SHA256:USBcrPavHRCuhtBh6ynT+PHf9QDcN2JTvaZRKHhr/Ak.
+Are you sure you want to continue connecting (yes/no)? yes
+Failed to add the host to the list of known hosts (/home/pi/.ssh/known_hosts).
+root@10.75.159.250's password: 
+Last login: Thu Jan  1 00:05:56 1970 from 10.75.159.161
+root@bmc-oob.:~# config_bmc_status -s slave 
+BMC will swap to slave after 10 seconds...
+Thu May 16 19:57:44 CST 2024
+spawn ssh pi@10.75.159.161
+pi@10.75.159.161's password: 
+Linux raspberrypi-3 5.10.17-v7l+ #1414 SMP Fri Apr 30 13:20:47 BST 2021 armv7l
+
+The programs included with the Debian GNU/Linux system are free software;
+the exact distribution terms for each program are described in the
+individual files in /usr/share/doc/*/copyright.
+
+Debian GNU/Linux comes with ABSOLUTELY NO WARRANTY, to the extent
+permitted by applicable law.
+Last login: Sat Apr 20 15:19:59 2024 from 10.75.135.33
+]0;pi@raspberrypi-3: ~[01;32mpi@raspberrypi-3[00m:[01;34m~ $[00m ssh root@10.75.159.250
+devmem 0x1e785010;devmem 0x1e785030;devmem 0x1e620010;devmem 0x1e6200a8;show_bmc_status 
+ssh: connect to host 10.75.159.250 port 22: Connection timed out
+]0;pi@raspberrypi-3: ~[01;32mpi@raspberrypi-3[00m:[01;34m~ $[00m devmem 0x1e785010;devmem 0x1e785030;devmem 0x1e620010;devmem 0x1e6200a8;show_bmc_status 
+-bash: devmem: command not found
+-bash: devmem: command not found
+-bash: devmem: command not found
+-bash: devmem: command not found
+-bash: show_bmc_status: command not found
+]0;pi@raspberrypi-3: ~[01;32mpi@raspberrypi-3[00m:[01;34m~ $[00m ssh root@10.75.159.250
+ssh root@10.75.159.250
+devmem 0x1e785010;devmem 0x1e785030;devmem 0x1e620010;devmem 0x1e6200a8;show_bmc_status 
+devmem 0x1e785010;devmem 0x1e785030;devmem 0x1e620010;devmem 0x1e6200a8;show_bmc_status 
+The authenticity of host '10.75.159.250 (10.75.159.250)' can't be established.
+ECDSA key fingerprint is SHA256:pjf1i0N5V9YHKsD6Qd/wZBL1LzqJTUxbY+65s897dmY.
+Are you sure you want to continue connecting (yes/no)? yes
+Failed to add the host to the list of known hosts (/home/pi/.ssh/known_hosts).
+root@10.75.159.250's password: 
+Last login: Thu Jan  1 00:06:09 1970 from 10.75.159.161
+root@lambda_bmc:~# devmem 0x1e785010;devmem 0x1e785030;devmem 0x1e620010;devmem 0x1e6200a8;show_bmc_status 
+0x00000000
+0x00000102
+0x203C0641
+0x00000000
+BMC current boot code source: slave
+spawn ssh pi@10.75.159.161
+pi@10.75.159.161's password: 
+Linux raspberrypi-3 5.10.17-v7l+ #1414 SMP Fri Apr 30 13:20:47 BST 2021 armv7l
+
+The programs included with the Debian GNU/Linux system are free software;
+the exact distribution terms for each program are described in the
+individual files in /usr/share/doc/*/copyright.
+
+Debian GNU/Linux comes with ABSOLUTELY NO WARRANTY, to the extent
+permitted by applicable law.
+Last login: Sat Apr 20 15:26:45 2024 from 10.75.135.33
+]0;pi@raspberrypi-3: ~[01;32mpi@raspberrypi-3[00m:[01;34m~ $[00m ssh root@10.75.159.250
+show_version bmc |grep Pingpong  
+The authenticity of host '10.75.159.250 (10.75.159.250)' can't be established.
+ECDSA key fingerprint is SHA256:pjf1i0N5V9YHKsD6Qd/wZBL1LzqJTUxbY+65s897dmY.
+Are you sure you want to continue connecting (yes/no)? yes
+Failed to add the host to the list of known hosts (/home/pi/.ssh/known_hosts).
+root@10.75.159.250's password: 
+Last login: Thu Jan  1 00:06:45 1970 from 10.75.159.161
+root@lambda_bmc:~# show_version bmc |grep Pingpong  
+Pingpong BMC Version    : hpa-v2.11.00-dirty
+spawn ssh pi@10.75.159.161
+pi@10.75.159.161's password: 
+Linux raspberrypi-3 5.10.17-v7l+ #1414 SMP Fri Apr 30 13:20:47 BST 2021 armv7l
+
+The programs included with the Debian GNU/Linux system are free software;
+the exact distribution terms for each program are described in the
+individual files in /usr/share/doc/*/copyright.
+
+Debian GNU/Linux comes with ABSOLUTELY NO WARRANTY, to the extent
+permitted by applicable law.
+Last login: Sat Apr 20 15:27:16 2024 from 10.75.135.33
+]0;pi@raspberrypi-3: ~[01;32mpi@raspberrypi-3[00m:[01;34m~ $[00m ssh root@10.75.159.250
+devmem 0x1e785010;devmem 0x1e785030;rm -rf /var/log/*;show_bmc_status 
+The authenticity of host '10.75.159.250 (10.75.159.250)' can't be established.
+ECDSA key fingerprint is SHA256:pjf1i0N5V9YHKsD6Qd/wZBL1LzqJTUxbY+65s897dmY.
+Are you sure you want to continue connecting (yes/no)? yes
+Failed to add the host to the list of known hosts (/home/pi/.ssh/known_hosts).
+root@10.75.159.250's password: 
+Last login: Thu Jan  1 00:06:54 1970 from 10.75.159.161
+root@lambda_bmc:~# devmem 0x1e785010;devmem 0x1e785030;rm -rf /var/log/*;show_bmc_status 
+0x00000000
+0x00000102
+BMC current boot code source: slave
+Thu May 16 20:05:24 CST 2024
+==================================================================================================
+**************************************************************************************************
+==================================================================================================
+======================cycle6 Start======================
+Thu May 16 20:10:39 CST 2024
+spawn ssh pi@10.75.159.161
+pi@10.75.159.161's password: 
+Linux raspberrypi-3 5.10.17-v7l+ #1414 SMP Fri Apr 30 13:20:47 BST 2021 armv7l
+
+The programs included with the Debian GNU/Linux system are free software;
+the exact distribution terms for each program are described in the
+individual files in /usr/share/doc/*/copyright.
+
+Debian GNU/Linux comes with ABSOLUTELY NO WARRANTY, to the extent
+permitted by applicable law.
+Last login: Sat Apr 20 15:31:49 2024 from 10.75.135.33
+]0;pi@raspberrypi-3: ~[01;32mpi@raspberrypi-3[00m:[01;34m~ $[00m ssh root@10.75.159.250
+devmem 0x1e785010;devmem 0x1e785030;devmem 0x1e620010;devmem 0x1e6200a8;show_bmc_status 
+The authenticity of host '10.75.159.250 (10.75.159.250)' can't be established.
+ECDSA key fingerprint is SHA256:/NU2pG64x+n0Myi6XKC6wEXsuQ5wY5VlzZ/gnENCifc.
+Are you sure you want to continue connecting (yes/no)? yes
+Failed to add the host to the list of known hosts (/home/pi/.ssh/known_hosts).
+root@10.75.159.250's password: 
+root@bmc-oob.:~# devmem 0x1e785010;devmem 0x1e785030;devmem 0x1e620010;devmem 0x1e6200a8;show_bmc_status 
+0x00000000
+0x00000000
+0x203C0641
+0x00000000
+BMC current boot code source: master
+spawn ssh pi@10.75.159.161
+pi@10.75.159.161's password: 
+Linux raspberrypi-3 5.10.17-v7l+ #1414 SMP Fri Apr 30 13:20:47 BST 2021 armv7l
+
+The programs included with the Debian GNU/Linux system are free software;
+the exact distribution terms for each program are described in the
+individual files in /usr/share/doc/*/copyright.
+
+Debian GNU/Linux comes with ABSOLUTELY NO WARRANTY, to the extent
+permitted by applicable law.
+Last login: Sat Apr 20 15:32:51 2024 from 10.75.135.33
+]0;pi@raspberrypi-3: ~[01;32mpi@raspberrypi-3[00m:[01;34m~ $[00m ssh root@10.75.159.250
+show_version bmc |grep Pingpong  
+The authenticity of host '10.75.159.250 (10.75.159.250)' can't be established.
+ECDSA key fingerprint is SHA256:/NU2pG64x+n0Myi6XKC6wEXsuQ5wY5VlzZ/gnENCifc.
+Are you sure you want to continue connecting (yes/no)? yes
+Failed to add the host to the list of known hosts (/home/pi/.ssh/known_hosts).
+root@10.75.159.250's password: 
+Last login: Thu Jan  1 00:05:42 1970 from 10.75.159.161
+root@bmc-oob.:~# show_version bmc |grep Pingpong  
+Pingpong BMC Version    : hpa-v2.11.00-dirty
+spawn ssh pi@10.75.159.161
+pi@10.75.159.161's password: 
+Linux raspberrypi-3 5.10.17-v7l+ #1414 SMP Fri Apr 30 13:20:47 BST 2021 armv7l
+
+The programs included with the Debian GNU/Linux system are free software;
+the exact distribution terms for each program are described in the
+individual files in /usr/share/doc/*/copyright.
+
+Debian GNU/Linux comes with ABSOLUTELY NO WARRANTY, to the extent
+permitted by applicable law.
+Last login: Sat Apr 20 15:34:08 2024 from 10.75.135.33
+]0;pi@raspberrypi-3: ~[01;32mpi@raspberrypi-3[00m:[01;34m~ $[00m ssh root@10.75.159.250
+config_bmc_status -s slave 
+The authenticity of host '10.75.159.250 (10.75.159.250)' can't be established.
+ECDSA key fingerprint is SHA256:/NU2pG64x+n0Myi6XKC6wEXsuQ5wY5VlzZ/gnENCifc.
+Are you sure you want to continue connecting (yes/no)? yes
+Failed to add the host to the list of known hosts (/home/pi/.ssh/known_hosts).
+root@10.75.159.250's password: 
+Last login: Thu Jan  1 00:05:53 1970 from 10.75.159.161
+root@bmc-oob.:~# config_bmc_status -s slave 
+BMC will swap to slave after 10 seconds...
+Thu May 16 20:12:19 CST 2024
+spawn ssh pi@10.75.159.161
+pi@10.75.159.161's password: 
+Linux raspberrypi-3 5.10.17-v7l+ #1414 SMP Fri Apr 30 13:20:47 BST 2021 armv7l
+
+The programs included with the Debian GNU/Linux system are free software;
+the exact distribution terms for each program are described in the
+individual files in /usr/share/doc/*/copyright.
+
+Debian GNU/Linux comes with ABSOLUTELY NO WARRANTY, to the extent
+permitted by applicable law.
+Last login: Sat Apr 20 15:34:44 2024 from 10.75.135.33
+]0;pi@raspberrypi-3: ~[01;32mpi@raspberrypi-3[00m:[01;34m~ $[00m ssh root@10.75.159.250
+devmem 0x1e785010;devmem 0x1e785030;devmem 0x1e620010;devmem 0x1e6200a8;show_bmc_status 
+The authenticity of host '10.75.159.250 (10.75.159.250)' can't be established.
+ECDSA key fingerprint is SHA256:DpC+0iLFDy3w+ih8rXiYGnlGNFR7KhVmAgF9o0qO4wU.
+Are you sure you want to continue connecting (yes/no)? yes
+Failed to add the host to the list of known hosts (/home/pi/.ssh/known_hosts).
+root@10.75.159.250's password: 
+Last login: Thu Jan  1 00:06:04 1970 from 10.75.159.161
+root@lambda_bmc:~# devmem 0x1e785010;devmem 0x1e785030;devmem 0x1e620010;devmem 0x1e6200a8;show_bmc_status 
+0x00000000
+0x00000102
+0x203C0641
+0x00000000
+BMC current boot code source: slave
+spawn ssh pi@10.75.159.161
+pi@10.75.159.161's password: 
+Linux raspberrypi-3 5.10.17-v7l+ #1414 SMP Fri Apr 30 13:20:47 BST 2021 armv7l
+
+The programs included with the Debian GNU/Linux system are free software;
+the exact distribution terms for each program are described in the
+individual files in /usr/share/doc/*/copyright.
+
+Debian GNU/Linux comes with ABSOLUTELY NO WARRANTY, to the extent
+permitted by applicable law.
+Last login: Sat Apr 20 15:41:51 2024 from 10.75.135.33
+]0;pi@raspberrypi-3: ~[01;32mpi@raspberrypi-3[00m:[01;34m~ $[00m ssh root@10.75.159.250
+show_version bmc |grep Pingpong  
+The authenticity of host '10.75.159.250 (10.75.159.250)' can't be established.
+ECDSA key fingerprint is SHA256:DpC+0iLFDy3w+ih8rXiYGnlGNFR7KhVmAgF9o0qO4wU.
+Are you sure you want to continue connecting (yes/no)? yes
+Failed to add the host to the list of known hosts (/home/pi/.ssh/known_hosts).
+root@10.75.159.250's password: 
+Last login: Thu Jan  1 00:07:07 1970 from 10.75.159.161
+root@lambda_bmc:~# show_version bmc |grep Pingpong  
+Pingpong BMC Version    : hpa-v2.11.00-dirty
+spawn ssh pi@10.75.159.161
+pi@10.75.159.161's password: 
+Linux raspberrypi-3 5.10.17-v7l+ #1414 SMP Fri Apr 30 13:20:47 BST 2021 armv7l
+
+The programs included with the Debian GNU/Linux system are free software;
+the exact distribution terms for each program are described in the
+individual files in /usr/share/doc/*/copyright.
+
+Debian GNU/Linux comes with ABSOLUTELY NO WARRANTY, to the extent
+permitted by applicable law.
+Last login: Sat Apr 20 15:42:10 2024 from 10.75.135.33
+]0;pi@raspberrypi-3: ~[01;32mpi@raspberrypi-3[00m:[01;34m~ $[00m ssh root@10.75.159.250
+devmem 0x1e785010;devmem 0x1e785030;rm -rf /var/log/*;show_bmc_status 
+The authenticity of host '10.75.159.250 (10.75.159.250)' can't be established.
+ECDSA key fingerprint is SHA256:DpC+0iLFDy3w+ih8rXiYGnlGNFR7KhVmAgF9o0qO4wU.
+Are you sure you want to continue connecting (yes/no)? yes
+Failed to add the host to the list of known hosts (/home/pi/.ssh/known_hosts).
+root@10.75.159.250's password: 
+Last login: Thu Jan  1 00:07:13 1970 from 10.75.159.161
+root@lambda_bmc:~# devmem 0x1e785010;devmem 0x1e785030;rm -rf /var/log/*;show_bmc_status 
+0x00000000
+0x00000102
+BMC current boot code source: slave
+Thu May 16 20:20:13 CST 2024
+==================================================================================================
+**************************************************************************************************
+==================================================================================================
+======================cycle7 Start======================
+Thu May 16 20:25:28 CST 2024
+spawn ssh pi@10.75.159.161
+pi@10.75.159.161's password: 
+Linux raspberrypi-3 5.10.17-v7l+ #1414 SMP Fri Apr 30 13:20:47 BST 2021 armv7l
+
+The programs included with the Debian GNU/Linux system are free software;
+the exact distribution terms for each program are described in the
+individual files in /usr/share/doc/*/copyright.
+
+Debian GNU/Linux comes with ABSOLUTELY NO WARRANTY, to the extent
+permitted by applicable law.
+Last login: Sat Apr 20 15:46:56 2024 from 10.75.135.33
+]0;pi@raspberrypi-3: ~[01;32mpi@raspberrypi-3[00m:[01;34m~ $[00m ssh root@10.75.159.250
+devmem 0x1e785010;devmem 0x1e785030;devmem 0x1e620010;devmem 0x1e6200a8;show_bmc_status 
+The authenticity of host '10.75.159.250 (10.75.159.250)' can't be established.
+ECDSA key fingerprint is SHA256:9H47iiUoAGWKMZ+moNPZnpumYyr5OIXahbGjiN4XY3U.
+Are you sure you want to continue connecting (yes/no)? yes
+Failed to add the host to the list of known hosts (/home/pi/.ssh/known_hosts).
+root@10.75.159.250's password: 
+root@bmc-oob.:~# devmem 0x1e785010;devmem 0x1e785030;devmem 0x1e620010;devmem 0x1e6200a8;show_bmc_status 
+0x00000000
+0x00000000
+0x203C0641
+0x00000000
+BMC current boot code source: master
+spawn ssh pi@10.75.159.161
+pi@10.75.159.161's password: 
+Linux raspberrypi-3 5.10.17-v7l+ #1414 SMP Fri Apr 30 13:20:47 BST 2021 armv7l
+
+The programs included with the Debian GNU/Linux system are free software;
+the exact distribution terms for each program are described in the
+individual files in /usr/share/doc/*/copyright.
+
+Debian GNU/Linux comes with ABSOLUTELY NO WARRANTY, to the extent
+permitted by applicable law.
+Last login: Sat Apr 20 15:49:09 2024 from 10.75.135.33
+]0;pi@raspberrypi-3: ~[01;32mpi@raspberrypi-3[00m:[01;34m~ $[00m ssh root@10.75.159.250
+show_version bmc |grep Pingpong  
+The authenticity of host '10.75.159.250 (10.75.159.250)' can't be established.
+ECDSA key fingerprint is SHA256:9H47iiUoAGWKMZ+moNPZnpumYyr5OIXahbGjiN4XY3U.
+Are you sure you want to continue connecting (yes/no)? yes
+Failed to add the host to the list of known hosts (/home/pi/.ssh/known_hosts).
+root@10.75.159.250's password: 
+Last login: Thu Jan  1 00:06:07 1970 from 10.75.159.161
+root@bmc-oob.:~# show_version bmc |grep Pingpong  
+Pingpong BMC Version    : hpa-v2.11.00-dirty
+spawn ssh pi@10.75.159.161
+pi@10.75.159.161's password: 
+Linux raspberrypi-3 5.10.17-v7l+ #1414 SMP Fri Apr 30 13:20:47 BST 2021 armv7l
+
+The programs included with the Debian GNU/Linux system are free software;
+the exact distribution terms for each program are described in the
+individual files in /usr/share/doc/*/copyright.
+
+Debian GNU/Linux comes with ABSOLUTELY NO WARRANTY, to the extent
+permitted by applicable law.
+Last login: Sat Apr 20 15:49:23 2024 from 10.75.135.33
+]0;pi@raspberrypi-3: ~[01;32mpi@raspberrypi-3[00m:[01;34m~ $[00m ssh root@10.75.159.250
+config_bmc_status -s slave 
+The authenticity of host '10.75.159.250 (10.75.159.250)' can't be established.
+ECDSA key fingerprint is SHA256:9H47iiUoAGWKMZ+moNPZnpumYyr5OIXahbGjiN4XY3U.
+Are you sure you want to continue connecting (yes/no)? yes
+Failed to add the host to the list of known hosts (/home/pi/.ssh/known_hosts).
+root@10.75.159.250's password: 
+Last login: Thu Jan  1 00:06:18 1970 from 10.75.159.161
+root@bmc-oob.:~# config_bmc_status -s slave 
+BMC will swap to slave after 10 seconds...
+Thu May 16 20:27:36 CST 2024
+spawn ssh pi@10.75.159.161
+pi@10.75.159.161's password: 
+Linux raspberrypi-3 5.10.17-v7l+ #1414 SMP Fri Apr 30 13:20:47 BST 2021 armv7l
+
+The programs included with the Debian GNU/Linux system are free software;
+the exact distribution terms for each program are described in the
+individual files in /usr/share/doc/*/copyright.
+
+Debian GNU/Linux comes with ABSOLUTELY NO WARRANTY, to the extent
+permitted by applicable law.
+Last login: Sat Apr 20 15:54:32 2024 from 10.75.135.33
+]0;pi@raspberrypi-3: ~[01;32mpi@raspberrypi-3[00m:[01;34m~ $[00m ssh root@10.75.159.250
+devmem 0x1e785010;devmem 0x1e785030;devmem 0x1e620010;devmem 0x1e6200a8;show_bmc_status 
+The authenticity of host '10.75.159.250 (10.75.159.250)' can't be established.
+ECDSA key fingerprint is SHA256:NOwveOEZN3EaUDuWzcuo5Uk+OvnyVV4Dt1P8z2r0I+0.
+Are you sure you want to continue connecting (yes/no)? yes
+Failed to add the host to the list of known hosts (/home/pi/.ssh/known_hosts).
+root@10.75.159.250's password: 
+Last login: Thu Jan  1 00:06:32 1970 from 10.75.159.161
+root@lambda_bmc:~# devmem 0x1e785010;devmem 0x1e785030;devmem 0x1e620010;devmem 0x1e6200a8;show_bmc_status 
+0x00000000
+0x00000102
+0x203C0641
+0x00000000
+BMC current boot code source: slave
+spawn ssh pi@10.75.159.161
+pi@10.75.159.161's password: 
+Linux raspberrypi-3 5.10.17-v7l+ #1414 SMP Fri Apr 30 13:20:47 BST 2021 armv7l
+
+The programs included with the Debian GNU/Linux system are free software;
+the exact distribution terms for each program are described in the
+individual files in /usr/share/doc/*/copyright.
+
+Debian GNU/Linux comes with ABSOLUTELY NO WARRANTY, to the extent
+permitted by applicable law.
+Last login: Sat Apr 20 15:54:48 2024 from 10.75.135.33
+]0;pi@raspberrypi-3: ~[01;32mpi@raspberrypi-3[00m:[01;34m~ $[00m ssh root@10.75.159.250
+show_version bmc |grep Pingpong  
+The authenticity of host '10.75.159.250 (10.75.159.250)' can't be established.
+ECDSA key fingerprint is SHA256:NOwveOEZN3EaUDuWzcuo5Uk+OvnyVV4Dt1P8z2r0I+0.
+Are you sure you want to continue connecting (yes/no)? yes
+Failed to add the host to the list of known hosts (/home/pi/.ssh/known_hosts).
+root@10.75.159.250's password: 
+Last login: Thu Jan  1 00:05:45 1970 from 10.75.159.161
+root@lambda_bmc:~# show_version bmc |grep Pingpong  
+Pingpong BMC Version    : hpa-v2.11.00-dirty
+spawn ssh pi@10.75.159.161
+pi@10.75.159.161's password: 
+Linux raspberrypi-3 5.10.17-v7l+ #1414 SMP Fri Apr 30 13:20:47 BST 2021 armv7l
+
+The programs included with the Debian GNU/Linux system are free software;
+the exact distribution terms for each program are described in the
+individual files in /usr/share/doc/*/copyright.
+
+Debian GNU/Linux comes with ABSOLUTELY NO WARRANTY, to the extent
+permitted by applicable law.
+Last login: Sat Apr 20 15:56:07 2024 from 10.75.135.33
+]0;pi@raspberrypi-3: ~[01;32mpi@raspberrypi-3[00m:[01;34m~ $[00m ssh root@10.75.159.250
+devmem 0x1e785010;devmem 0x1e785030;rm -rf /var/log/*;show_bmc_status 
+The authenticity of host '10.75.159.250 (10.75.159.250)' can't be established.
+ECDSA key fingerprint is SHA256:NOwveOEZN3EaUDuWzcuo5Uk+OvnyVV4Dt1P8z2r0I+0.
+Are you sure you want to continue connecting (yes/no)? yes
+Failed to add the host to the list of known hosts (/home/pi/.ssh/known_hosts).
+root@10.75.159.250's password: 
+Last login: Thu Jan  1 00:05:54 1970 from 10.75.159.161
+root@lambda_bmc:~# devmem 0x1e785010;devmem 0x1e785030;rm -rf /var/log/*;show_bmc_status 
+0x00000000
+0x00000102
+BMC current boot code source: slave
+Thu May 16 20:34:15 CST 2024
+==================================================================================================
+**************************************************************************************************
+==================================================================================================
+======================cycle8 Start======================
+Thu May 16 20:39:30 CST 2024
+spawn ssh pi@10.75.159.161
+pi@10.75.159.161's password: 
+Linux raspberrypi-3 5.10.17-v7l+ #1414 SMP Fri Apr 30 13:20:47 BST 2021 armv7l
+
+The programs included with the Debian GNU/Linux system are free software;
+the exact distribution terms for each program are described in the
+individual files in /usr/share/doc/*/copyright.
+
+Debian GNU/Linux comes with ABSOLUTELY NO WARRANTY, to the extent
+permitted by applicable law.
+Last login: Sat Apr 20 15:57:46 2024 from 10.75.135.33
+]0;pi@raspberrypi-3: ~[01;32mpi@raspberrypi-3[00m:[01;34m~ $[00m ssh root@10.75.159.250
+devmem 0x1e785010;devmem 0x1e785030;devmem 0x1e620010;devmem 0x1e6200a8;show_bmc_status 
+The authenticity of host '10.75.159.250 (10.75.159.250)' can't be established.
+ECDSA key fingerprint is SHA256:7oPTA9Q5NxeVRYWjRaNUK3KXI3tbOUx+vb9Vl0Q5fjs.
+Are you sure you want to continue connecting (yes/no)? yes
+Failed to add the host to the list of known hosts (/home/pi/.ssh/known_hosts).
+root@10.75.159.250's password: 
+root@bmc-oob.:~# devmem 0x1e785010;devmem 0x1e785030;devmem 0x1e620010;devmem 0x1e6200a8;show_bmc_status 
+0x00000000
+0x00000000
+0x203C0641
+0x00000000
+BMC current boot code source: master
+spawn ssh pi@10.75.159.161
+pi@10.75.159.161's password: 
+Linux raspberrypi-3 5.10.17-v7l+ #1414 SMP Fri Apr 30 13:20:47 BST 2021 armv7l
+
+The programs included with the Debian GNU/Linux system are free software;
+the exact distribution terms for each program are described in the
+individual files in /usr/share/doc/*/copyright.
+
+Debian GNU/Linux comes with ABSOLUTELY NO WARRANTY, to the extent
+permitted by applicable law.
+Last login: Sat Apr 20 16:02:51 2024 from 10.75.135.33
+]0;pi@raspberrypi-3: ~[01;32mpi@raspberrypi-3[00m:[01;34m~ $[00m ssh root@10.75.159.250
+show_version bmc |grep Pingpong  
+The authenticity of host '10.75.159.250 (10.75.159.250)' can't be established.
+ECDSA key fingerprint is SHA256:7oPTA9Q5NxeVRYWjRaNUK3KXI3tbOUx+vb9Vl0Q5fjs.
+Are you sure you want to continue connecting (yes/no)? yes
+Failed to add the host to the list of known hosts (/home/pi/.ssh/known_hosts).
+root@10.75.159.250's password: 
+Last login: Thu Jan  1 00:06:30 1970 from 10.75.159.161
+root@bmc-oob.:~# show_version bmc |grep Pingpong  
+Pingpong BMC Version    : hpa-v2.11.00-dirty
+spawn ssh pi@10.75.159.161
+pi@10.75.159.161's password: 
+Linux raspberrypi-3 5.10.17-v7l+ #1414 SMP Fri Apr 30 13:20:47 BST 2021 armv7l
+
+The programs included with the Debian GNU/Linux system are free software;
+the exact distribution terms for each program are described in the
+individual files in /usr/share/doc/*/copyright.
+
+Debian GNU/Linux comes with ABSOLUTELY NO WARRANTY, to the extent
+permitted by applicable law.
+Last login: Sat Apr 20 16:03:47 2024 from 10.75.135.33
+]0;pi@raspberrypi-3: ~[01;32mpi@raspberrypi-3[00m:[01;34m~ $[00m ssh root@10.75.159.250
+config_bmc_status -s slave 
+The authenticity of host '10.75.159.250 (10.75.159.250)' can't be established.
+ECDSA key fingerprint is SHA256:7oPTA9Q5NxeVRYWjRaNUK3KXI3tbOUx+vb9Vl0Q5fjs.
+Are you sure you want to continue connecting (yes/no)? yes
+Failed to add the host to the list of known hosts (/home/pi/.ssh/known_hosts).
+root@10.75.159.250's password: 
+Last login: Thu Jan  1 00:06:40 1970 from 10.75.159.161
+root@bmc-oob.:~# config_bmc_status -s slave 
+BMC will swap to slave after 10 seconds...
+Thu May 16 20:41:57 CST 2024
+spawn ssh pi@10.75.159.161
+pi@10.75.159.161's password: 
+Linux raspberrypi-3 5.10.17-v7l+ #1414 SMP Fri Apr 30 13:20:47 BST 2021 armv7l
+
+The programs included with the Debian GNU/Linux system are free software;
+the exact distribution terms for each program are described in the
+individual files in /usr/share/doc/*/copyright.
+
+Debian GNU/Linux comes with ABSOLUTELY NO WARRANTY, to the extent
+permitted by applicable law.
+Last login: Sat Apr 20 16:06:15 2024 from 10.75.135.33
+]0;pi@raspberrypi-3: ~[01;32mpi@raspberrypi-3[00m:[01;34m~ $[00m ssh root@10.75.159.250
+devmem 0x1e785010;devmem 0x1e785030;devmem 0x1e620010;devmem 0x1e6200a8;show_bmc_status 
+The authenticity of host '10.75.159.250 (10.75.159.250)' can't be established.
+ECDSA key fingerprint is SHA256:yPoHbW1saEEJ2URWYWo0WxxyRApuah/0bEUBpUMr1Kc.
+Are you sure you want to continue connecting (yes/no)? yes
+Failed to add the host to the list of known hosts (/home/pi/.ssh/known_hosts).
+root@10.75.159.250's password: 
+Last login: Thu Jan  1 00:06:50 1970 from 10.75.159.161
+root@lambda_bmc:~# devmem 0x1e785010;devmem 0x1e785030;devmem 0x1e620010;devmem 0x1e6200a8;show_bmc_status 
+0x00000000
+0x00000102
+0x203C0641
+0x00005C80
+BMC current boot code source: slave
+spawn ssh pi@10.75.159.161
+pi@10.75.159.161's password: 
+Linux raspberrypi-3 5.10.17-v7l+ #1414 SMP Fri Apr 30 13:20:47 BST 2021 armv7l
+
+The programs included with the Debian GNU/Linux system are free software;
+the exact distribution terms for each program are described in the
+individual files in /usr/share/doc/*/copyright.
+
+Debian GNU/Linux comes with ABSOLUTELY NO WARRANTY, to the extent
+permitted by applicable law.
+Last login: Sat Apr 20 16:09:09 2024 from 10.75.135.33
+]0;pi@raspberrypi-3: ~[01;32mpi@raspberrypi-3[00m:[01;34m~ $[00m ssh root@10.75.159.250
+show_version bmc |grep Pingpong  
+The authenticity of host '10.75.159.250 (10.75.159.250)' can't be established.
+ECDSA key fingerprint is SHA256:yPoHbW1saEEJ2URWYWo0WxxyRApuah/0bEUBpUMr1Kc.
+Are you sure you want to continue connecting (yes/no)? yes
+Failed to add the host to the list of known hosts (/home/pi/.ssh/known_hosts).
+root@10.75.159.250's password: 
+Last login: Thu Jan  1 00:05:36 1970 from 10.75.159.161
+root@lambda_bmc:~# show_version bmc |grep Pingpong  
+Pingpong BMC Version    : hpa-v2.11.00-dirty
+spawn ssh pi@10.75.159.161
+pi@10.75.159.161's password: 
+Linux raspberrypi-3 5.10.17-v7l+ #1414 SMP Fri Apr 30 13:20:47 BST 2021 armv7l
+
+The programs included with the Debian GNU/Linux system are free software;
+the exact distribution terms for each program are described in the
+individual files in /usr/share/doc/*/copyright.
+
+Debian GNU/Linux comes with ABSOLUTELY NO WARRANTY, to the extent
+permitted by applicable law.
+Last login: Sat Apr 20 16:10:20 2024 from 10.75.135.33
+]0;pi@raspberrypi-3: ~[01;32mpi@raspberrypi-3[00m:[01;34m~ $[00m ssh root@10.75.159.250
+devmem 0x1e785010;devmem 0x1e785030;rm -rf /var/log/*;show_bmc_status 
+The authenticity of host '10.75.159.250 (10.75.159.250)' can't be established.
+ECDSA key fingerprint is SHA256:yPoHbW1saEEJ2URWYWo0WxxyRApuah/0bEUBpUMr1Kc.
+Are you sure you want to continue connecting (yes/no)? yes
+Failed to add the host to the list of known hosts (/home/pi/.ssh/known_hosts).
+root@10.75.159.250's password: 
+Last login: Thu Jan  1 00:05:45 1970 from 10.75.159.161
+root@lambda_bmc:~# devmem 0x1e785010;devmem 0x1e785030;rm -rf /var/log/*;show_bmc_status 
+0x00000000
+0x00000102
+BMC current boot code source: slave
+Thu May 16 20:48:26 CST 2024
+==================================================================================================
+**************************************************************************************************
+==================================================================================================
+======================cycle9 Start======================
+Thu May 16 20:53:43 CST 2024
+spawn ssh pi@10.75.159.161
+pi@10.75.159.161's password: 
+Linux raspberrypi-3 5.10.17-v7l+ #1414 SMP Fri Apr 30 13:20:47 BST 2021 armv7l
+
+The programs included with the Debian GNU/Linux system are free software;
+the exact distribution terms for each program are described in the
+individual files in /usr/share/doc/*/copyright.
+
+Debian GNU/Linux comes with ABSOLUTELY NO WARRANTY, to the extent
+permitted by applicable law.
+Last login: Sat Apr 20 16:13:38 2024 from 10.75.135.33
+]0;pi@raspberrypi-3: ~[01;32mpi@raspberrypi-3[00m:[01;34m~ $[00m ssh root@10.75.159.250
+devmem 0x1e785010;devmem 0x1e785030;devmem 0x1e620010;devmem 0x1e6200a8;show_bmc_status 
+The authenticity of host '10.75.159.250 (10.75.159.250)' can't be established.
+ECDSA key fingerprint is SHA256:w6KYnuQN+mFFR4KujusS0Ek7jDzq9vejSBfi0UmRKPw.
+Are you sure you want to continue connecting (yes/no)? yes
+Failed to add the host to the list of known hosts (/home/pi/.ssh/known_hosts).
+root@10.75.159.250's password: 
+root@bmc-oob.:~# devmem 0x1e785010;devmem 0x1e785030;devmem 0x1e620010;devmem 0x1e6200a8;show_bmc_status 
+0x00000000
+0x00000000
+0x203C0641
+0x00000000
+BMC current boot code source: master
+spawn ssh pi@10.75.159.161
+pi@10.75.159.161's password: 
+Linux raspberrypi-3 5.10.17-v7l+ #1414 SMP Fri Apr 30 13:20:47 BST 2021 armv7l
+
+The programs included with the Debian GNU/Linux system are free software;
+the exact distribution terms for each program are described in the
+individual files in /usr/share/doc/*/copyright.
+
+Debian GNU/Linux comes with ABSOLUTELY NO WARRANTY, to the extent
+permitted by applicable law.
+Last login: Sat Apr 20 16:15:54 2024 from 10.75.135.33
+]0;pi@raspberrypi-3: ~[01;32mpi@raspberrypi-3[00m:[01;34m~ $[00m ssh root@10.75.159.250
+show_version bmc |grep Pingpong  
+The authenticity of host '10.75.159.250 (10.75.159.250)' can't be established.
+ECDSA key fingerprint is SHA256:w6KYnuQN+mFFR4KujusS0Ek7jDzq9vejSBfi0UmRKPw.
+Are you sure you want to continue connecting (yes/no)? yes
+Failed to add the host to the list of known hosts (/home/pi/.ssh/known_hosts).
+root@10.75.159.250's password: 
+Last login: Thu Jan  1 00:05:45 1970 from 10.75.159.161
+root@bmc-oob.:~# show_version bmc |grep Pingpong  
+Pingpong BMC Version    : hpa-v2.11.00-dirty
+spawn ssh pi@10.75.159.161
+pi@10.75.159.161's password: 
+Linux raspberrypi-3 5.10.17-v7l+ #1414 SMP Fri Apr 30 13:20:47 BST 2021 armv7l
+
+The programs included with the Debian GNU/Linux system are free software;
+the exact distribution terms for each program are described in the
+individual files in /usr/share/doc/*/copyright.
+
+Debian GNU/Linux comes with ABSOLUTELY NO WARRANTY, to the extent
+permitted by applicable law.
+Last login: Sat Apr 20 16:17:16 2024 from 10.75.135.33
+]0;pi@raspberrypi-3: ~[01;32mpi@raspberrypi-3[00m:[01;34m~ $[00m ssh root@10.75.159.250
+config_bmc_status -s slave 
+The authenticity of host '10.75.159.250 (10.75.159.250)' can't be established.
+ECDSA key fingerprint is SHA256:w6KYnuQN+mFFR4KujusS0Ek7jDzq9vejSBfi0UmRKPw.
+Are you sure you want to continue connecting (yes/no)? yes
+Failed to add the host to the list of known hosts (/home/pi/.ssh/known_hosts).
+root@10.75.159.250's password: 
+Last login: Thu Jan  1 00:05:57 1970 from 10.75.159.161
+root@bmc-oob.:~# config_bmc_status -s slave 
+BMC will swap to slave after 10 seconds...
+Thu May 16 20:55:28 CST 2024
+spawn ssh pi@10.75.159.161
+pi@10.75.159.161's password: 
+Linux raspberrypi-3 5.10.17-v7l+ #1414 SMP Fri Apr 30 13:20:47 BST 2021 armv7l
+
+The programs included with the Debian GNU/Linux system are free software;
+the exact distribution terms for each program are described in the
+individual files in /usr/share/doc/*/copyright.
+
+Debian GNU/Linux comes with ABSOLUTELY NO WARRANTY, to the extent
+permitted by applicable law.
+Last login: Sat Apr 20 16:21:19 2024 from 10.75.135.33
+]0;pi@raspberrypi-3: ~[01;32mpi@raspberrypi-3[00m:[01;34m~ $[00m ssh root@10.75.159.250
+devmem 0x1e785010;devmem 0x1e785030;devmem 0x1e620010;devmem 0x1e6200a8;show_bmc_status 
+The authenticity of host '10.75.159.250 (10.75.159.250)' can't be established.
+ECDSA key fingerprint is SHA256:V51isaaxq6FRvKbIlJm7PvM9wo7J7Gg/YqxqAq3Oiak.
+Are you sure you want to continue connecting (yes/no)? yes
+Failed to add the host to the list of known hosts (/home/pi/.ssh/known_hosts).
+root@10.75.159.250's password: 
+Last login: Thu Jan  1 00:06:09 1970 from 10.75.159.161
+root@lambda_bmc:~# devmem 0x1e785010;devmem 0x1e785030;devmem 0x1e620010;devmem 0x1e6200a8;show_bmc_status 
+0x00000000
+0x00000102
+0x203C0641
+0x00000000
+BMC current boot code source: slave
+spawn ssh pi@10.75.159.161
+pi@10.75.159.161's password: 
+Linux raspberrypi-3 5.10.17-v7l+ #1414 SMP Fri Apr 30 13:20:47 BST 2021 armv7l
+
+The programs included with the Debian GNU/Linux system are free software;
+the exact distribution terms for each program are described in the
+individual files in /usr/share/doc/*/copyright.
+
+Debian GNU/Linux comes with ABSOLUTELY NO WARRANTY, to the extent
+permitted by applicable law.
+Last login: Sat Apr 20 16:22:39 2024 from 10.75.135.33
+]0;pi@raspberrypi-3: ~[01;32mpi@raspberrypi-3[00m:[01;34m~ $[00m ssh root@10.75.159.250
+show_version bmc |grep Pingpong  
+The authenticity of host '10.75.159.250 (10.75.159.250)' can't be established.
+ECDSA key fingerprint is SHA256:V51isaaxq6FRvKbIlJm7PvM9wo7J7Gg/YqxqAq3Oiak.
+Are you sure you want to continue connecting (yes/no)? yes
+Failed to add the host to the list of known hosts (/home/pi/.ssh/known_hosts).
+root@10.75.159.250's password: 
+Last login: Thu Jan  1 00:06:00 1970 from 10.75.159.161
+root@lambda_bmc:~# show_version bmc |grep Pingpong  
+Pingpong BMC Version    : hpa-v2.11.00-dirty
+spawn ssh pi@10.75.159.161
+pi@10.75.159.161's password: 
+Linux raspberrypi-3 5.10.17-v7l+ #1414 SMP Fri Apr 30 13:20:47 BST 2021 armv7l
+
+The programs included with the Debian GNU/Linux system are free software;
+the exact distribution terms for each program are described in the
+individual files in /usr/share/doc/*/copyright.
+
+Debian GNU/Linux comes with ABSOLUTELY NO WARRANTY, to the extent
+permitted by applicable law.
+Last login: Sat Apr 20 16:24:13 2024 from 10.75.135.33
+]0;pi@raspberrypi-3: ~[01;32mpi@raspberrypi-3[00m:[01;34m~ $[00m ssh root@10.75.159.250
+devmem 0x1e785010;devmem 0x1e785030;rm -rf /var/log/*;show_bmc_status 
+The authenticity of host '10.75.159.250 (10.75.159.250)' can't be established.
+ECDSA key fingerprint is SHA256:V51isaaxq6FRvKbIlJm7PvM9wo7J7Gg/YqxqAq3Oiak.
+Are you sure you want to continue connecting (yes/no)? yes
+Failed to add the host to the list of known hosts (/home/pi/.ssh/known_hosts).
+root@10.75.159.250's password: 
+Last login: Thu Jan  1 00:06:07 1970 from 10.75.159.161
+root@lambda_bmc:~# devmem 0x1e785010;devmem 0x1e785030;rm -rf /var/log/*;show_bmc_status 
+0x00000000
+0x00000102
+BMC current boot code source: slave
+Thu May 16 21:02:16 CST 2024
+==================================================================================================
+**************************************************************************************************
+==================================================================================================
+======================cycle10 Start======================
+Thu May 16 21:07:31 CST 2024
+spawn ssh pi@10.75.159.161
+pi@10.75.159.161's password: 
+Linux raspberrypi-3 5.10.17-v7l+ #1414 SMP Fri Apr 30 13:20:47 BST 2021 armv7l
+
+The programs included with the Debian GNU/Linux system are free software;
+the exact distribution terms for each program are described in the
+individual files in /usr/share/doc/*/copyright.
+
+Debian GNU/Linux comes with ABSOLUTELY NO WARRANTY, to the extent
+permitted by applicable law.
+Last login: Sat Apr 20 16:28:02 2024 from 10.75.135.33
+]0;pi@raspberrypi-3: ~[01;32mpi@raspberrypi-3[00m:[01;34m~ $[00m ssh root@10.75.159.250
+devmem 0x1e785010;devmem 0x1e785030;devmem 0x1e620010;devmem 0x1e6200a8;show_bmc_status 
+The authenticity of host '10.75.159.250 (10.75.159.250)' can't be established.
+ECDSA key fingerprint is SHA256:d0ZSyd28JmJ3bEHBRp47E+GoMniiwQ0f7nl1L1qTdIQ.
+Are you sure you want to continue connecting (yes/no)? yes
+Failed to add the host to the list of known hosts (/home/pi/.ssh/known_hosts).
+root@10.75.159.250's password: 
+root@bmc-oob.:~# devmem 0x1e785010;devmem 0x1e785030;devmem 0x1e620010;devmem 0x1e6200a8;show_bmc_status 
+0x00000000
+0x00000000
+0x203C0641
+0x00000000
+BMC current boot code source: master
+spawn ssh pi@10.75.159.161
+pi@10.75.159.161's password: 
+Linux raspberrypi-3 5.10.17-v7l+ #1414 SMP Fri Apr 30 13:20:47 BST 2021 armv7l
+
+The programs included with the Debian GNU/Linux system are free software;
+the exact distribution terms for each program are described in the
+individual files in /usr/share/doc/*/copyright.
+
+Debian GNU/Linux comes with ABSOLUTELY NO WARRANTY, to the extent
+permitted by applicable law.
+Last login: Sat Apr 20 16:29:43 2024 from 10.75.135.33
+]0;pi@raspberrypi-3: ~[01;32mpi@raspberrypi-3[00m:[01;34m~ $[00m ssh root@10.75.159.250
+show_version bmc |grep Pingpong  
+The authenticity of host '10.75.159.250 (10.75.159.250)' can't be established.
+ECDSA key fingerprint is SHA256:d0ZSyd28JmJ3bEHBRp47E+GoMniiwQ0f7nl1L1qTdIQ.
+Are you sure you want to continue connecting (yes/no)? yes
+Failed to add the host to the list of known hosts (/home/pi/.ssh/known_hosts).
+root@10.75.159.250's password: 
+Last login: Thu Jan  1 00:07:33 1970 from 10.75.159.161
+root@bmc-oob.:~# show_version bmc |grep Pingpong  
+Pingpong BMC Version    : hpa-v2.11.00-dirty
+spawn ssh pi@10.75.159.161
+pi@10.75.159.161's password: 
+Linux raspberrypi-3 5.10.17-v7l+ #1414 SMP Fri Apr 30 13:20:47 BST 2021 armv7l
+
+The programs included with the Debian GNU/Linux system are free software;
+the exact distribution terms for each program are described in the
+individual files in /usr/share/doc/*/copyright.
+
+Debian GNU/Linux comes with ABSOLUTELY NO WARRANTY, to the extent
+permitted by applicable law.
+Last login: Sat Apr 20 16:32:51 2024 from 10.75.135.33
+]0;pi@raspberrypi-3: ~[01;32mpi@raspberrypi-3[00m:[01;34m~ $[00m ssh root@10.75.159.250
+config_bmc_status -s slave 
+The authenticity of host '10.75.159.250 (10.75.159.250)' can't be established.
+ECDSA key fingerprint is SHA256:d0ZSyd28JmJ3bEHBRp47E+GoMniiwQ0f7nl1L1qTdIQ.
+Are you sure you want to continue connecting (yes/no)? yes
+Failed to add the host to the list of known hosts (/home/pi/.ssh/known_hosts).
+root@10.75.159.250's password: 
+Last login: Thu Jan  1 00:07:43 1970 from 10.75.159.161
+root@bmc-oob.:~# config_bmc_status -s slave 
+BMC will swap to slave after 10 seconds...
+Thu May 16 21:11:02 CST 2024
+spawn ssh pi@10.75.159.161
+pi@10.75.159.161's password: 
+Linux raspberrypi-3 5.10.17-v7l+ #1414 SMP Fri Apr 30 13:20:47 BST 2021 armv7l
+
+The programs included with the Debian GNU/Linux system are free software;
+the exact distribution terms for each program are described in the
+individual files in /usr/share/doc/*/copyright.
+
+Debian GNU/Linux comes with ABSOLUTELY NO WARRANTY, to the extent
+permitted by applicable law.
+Last login: Sat Apr 20 16:35:23 2024 from 10.75.135.33
+]0;pi@raspberrypi-3: ~[01;32mpi@raspberrypi-3[00m:[01;34m~ $[00m ssh root@10.75.159.250
+devmem 0x1e785010;devmem 0x1e785030;devmem 0x1e620010;devmem 0x1e6200a8;show_bmc_status 
+ssh: connect to host 10.75.159.250 port 22: Connection timed out
+]0;pi@raspberrypi-3: ~[01;32mpi@raspberrypi-3[00m:[01;34m~ $[00m devmem 0x1e785010;devmem 0x1e785030;devmem 0x1e620010;devmem 0x1e6200a8;show_bmc_status 
+-bash: devmem: command not found
+-bash: devmem: command not found
+-bash: devmem: command not found
+-bash: devmem: command not found
+-bash: show_bmc_status: command not found
+]0;pi@raspberrypi-3: ~[01;32mpi@raspberrypi-3[00m:[01;34m~ $[00m ssh root@10.75.159.250
+devmem 0x1e785010;devmem 0x1e785030;devmem 0x1e620010;devmem 0x1e6200a8;show_bmc_status 
+The authenticity of host '10.75.159.250 (10.75.159.250)' can't be established.
+ECDSA key fingerprint is SHA256:hK4GcaA6DMAXnKJAHlbR93jP2sLwJmQcHrYqJ1gaGSI.
+Are you sure you want to continue connecting (yes/no)? yes
+Failed to add the host to the list of known hosts (/home/pi/.ssh/known_hosts).
+root@10.75.159.250's password: 
+Last login: Thu Jan  1 00:07:54 1970 from 10.75.159.161
+root@lambda_bmc:~# devmem 0x1e785010;devmem 0x1e785030;devmem 0x1e620010;devmem 0x1e6200a8;show_bmc_status 
+0x00000000
+0x00000102
+0x203C0641
+0x00000000
+BMC current boot code source: slave
+spawn ssh pi@10.75.159.161
+pi@10.75.159.161's password: 
+Linux raspberrypi-3 5.10.17-v7l+ #1414 SMP Fri Apr 30 13:20:47 BST 2021 armv7l
+
+The programs included with the Debian GNU/Linux system are free software;
+the exact distribution terms for each program are described in the
+individual files in /usr/share/doc/*/copyright.
+
+Debian GNU/Linux comes with ABSOLUTELY NO WARRANTY, to the extent
+permitted by applicable law.
+Last login: Sat Apr 20 16:38:14 2024 from 10.75.135.33
+]0;pi@raspberrypi-3: ~[01;32mpi@raspberrypi-3[00m:[01;34m~ $[00m ssh root@10.75.159.250
+show_version bmc |grep Pingpong  
+The authenticity of host '10.75.159.250 (10.75.159.250)' can't be established.
+ECDSA key fingerprint is SHA256:hK4GcaA6DMAXnKJAHlbR93jP2sLwJmQcHrYqJ1gaGSI.
+Are you sure you want to continue connecting (yes/no)? yes
+Failed to add the host to the list of known hosts (/home/pi/.ssh/known_hosts).
+root@10.75.159.250's password: 
+Last login: Thu Jan  1 00:06:45 1970 from 10.75.159.161
+root@lambda_bmc:~# show_version bmc |grep Pingpong  
+Pingpong BMC Version    : hpa-v2.11.00-dirty
+spawn ssh pi@10.75.159.161
+pi@10.75.159.161's password: 
+Linux raspberrypi-3 5.10.17-v7l+ #1414 SMP Fri Apr 30 13:20:47 BST 2021 armv7l
+
+The programs included with the Debian GNU/Linux system are free software;
+the exact distribution terms for each program are described in the
+individual files in /usr/share/doc/*/copyright.
+
+Debian GNU/Linux comes with ABSOLUTELY NO WARRANTY, to the extent
+permitted by applicable law.
+Last login: Sat Apr 20 16:40:37 2024 from 10.75.135.33
+]0;pi@raspberrypi-3: ~[01;32mpi@raspberrypi-3[00m:[01;34m~ $[00m ssh root@10.75.159.250
+devmem 0x1e785010;devmem 0x1e785030;rm -rf /var/log/*;show_bmc_status 
+The authenticity of host '10.75.159.250 (10.75.159.250)' can't be established.
+ECDSA key fingerprint is SHA256:hK4GcaA6DMAXnKJAHlbR93jP2sLwJmQcHrYqJ1gaGSI.
+Are you sure you want to continue connecting (yes/no)? yes
+Failed to add the host to the list of known hosts (/home/pi/.ssh/known_hosts).
+root@10.75.159.250's password: 
+Last login: Thu Jan  1 00:06:53 1970 from 10.75.159.161
+root@lambda_bmc:~# devmem 0x1e785010;devmem 0x1e785030;rm -rf /var/log/*;show_bmc_status 
+0x00000000
+0x00000102
+BMC current boot code source: slave
+Thu May 16 21:18:42 CST 2024
+==================================================================================================
+**************************************************************************************************
+==================================================================================================
+======================cycle11 Start======================
+Thu May 16 21:26:12 CST 2024
+spawn ssh pi@10.75.159.161
+pi@10.75.159.161's password: 
+Linux raspberrypi-3 5.10.17-v7l+ #1414 SMP Fri Apr 30 13:20:47 BST 2021 armv7l
+
+The programs included with the Debian GNU/Linux system are free software;
+the exact distribution terms for each program are described in the
+individual files in /usr/share/doc/*/copyright.
+
+Debian GNU/Linux comes with ABSOLUTELY NO WARRANTY, to the extent
+permitted by applicable law.
+Last login: Sat Apr 20 16:47:15 2024 from 10.75.135.33
+]0;pi@raspberrypi-3: ~[01;32mpi@raspberrypi-3[00m:[01;34m~ $[00m ssh root@10.75.159.250
+devmem 0x1e785010;devmem 0x1e785030;devmem 0x1e620010;devmem 0x1e6200a8;show_bmc_status 
+The authenticity of host '10.75.159.250 (10.75.159.250)' can't be established.
+ECDSA key fingerprint is SHA256:jsLuZMUGhn8IfiP+dALgIPoxDOt0QlNIz+9/acB0JgI.
+Are you sure you want to continue connecting (yes/no)? yes
+Failed to add the host to the list of known hosts (/home/pi/.ssh/known_hosts).
+root@10.75.159.250's password: 
+root@bmc-oob.:~# devmem 0x1e785010;devmem 0x1e785030;devmem 0x1e620010;devmem 0x1e6200a8;show_bmc_status 
+0x00000000
+0x00000000
+0x203C0641
+0x00000000
+BMC current boot code source: master
+spawn ssh pi@10.75.159.161
+pi@10.75.159.161's password: 
+Linux raspberrypi-3 5.10.17-v7l+ #1414 SMP Fri Apr 30 13:20:47 BST 2021 armv7l
+
+The programs included with the Debian GNU/Linux system are free software;
+the exact distribution terms for each program are described in the
+individual files in /usr/share/doc/*/copyright.
+
+Debian GNU/Linux comes with ABSOLUTELY NO WARRANTY, to the extent
+permitted by applicable law.
+Last login: Sat Apr 20 16:49:45 2024 from 10.75.135.33
+]0;pi@raspberrypi-3: ~[01;32mpi@raspberrypi-3[00m:[01;34m~ $[00m ssh root@10.75.159.250
+show_version bmc |grep Pingpong  
+The authenticity of host '10.75.159.250 (10.75.159.250)' can't be established.
+ECDSA key fingerprint is SHA256:jsLuZMUGhn8IfiP+dALgIPoxDOt0QlNIz+9/acB0JgI.
+Are you sure you want to continue connecting (yes/no)? yes
+Failed to add the host to the list of known hosts (/home/pi/.ssh/known_hosts).
+root@10.75.159.250's password: 
+Last login: Thu Jan  1 00:07:21 1970 from 10.75.159.161
+root@bmc-oob.:~# show_version bmc |grep Pingpong  
+Pingpong BMC Version    : hpa-v2.11.00-dirty
+spawn ssh pi@10.75.159.161
+pi@10.75.159.161's password: 
+Linux raspberrypi-3 5.10.17-v7l+ #1414 SMP Fri Apr 30 13:20:47 BST 2021 armv7l
+
+The programs included with the Debian GNU/Linux system are free software;
+the exact distribution terms for each program are described in the
+individual files in /usr/share/doc/*/copyright.
+
+Debian GNU/Linux comes with ABSOLUTELY NO WARRANTY, to the extent
+permitted by applicable law.
+Last login: Sat Apr 20 16:51:20 2024 from 10.75.135.33
+]0;pi@raspberrypi-3: ~[01;32mpi@raspberrypi-3[00m:[01;34m~ $[00m ssh root@10.75.159.250
+config_bmc_status -s slave 
+ssh: connect to host 10.75.159.250 port 22: Connection timed out
+]0;pi@raspberrypi-3: ~[01;32mpi@raspberrypi-3[00m:[01;34m~ $[00m config_bmc_status -s slave 
+-bash: config_bmc_status: command not found
+]0;pi@raspberrypi-3: ~[01;32mpi@raspberrypi-3[00m:[01;34m~ $[00m ssh root@10.75.159.250
+config_bmc_status -s slave 
+ssh: connect to host 10.75.159.250 port 22: Connection timed out
+]0;pi@raspberrypi-3: ~[01;32mpi@raspberrypi-3[00m:[01;34m~ $[00m ssh root@10.75.159.250
+ssh root@10.75.159.250
+config_bmc_status -s slave 
+config_bmc_status -s slave 
+The authenticity of host '10.75.159.250 (10.75.159.250)' can't be established.
+ECDSA key fingerprint is SHA256:jsLuZMUGhn8IfiP+dALgIPoxDOt0QlNIz+9/acB0JgI.
+Are you sure you want to continue connecting (yes/no)? yes
+Failed to add the host to the list of known hosts (/home/pi/.ssh/known_hosts).
+root@10.75.159.250's password: 
+Last login: Thu Jan  1 00:07:33 1970 from 10.75.159.161
+root@bmc-oob.:~# config_bmc_status -s slave 
+BMC will swap to slave after 10 seconds...
+Thu May 16 21:34:02 CST 2024
+spawn ssh pi@10.75.159.161
+pi@10.75.159.161's password: 
+Linux raspberrypi-3 5.10.17-v7l+ #1414 SMP Fri Apr 30 13:20:47 BST 2021 armv7l
+
+The programs included with the Debian GNU/Linux system are free software;
+the exact distribution terms for each program are described in the
+individual files in /usr/share/doc/*/copyright.
+
+Debian GNU/Linux comes with ABSOLUTELY NO WARRANTY, to the extent
+permitted by applicable law.
+Last login: Sat Apr 20 16:57:05 2024 from 10.75.135.33
+]0;pi@raspberrypi-3: ~[01;32mpi@raspberrypi-3[00m:[01;34m~ $[00m ssh root@10.75.159.250
+devmem 0x1e785010;devmem 0x1e785030;devmem 0x1e620010;devmem 0x1e6200a8;show_bmc_status 
+The authenticity of host '10.75.159.250 (10.75.159.250)' can't be established.
+ECDSA key fingerprint is SHA256:oj61sD2/wTmLmsDE7FRLlAjWWcfktYzjbeBJrPJEu/Y.
+Are you sure you want to continue connecting (yes/no)? yes
+Failed to add the host to the list of known hosts (/home/pi/.ssh/known_hosts).
+root@10.75.159.250's password: 
+Last login: Thu Jan  1 00:07:33 1970 from 10.75.159.161
+root@lambda_bmc:~# devmem 0x1e785010;devmem 0x1e785030;devmem 0x1e620010;devmem 0x1e6200a8;show_bmc_status 
+0x00000000
+0x00000102
+0x203C0641
+0x00000000
+BMC current boot code source: slave
+spawn ssh pi@10.75.159.161
+pi@10.75.159.161's password: 
+Linux raspberrypi-3 5.10.17-v7l+ #1414 SMP Fri Apr 30 13:20:47 BST 2021 armv7l
+
+The programs included with the Debian GNU/Linux system are free software;
+the exact distribution terms for each program are described in the
+individual files in /usr/share/doc/*/copyright.
+
+Debian GNU/Linux comes with ABSOLUTELY NO WARRANTY, to the extent
+permitted by applicable law.
+Last login: Sat Apr 20 17:02:09 2024 from 10.75.135.33
+]0;pi@raspberrypi-3: ~[01;32mpi@raspberrypi-3[00m:[01;34m~ $[00m ssh root@10.75.159.250
+show_version bmc |grep Pingpong  
+The authenticity of host '10.75.159.250 (10.75.159.250)' can't be established.
+ECDSA key fingerprint is SHA256:oj61sD2/wTmLmsDE7FRLlAjWWcfktYzjbeBJrPJEu/Y.
+Are you sure you want to continue connecting (yes/no)? yes
+Failed to add the host to the list of known hosts (/home/pi/.ssh/known_hosts).
+root@10.75.159.250's password: 
+Last login: Thu Jan  1 00:06:16 1970 from 10.75.159.161
+root@lambda_bmc:~# show_version bmc |grep Pingpong  
+Pingpong BMC Version    : hpa-v2.11.00-dirty
+spawn ssh pi@10.75.159.161
+pi@10.75.159.161's password: 
+Linux raspberrypi-3 5.10.17-v7l+ #1414 SMP Fri Apr 30 13:20:47 BST 2021 armv7l
+
+The programs included with the Debian GNU/Linux system are free software;
+the exact distribution terms for each program are described in the
+individual files in /usr/share/doc/*/copyright.
+
+Debian GNU/Linux comes with ABSOLUTELY NO WARRANTY, to the extent
+permitted by applicable law.
+Last login: Sat Apr 20 17:03:05 2024 from 10.75.135.33
+]0;pi@raspberrypi-3: ~[01;32mpi@raspberrypi-3[00m:[01;34m~ $[00m ssh root@10.75.159.250
+devmem 0x1e785010;devmem 0x1e785030;rm -rf /var/log/*;show_bmc_status 
+The authenticity of host '10.75.159.250 (10.75.159.250)' can't be established.
+ECDSA key fingerprint is SHA256:oj61sD2/wTmLmsDE7FRLlAjWWcfktYzjbeBJrPJEu/Y.
+Are you sure you want to continue connecting (yes/no)? yes
+Failed to add the host to the list of known hosts (/home/pi/.ssh/known_hosts).
+root@10.75.159.250's password: 
+Last login: Thu Jan  1 00:06:26 1970 from 10.75.159.161
+root@lambda_bmc:~# devmem 0x1e785010;devmem 0x1e785030;rm -rf /var/log/*;show_bmc_status 
+0x00000000
+0x00000102
+BMC current boot code source: slave
+Thu May 16 21:41:17 CST 2024
+==================================================================================================
+**************************************************************************************************
+==================================================================================================
+======================cycle12 Start======================
+Thu May 16 21:46:32 CST 2024
+spawn ssh pi@10.75.159.161
+pi@10.75.159.161's password: 
+Linux raspberrypi-3 5.10.17-v7l+ #1414 SMP Fri Apr 30 13:20:47 BST 2021 armv7l
+
+The programs included with the Debian GNU/Linux system are free software;
+the exact distribution terms for each program are described in the
+individual files in /usr/share/doc/*/copyright.
+
+Debian GNU/Linux comes with ABSOLUTELY NO WARRANTY, to the extent
+permitted by applicable law.
+Last login: Sat Apr 20 17:04:53 2024 from 10.75.135.33
+]0;pi@raspberrypi-3: ~[01;32mpi@raspberrypi-3[00m:[01;34m~ $[00m ssh root@10.75.159.250
+devmem 0x1e785010;devmem 0x1e785030;devmem 0x1e620010;devmem 0x1e6200a8;show_bmc_status 
+The authenticity of host '10.75.159.250 (10.75.159.250)' can't be established.
+ECDSA key fingerprint is SHA256:xlvDxa1UEjbAfnwy6AUiORAmW04b9N97Ys+R+Lj+p2s.
+Are you sure you want to continue connecting (yes/no)? yes
+Failed to add the host to the list of known hosts (/home/pi/.ssh/known_hosts).
+root@10.75.159.250's password: 
+root@bmc-oob.:~# devmem 0x1e785010;devmem 0x1e785030;devmem 0x1e620010;devmem 0x1e6200a8;show_bmc_status 
+0x00000000
+0x00000000
+0x203C0641
+0x00000000
+BMC current boot code source: master
+spawn ssh pi@10.75.159.161
+pi@10.75.159.161's password: 
+Linux raspberrypi-3 5.10.17-v7l+ #1414 SMP Fri Apr 30 13:20:47 BST 2021 armv7l
+
+The programs included with the Debian GNU/Linux system are free software;
+the exact distribution terms for each program are described in the
+individual files in /usr/share/doc/*/copyright.
+
+Debian GNU/Linux comes with ABSOLUTELY NO WARRANTY, to the extent
+permitted by applicable law.
+Last login: Sat Apr 20 17:10:05 2024 from 10.75.135.33
+]0;pi@raspberrypi-3: ~[01;32mpi@raspberrypi-3[00m:[01;34m~ $[00m ssh root@10.75.159.250
+show_version bmc |grep Pingpong  
+The authenticity of host '10.75.159.250 (10.75.159.250)' can't be established.
+ECDSA key fingerprint is SHA256:xlvDxa1UEjbAfnwy6AUiORAmW04b9N97Ys+R+Lj+p2s.
+Are you sure you want to continue connecting (yes/no)? yes
+Failed to add the host to the list of known hosts (/home/pi/.ssh/known_hosts).
+root@10.75.159.250's password: 
+Last login: Thu Jan  1 00:05:53 1970 from 10.75.159.161
+root@bmc-oob.:~# show_version bmc |grep Pingpong  
+Pingpong BMC Version    : hpa-v2.11.00-dirty
+spawn ssh pi@10.75.159.161
+pi@10.75.159.161's password: 
+Linux raspberrypi-3 5.10.17-v7l+ #1414 SMP Fri Apr 30 13:20:47 BST 2021 armv7l
+
+The programs included with the Debian GNU/Linux system are free software;
+the exact distribution terms for each program are described in the
+individual files in /usr/share/doc/*/copyright.
+
+Debian GNU/Linux comes with ABSOLUTELY NO WARRANTY, to the extent
+permitted by applicable law.
+Last login: Sat Apr 20 17:10:13 2024 from 10.75.135.33
+]0;pi@raspberrypi-3: ~[01;32mpi@raspberrypi-3[00m:[01;34m~ $[00m ssh root@10.75.159.250
+config_bmc_status -s slave 
+The authenticity of host '10.75.159.250 (10.75.159.250)' can't be established.
+ECDSA key fingerprint is SHA256:xlvDxa1UEjbAfnwy6AUiORAmW04b9N97Ys+R+Lj+p2s.
+Are you sure you want to continue connecting (yes/no)? yes
+Failed to add the host to the list of known hosts (/home/pi/.ssh/known_hosts).
+root@10.75.159.250's password: 
+Last login: Thu Jan  1 00:06:04 1970 from 10.75.159.161
+root@bmc-oob.:~# config_bmc_status -s slave 
+BMC will swap to slave after 10 seconds...
+Thu May 16 21:48:27 CST 2024
+spawn ssh pi@10.75.159.161
+pi@10.75.159.161's password: 
+Linux raspberrypi-3 5.10.17-v7l+ #1414 SMP Fri Apr 30 13:20:47 BST 2021 armv7l
+
+The programs included with the Debian GNU/Linux system are free software;
+the exact distribution terms for each program are described in the
+individual files in /usr/share/doc/*/copyright.
+
+Debian GNU/Linux comes with ABSOLUTELY NO WARRANTY, to the extent
+permitted by applicable law.
+Last login: Sat Apr 20 17:11:57 2024 from 10.75.135.33
+]0;pi@raspberrypi-3: ~[01;32mpi@raspberrypi-3[00m:[01;34m~ $[00m ssh root@10.75.159.250
+devmem 0x1e785010;devmem 0x1e785030;devmem 0x1e620010;devmem 0x1e6200a8;show_bmc_status 
+The authenticity of host '10.75.159.250 (10.75.159.250)' can't be established.
+ECDSA key fingerprint is SHA256:jrDGZGcj6y4/I8PDR7l4QQliLB8DZZsMGh3SzhAsOfo.
+Are you sure you want to continue connecting (yes/no)? yes
+Failed to add the host to the list of known hosts (/home/pi/.ssh/known_hosts).
+root@10.75.159.250's password: 
+Last login: Thu Jan  1 00:06:17 1970 from 10.75.159.161
+root@lambda_bmc:~# devmem 0x1e785010;devmem 0x1e785030;devmem 0x1e620010;devmem 0x1e6200a8;show_bmc_status 
+0x00000000
+0x00000102
+0x203C0641
+0x00000000
+BMC current boot code source: slave
+spawn ssh pi@10.75.159.161
+pi@10.75.159.161's password: 
+Linux raspberrypi-3 5.10.17-v7l+ #1414 SMP Fri Apr 30 13:20:47 BST 2021 armv7l
+
+The programs included with the Debian GNU/Linux system are free software;
+the exact distribution terms for each program are described in the
+individual files in /usr/share/doc/*/copyright.
+
+Debian GNU/Linux comes with ABSOLUTELY NO WARRANTY, to the extent
+permitted by applicable law.
+Last login: Sat Apr 20 17:15:39 2024 from 10.75.135.33
+]0;pi@raspberrypi-3: ~[01;32mpi@raspberrypi-3[00m:[01;34m~ $[00m ssh root@10.75.159.250
+show_version bmc |grep Pingpong  
+The authenticity of host '10.75.159.250 (10.75.159.250)' can't be established.
+ECDSA key fingerprint is SHA256:jrDGZGcj6y4/I8PDR7l4QQliLB8DZZsMGh3SzhAsOfo.
+Are you sure you want to continue connecting (yes/no)? yes
+Failed to add the host to the list of known hosts (/home/pi/.ssh/known_hosts).
+root@10.75.159.250's password: 
+Last login: Thu Jan  1 00:05:45 1970 from 10.75.159.161
+root@lambda_bmc:~# show_version bmc |grep Pingpong  
+Pingpong BMC Version    : hpa-v2.11.00-dirty
+spawn ssh pi@10.75.159.161
+pi@10.75.159.161's password: 
+Linux raspberrypi-3 5.10.17-v7l+ #1414 SMP Fri Apr 30 13:20:47 BST 2021 armv7l
+
+The programs included with the Debian GNU/Linux system are free software;
+the exact distribution terms for each program are described in the
+individual files in /usr/share/doc/*/copyright.
+
+Debian GNU/Linux comes with ABSOLUTELY NO WARRANTY, to the extent
+permitted by applicable law.
+Last login: Sat Apr 20 17:17:02 2024 from 10.75.135.33
+]0;pi@raspberrypi-3: ~[01;32mpi@raspberrypi-3[00m:[01;34m~ $[00m ssh root@10.75.159.250
+devmem 0x1e785010;devmem 0x1e785030;rm -rf /var/log/*;show_bmc_status 
+The authenticity of host '10.75.159.250 (10.75.159.250)' can't be established.
+ECDSA key fingerprint is SHA256:jrDGZGcj6y4/I8PDR7l4QQliLB8DZZsMGh3SzhAsOfo.
+Are you sure you want to continue connecting (yes/no)? yes
+Failed to add the host to the list of known hosts (/home/pi/.ssh/known_hosts).
+root@10.75.159.250's password: 
+Last login: Thu Jan  1 00:05:53 1970 from 10.75.159.161
+root@lambda_bmc:~# devmem 0x1e785010;devmem 0x1e785030;rm -rf /var/log/*;show_bmc_status 
+0x00000000
+0x00000102
+BMC current boot code source: slave
+Thu May 16 21:55:05 CST 2024
+==================================================================================================
+**************************************************************************************************
+==================================================================================================
+======================cycle13 Start======================
+Thu May 16 22:00:21 CST 2024
+spawn ssh pi@10.75.159.161
+pi@10.75.159.161's password: 
+Linux raspberrypi-3 5.10.17-v7l+ #1414 SMP Fri Apr 30 13:20:47 BST 2021 armv7l
+
+The programs included with the Debian GNU/Linux system are free software;
+the exact distribution terms for each program are described in the
+individual files in /usr/share/doc/*/copyright.
+
+Debian GNU/Linux comes with ABSOLUTELY NO WARRANTY, to the extent
+permitted by applicable law.
+Last login: Sat Apr 20 17:19:43 2024 from 10.75.135.33
+]0;pi@raspberrypi-3: ~[01;32mpi@raspberrypi-3[00m:[01;34m~ $[00m ssh root@10.75.159.250
+devmem 0x1e785010;devmem 0x1e785030;devmem 0x1e620010;devmem 0x1e6200a8;show_bmc_status 
+The authenticity of host '10.75.159.250 (10.75.159.250)' can't be established.
+ECDSA key fingerprint is SHA256:hIqUo6ORYk8Dl9KoNld9Yvh1scBTkw+gkMB/EmaF9wo.
+Are you sure you want to continue connecting (yes/no)? yes
+Failed to add the host to the list of known hosts (/home/pi/.ssh/known_hosts).
+root@10.75.159.250's password: 
+root@bmc-oob.:~# devmem 0x1e785010;devmem 0x1e785030;devmem 0x1e620010;devmem 0x1e6200a8;show_bmc_status 
+0x00000000
+0x00000000
+0x203C0641
+0x00000000
+BMC current boot code source: master
+spawn ssh pi@10.75.159.161
+pi@10.75.159.161's password: 
+Linux raspberrypi-3 5.10.17-v7l+ #1414 SMP Fri Apr 30 13:20:47 BST 2021 armv7l
+
+The programs included with the Debian GNU/Linux system are free software;
+the exact distribution terms for each program are described in the
+individual files in /usr/share/doc/*/copyright.
+
+Debian GNU/Linux comes with ABSOLUTELY NO WARRANTY, to the extent
+permitted by applicable law.
+Last login: Sat Apr 20 17:22:32 2024 from 10.75.135.33
+]0;pi@raspberrypi-3: ~[01;32mpi@raspberrypi-3[00m:[01;34m~ $[00m ssh root@10.75.159.250
+show_version bmc |grep Pingpong  
+The authenticity of host '10.75.159.250 (10.75.159.250)' can't be established.
+ECDSA key fingerprint is SHA256:hIqUo6ORYk8Dl9KoNld9Yvh1scBTkw+gkMB/EmaF9wo.
+Are you sure you want to continue connecting (yes/no)? yes
+Failed to add the host to the list of known hosts (/home/pi/.ssh/known_hosts).
+root@10.75.159.250's password: 
+Last login: Thu Jan  1 00:05:34 1970 from 10.75.159.161
+root@bmc-oob.:~# show_version bmc |grep Pingpong  
+Pingpong BMC Version    : hpa-v2.11.00-dirty
+spawn ssh pi@10.75.159.161
+pi@10.75.159.161's password: 
+Linux raspberrypi-3 5.10.17-v7l+ #1414 SMP Fri Apr 30 13:20:47 BST 2021 armv7l
+
+The programs included with the Debian GNU/Linux system are free software;
+the exact distribution terms for each program are described in the
+individual files in /usr/share/doc/*/copyright.
+
+Debian GNU/Linux comes with ABSOLUTELY NO WARRANTY, to the extent
+permitted by applicable law.
+Last login: Sat Apr 20 17:23:42 2024 from 10.75.135.33
+]0;pi@raspberrypi-3: ~[01;32mpi@raspberrypi-3[00m:[01;34m~ $[00m ssh root@10.75.159.250
+config_bmc_status -s slave 
+The authenticity of host '10.75.159.250 (10.75.159.250)' can't be established.
+ECDSA key fingerprint is SHA256:hIqUo6ORYk8Dl9KoNld9Yvh1scBTkw+gkMB/EmaF9wo.
+Are you sure you want to continue connecting (yes/no)? yes
+Failed to add the host to the list of known hosts (/home/pi/.ssh/known_hosts).
+root@10.75.159.250's password: 
+Last login: Thu Jan  1 00:05:44 1970 from 10.75.159.161
+root@bmc-oob.:~# config_bmc_status -s slave 
+BMC will swap to slave after 10 seconds...
+Thu May 16 22:01:54 CST 2024
+spawn ssh pi@10.75.159.161
+pi@10.75.159.161's password: 
+Linux raspberrypi-3 5.10.17-v7l+ #1414 SMP Fri Apr 30 13:20:47 BST 2021 armv7l
+
+The programs included with the Debian GNU/Linux system are free software;
+the exact distribution terms for each program are described in the
+individual files in /usr/share/doc/*/copyright.
+
+Debian GNU/Linux comes with ABSOLUTELY NO WARRANTY, to the extent
+permitted by applicable law.
+Last login: Sat Apr 20 17:26:12 2024 from 10.75.135.33
+]0;pi@raspberrypi-3: ~[01;32mpi@raspberrypi-3[00m:[01;34m~ $[00m ssh root@10.75.159.250
+devmem 0x1e785010;devmem 0x1e785030;devmem 0x1e620010;devmem 0x1e6200a8;show_bmc_status 
+The authenticity of host '10.75.159.250 (10.75.159.250)' can't be established.
+ECDSA key fingerprint is SHA256:lb5PelMTvm/9ivth/Jr6FF2RgIjDDPjGX6xvhrO9FUg.
+Are you sure you want to continue connecting (yes/no)? yes
+Failed to add the host to the list of known hosts (/home/pi/.ssh/known_hosts).
+root@10.75.159.250's password: 
+Last login: Thu Jan  1 00:05:57 1970 from 10.75.159.161
+root@lambda_bmc:~# devmem 0x1e785010;devmem 0x1e785030;devmem 0x1e620010;devmem 0x1e6200a8;show_bmc_status 
+0x00000000
+0x00000102
+0x203C0641
+0x00000000
+BMC current boot code source: slave
+spawn ssh pi@10.75.159.161
+pi@10.75.159.161's password: 
+Linux raspberrypi-3 5.10.17-v7l+ #1414 SMP Fri Apr 30 13:20:47 BST 2021 armv7l
+
+The programs included with the Debian GNU/Linux system are free software;
+the exact distribution terms for each program are described in the
+individual files in /usr/share/doc/*/copyright.
+
+Debian GNU/Linux comes with ABSOLUTELY NO WARRANTY, to the extent
+permitted by applicable law.
+Last login: Sat Apr 20 17:29:05 2024 from 10.75.135.33
+]0;pi@raspberrypi-3: ~[01;32mpi@raspberrypi-3[00m:[01;34m~ $[00m ssh root@10.75.159.250
+show_version bmc |grep Pingpong  
+The authenticity of host '10.75.159.250 (10.75.159.250)' can't be established.
+ECDSA key fingerprint is SHA256:lb5PelMTvm/9ivth/Jr6FF2RgIjDDPjGX6xvhrO9FUg.
+Are you sure you want to continue connecting (yes/no)? yes
+Failed to add the host to the list of known hosts (/home/pi/.ssh/known_hosts).
+root@10.75.159.250's password: 
+Last login: Thu Jan  1 00:05:21 1970 from 10.75.159.161
+root@lambda_bmc:~# show_version bmc |grep Pingpong  
+Pingpong BMC Version    : hpa-v2.11.00-dirty
+spawn ssh pi@10.75.159.161
+pi@10.75.159.161's password: 
+Linux raspberrypi-3 5.10.17-v7l+ #1414 SMP Fri Apr 30 13:20:47 BST 2021 armv7l
+
+The programs included with the Debian GNU/Linux system are free software;
+the exact distribution terms for each program are described in the
+individual files in /usr/share/doc/*/copyright.
+
+Debian GNU/Linux comes with ABSOLUTELY NO WARRANTY, to the extent
+permitted by applicable law.
+Last login: Sat Apr 20 17:30:01 2024 from 10.75.135.33
+]0;pi@raspberrypi-3: ~[01;32mpi@raspberrypi-3[00m:[01;34m~ $[00m ssh root@10.75.159.250
+devmem 0x1e785010;devmem 0x1e785030;rm -rf /var/log/*;show_bmc_status 
+The authenticity of host '10.75.159.250 (10.75.159.250)' can't be established.
+ECDSA key fingerprint is SHA256:lb5PelMTvm/9ivth/Jr6FF2RgIjDDPjGX6xvhrO9FUg.
+Are you sure you want to continue connecting (yes/no)? yes
+Failed to add the host to the list of known hosts (/home/pi/.ssh/known_hosts).
+root@10.75.159.250's password: 
+Last login: Thu Jan  1 00:05:30 1970 from 10.75.159.161
+root@lambda_bmc:~# devmem 0x1e785010;devmem 0x1e785030;rm -rf /var/log/*;show_bmc_status 
+0x00000000
+0x00000102
+BMC current boot code source: slave
+Thu May 16 22:08:09 CST 2024
+==================================================================================================
+**************************************************************************************************
+==================================================================================================
+======================cycle14 Start======================
+Thu May 16 22:13:24 CST 2024
+spawn ssh pi@10.75.159.161
+pi@10.75.159.161's password: 
+Linux raspberrypi-3 5.10.17-v7l+ #1414 SMP Fri Apr 30 13:20:47 BST 2021 armv7l
+
+The programs included with the Debian GNU/Linux system are free software;
+the exact distribution terms for each program are described in the
+individual files in /usr/share/doc/*/copyright.
+
+Debian GNU/Linux comes with ABSOLUTELY NO WARRANTY, to the extent
+permitted by applicable law.
+Last login: Sat Apr 20 17:30:30 2024 from 10.75.135.33
+]0;pi@raspberrypi-3: ~[01;32mpi@raspberrypi-3[00m:[01;34m~ $[00m ssh root@10.75.159.250
+devmem 0x1e785010;devmem 0x1e785030;devmem 0x1e620010;devmem 0x1e6200a8;show_bmc_status 
+The authenticity of host '10.75.159.250 (10.75.159.250)' can't be established.
+ECDSA key fingerprint is SHA256:WM0X1MiRzELGfYIaiizpi7RWKFkgQjQxCmON+pVYVPk.
+Are you sure you want to continue connecting (yes/no)? yes
+Failed to add the host to the list of known hosts (/home/pi/.ssh/known_hosts).
+root@10.75.159.250's password: 
+root@bmc-oob.:~# devmem 0x1e785010;devmem 0x1e785030;devmem 0x1e620010;devmem 0x1e6200a8;show_bmc_status 
+0x00000000
+0x00000000
+0x203C0641
+0x00000000
+BMC current boot code source: master
+spawn ssh pi@10.75.159.161
+pi@10.75.159.161's password: 
+Linux raspberrypi-3 5.10.17-v7l+ #1414 SMP Fri Apr 30 13:20:47 BST 2021 armv7l
+
+The programs included with the Debian GNU/Linux system are free software;
+the exact distribution terms for each program are described in the
+individual files in /usr/share/doc/*/copyright.
+
+Debian GNU/Linux comes with ABSOLUTELY NO WARRANTY, to the extent
+permitted by applicable law.
+Last login: Sat Apr 20 17:38:13 2024 from 10.75.135.33
+]0;pi@raspberrypi-3: ~[01;32mpi@raspberrypi-3[00m:[01;34m~ $[00m ssh root@10.75.159.250
+show_version bmc |grep Pingpong  
+The authenticity of host '10.75.159.250 (10.75.159.250)' can't be established.
+ECDSA key fingerprint is SHA256:WM0X1MiRzELGfYIaiizpi7RWKFkgQjQxCmON+pVYVPk.
+Are you sure you want to continue connecting (yes/no)? yes
+Failed to add the host to the list of known hosts (/home/pi/.ssh/known_hosts).
+root@10.75.159.250's password: 
+Last login: Thu Jan  1 00:07:14 1970 from 10.75.159.161
+root@bmc-oob.:~# show_version bmc |grep Pingpong  
+Pingpong BMC Version    : hpa-v2.11.00-dirty
+spawn ssh pi@10.75.159.161
+pi@10.75.159.161's password: 
+Linux raspberrypi-3 5.10.17-v7l+ #1414 SMP Fri Apr 30 13:20:47 BST 2021 armv7l
+
+The programs included with the Debian GNU/Linux system are free software;
+the exact distribution terms for each program are described in the
+individual files in /usr/share/doc/*/copyright.
+
+Debian GNU/Linux comes with ABSOLUTELY NO WARRANTY, to the extent
+permitted by applicable law.
+Last login: Sat Apr 20 17:38:26 2024 from 10.75.135.33
+]0;pi@raspberrypi-3: ~[01;32mpi@raspberrypi-3[00m:[01;34m~ $[00m ssh root@10.75.159.250
+config_bmc_status -s slave 
+The authenticity of host '10.75.159.250 (10.75.159.250)' can't be established.
+ECDSA key fingerprint is SHA256:WM0X1MiRzELGfYIaiizpi7RWKFkgQjQxCmON+pVYVPk.
+Are you sure you want to continue connecting (yes/no)? yes
+Failed to add the host to the list of known hosts (/home/pi/.ssh/known_hosts).
+root@10.75.159.250's password: 
+Last login: Thu Jan  1 00:07:25 1970 from 10.75.159.161
+root@bmc-oob.:~# config_bmc_status -s slave 
+BMC will swap to slave after 10 seconds...
+Thu May 16 22:16:38 CST 2024
+spawn ssh pi@10.75.159.161
+pi@10.75.159.161's password: 
+Linux raspberrypi-3 5.10.17-v7l+ #1414 SMP Fri Apr 30 13:20:47 BST 2021 armv7l
+
+The programs included with the Debian GNU/Linux system are free software;
+the exact distribution terms for each program are described in the
+individual files in /usr/share/doc/*/copyright.
+
+Debian GNU/Linux comes with ABSOLUTELY NO WARRANTY, to the extent
+permitted by applicable law.
+Last login: Sat Apr 20 17:43:23 2024 from 10.75.135.33
+]0;pi@raspberrypi-3: ~[01;32mpi@raspberrypi-3[00m:[01;34m~ $[00m ssh root@10.75.159.250
+devmem 0x1e785010;devmem 0x1e785030;devmem 0x1e620010;devmem 0x1e6200a8;show_bmc_status 
+The authenticity of host '10.75.159.250 (10.75.159.250)' can't be established.
+ECDSA key fingerprint is SHA256:Kg8Q3S2CWjhzma64nL72LghhDoU37am77bYZ3kqtMOw.
+Are you sure you want to continue connecting (yes/no)? yes
+Failed to add the host to the list of known hosts (/home/pi/.ssh/known_hosts).
+root@10.75.159.250's password: 
+Last login: Thu Jan  1 00:07:38 1970 from 10.75.159.161
+root@lambda_bmc:~# devmem 0x1e785010;devmem 0x1e785030;devmem 0x1e620010;devmem 0x1e6200a8;show_bmc_status 
+0x00000000
+0x00000102
+0x203C0641
+0x00000000
+BMC current boot code source: slave
+spawn ssh pi@10.75.159.161
+pi@10.75.159.161's password: 
+Linux raspberrypi-3 5.10.17-v7l+ #1414 SMP Fri Apr 30 13:20:47 BST 2021 armv7l
+
+The programs included with the Debian GNU/Linux system are free software;
+the exact distribution terms for each program are described in the
+individual files in /usr/share/doc/*/copyright.
+
+Debian GNU/Linux comes with ABSOLUTELY NO WARRANTY, to the extent
+permitted by applicable law.
+Last login: Sat Apr 20 17:45:34 2024 from 10.75.135.33
+]0;pi@raspberrypi-3: ~[01;32mpi@raspberrypi-3[00m:[01;34m~ $[00m ssh root@10.75.159.250
+show_version bmc |grep Pingpong  
+The authenticity of host '10.75.159.250 (10.75.159.250)' can't be established.
+ECDSA key fingerprint is SHA256:Kg8Q3S2CWjhzma64nL72LghhDoU37am77bYZ3kqtMOw.
+Are you sure you want to continue connecting (yes/no)? yes
+Failed to add the host to the list of known hosts (/home/pi/.ssh/known_hosts).
+root@10.75.159.250's password: 
+Last login: Thu Jan  1 00:06:27 1970 from 10.75.159.161
+root@lambda_bmc:~# show_version bmc |grep Pingpong  
+Pingpong BMC Version    : hpa-v2.11.00-dirty
+spawn ssh pi@10.75.159.161
+pi@10.75.159.161's password: 
+Linux raspberrypi-3 5.10.17-v7l+ #1414 SMP Fri Apr 30 13:20:47 BST 2021 armv7l
+
+The programs included with the Debian GNU/Linux system are free software;
+the exact distribution terms for each program are described in the
+individual files in /usr/share/doc/*/copyright.
+
+Debian GNU/Linux comes with ABSOLUTELY NO WARRANTY, to the extent
+permitted by applicable law.
+Last login: Sat Apr 20 17:45:51 2024 from 10.75.135.33
+]0;pi@raspberrypi-3: ~[01;32mpi@raspberrypi-3[00m:[01;34m~ $[00m ssh root@10.75.159.250
+devmem 0x1e785010;devmem 0x1e785030;rm -rf /var/log/*;show_bmc_status 
+The authenticity of host '10.75.159.250 (10.75.159.250)' can't be established.
+ECDSA key fingerprint is SHA256:Kg8Q3S2CWjhzma64nL72LghhDoU37am77bYZ3kqtMOw.
+Are you sure you want to continue connecting (yes/no)? yes
+Failed to add the host to the list of known hosts (/home/pi/.ssh/known_hosts).
+root@10.75.159.250's password: 
+Last login: Thu Jan  1 00:06:35 1970 from 10.75.159.161
+root@lambda_bmc:~# devmem 0x1e785010;devmem 0x1e785030;rm -rf /var/log/*;show_bmc_status 
+0x00000000
+0x00000102
+BMC current boot code source: slave
+Thu May 16 22:23:52 CST 2024
+==================================================================================================
+**************************************************************************************************
+==================================================================================================
+======================cycle15 Start======================
+Thu May 16 22:29:07 CST 2024
+spawn ssh pi@10.75.159.161
+pi@10.75.159.161's password: 
+Linux raspberrypi-3 5.10.17-v7l+ #1414 SMP Fri Apr 30 13:20:47 BST 2021 armv7l
+
+The programs included with the Debian GNU/Linux system are free software;
+the exact distribution terms for each program are described in the
+individual files in /usr/share/doc/*/copyright.
+
+Debian GNU/Linux comes with ABSOLUTELY NO WARRANTY, to the extent
+permitted by applicable law.
+Last login: Sat Apr 20 17:50:57 2024 from 10.75.135.33
+]0;pi@raspberrypi-3: ~[01;32mpi@raspberrypi-3[00m:[01;34m~ $[00m ssh root@10.75.159.250
+devmem 0x1e785010;devmem 0x1e785030;devmem 0x1e620010;devmem 0x1e6200a8;show_bmc_status 
+The authenticity of host '10.75.159.250 (10.75.159.250)' can't be established.
+ECDSA key fingerprint is SHA256:jxn34XGh7OZTTefY0zNeG+Bj7741IZzKBZB3ZbQ3gCg.
+Are you sure you want to continue connecting (yes/no)? yes
+Failed to add the host to the list of known hosts (/home/pi/.ssh/known_hosts).
+root@10.75.159.250's password: 
+root@bmc-oob.:~# devmem 0x1e785010;devmem 0x1e785030;devmem 0x1e620010;devmem 0x1e6200a8;show_bmc_status 
+0x00000000
+0x00000000
+0x203C0641
+0x00000000
+BMC current boot code source: master
+spawn ssh pi@10.75.159.161
+pi@10.75.159.161's password: 
+Linux raspberrypi-3 5.10.17-v7l+ #1414 SMP Fri Apr 30 13:20:47 BST 2021 armv7l
+
+The programs included with the Debian GNU/Linux system are free software;
+the exact distribution terms for each program are described in the
+individual files in /usr/share/doc/*/copyright.
+
+Debian GNU/Linux comes with ABSOLUTELY NO WARRANTY, to the extent
+permitted by applicable law.
+Last login: Sat Apr 20 17:51:19 2024 from 10.75.135.33
+]0;pi@raspberrypi-3: ~[01;32mpi@raspberrypi-3[00m:[01;34m~ $[00m ssh root@10.75.159.250
+show_version bmc |grep Pingpong  
+The authenticity of host '10.75.159.250 (10.75.159.250)' can't be established.
+ECDSA key fingerprint is SHA256:jxn34XGh7OZTTefY0zNeG+Bj7741IZzKBZB3ZbQ3gCg.
+Are you sure you want to continue connecting (yes/no)? yes
+Failed to add the host to the list of known hosts (/home/pi/.ssh/known_hosts).
+root@10.75.159.250's password: 
+Last login: Thu Jan  1 00:05:59 1970 from 10.75.159.161
+root@bmc-oob.:~# show_version bmc |grep Pingpong  
+Pingpong BMC Version    : hpa-v2.11.00-dirty
+spawn ssh pi@10.75.159.161
+pi@10.75.159.161's password: 
+Linux raspberrypi-3 5.10.17-v7l+ #1414 SMP Fri Apr 30 13:20:47 BST 2021 armv7l
+
+The programs included with the Debian GNU/Linux system are free software;
+the exact distribution terms for each program are described in the
+individual files in /usr/share/doc/*/copyright.
+
+Debian GNU/Linux comes with ABSOLUTELY NO WARRANTY, to the extent
+permitted by applicable law.
+Last login: Sat Apr 20 17:52:54 2024 from 10.75.135.33
+]0;pi@raspberrypi-3: ~[01;32mpi@raspberrypi-3[00m:[01;34m~ $[00m ssh root@10.75.159.250
+config_bmc_status -s slave 
+The authenticity of host '10.75.159.250 (10.75.159.250)' can't be established.
+ECDSA key fingerprint is SHA256:jxn34XGh7OZTTefY0zNeG+Bj7741IZzKBZB3ZbQ3gCg.
+Are you sure you want to continue connecting (yes/no)? yes
+Failed to add the host to the list of known hosts (/home/pi/.ssh/known_hosts).
+root@10.75.159.250's password: 
+Last login: Thu Jan  1 00:06:10 1970 from 10.75.159.161
+root@bmc-oob.:~# config_bmc_status -s slave 
+BMC will swap to slave after 10 seconds...
+Thu May 16 22:31:07 CST 2024
+spawn ssh pi@10.75.159.161
+pi@10.75.159.161's password: 
+Linux raspberrypi-3 5.10.17-v7l+ #1414 SMP Fri Apr 30 13:20:47 BST 2021 armv7l
+
+The programs included with the Debian GNU/Linux system are free software;
+the exact distribution terms for each program are described in the
+individual files in /usr/share/doc/*/copyright.
+
+Debian GNU/Linux comes with ABSOLUTELY NO WARRANTY, to the extent
+permitted by applicable law.
+Last login: Sat Apr 20 17:53:59 2024 from 10.75.135.33
+]0;pi@raspberrypi-3: ~[01;32mpi@raspberrypi-3[00m:[01;34m~ $[00m ssh root@10.75.159.250
+devmem 0x1e785010;devmem 0x1e785030;devmem 0x1e620010;devmem 0x1e6200a8;show_bmc_status 
+ssh: connect to host 10.75.159.250 port 22: Connection timed out
+]0;pi@raspberrypi-3: ~[01;32mpi@raspberrypi-3[00m:[01;34m~ $[00m devmem 0x1e785010;devmem 0x1e785030;devmem 0x1e620010;devmem 0x1e6200a8;show_bmc_status 
+ssh root@10.75.159.250
+devmem 0x1e785010;devmem 0x1e785030;devmem 0x1e620010;devmem 0x1e6200a8;show_bmc_status 
+-bash: devmem: command not found
+-bash: devmem: command not found
+-bash: devmem: command not found
+-bash: devmem: command not found
+-bash: show_bmc_status: command not found
+]0;pi@raspberrypi-3: ~[01;32mpi@raspberrypi-3[00m:[01;34m~ $[00m ssh root@10.75.159.250
+devmem 0x1e785010;devmem 0x1e785030;devmem 0x1e620010;devmem 0x1e6200a8;show_bmc_status 
+The authenticity of host '10.75.159.250 (10.75.159.250)' can't be established.
+ECDSA key fingerprint is SHA256:sr8UvLTBtYGn5/zDUBnB1hgERsfnBqOekqJxBTX94cA.
+Are you sure you want to continue connecting (yes/no)? yes
+Failed to add the host to the list of known hosts (/home/pi/.ssh/known_hosts).
+root@10.75.159.250's password: 
+Last login: Thu Jan  1 00:06:22 1970 from 10.75.159.161
+root@lambda_bmc:~# devmem 0x1e785010;devmem 0x1e785030;devmem 0x1e620010;devmem 0x1e6200a8;show_bmc_status 
+0x00000000
+0x00000102
+0x203C0641
+0x00000000
+BMC current boot code source: slave
+spawn ssh pi@10.75.159.161
+pi@10.75.159.161's password: 
+Linux raspberrypi-3 5.10.17-v7l+ #1414 SMP Fri Apr 30 13:20:47 BST 2021 armv7l
+
+The programs included with the Debian GNU/Linux system are free software;
+the exact distribution terms for each program are described in the
+individual files in /usr/share/doc/*/copyright.
+
+Debian GNU/Linux comes with ABSOLUTELY NO WARRANTY, to the extent
+permitted by applicable law.
+Last login: Sat Apr 20 18:00:37 2024 from 10.75.135.33
+]0;pi@raspberrypi-3: ~[01;32mpi@raspberrypi-3[00m:[01;34m~ $[00m ssh root@10.75.159.250
+show_version bmc |grep Pingpong  
+The authenticity of host '10.75.159.250 (10.75.159.250)' can't be established.
+ECDSA key fingerprint is SHA256:sr8UvLTBtYGn5/zDUBnB1hgERsfnBqOekqJxBTX94cA.
+Are you sure you want to continue connecting (yes/no)? yes
+Failed to add the host to the list of known hosts (/home/pi/.ssh/known_hosts).
+root@10.75.159.250's password: 
+Last login: Thu Jan  1 00:06:47 1970 from 10.75.159.161
+root@lambda_bmc:~# show_version bmc |grep Pingpong  
+Pingpong BMC Version    : hpa-v2.11.00-dirty
+spawn ssh pi@10.75.159.161
+pi@10.75.159.161's password: 
+Linux raspberrypi-3 5.10.17-v7l+ #1414 SMP Fri Apr 30 13:20:47 BST 2021 armv7l
+
+The programs included with the Debian GNU/Linux system are free software;
+the exact distribution terms for each program are described in the
+individual files in /usr/share/doc/*/copyright.
+
+Debian GNU/Linux comes with ABSOLUTELY NO WARRANTY, to the extent
+permitted by applicable law.
+Last login: Sat Apr 20 18:00:45 2024 from 10.75.135.33
+]0;pi@raspberrypi-3: ~[01;32mpi@raspberrypi-3[00m:[01;34m~ $[00m ssh root@10.75.159.250
+devmem 0x1e785010;devmem 0x1e785030;rm -rf /var/log/*;show_bmc_status 
+The authenticity of host '10.75.159.250 (10.75.159.250)' can't be established.
+ECDSA key fingerprint is SHA256:sr8UvLTBtYGn5/zDUBnB1hgERsfnBqOekqJxBTX94cA.
+Are you sure you want to continue connecting (yes/no)? yes
+Failed to add the host to the list of known hosts (/home/pi/.ssh/known_hosts).
+root@10.75.159.250's password: 
+Last login: Thu Jan  1 00:06:54 1970 from 10.75.159.161
+root@lambda_bmc:~# devmem 0x1e785010;devmem 0x1e785030;rm -rf /var/log/*;show_bmc_status 
+0x00000000
+0x00000102
+BMC current boot code source: slave
+Thu May 16 22:38:43 CST 2024
+==================================================================================================
+**************************************************************************************************
+==================================================================================================
+======================cycle16 Start======================
+Thu May 16 22:43:57 CST 2024
+spawn ssh pi@10.75.159.161
+pi@10.75.159.161's password: 
+Linux raspberrypi-3 5.10.17-v7l+ #1414 SMP Fri Apr 30 13:20:47 BST 2021 armv7l
+
+The programs included with the Debian GNU/Linux system are free software;
+the exact distribution terms for each program are described in the
+individual files in /usr/share/doc/*/copyright.
+
+Debian GNU/Linux comes with ABSOLUTELY NO WARRANTY, to the extent
+permitted by applicable law.
+Last login: Sat Apr 20 18:06:06 2024 from 10.75.135.33
+]0;pi@raspberrypi-3: ~[01;32mpi@raspberrypi-3[00m:[01;34m~ $[00m ssh root@10.75.159.250
+devmem 0x1e785010;devmem 0x1e785030;devmem 0x1e620010;devmem 0x1e6200a8;show_bmc_status 
+The authenticity of host '10.75.159.250 (10.75.159.250)' can't be established.
+ECDSA key fingerprint is SHA256:995bZemSYY29bhTSdLIuCNMEEBNUgpis7axZxcYhBWI.
+Are you sure you want to continue connecting (yes/no)? yes
+Failed to add the host to the list of known hosts (/home/pi/.ssh/known_hosts).
+root@10.75.159.250's password: 
+root@bmc-oob.:~# devmem 0x1e785010;devmem 0x1e785030;devmem 0x1e620010;devmem 0x1e6200a8;show_bmc_status 
+0x00000000
+0x00000000
+0x203C0641
+0x00000000
+BMC current boot code source: master
+spawn ssh pi@10.75.159.161
+pi@10.75.159.161's password: 
+Linux raspberrypi-3 5.10.17-v7l+ #1414 SMP Fri Apr 30 13:20:47 BST 2021 armv7l
+
+The programs included with the Debian GNU/Linux system are free software;
+the exact distribution terms for each program are described in the
+individual files in /usr/share/doc/*/copyright.
+
+Debian GNU/Linux comes with ABSOLUTELY NO WARRANTY, to the extent
+permitted by applicable law.
+Last login: Sat Apr 20 18:07:58 2024 from 10.75.135.33
+]0;pi@raspberrypi-3: ~[01;32mpi@raspberrypi-3[00m:[01;34m~ $[00m ssh root@10.75.159.250
+show_version bmc |grep Pingpong  
+The authenticity of host '10.75.159.250 (10.75.159.250)' can't be established.
+ECDSA key fingerprint is SHA256:995bZemSYY29bhTSdLIuCNMEEBNUgpis7axZxcYhBWI.
+Are you sure you want to continue connecting (yes/no)? yes
+Failed to add the host to the list of known hosts (/home/pi/.ssh/known_hosts).
+root@10.75.159.250's password: 
+Last login: Thu Jan  1 00:07:32 1970 from 10.75.159.161
+root@bmc-oob.:~# show_version bmc |grep Pingpong  
+Pingpong BMC Version    : hpa-v2.11.00-dirty
+spawn ssh pi@10.75.159.161
+pi@10.75.159.161's password: 
+Linux raspberrypi-3 5.10.17-v7l+ #1414 SMP Fri Apr 30 13:20:47 BST 2021 armv7l
+
+The programs included with the Debian GNU/Linux system are free software;
+the exact distribution terms for each program are described in the
+individual files in /usr/share/doc/*/copyright.
+
+Debian GNU/Linux comes with ABSOLUTELY NO WARRANTY, to the extent
+permitted by applicable law.
+Last login: Sat Apr 20 18:09:17 2024 from 10.75.135.33
+]0;pi@raspberrypi-3: ~[01;32mpi@raspberrypi-3[00m:[01;34m~ $[00m ssh root@10.75.159.250
+config_bmc_status -s slave 
+The authenticity of host '10.75.159.250 (10.75.159.250)' can't be established.
+ECDSA key fingerprint is SHA256:995bZemSYY29bhTSdLIuCNMEEBNUgpis7axZxcYhBWI.
+Are you sure you want to continue connecting (yes/no)? yes
+Failed to add the host to the list of known hosts (/home/pi/.ssh/known_hosts).
+root@10.75.159.250's password: 
+Last login: Thu Jan  1 00:07:43 1970 from 10.75.159.161
+root@bmc-oob.:~# config_bmc_status -s slave 
+BMC will swap to slave after 10 seconds...
+Thu May 16 22:47:29 CST 2024
+spawn ssh pi@10.75.159.161
+pi@10.75.159.161's password: 
+Linux raspberrypi-3 5.10.17-v7l+ #1414 SMP Fri Apr 30 13:20:47 BST 2021 armv7l
+
+The programs included with the Debian GNU/Linux system are free software;
+the exact distribution terms for each program are described in the
+individual files in /usr/share/doc/*/copyright.
+
+Debian GNU/Linux comes with ABSOLUTELY NO WARRANTY, to the extent
+permitted by applicable law.
+Last login: Sat Apr 20 18:14:29 2024 from 10.75.135.33
+]0;pi@raspberrypi-3: ~[01;32mpi@raspberrypi-3[00m:[01;34m~ $[00m ssh root@10.75.159.250
+devmem 0x1e785010;devmem 0x1e785030;devmem 0x1e620010;devmem 0x1e6200a8;show_bmc_status 
+The authenticity of host '10.75.159.250 (10.75.159.250)' can't be established.
+ECDSA key fingerprint is SHA256:Z4QS9IRzXj09Y5mzifol80K9WHhXD8nF6by63elpSKw.
+Are you sure you want to continue connecting (yes/no)? yes
+Failed to add the host to the list of known hosts (/home/pi/.ssh/known_hosts).
+root@10.75.159.250's password: 
+Last login: Thu Jan  1 00:07:55 1970 from 10.75.159.161
+root@lambda_bmc:~# devmem 0x1e785010;devmem 0x1e785030;devmem 0x1e620010;devmem 0x1e6200a8;show_bmc_status 
+0x00000000
+0x00000102
+0x203C0641
+0x00000000
+BMC current boot code source: slave
+spawn ssh pi@10.75.159.161
+pi@10.75.159.161's password: 
+Linux raspberrypi-3 5.10.17-v7l+ #1414 SMP Fri Apr 30 13:20:47 BST 2021 armv7l
+
+The programs included with the Debian GNU/Linux system are free software;
+the exact distribution terms for each program are described in the
+individual files in /usr/share/doc/*/copyright.
+
+Debian GNU/Linux comes with ABSOLUTELY NO WARRANTY, to the extent
+permitted by applicable law.
+Last login: Sat Apr 20 18:14:46 2024 from 10.75.135.33
+]0;pi@raspberrypi-3: ~[01;32mpi@raspberrypi-3[00m:[01;34m~ $[00m ssh root@10.75.159.250
+show_version bmc |grep Pingpong  
+The authenticity of host '10.75.159.250 (10.75.159.250)' can't be established.
+ECDSA key fingerprint is SHA256:Z4QS9IRzXj09Y5mzifol80K9WHhXD8nF6by63elpSKw.
+Are you sure you want to continue connecting (yes/no)? yes
+Failed to add the host to the list of known hosts (/home/pi/.ssh/known_hosts).
+root@10.75.159.250's password: 
+Last login: Thu Jan  1 00:06:36 1970 from 10.75.159.161
+root@lambda_bmc:~# show_version bmc |grep Pingpong  
+Pingpong BMC Version    : hpa-v2.11.00-dirty
+spawn ssh pi@10.75.159.161
+pi@10.75.159.161's password: 
+Linux raspberrypi-3 5.10.17-v7l+ #1414 SMP Fri Apr 30 13:20:47 BST 2021 armv7l
+
+The programs included with the Debian GNU/Linux system are free software;
+the exact distribution terms for each program are described in the
+individual files in /usr/share/doc/*/copyright.
+
+Debian GNU/Linux comes with ABSOLUTELY NO WARRANTY, to the extent
+permitted by applicable law.
+Last login: Sat Apr 20 18:16:49 2024 from 10.75.135.33
+]0;pi@raspberrypi-3: ~[01;32mpi@raspberrypi-3[00m:[01;34m~ $[00m ssh root@10.75.159.250
+devmem 0x1e785010;devmem 0x1e785030;rm -rf /var/log/*;show_bmc_status 
+The authenticity of host '10.75.159.250 (10.75.159.250)' can't be established.
+ECDSA key fingerprint is SHA256:Z4QS9IRzXj09Y5mzifol80K9WHhXD8nF6by63elpSKw.
+Are you sure you want to continue connecting (yes/no)? yes
+Failed to add the host to the list of known hosts (/home/pi/.ssh/known_hosts).
+root@10.75.159.250's password: 
+Last login: Thu Jan  1 00:06:43 1970 from 10.75.159.161
+root@lambda_bmc:~# devmem 0x1e785010;devmem 0x1e785030;rm -rf /var/log/*;show_bmc_status 
+0x00000000
+0x00000102
+BMC current boot code source: slave
+Thu May 16 22:54:54 CST 2024
+==================================================================================================
+**************************************************************************************************
+==================================================================================================
+======================cycle17 Start======================
+Thu May 16 23:00:10 CST 2024
+spawn ssh pi@10.75.159.161
+pi@10.75.159.161's password: 
+Linux raspberrypi-3 5.10.17-v7l+ #1414 SMP Fri Apr 30 13:20:47 BST 2021 armv7l
+
+The programs included with the Debian GNU/Linux system are free software;
+the exact distribution terms for each program are described in the
+individual files in /usr/share/doc/*/copyright.
+
+Debian GNU/Linux comes with ABSOLUTELY NO WARRANTY, to the extent
+permitted by applicable law.
+Last login: Sat Apr 20 18:21:46 2024 from 10.75.135.33
+]0;pi@raspberrypi-3: ~[01;32mpi@raspberrypi-3[00m:[01;34m~ $[00m ssh root@10.75.159.250
+devmem 0x1e785010;devmem 0x1e785030;devmem 0x1e620010;devmem 0x1e6200a8;show_bmc_status 
+The authenticity of host '10.75.159.250 (10.75.159.250)' can't be established.
+ECDSA key fingerprint is SHA256:hMpRS2GZGVoptvKFrFzKpsWrweKOB4y1tKKMNVjs74I.
+Are you sure you want to continue connecting (yes/no)? yes
+Failed to add the host to the list of known hosts (/home/pi/.ssh/known_hosts).
+root@10.75.159.250's password: 
+root@bmc-oob.:~# devmem 0x1e785010;devmem 0x1e785030;devmem 0x1e620010;devmem 0x1e6200a8;show_bmc_status 
+0x00000000
+0x00000000
+0x203C0641
+0x00000000
+BMC current boot code source: master
+spawn ssh pi@10.75.159.161
+pi@10.75.159.161's password: 
+Linux raspberrypi-3 5.10.17-v7l+ #1414 SMP Fri Apr 30 13:20:47 BST 2021 armv7l
+
+The programs included with the Debian GNU/Linux system are free software;
+the exact distribution terms for each program are described in the
+individual files in /usr/share/doc/*/copyright.
+
+Debian GNU/Linux comes with ABSOLUTELY NO WARRANTY, to the extent
+permitted by applicable law.
+Last login: Sat Apr 20 18:22:22 2024 from 10.75.135.33
+]0;pi@raspberrypi-3: ~[01;32mpi@raspberrypi-3[00m:[01;34m~ $[00m ssh root@10.75.159.250
+show_version bmc |grep Pingpong  
+The authenticity of host '10.75.159.250 (10.75.159.250)' can't be established.
+ECDSA key fingerprint is SHA256:hMpRS2GZGVoptvKFrFzKpsWrweKOB4y1tKKMNVjs74I.
+Are you sure you want to continue connecting (yes/no)? yes
+Failed to add the host to the list of known hosts (/home/pi/.ssh/known_hosts).
+root@10.75.159.250's password: 
+Last login: Thu Jan  1 00:08:07 1970 from 10.75.159.161
+root@bmc-oob.:~# show_version bmc |grep Pingpong  
+Pingpong BMC Version    : hpa-v2.11.00-dirty
+spawn ssh pi@10.75.159.161
+pi@10.75.159.161's password: 
+Linux raspberrypi-3 5.10.17-v7l+ #1414 SMP Fri Apr 30 13:20:47 BST 2021 armv7l
+
+The programs included with the Debian GNU/Linux system are free software;
+the exact distribution terms for each program are described in the
+individual files in /usr/share/doc/*/copyright.
+
+Debian GNU/Linux comes with ABSOLUTELY NO WARRANTY, to the extent
+permitted by applicable law.
+Last login: Sat Apr 20 18:26:05 2024 from 10.75.135.33
+]0;pi@raspberrypi-3: ~[01;32mpi@raspberrypi-3[00m:[01;34m~ $[00m ssh root@10.75.159.250
+config_bmc_status -s slave 
+The authenticity of host '10.75.159.250 (10.75.159.250)' can't be established.
+ECDSA key fingerprint is SHA256:hMpRS2GZGVoptvKFrFzKpsWrweKOB4y1tKKMNVjs74I.
+Are you sure you want to continue connecting (yes/no)? yes
+Failed to add the host to the list of known hosts (/home/pi/.ssh/known_hosts).
+root@10.75.159.250's password: 
+Last login: Thu Jan  1 00:08:18 1970 from 10.75.159.161
+root@bmc-oob.:~# config_bmc_status -s slave 
+BMC will swap to slave after 10 seconds...
+Thu May 16 23:04:20 CST 2024
+spawn ssh pi@10.75.159.161
+pi@10.75.159.161's password: 
+Linux raspberrypi-3 5.10.17-v7l+ #1414 SMP Fri Apr 30 13:20:47 BST 2021 armv7l
+
+The programs included with the Debian GNU/Linux system are free software;
+the exact distribution terms for each program are described in the
+individual files in /usr/share/doc/*/copyright.
+
+Debian GNU/Linux comes with ABSOLUTELY NO WARRANTY, to the extent
+permitted by applicable law.
+Last login: Sat Apr 20 18:30:43 2024 from 10.75.135.33
+]0;pi@raspberrypi-3: ~[01;32mpi@raspberrypi-3[00m:[01;34m~ $[00m ssh root@10.75.159.250
+devmem 0x1e785010;devmem 0x1e785030;devmem 0x1e620010;devmem 0x1e6200a8;show_bmc_status 
+The authenticity of host '10.75.159.250 (10.75.159.250)' can't be established.
+ECDSA key fingerprint is SHA256:MiuVx3+HtAFC6q1T7v084mxzpV5fs6jOZS7b026Nz+E.
+Are you sure you want to continue connecting (yes/no)? yes
+Failed to add the host to the list of known hosts (/home/pi/.ssh/known_hosts).
+root@10.75.159.250's password: 
+Last login: Thu Jan  1 00:08:32 1970 from 10.75.159.161
+root@lambda_bmc:~# devmem 0x1e785010;devmem 0x1e785030;devmem 0x1e620010;devmem 0x1e6200a8;show_bmc_status 
+0x00000000
+0x00000102
+0x203C0641
+0x00000000
+BMC current boot code source: slave
+spawn ssh pi@10.75.159.161
+pi@10.75.159.161's password: 
+Linux raspberrypi-3 5.10.17-v7l+ #1414 SMP Fri Apr 30 13:20:47 BST 2021 armv7l
+
+The programs included with the Debian GNU/Linux system are free software;
+the exact distribution terms for each program are described in the
+individual files in /usr/share/doc/*/copyright.
+
+Debian GNU/Linux comes with ABSOLUTELY NO WARRANTY, to the extent
+permitted by applicable law.
+Last login: Sat Apr 20 18:31:31 2024 from 10.75.135.33
+]0;pi@raspberrypi-3: ~[01;32mpi@raspberrypi-3[00m:[01;34m~ $[00m ssh root@10.75.159.250
+show_version bmc |grep Pingpong  
+The authenticity of host '10.75.159.250 (10.75.159.250)' can't be established.
+ECDSA key fingerprint is SHA256:MiuVx3+HtAFC6q1T7v084mxzpV5fs6jOZS7b026Nz+E.
+Are you sure you want to continue connecting (yes/no)? yes
+Failed to add the host to the list of known hosts (/home/pi/.ssh/known_hosts).
+root@10.75.159.250's password: 
+Last login: Thu Jan  1 00:05:44 1970 from 10.75.159.161
+root@lambda_bmc:~# show_version bmc |grep Pingpong  
+Pingpong BMC Version    : hpa-v2.11.00-dirty
+spawn ssh pi@10.75.159.161
+pi@10.75.159.161's password: 
+Linux raspberrypi-3 5.10.17-v7l+ #1414 SMP Fri Apr 30 13:20:47 BST 2021 armv7l
+
+The programs included with the Debian GNU/Linux system are free software;
+the exact distribution terms for each program are described in the
+individual files in /usr/share/doc/*/copyright.
+
+Debian GNU/Linux comes with ABSOLUTELY NO WARRANTY, to the extent
+permitted by applicable law.
+Last login: Sat Apr 20 18:32:50 2024 from 10.75.135.33
+]0;pi@raspberrypi-3: ~[01;32mpi@raspberrypi-3[00m:[01;34m~ $[00m ssh root@10.75.159.250
+devmem 0x1e785010;devmem 0x1e785030;rm -rf /var/log/*;show_bmc_status 
+The authenticity of host '10.75.159.250 (10.75.159.250)' can't be established.
+ECDSA key fingerprint is SHA256:MiuVx3+HtAFC6q1T7v084mxzpV5fs6jOZS7b026Nz+E.
+Are you sure you want to continue connecting (yes/no)? yes
+Failed to add the host to the list of known hosts (/home/pi/.ssh/known_hosts).
+root@10.75.159.250's password: 
+Last login: Thu Jan  1 00:05:52 1970 from 10.75.159.161
+root@lambda_bmc:~# devmem 0x1e785010;devmem 0x1e785030;rm -rf /var/log/*;show_bmc_status 
+0x00000000
+0x00000102
+BMC current boot code source: slave
+Thu May 16 23:10:58 CST 2024
+==================================================================================================
+**************************************************************************************************
+==================================================================================================
+======================cycle18 Start======================
+Thu May 16 23:16:13 CST 2024
+spawn ssh pi@10.75.159.161
+pi@10.75.159.161's password: 
+Linux raspberrypi-3 5.10.17-v7l+ #1414 SMP Fri Apr 30 13:20:47 BST 2021 armv7l
+
+The programs included with the Debian GNU/Linux system are free software;
+the exact distribution terms for each program are described in the
+individual files in /usr/share/doc/*/copyright.
+
+Debian GNU/Linux comes with ABSOLUTELY NO WARRANTY, to the extent
+permitted by applicable law.
+Last login: Sat Apr 20 18:37:54 2024 from 10.75.135.33
+]0;pi@raspberrypi-3: ~[01;32mpi@raspberrypi-3[00m:[01;34m~ $[00m ssh root@10.75.159.250
+devmem 0x1e785010;devmem 0x1e785030;devmem 0x1e620010;devmem 0x1e6200a8;show_bmc_status 
+The authenticity of host '10.75.159.250 (10.75.159.250)' can't be established.
+ECDSA key fingerprint is SHA256:GR3Wo1pKlYRUx+QijGTlgP2X1sgZqbiCIDdXpY8XPjg.
+Are you sure you want to continue connecting (yes/no)? yes
+Failed to add the host to the list of known hosts (/home/pi/.ssh/known_hosts).
+root@10.75.159.250's password: 
+root@bmc-oob.:~# devmem 0x1e785010;devmem 0x1e785030;devmem 0x1e620010;devmem 0x1e6200a8;show_bmc_status 
+0x00000000
+0x00000000
+0x203C0641
+0x00000000
+BMC current boot code source: master
+spawn ssh pi@10.75.159.161
+pi@10.75.159.161's password: 
+Linux raspberrypi-3 5.10.17-v7l+ #1414 SMP Fri Apr 30 13:20:47 BST 2021 armv7l
+
+The programs included with the Debian GNU/Linux system are free software;
+the exact distribution terms for each program are described in the
+individual files in /usr/share/doc/*/copyright.
+
+Debian GNU/Linux comes with ABSOLUTELY NO WARRANTY, to the extent
+permitted by applicable law.
+Last login: Sat Apr 20 18:38:24 2024 from 10.75.135.33
+]0;pi@raspberrypi-3: ~[01;32mpi@raspberrypi-3[00m:[01;34m~ $[00m ssh root@10.75.159.250
+show_version bmc |grep Pingpong  
+The authenticity of host '10.75.159.250 (10.75.159.250)' can't be established.
+ECDSA key fingerprint is SHA256:GR3Wo1pKlYRUx+QijGTlgP2X1sgZqbiCIDdXpY8XPjg.
+Are you sure you want to continue connecting (yes/no)? yes
+Failed to add the host to the list of known hosts (/home/pi/.ssh/known_hosts).
+root@10.75.159.250's password: 
+Last login: Thu Jan  1 00:04:48 1970 from 10.75.159.161
+root@bmc-oob.:~# show_version bmc |grep Pingpong  
+Pingpong BMC Version    : hpa-v2.11.00-dirty
+spawn ssh pi@10.75.159.161
+pi@10.75.159.161's password: 
+Linux raspberrypi-3 5.10.17-v7l+ #1414 SMP Fri Apr 30 13:20:47 BST 2021 armv7l
+
+The programs included with the Debian GNU/Linux system are free software;
+the exact distribution terms for each program are described in the
+individual files in /usr/share/doc/*/copyright.
+
+Debian GNU/Linux comes with ABSOLUTELY NO WARRANTY, to the extent
+permitted by applicable law.
+Last login: Sat Apr 20 18:38:48 2024 from 10.75.135.33
+]0;pi@raspberrypi-3: ~[01;32mpi@raspberrypi-3[00m:[01;34m~ $[00m ssh root@10.75.159.250
+config_bmc_status -s slave 
+The authenticity of host '10.75.159.250 (10.75.159.250)' can't be established.
+ECDSA key fingerprint is SHA256:GR3Wo1pKlYRUx+QijGTlgP2X1sgZqbiCIDdXpY8XPjg.
+Are you sure you want to continue connecting (yes/no)? yes
+Failed to add the host to the list of known hosts (/home/pi/.ssh/known_hosts).
+root@10.75.159.250's password: 
+Last login: Thu Jan  1 00:04:59 1970 from 10.75.159.161
+root@bmc-oob.:~# config_bmc_status -s slave 
+BMC will swap to slave after 10 seconds...
+Thu May 16 23:17:03 CST 2024
+spawn ssh pi@10.75.159.161
+pi@10.75.159.161's password: 
+Linux raspberrypi-3 5.10.17-v7l+ #1414 SMP Fri Apr 30 13:20:47 BST 2021 armv7l
+
+The programs included with the Debian GNU/Linux system are free software;
+the exact distribution terms for each program are described in the
+individual files in /usr/share/doc/*/copyright.
+
+Debian GNU/Linux comes with ABSOLUTELY NO WARRANTY, to the extent
+permitted by applicable law.
+Last login: Sat Apr 20 18:43:08 2024 from 10.75.135.33
+]0;pi@raspberrypi-3: ~[01;32mpi@raspberrypi-3[00m:[01;34m~ $[00m ssh root@10.75.159.250
+devmem 0x1e785010;devmem 0x1e785030;devmem 0x1e620010;devmem 0x1e6200a8;show_bmc_status 
+ssh: connect to host 10.75.159.250 port 22: No route to host
+]0;pi@raspberrypi-3: ~[01;32mpi@raspberrypi-3[00m:[01;34m~ $[00m devmem 0x1e785010;devmem 0x1e785030;devmem 0x1e620010;devmem 0x1e6200a8;show_bmc_status 
+ssh root@10.75.159.250
+devmem 0x1e785010;devmem 0x1e785030;devmem 0x1e620010;devmem 0x1e6200a8;show_bmc_status 
+-bash: devmem: command not found
+-bash: devmem: command not found
+-bash: devmem: command not found
+-bash: devmem: command not found
+-bash: show_bmc_status: command not found
+]0;pi@raspberrypi-3: ~[01;32mpi@raspberrypi-3[00m:[01;34m~ $[00m ssh root@10.75.159.250
+ssh: connect to host 10.75.159.250 port 22: No route to host
+]0;pi@raspberrypi-3: ~[01;32mpi@raspberrypi-3[00m:[01;34m~ $[00m devmem 0x1e785010;devmem 0x1e785030;devmem 0x1e620010;devmem 0x1e6200a8;show_bmc_status 
+-bash: devmem: command not found
+-bash: devmem: command not found
+-bash: devmem: command not found
+-bash: devmem: command not found
+-bash: show_bmc_status: command not found
+]0;pi@raspberrypi-3: ~[01;32mpi@raspberrypi-3[00m:[01;34m~ $[00m ssh root@10.75.159.250
+devmem 0x1e785010;devmem 0x1e785030;devmem 0x1e620010;devmem 0x1e6200a8;show_bmc_status 
+ssh: connect to host 10.75.159.250 port 22: No route to host
+]0;pi@raspberrypi-3: ~[01;32mpi@raspberrypi-3[00m:[01;34m~ $[00m devmem 0x1e785010;devmem 0x1e785030;devmem 0x1e620010;devmem 0x1e6200a8;show_bmc_status 
+-bash: devmem: command not found
+-bash: devmem: command not found
+-bash: devmem: command not found
+-bash: devmem: command not found
+-bash: show_bmc_status: command not found
+]0;pi@raspberrypi-3: ~[01;32mpi@raspberrypi-3[00m:[01;34m~ $[00m ssh root@10.75.159.250
+ssh root@10.75.159.250
+devmem 0x1e785010;devmem 0x1e785030;devmem 0x1e620010;devmem 0x1e6200a8;show_bmc_status 
+devmem 0x1e785010;devmem 0x1e785030;devmem 0x1e620010;devmem 0x1e6200a8;show_bmc_status 
+ssh: connect to host 10.75.159.250 port 22: No route to host
+]0;pi@raspberrypi-3: ~[01;32mpi@raspberrypi-3[00m:[01;34m~ $[00m ssh root@10.75.159.250
+ssh root@10.75.159.250
+devmem 0x1e785010;devmem 0x1e785030;devmem 0x1e620010;devmem 0x1e6200a8;show_bmc_status 
+ssh: connect to host 10.75.159.250 port 22: No route to host
+]0;pi@raspberrypi-3: ~[01;32mpi@raspberrypi-3[00m:[01;34m~ $[00m devmem 0x1e785010;devmem 0x1e785030;devmem 0x1e620010;devmem 0x1e6200a8;show_bmc_status 
+-bash: devmem: command not found
+-bash: devmem: command not found
+-bash: devmem: command not found
+-bash: devmem: command not found
+-bash: show_bmc_status: command not found
+]0;pi@raspberrypi-3: ~[01;32mpi@raspberrypi-3[00m:[01;34m~ $[00m ssh root@10.75.159.250
+devmem 0x1e785010;devmem 0x1e785030;devmem 0x1e620010;devmem 0x1e6200a8;show_bmc_status 
+ssh: connect to host 10.75.159.250 port 22: No route to host
+]0;pi@raspberrypi-3: ~[01;32mpi@raspberrypi-3[00m:[01;34m~ $[00m ssh root@10.75.159.250
+ssh root@10.75.159.250
+devmem 0x1e785010;devmem 0x1e785030;devmem 0x1e620010;devmem 0x1e6200a8;show_bmc_status 
+ssh: connect to host 10.75.159.250 port 22: No route to host
+]0;pi@raspberrypi-3: ~[01;32mpi@raspberrypi-3[00m:[01;34m~ $[00m devmem 0x1e785010;devmem 0x1e785030;devmem 0x1e620010;devmem 0x1e6200a8;show_bmc_status 
+-bash: devmem: command not found
+-bash: devmem: command not found
+-bash: devmem: command not found
+-bash: devmem: command not found
+-bash: show_bmc_status: command not found
+]0;pi@raspberrypi-3: ~[01;32mpi@raspberrypi-3[00m:[01;34m~ $[00m devmem 0x1e785010;devmem 0x1e785030;devmem 0x1e620010;devmem 0x1e6200a8;show_bmc_status 
+-bash: devmem: command not found
+-bash: devmem: command not found
+-bash: devmem: command not found
+-bash: devmem: command not found
+-bash: show_bmc_status: command not found
+]0;pi@raspberrypi-3: ~[01;32mpi@raspberrypi-3[00m:[01;34m~ $[00m ssh root@10.75.159.250
+devmem 0x1e785010;devmem 0x1e785030;devmem 0x1e620010;devmem 0x1e6200a8;show_bmc_status 
+ssh: connect to host 10.75.159.250 port 22: No route to host
+]0;pi@raspberrypi-3: ~[01;32mpi@raspberrypi-3[00m:[01;34m~ $[00m devmem 0x1e785010;devmem 0x1e785030;devmem 0x1e620010;devmem 0x1e6200a8;show_bmc_status 
+-bash: devmem: command not found
+-bash: devmem: command not found
+-bash: devmem: command not found
+-bash: devmem: command not found
+-bash: show_bmc_status: command not found
+]0;pi@raspberrypi-3: ~[01;32mpi@raspberrypi-3[00m:[01;34m~ $[00m ssh root@10.75.159.250
+ssh root@10.75.159.250
+devmem 0x1e785010;devmem 0x1e785030;devmem 0x1e620010;devmem 0x1e6200a8;show_bmc_status 
+devmem 0x1e785010;devmem 0x1e785030;devmem 0x1e620010;devmem 0x1e6200a8;show_bmc_status 
+ssh: connect to host 10.75.159.250 port 22: No route to host
+]0;pi@raspberrypi-3: ~[01;32mpi@raspberrypi-3[00m:[01;34m~ $[00m ssh root@10.75.159.250
+devmem 0x1e785010;devmem 0x1e785030;devmem 0x1e620010;devmem 0x1e6200a8;show_bmc_status 
+ssh: connect to host 10.75.159.250 port 22: No route to host
+]0;pi@raspberrypi-3: ~[01;32mpi@raspberrypi-3[00m:[01;34m~ $[00m devmem 0x1e785010;devmem 0x1e785030;devmem 0x1e620010;devmem 0x1e6200a8;show_bmc_status 
+-bash: devmem: command not found
+-bash: devmem: command not found
+-bash: devmem: command not found
+-bash: devmem: command not found
+-bash: show_bmc_status: command not found
+]0;pi@raspberrypi-3: ~[01;32mpi@raspberrypi-3[00m:[01;34m~ $[00m ssh root@10.75.159.250
+devmem 0x1e785010;devmem 0x1e785030;devmem 0x1e620010;devmem 0x1e6200a8;show_bmc_status 
+ssh: connect to host 10.75.159.250 port 22: No route to host
+]0;pi@raspberrypi-3: ~[01;32mpi@raspberrypi-3[00m:[01;34m~ $[00m devmem 0x1e785010;devmem 0x1e785030;devmem 0x1e620010;devmem 0x1e6200a8;show_bmc_status 
+-bash: devmem: command not found
+-bash: devmem: command not found
+-bash: devmem: command not found
+-bash: devmem: command not found
+-bash: show_bmc_status: command not found
+]0;pi@raspberrypi-3: ~[01;32mpi@raspberrypi-3[00m:[01;34m~ $[00m ssh root@10.75.159.250
+ssh root@10.75.159.250
+devmem 0x1e785010;devmem 0x1e785030;devmem 0x1e620010;devmem 0x1e6200a8;show_bmc_status 
+devmem 0x1e785010;devmem 0x1e785030;devmem 0x1e620010;devmem 0x1e6200a8;show_bmc_status 
+ssh: connect to host 10.75.159.250 port 22: No route to host
+]0;pi@raspberrypi-3: ~[01;32mpi@raspberrypi-3[00m:[01;34m~ $[00m ssh root@10.75.159.250
+devmem 0x1e785010;devmem 0x1e785030;devmem 0x1e620010;devmem 0x1e6200a8;show_bmc_status 
+ssh: connect to host 10.75.159.250 port 22: No route to host
+]0;pi@raspberrypi-3: ~[01;32mpi@raspberrypi-3[00m:[01;34m~ $[00m ssh root@10.75.159.250
+devmem 0x1e785010;devmem 0x1e785030;devmem 0x1e620010;devmem 0x1e6200a8;show_bmc_status 
+ssh: connect to host 10.75.159.250 port 22: No route to host
+]0;pi@raspberrypi-3: ~[01;32mpi@raspberrypi-3[00m:[01;34m~ $[00m devmem 0x1e785010;devmem 0x1e785030;devmem 0x1e620010;devmem 0x1e6200a8;show_bmc_status 
+-bash: devmem: command not found
+-bash: devmem: command not found
+-bash: devmem: command not found
+-bash: devmem: command not found
+-bash: show_bmc_status: command not found
+]0;pi@raspberrypi-3: ~[01;32mpi@raspberrypi-3[00m:[01;34m~ $[00m ssh root@10.75.159.250
+devmem 0x1e785010;devmem 0x1e785030;devmem 0x1e620010;devmem 0x1e6200a8;show_bmc_status 
+ssh: connect to host 10.75.159.250 port 22: No route to host
+]0;pi@raspberrypi-3: ~[01;32mpi@raspberrypi-3[00m:[01;34m~ $[00m ssh root@10.75.159.250
+ssh root@10.75.159.250
+devmem 0x1e785010;devmem 0x1e785030;devmem 0x1e620010;devmem 0x1e6200a8;show_bmc_status 
+devmem 0x1e785010;devmem 0x1e785030;devmem 0x1e620010;devmem 0x1e6200a8;show_bmc_status 
+ssh: connect to host 10.75.159.250 port 22: No route to host
+]0;pi@raspberrypi-3: ~[01;32mpi@raspberrypi-3[00m:[01;34m~ $[00m devmem 0x1e785010;devmem 0x1e785030;devmem 0x1e620010;devmem 0x1e6200a8;show_bmc_status 
+-bash: devmem: command not found
+-bash: devmem: command not found
+-bash: devmem: command not found
+-bash: devmem: command not found
+-bash: show_bmc_status: command not found
+]0;pi@raspberrypi-3: ~[01;32mpi@raspberrypi-3[00m:[01;34m~ $[00m devmem 0x1e785010;devmem 0x1e785030;devmem 0x1e620010;devmem 0x1e6200a8;show_bmc_status 
+-bash: devmem: command not found
+-bash: devmem: command not found
+-bash: devmem: command not found
+-bash: devmem: command not found
+-bash: show_bmc_status: command not found
+]0;pi@raspberrypi-3: ~[01;32mpi@raspberrypi-3[00m:[01;34m~ $[00m ssh root@10.75.159.250
+ssh root@10.75.159.250
+devmem 0x1e785010;devmem 0x1e785030;devmem 0x1e620010;devmem 0x1e6200a8;show_bmc_status 
+devmem 0x1e785010;devmem 0x1e785030;devmem 0x1e620010;devmem 0x1e6200a8;show_bmc_status 
+ssh: connect to host 10.75.159.250 port 22: No route to host
+]0;pi@raspberrypi-3: ~[01;32mpi@raspberrypi-3[00m:[01;34m~ $[00m devmem 0x1e785010;devmem 0x1e785030;devmem 0x1e620010;devmem 0x1e6200a8;show_bmc_status 
+-bash: devmem: command not found
+-bash: devmem: command not found
+-bash: devmem: command not found
+-bash: devmem: command not found
+-bash: show_bmc_status: command not found
+]0;pi@raspberrypi-3: ~[01;32mpi@raspberrypi-3[00m:[01;34m~ $[00m ssh root@10.75.159.250
+devmem 0x1e785010;devmem 0x1e785030;devmem 0x1e620010;devmem 0x1e6200a8;show_bmc_status 
+ssh: connect to host 10.75.159.250 port 22: No route to host
+]0;pi@raspberrypi-3: ~[01;32mpi@raspberrypi-3[00m:[01;34m~ $[00m ssh root@10.75.159.250
+ssh root@10.75.159.250
+devmem 0x1e785010;devmem 0x1e785030;devmem 0x1e620010;devmem 0x1e6200a8;show_bmc_status 
+devmem 0x1e785010;devmem 0x1e785030;devmem 0x1e620010;devmem 0x1e6200a8;show_bmc_status 
+ssh: connect to host 10.75.159.250 port 22: No route to host
+]0;pi@raspberrypi-3: ~[01;32mpi@raspberrypi-3[00m:[01;34m~ $[00m devmem 0x1e785010;devmem 0x1e785030;devmem 0x1e620010;devmem 0x1e6200a8;show_bmc_status 
+-bash: devmem: command not found
+-bash: devmem: command not found
+-bash: devmem: command not found
+-bash: devmem: command not found
+-bash: show_bmc_status: command not found
+]0;pi@raspberrypi-3: ~[01;32mpi@raspberrypi-3[00m:[01;34m~ $[00m ssh root@10.75.159.250
+devmem 0x1e785010;devmem 0x1e785030;devmem 0x1e620010;devmem 0x1e6200a8;show_bmc_status 
+ssh: connect to host 10.75.159.250 port 22: No route to host
+]0;pi@raspberrypi-3: ~[01;32mpi@raspberrypi-3[00m:[01;34m~ $[00m ssh root@10.75.159.250
+devmem 0x1e785010;devmem 0x1e785030;devmem 0x1e620010;devmem 0x1e6200a8;show_bmc_status 
+ssh: connect to host 10.75.159.250 port 22: No route to host
+]0;pi@raspberrypi-3: ~[01;32mpi@raspberrypi-3[00m:[01;34m~ $[00m devmem 0x1e785010;devmem 0x1e785030;devmem 0x1e620010;devmem 0x1e6200a8;show_bmc_status 
+-bash: devmem: command not found
+-bash: devmem: command not found
+-bash: devmem: command not found
+-bash: devmem: command not found
+-bash: show_bmc_status: command not found
+]0;pi@raspberrypi-3: ~[01;32mpi@raspberrypi-3[00m:[01;34m~ $[00m devmem 0x1e785010;devmem 0x1e785030;devmem 0x1e620010;devmem 0x1e6200a8;show_bmc_status 
+-bash: devmem: command not found
+-bash: devmem: command not found
+-bash: devmem: command not found
+-bash: devmem: command not found
+-bash: show_bmc_status: command not found
+]0;pi@raspberrypi-3: ~[01;32mpi@raspberrypi-3[00m:[01;34m~ $[00m ssh root@10.75.159.250
+devmem 0x1e785010;devmem 0x1e785030;devmem 0x1e620010;devmem 0x1e6200a8;show_bmc_status 
+ssh: connect to host 10.75.159.250 port 22: No route to host
+]0;pi@raspberrypi-3: ~[01;32mpi@raspberrypi-3[00m:[01;34m~ $[00m devmem 0x1e785010;devmem 0x1e785030;devmem 0x1e620010;devmem 0x1e6200a8;show_bmc_status 
+-bash: devmem: command not found
+-bash: devmem: command not found
+-bash: devmem: command not found
+-bash: devmem: command not found
+-bash: show_bmc_status: command not found
+]0;pi@raspberrypi-3: ~[01;32mpi@raspberrypi-3[00m:[01;34m~ $[00m ssh root@10.75.159.250
+ssh root@10.75.159.250
+devmem 0x1e785010;devmem 0x1e785030;devmem 0x1e620010;devmem 0x1e6200a8;show_bmc_status 
+devmem 0x1e785010;devmem 0x1e785030;devmem 0x1e620010;devmem 0x1e6200a8;show_bmc_status 
+ssh: connect to host 10.75.159.250 port 22: No route to host
+]0;pi@raspberrypi-3: ~[01;32mpi@raspberrypi-3[00m:[01;34m~ $[00m devmem 0x1e785010;devmem 0x1e785030;devmem 0x1e620010;devmem 0x1e6200a8;show_bmc_status 
+-bash: devmem: command not found
+-bash: devmem: command not found
+-bash: devmem: command not found
+-bash: devmem: command not found
+-bash: show_bmc_status: command not found
+]0;pi@raspberrypi-3: ~[01;32mpi@raspberrypi-3[00m:[01;34m~ $[00m ssh root@10.75.159.250
+devmem 0x1e785010;devmem 0x1e785030;devmem 0x1e620010;devmem 0x1e6200a8;show_bmc_status 
+ssh: connect to host 10.75.159.250 port 22: No route to host
+]0;pi@raspberrypi-3: ~[01;32mpi@raspberrypi-3[00m:[01;34m~ $[00m ssh root@10.75.159.250
+ssh root@10.75.159.250
+devmem 0x1e785010;devmem 0x1e785030;devmem 0x1e620010;devmem 0x1e6200a8;show_bmc_status 
+devmem 0x1e785010;devmem 0x1e785030;devmem 0x1e620010;devmem 0x1e6200a8;show_bmc_status 
+ssh: connect to host 10.75.159.250 port 22: No route to host
+]0;pi@raspberrypi-3: ~[01;32mpi@raspberrypi-3[00m:[01;34m~ $[00m devmem 0x1e785010;devmem 0x1e785030;devmem 0x1e620010;devmem 0x1e6200a8;show_bmc_status 
+-bash: devmem: command not found
+-bash: devmem: command not found
+-bash: devmem: command not found
+-bash: devmem: command not found
+-bash: show_bmc_status: command not found
+]0;pi@raspberrypi-3: ~[01;32mpi@raspberrypi-3[00m:[01;34m~ $[00m ssh root@10.75.159.250
+devmem 0x1e785010;devmem 0x1e785030;devmem 0x1e620010;devmem 0x1e6200a8;show_bmc_status 
+ssh: connect to host 10.75.159.250 port 22: No route to host
+]0;pi@raspberrypi-3: ~[01;32mpi@raspberrypi-3[00m:[01;34m~ $[00m devmem 0x1e785010;devmem 0x1e785030;devmem 0x1e620010;devmem 0x1e6200a8;show_bmc_status 
+-bash: devmem: command not found
+-bash: devmem: command not found
+-bash: devmem: command not found
+-bash: devmem: command not found
+-bash: show_bmc_status: command not found
+]0;pi@raspberrypi-3: ~[01;32mpi@raspberrypi-3[00m:[01;34m~ $[00m devmem 0x1e785010;devmem 0x1e785030;devmem 0x1e620010;devmem 0x1e6200a8;show_bmc_status 
+-bash: devmem: command not found
+-bash: devmem: command not found
+-bash: devmem: command not found
+-bash: devmem: command not found
+-bash: show_bmc_status: command not found
+]0;pi@raspberrypi-3: ~[01;32mpi@raspberrypi-3[00m:[01;34m~ $[00m ssh root@10.75.159.250
+ssh root@10.75.159.250
+devmem 0x1e785010;devmem 0x1e785030;devmem 0x1e620010;devmem 0x1e6200a8;show_bmc_status 
+devmem 0x1e785010;devmem 0x1e785030;devmem 0x1e620010;devmem 0x1e6200a8;show_bmc_status 
+ssh: connect to host 10.75.159.250 port 22: No route to host
+]0;pi@raspberrypi-3: ~[01;32mpi@raspberrypi-3[00m:[01;34m~ $[00m ssh root@10.75.159.250
+ssh root@10.75.159.250
+devmem 0x1e785010;devmem 0x1e785030;devmem 0x1e620010;devmem 0x1e6200a8;show_bmc_status 
+devmem 0x1e785010;devmem 0x1e785030;devmem 0x1e620010;devmem 0x1e6200a8;show_bmc_status 
+ssh: connect to host 10.75.159.250 port 22: No route to host
+]0;pi@raspberrypi-3: ~[01;32mpi@raspberrypi-3[00m:[01;34m~ $[00m ssh root@10.75.159.250
+devmem 0x1e785010;devmem 0x1e785030;devmem 0x1e620010;devmem 0x1e6200a8;show_bmc_status 
+ssh: connect to host 10.75.159.250 port 22: No route to host
+]0;pi@raspberrypi-3: ~[01;32mpi@raspberrypi-3[00m:[01;34m~ $[00m devmem 0x1e785010;devmem 0x1e785030;devmem 0x1e620010;devmem 0x1e6200a8;show_bmc_status 
+ssh root@10.75.159.250
+devmem 0x1e785010;devmem 0x1e785030;devmem 0x1e620010;devmem 0x1e6200a8;show_bmc_status 
+-bash: devmem: command not found
+-bash: devmem: command not found
+-bash: devmem: command not found
+-bash: devmem: command not found
+-bash: show_bmc_status: command not found
+]0;pi@raspberrypi-3: ~[01;32mpi@raspberrypi-3[00m:[01;34m~ $[00m devmem 0x1e785010;devmem 0x1e785030;devmem 0x1e620010;devmem 0x1e6200a8;show_bmc_status 
+-bash: devmem: command not found
+-bash: devmem: command not found
+-bash: devmem: command not found
+-bash: devmem: command not found
+-bash: show_bmc_status: command not found
+]0;pi@raspberrypi-3: ~[01;32mpi@raspberrypi-3[00m:[01;34m~ $[00m ssh root@10.75.159.250
+devmem 0x1e785010;devmem 0x1e785030;devmem 0x1e620010;devmem 0x1e6200a8;show_bmc_status 
+ssh: connect to host 10.75.159.250 port 22: No route to host
+]0;pi@raspberrypi-3: ~[01;32mpi@raspberrypi-3[00m:[01;34m~ $[00m ssh root@10.75.159.250
+devmem 0x1e785010;devmem 0x1e785030;devmem 0x1e620010;devmem 0x1e6200a8;show_bmc_status 
+ssh: connect to host 10.75.159.250 port 22: No route to host
+]0;pi@raspberrypi-3: ~[01;32mpi@raspberrypi-3[00m:[01;34m~ $[00m devmem 0x1e785010;devmem 0x1e785030;devmem 0x1e620010;devmem 0x1e6200a8;show_bmc_status 
+-bash: devmem: command not found
+-bash: devmem: command not found
+-bash: devmem: command not found
+-bash: devmem: command not found
+-bash: show_bmc_status: command not found
+]0;pi@raspberrypi-3: ~[01;32mpi@raspberrypi-3[00m:[01;34m~ $[00m ssh root@10.75.159.250
+ssh root@10.75.159.250
+devmem 0x1e785010;devmem 0x1e785030;devmem 0x1e620010;devmem 0x1e6200a8;show_bmc_status 
+devmem 0x1e785010;devmem 0x1e785030;devmem 0x1e620010;devmem 0x1e6200a8;show_bmc_status 
+ssh: connect to host 10.75.159.250 port 22: No route to host
+]0;pi@raspberrypi-3: ~[01;32mpi@raspberrypi-3[00m:[01;34m~ $[00m devmem 0x1e785010;devmem 0x1e785030;devmem 0x1e620010;devmem 0x1e6200a8;show_bmc_status 
+-bash: devmem: command not found
+-bash: devmem: command not found
+-bash: devmem: command not found
+-bash: devmem: command not found
+-bash: show_bmc_status: command not found
+]0;pi@raspberrypi-3: ~[01;32mpi@raspberrypi-3[00m:[01;34m~ $[00m devmem 0x1e785010;devmem 0x1e785030;devmem 0x1e620010;devmem 0x1e6200a8;show_bmc_status 
+-bash: devmem: command not found
+-bash: devmem: command not found
+-bash: devmem: command not found
+-bash: devmem: command not found
+-bash: show_bmc_status: command not found
+]0;pi@raspberrypi-3: ~[01;32mpi@raspberrypi-3[00m:[01;34m~ $[00m ssh root@10.75.159.250
+ssh root@10.75.159.250
+devmem 0x1e785010;devmem 0x1e785030;devmem 0x1e620010;devmem 0x1e6200a8;show_bmc_status 
+devmem 0x1e785010;devmem 0x1e785030;devmem 0x1e620010;devmem 0x1e6200a8;show_bmc_status 
+ssh: connect to host 10.75.159.250 port 22: No route to host
+]0;pi@raspberrypi-3: ~[01;32mpi@raspberrypi-3[00m:[01;34m~ $[00m ssh root@10.75.159.250
+ssh root@10.75.159.250
+devmem 0x1e785010;devmem 0x1e785030;devmem 0x1e620010;devmem 0x1e6200a8;show_bmc_status 
+devmem 0x1e785010;devmem 0x1e785030;devmem 0x1e620010;devmem 0x1e6200a8;show_bmc_status 
+ssh: connect to host 10.75.159.250 port 22: No route to host
+]0;pi@raspberrypi-3: ~[01;32mpi@raspberrypi-3[00m:[01;34m~ $[00m devmem 0x1e785010;devmem 0x1e785030;devmem 0x1e620010;devmem 0x1e6200a8;show_bmc_status 
+-bash: devmem: command not found
+-bash: devmem: command not found
+-bash: devmem: command not found
+-bash: devmem: command not found
+-bash: show_bmc_status: command not found
+]0;pi@raspberrypi-3: ~[01;32mpi@raspberrypi-3[00m:[01;34m~ $[00m ssh root@10.75.159.250
+ssh root@10.75.159.250
+devmem 0x1e785010;devmem 0x1e785030;devmem 0x1e620010;devmem 0x1e6200a8;show_bmc_status 
+devmem 0x1e785010;devmem 0x1e785030;devmem 0x1e620010;devmem 0x1e6200a8;show_bmc_status 
+ssh: connect to host 10.75.159.250 port 22: No route to host
+]0;pi@raspberrypi-3: ~[01;32mpi@raspberrypi-3[00m:[01;34m~ $[00m devmem 0x1e785010;devmem 0x1e785030;devmem 0x1e620010;devmem 0x1e6200a8;show_bmc_status 
+-bash: devmem: command not found
+-bash: devmem: command not found
+-bash: devmem: command not found
+-bash: devmem: command not found
+-bash: show_bmc_status: command not found
+]0;pi@raspberrypi-3: ~[01;32mpi@raspberrypi-3[00m:[01;34m~ $[00m ssh root@10.75.159.250
+ssh root@10.75.159.250
+devmem 0x1e785010;devmem 0x1e785030;devmem 0x1e620010;devmem 0x1e6200a8;show_bmc_status 
+devmem 0x1e785010;devmem 0x1e785030;devmem 0x1e620010;devmem 0x1e6200a8;show_bmc_status 
+ssh: connect to host 10.75.159.250 port 22: No route to host
+]0;pi@raspberrypi-3: ~[01;32mpi@raspberrypi-3[00m:[01;34m~ $[00m ssh root@10.75.159.250
+ssh root@10.75.159.250
+devmem 0x1e785010;devmem 0x1e785030;devmem 0x1e620010;devmem 0x1e6200a8;show_bmc_status 
+devmem 0x1e785010;devmem 0x1e785030;devmem 0x1e620010;devmem 0x1e6200a8;show_bmc_status 
+ssh: connect to host 10.75.159.250 port 22: No route to host
+]0;pi@raspberrypi-3: ~[01;32mpi@raspberrypi-3[00m:[01;34m~ $[00m ssh root@10.75.159.250
+ssh root@10.75.159.250
+devmem 0x1e785010;devmem 0x1e785030;devmem 0x1e620010;devmem 0x1e6200a8;show_bmc_status 
+devmem 0x1e785010;devmem 0x1e785030;devmem 0x1e620010;devmem 0x1e6200a8;show_bmc_status 
+ssh: connect to host 10.75.159.250 port 22: No route to host
+]0;pi@raspberrypi-3: ~[01;32mpi@raspberrypi-3[00m:[01;34m~ $[00m devmem 0x1e785010;devmem 0x1e785030;devmem 0x1e620010;devmem 0x1e6200a8;show_bmc_status 
+-bash: devmem: command not found
+-bash: devmem: command not found
+-bash: devmem: command not found
+-bash: devmem: command not found
+-bash: show_bmc_status: command not found
+]0;pi@raspberrypi-3: ~[01;32mpi@raspberrypi-3[00m:[01;34m~ $[00m ssh root@10.75.159.250
+ssh root@10.75.159.250
+devmem 0x1e785010;devmem 0x1e785030;devmem 0x1e620010;devmem 0x1e6200a8;show_bmc_status 
+devmem 0x1e785010;devmem 0x1e785030;devmem 0x1e620010;devmem 0x1e6200a8;show_bmc_status 
+ssh: connect to host 10.75.159.250 port 22: No route to host
+]0;pi@raspberrypi-3: ~[01;32mpi@raspberrypi-3[00m:[01;34m~ $[00m ssh root@10.75.159.250
+ssh root@10.75.159.250
+devmem 0x1e785010;devmem 0x1e785030;devmem 0x1e620010;devmem 0x1e6200a8;show_bmc_status 
+devmem 0x1e785010;devmem 0x1e785030;devmem 0x1e620010;devmem 0x1e6200a8;show_bmc_status 
+ssh: connect to host 10.75.159.250 port 22: No route to host
+]0;pi@raspberrypi-3: ~[01;32mpi@raspberrypi-3[00m:[01;34m~ $[00m devmem 0x1e785010;devmem 0x1e785030;devmem 0x1e620010;devmem 0x1e6200a8;show_bmc_status 
+-bash: devmem: command not found
+-bash: devmem: command not found
+-bash: devmem: command not found
+-bash: devmem: command not found
+-bash: show_bmc_status: command not found
+]0;pi@raspberrypi-3: ~[01;32mpi@raspberrypi-3[00m:[01;34m~ $[00m devmem 0x1e785010;devmem 0x1e785030;devmem 0x1e620010;devmem 0x1e6200a8;show_bmc_status 
+-bash: devmem: command not found
+-bash: devmem: command not found
+-bash: devmem: command not found
+-bash: devmem: command not found
+-bash: show_bmc_status: command not found
+]0;pi@raspberrypi-3: ~[01;32mpi@raspberrypi-3[00m:[01;34m~ $[00m ssh root@10.75.159.250
+ssh root@10.75.159.250
+devmem 0x1e785010;devmem 0x1e785030;devmem 0x1e620010;devmem 0x1e6200a8;show_bmc_status 
+devmem 0x1e785010;devmem 0x1e785030;devmem 0x1e620010;devmem 0x1e6200a8;show_bmc_status 
+ssh: connect to host 10.75.159.250 port 22: No route to host
+]0;pi@raspberrypi-3: ~[01;32mpi@raspberrypi-3[00m:[01;34m~ $[00m ssh root@10.75.159.250
+ssh root@10.75.159.250
+devmem 0x1e785010;devmem 0x1e785030;devmem 0x1e620010;devmem 0x1e6200a8;show_bmc_status 
+devmem 0x1e785010;devmem 0x1e785030;devmem 0x1e620010;devmem 0x1e6200a8;show_bmc_status 
+ssh: connect to host 10.75.159.250 port 22: No route to host
+]0;pi@raspberrypi-3: ~[01;32mpi@raspberrypi-3[00m:[01;34m~ $[00m devmem 0x1e785010;devmem 0x1e785030;devmem 0x1e620010;devmem 0x1e6200a8;show_bmc_status 
+-bash: devmem: command not found
+-bash: devmem: command not found
+-bash: devmem: command not found
+-bash: devmem: command not found
+-bash: show_bmc_status: command not found
+]0;pi@raspberrypi-3: ~[01;32mpi@raspberrypi-3[00m:[01;34m~ $[00m ssh root@10.75.159.250
+ssh root@10.75.159.250
+devmem 0x1e785010;devmem 0x1e785030;devmem 0x1e620010;devmem 0x1e6200a8;show_bmc_status 
+ssh: connect to host 10.75.159.250 port 22: No route to host
+]0;pi@raspberrypi-3: ~[01;32mpi@raspberrypi-3[00m:[01;34m~ $[00m devmem 0x1e785010;devmem 0x1e785030;devmem 0x1e620010;devmem 0x1e6200a8;show_bmc_status 
+-bash: devmem: command not found
+-bash: devmem: command not found
+-bash: devmem: command not found
+-bash: devmem: command not found
+-bash: show_bmc_status: command not found
+]0;pi@raspberrypi-3: ~[01;32mpi@raspberrypi-3[00m:[01;34m~ $[00m devmem 0x1e785010;devmem 0x1e785030;devmem 0x1e620010;devmem 0x1e6200a8;show_bmc_status 
+-bash: devmem: command not found
+-bash: devmem: command not found
+-bash: devmem: command not found
+-bash: devmem: command not found
+-bash: show_bmc_status: command not found
+]0;pi@raspberrypi-3: ~[01;32mpi@raspberrypi-3[00m:[01;34m~ $[00m ssh root@10.75.159.250
+devmem 0x1e785010;devmem 0x1e785030;devmem 0x1e620010;devmem 0x1e6200a8;show_bmc_status 
+ssh: connect to host 10.75.159.250 port 22: No route to host
+]0;pi@raspberrypi-3: ~[01;32mpi@raspberrypi-3[00m:[01;34m~ $[00m ssh root@10.75.159.250
+ssh root@10.75.159.250
+devmem 0x1e785010;devmem 0x1e785030;devmem 0x1e620010;devmem 0x1e6200a8;show_bmc_status 
+devmem 0x1e785010;devmem 0x1e785030;devmem 0x1e620010;devmem 0x1e6200a8;show_bmc_status 
+ssh: connect to host 10.75.159.250 port 22: No route to host
+]0;pi@raspberrypi-3: ~[01;32mpi@raspberrypi-3[00m:[01;34m~ $[00m devmem 0x1e785010;devmem 0x1e785030;devmem 0x1e620010;devmem 0x1e6200a8;show_bmc_status 
+-bash: devmem: command not found
+-bash: devmem: command not found
+-bash: devmem: command not found
+-bash: devmem: command not found
+-bash: show_bmc_status: command not found
+]0;pi@raspberrypi-3: ~[01;32mpi@raspberrypi-3[00m:[01;34m~ $[00m ssh root@10.75.159.250
+devmem 0x1e785010;devmem 0x1e785030;devmem 0x1e620010;devmem 0x1e6200a8;show_bmc_status 
+The authenticity of host '10.75.159.250 (10.75.159.250)' can't be established.
+ECDSA key fingerprint is SHA256:FQuIlsIMoHAOE7AITA+QgHJXDvDsCVn9n9fTFZyBzO4.
+Are you sure you want to continue connecting (yes/no)? yes
+Failed to add the host to the list of known hosts (/home/pi/.ssh/known_hosts).
+root@10.75.159.250's password: 
+Last login: Thu Jan  1 00:05:13 1970 from 10.75.159.161
+root@lambda_bmc:~# devmem 0x1e785010;devmem 0x1e785030;devmem 0x1e620010;devmem 0x1e6200a8;show_bmc_status 
+0x00000000
+0x00000200
+0x00000000
+0x00000016
+BMC current boot code source: master
+BMC not slave on ---11
+spawn ssh pi@10.75.159.161
+pi@10.75.159.161's password: 
+Linux raspberrypi-3 5.10.17-v7l+ #1414 SMP Fri Apr 30 13:20:47 BST 2021 armv7l
+
+The programs included with the Debian GNU/Linux system are free software;
+the exact distribution terms for each program are described in the
+individual files in /usr/share/doc/*/copyright.
+
+Debian GNU/Linux comes with ABSOLUTELY NO WARRANTY, to the extent
+permitted by applicable law.
+Last login: Sat Apr 20 18:50:01 2024 from 10.75.135.33
+]0;pi@raspberrypi-3: ~[01;32mpi@raspberrypi-3[00m:[01;34m~ $[00m ssh root@10.75.159.250
+show_version bmc |grep Pingpong  
+The authenticity of host '10.75.159.250 (10.75.159.250)' can't be established.
+ECDSA key fingerprint is SHA256:FQuIlsIMoHAOE7AITA+QgHJXDvDsCVn9n9fTFZyBzO4.
+Are you sure you want to continue connecting (yes/no)? yes
+Failed to add the host to the list of known hosts (/home/pi/.ssh/known_hosts).
+root@10.75.159.250's password: 
+Last login: Thu Jan  1 00:05:16 1970 from 10.75.159.161
+root@lambda_bmc:~# show_version bmc |grep Pingpong  
+Pingpong BMC Version    : NA
+BMC mdt error --2

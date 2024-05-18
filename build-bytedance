@@ -25,7 +25,7 @@ usage() {
 }
 
 buildplatform() {
-    source openbmc-init-build-env meta-huaqin/meta-$1 build-$1
+    source openbmc-init-build-env meta-bytedance/meta-$1 build-$1
     buildpath=$(pwd)
     downloads
     bitbake $1-image
@@ -40,43 +40,43 @@ elif [ $# -ge 2 ]; then
     case $2 in
     "clean")
         if [ $# -gt 2 ]; then
-            source openbmc-init-build-env meta-huaqin/meta-$1 build-$1; bitbake -c cleanall $3
+            source openbmc-init-build-env meta-bytedance/meta-$1 build-$1; bitbake -c cleanall $3
         else
-            source openbmc-init-build-env meta-huaqin/meta-$1 build-$1; bitbake -c cleanall $1-image
+            source openbmc-init-build-env meta-bytedance/meta-$1 build-$1; bitbake -c cleanall $1-image
         fi
     ;;
     "u-boot")
-	    source openbmc-init-build-env meta-huaqin/meta-$1 build-$1 && buildpath=$(pwd); downloads; bitbake u-boot
+	    source openbmc-init-build-env meta-bytedance/meta-$1 build-$1 && buildpath=$(pwd); downloads; bitbake u-boot
     ;;
     "linux-aspeed")
-	    source openbmc-init-build-env meta-huaqin/meta-$1 build-$1 && buildpath=$(pwd); downloads; bitbake linux-aspeed
+	    source openbmc-init-build-env meta-bytedance/meta-$1 build-$1 && buildpath=$(pwd); downloads; bitbake linux-aspeed
     ;;
     "modify-u-boot")
-	    source openbmc-init-build-env meta-huaqin/meta-$1 build-$1 && buildpath=$(pwd);  devtool modify u-boot
+	    source openbmc-init-build-env meta-bytedance/meta-$1 build-$1 && buildpath=$(pwd);  devtool modify u-boot
         echo "******************************************************************************************"
         echo "                        You can modify u-boot in build-$1/workspace                       "
         echo "******************************************************************************************"
     ;;
     "modify-linux-aspeed")
-	    source openbmc-init-build-env meta-huaqin/meta-$1 build-$1 && buildpath=$(pwd);  devtool modify linux-aspeed
+	    source openbmc-init-build-env meta-bytedance/meta-$1 build-$1 && buildpath=$(pwd);  devtool modify linux-aspeed
         echo "******************************************************************************************"
         echo "                        You can modify linux-aspeedt in build-$1/workspace                "
         echo "******************************************************************************************"
     ;;
     "reset-u-boot")
-	    source openbmc-init-build-env meta-huaqin/meta-$1 build-$1 && buildpath=$(pwd);  devtool reset u-boot
+	    source openbmc-init-build-env meta-bytedance/meta-$1 build-$1 && buildpath=$(pwd);  devtool reset u-boot
         echo "******************************************************************************************"
         echo "                                   Reset u-boot                                           "
         echo "******************************************************************************************"
     ;;
     "reset-linux-aspeed")
-	    source openbmc-init-build-env meta-huaqin/meta-$1 build-$1 && buildpath=$(pwd);  devtool reset linux-aspeed
+	    source openbmc-init-build-env meta-bytedance/meta-$1 build-$1 && buildpath=$(pwd);  devtool reset linux-aspeed
         echo "******************************************************************************************"
         echo "                                  Reset linux-aspeedt                                     "
         echo "******************************************************************************************"
     ;;
     *)
-	    source openbmc-init-build-env meta-huaqin/meta-$1 build-$1 && buildpath=$(pwd); downloads; bitbake $2
+	    source openbmc-init-build-env meta-bytedance/meta-$1 build-$1 && buildpath=$(pwd); downloads; bitbake $2
     ;;
     esac
 else
@@ -85,3 +85,11 @@ fi
 
 exit 0
 
+
+
+
+# 手动编译使用流程：
+# 下载字节分支 git clone https://gitlab-dbd2.huaqin.com/hq-obmc/bytedance.git -b helium ./matao-test
+# cd matao-test
+# ./sync_yocto.sh 
+# build-bytedance hpa

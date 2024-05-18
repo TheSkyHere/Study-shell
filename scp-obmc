@@ -7,11 +7,11 @@ if { [llength $argv] < 2} {
     exit 1 
 } 
 
-set timeout 20 
+set timeout 60
 set Local_File [lindex $argv 0] 
 set IP [lindex $argv 1]
 set STRING 0 
-spawn ssh-keygen -f "/home_a/matao/.ssh/known_hosts" -R $IP
+spawn ssh-keygen -f "/home_b/matao/.ssh/known_hosts" -R $IP
 
 proc myscpfunc { STRING1 } {
     set passwd 0penBmc
@@ -44,10 +44,10 @@ if { [llength $argv] == 2} {
         spawn scp $Local_File root@$IP:/tmp/images
         myscpfunc $STRING
 
-        spawn scp /home_a/matao/usr/local/bin/BMC_upgrade.sh root@$IP:~/
+        spawn scp /home_b/matao/usr/local/bin/BMC_upgrade.sh root@$IP:~/
         myscpfunc $STRING
     } else {
-        spawn scp $Local_File /home_a/matao/usr/local/bin/BMC_upgrade.sh root@$IP:~/
+        spawn scp $Local_File  root@$IP:~/
         myscpfunc $STRING
     }
     

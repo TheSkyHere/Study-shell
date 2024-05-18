@@ -1,42 +1,19 @@
 #!/bin/sh
 
-while :
-do
-    echo "==============TEST START=============="
-    echo "power off com1~5"
-    pduoff 1
-    pduoff 2
-    pduoff 3
-    pduoff 4
-    pduoff 5
-    sleep 5
-    echo "power on com1~5"
-    pduon 1
-    pduon 2
-    pduon 3
-    pduon 4
-    pduon 5
-    sleep 300
-    echo "==============TEST OVER=============="
-done
-
-
-#!/bin/sh
-
 num=0
+cd /sys/bus/i2c/devices/i2c-3/
 while :
 do
     echo "==============TEST START $num =(com 4~5)============="i
     num=$((num+1))
-    echo "power off com4~5"
-    pduoff 4
-    pduoff 5
-    sleep 5
-    echo "power on com4~5"
-    pduon 4
-    pduon 5
-    sleep 400
-    echo "==============TEST OVER=============="
+    echo "dps800 0x58" >> ./new_device
+    string=$(cat ./3-0058/hwmon/hwmon*/curr1_label)
+    echo "0x58" >> ./delete_device    
+    if [ $string == "iin" ];then
+        echo "==============TEST OVER status:OK   string:$string=============="
+    else
+        echo "==============TEST OVER status:FAIL string:$string=============="
+    fi
 done
 
 

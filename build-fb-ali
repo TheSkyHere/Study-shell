@@ -39,43 +39,43 @@ elif [ $# -ge 2 ]; then
     case $2 in
     "clean")
         if [ $# -gt 2 ]; then
-            source openbmc-init-build-env meta-huaqin/meta-$1 build-$1; bitbake -c cleanall $3
+            source openbmc-init-build-env meta-alibaba/meta-$1 build-$1; bitbake -c cleanall $3
         else
-            source openbmc-init-build-env meta-huaqin/meta-$1 build-$1; bitbake -c cleanall $1-image
+            source openbmc-init-build-env meta-alibaba/meta-$1 build-$1; bitbake -c cleanall $1-image
         fi
     ;;
     "u-boot")
-	    source openbmc-init-build-env meta-huaqin/meta-$1 build-$1 && buildpath=$(pwd); downloads; bitbake u-boot
+	    source openbmc-init-build-env meta-alibaba/meta-$1 build-$1 && buildpath=$(pwd); downloads; bitbake u-boot
     ;;
     "linux-aspeed")
-	    source openbmc-init-build-env meta-huaqin/meta-$1 build-$1 && buildpath=$(pwd); downloads; bitbake linux-aspeed
+	    source openbmc-init-build-env meta-alibaba/meta-$1 build-$1 && buildpath=$(pwd); downloads; bitbake linux-aspeed
     ;;
     "modify-u-boot")
-	    source openbmc-init-build-env meta-huaqin/meta-$1 build-$1 && buildpath=$(pwd);  devtool modify u-boot
+	    source openbmc-init-build-env meta-alibaba/meta-$1 build-$1 && buildpath=$(pwd);  devtool modify u-boot
         echo "******************************************************************************************"
         echo "                        You can modify u-boot in build-$1/workspace                       "
         echo "******************************************************************************************"
     ;;
     "modify-linux-aspeed")
-	    source openbmc-init-build-env meta-huaqin/meta-$1 build-$1 && buildpath=$(pwd);  devtool modify linux-aspeed
+	    source openbmc-init-build-env meta-alibaba/meta-$1 build-$1 && buildpath=$(pwd);  devtool modify linux-aspeed
         echo "******************************************************************************************"
         echo "                        You can modify linux-aspeedt in build-$1/workspace                "
         echo "******************************************************************************************"
     ;;
     "reset-u-boot")
-	    source openbmc-init-build-env meta-huaqin/meta-$1 build-$1 && buildpath=$(pwd);  devtool reset u-boot
+	    source openbmc-init-build-env meta-alibaba/meta-$1 build-$1 && buildpath=$(pwd);  devtool reset u-boot
         echo "******************************************************************************************"
         echo "                                   Reset u-boot                                           "
         echo "******************************************************************************************"
     ;;
     "reset-linux-aspeed")
-	    source openbmc-init-build-env meta-huaqin/meta-$1 build-$1 && buildpath=$(pwd);  devtool reset linux-aspeed
+	    source openbmc-init-build-env meta-alibaba/meta-$1 build-$1 && buildpath=$(pwd);  devtool reset linux-aspeed
         echo "******************************************************************************************"
         echo "                                  Reset linux-aspeedt                                     "
         echo "******************************************************************************************"
     ;;
     *)
-	    source openbmc-init-build-env meta-huaqin/meta-$1 build-$1 && buildpath=$(pwd); downloads; bitbake $2
+	    source openbmc-init-build-env meta-alibaba/meta-$1 build-$1 && buildpath=$(pwd); downloads; bitbake $2
     ;;
     esac
 else
@@ -105,3 +105,27 @@ exit 0
 #         • To go back to default recipes, run
 #         $ devtool reset linux-aspeed
 #         $ devtool reset u-boot 
+
+
+# ## 1.2. 操作步骤如下  
+#    1. git clone -b arch7 https://gitlab-dbd2.huaqin.com/sonicrepo/hqsonic-dev/alibmc.git 
+#    2. ./sync_yocto.sh 
+#    3. git submodule init
+#    4. git submodule update 
+#    5. cd meta-alibaba/meta-obmc-hq
+#    6. git pull origin
+#    7. cd ../../
+#    8. source openbmc-init-build-env meta-alibaba/meta-obmc-hq
+#    9. DL_DIR ?= "/home_a/zhangyang/obmc_download"
+#    10. bitbake  obmc-hq-image
+# ## 1.2. 操作步骤如下  
+#    1. git clone -b arch7 https://gitlab-dbd2.huaqin.com/sonicrepo/hqsonic-dev/alibmc.git 
+#    2. ./sync_yocto.sh 
+#    3. rm -rf meta-obmc-hq/
+#    4. git clone https://gitlab-dbd2.huaqin.com/s3ip/Devgroup/openbmc.git ./meta-obmc-hq
+#    5. cd meta-alibaba/meta-obmc-hq
+#    6. git pull origin
+#    7. cd ../../
+#    8. source openbmc-init-build-env meta-alibaba/meta-obmc-hq
+#    9. echo "DL_DIR ?= \"/home_a/robin/matao-test/downloads\"" >> "conf/local.conf"
+#    10. bitbake  obmc-hq-image

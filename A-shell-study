@@ -274,3 +274,8 @@ cat temp\ copy |head -n 1 |awk -F ':' '{printf $2}'   //根据":"分割字符串
 sudo update-rc.d mystart defaults
 https://www.cnblogs.com/guke/p/3978894.html
 https://blog.csdn.net/weixin_44537992/article/details/121630794
+
+
+#隐藏回显的方式
+    bmc_spi_select_enable "bios_$image_m_s"  > /dev/null 2>&1
+    echo "${bios_dev_spi}" > /sys/bus/spi/drivers/spidev/unbind  2> /dev/null
